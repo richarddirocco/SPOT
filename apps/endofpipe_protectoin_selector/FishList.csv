@@ -1,0 +1,107 @@
+GroupName,ScientificName,CommonName,MinSize,MaxSize
+Catfish & Sunfish,Ictalurus furcatus,Blue catfish,25,1650
+Catfish & Sunfish,Ictalurus punctatus,Channel catfish,25,533
+Catfish & Sunfish,Ictalurus punctatus x furcatus,Channel x blue hybrid catfish,25,1650
+Catfish & Sunfish,Lepomis auritus,Redbreast sunfish,25,178
+Catfish & Sunfish,Lepomis incisor,Sunfish,25,203
+Catfish & Sunfish,Lepomis macrochirus,Bluegill,25,203
+Catfish & Sunfish,Lepomis megalotis,Longear sunfish,25,152
+Catfish & Sunfish,Micropterus dolomieu,Smallmouth bass,25,381
+Catfish & Sunfish,Micropterus salmoides,Largemouth bass,25,381
+Catfish & Sunfish,Pomoxis annularis,White crappie,25,254
+Eel,Anguilla anguilla,European eel,25,1220
+Eel,Lampetra tridentata,Pacific lamprey,25,680
+Eel,Lota lota,Burbot,25,381
+Eel,Petromyzon marinus,Sea lamprey,25,860
+Herring,Alosa aestivalis,Blueback herring,25,203
+Herring,Alosa fallax,Twaite shad,25,600
+Herring,Alosa pseudoharengus,Alewife,25,152
+Herring,Alosa sapidissima,American shad,25,381
+Pike (derived),Esox lucius,Northern pike,25,762
+Pike (derived),Esox sp.,Tiger muskellunge,25,1830
+Salmon & Walleye,Abramis brama,Bream,25,820
+Salmon & Walleye,Barbus barbus,Barbel,25,120
+Salmon & Walleye,Campostoma anomalum,Central stoneroller,25,161
+Salmon & Walleye,Carassius carassius,Crucian carp,25,640
+Salmon & Walleye,Catostomus catostomus,Longnose sucker,25,356
+Salmon & Walleye,Catostomus commersoni,White sucker,25,508
+Salmon & Walleye,Catostomus laipinnis,Flannelmouth sucker,25,560
+Salmon & Walleye,Catostomus macrocheilus,Largescale sucker,25,432
+Salmon & Walleye,Catostomus platyrhynchus,Mountain sucker,25,203
+Salmon & Walleye,Chasmistes liorus,June sucker,25,610
+Salmon & Walleye,Coregonus artedii,Cisco,25,305
+Salmon & Walleye,Coregonus autumnalis,Arctic cisco,25,381
+Salmon & Walleye,Coregonus clupeaformis,Lake whitefish,25,381
+Salmon & Walleye,Coregonus nasus,Broad whitefish,25,457
+Salmon & Walleye,Coregonus sardinella,Least cisco,25,254
+Salmon & Walleye,Cyprinella lutrensis,Red shiner,25,90
+Salmon & Walleye,Cyprinella proserpina,Proserpine shiner,25,75
+Salmon & Walleye,Cyprinella venusta,Blacktail shiner,25,152
+Salmon & Walleye,Cyprinus carpio,Carp,25,457
+Salmon & Walleye,Etheostoma grahami,Rio Grande darter,25,60
+Salmon & Walleye,Gila cypha,Humpback chub,25,380
+Salmon & Walleye,Gila elegans,Bonytail chub,25,620
+Salmon & Walleye,Gobio gobio,Gudgeon,25,200
+Salmon & Walleye,Hybognathus amarus,Silvery minnow,25,76
+Salmon & Walleye,Hybognathus placitus,Plains minnow,25,130
+Salmon & Walleye,Iotichthys phlegethontis,Least chub,25,64
+Salmon & Walleye,Lepidomeda aliciae,Southern leatherside chub,25,127
+Salmon & Walleye,Leuciscus cephalus,European chub,25,600
+Salmon & Walleye,Leuciscus leuciscus,Dace,25,400
+Salmon & Walleye,Luxilus chrysocephalus,Striped shiner,25,200
+Salmon & Walleye,Lythrurus fumeus,Ribbon shiner,25,70
+Salmon & Walleye,Lythrurus umbratilis,Redfin shiner,25,64
+Salmon & Walleye,Macrhybopsis aestivalis,Speckled chub,25,76
+Salmon & Walleye,Morone americana,White perch,25,178
+Salmon & Walleye,Morone saxatilis,Striped bass,25,457
+Salmon & Walleye,Notropis amabilis,Texas shiner,25,62
+Salmon & Walleye,Notropis atherinoides,Emerald shiner,25,76
+Salmon & Walleye,Notropis atrocaudalis,Blackspot shiner,25,76
+Salmon & Walleye,Notropis bairdi,Red River shiner,25,80
+Salmon & Walleye,Notropis buccula,Smalleye shiner,25,44
+Salmon & Walleye,Notropis buchanani,Ghost shiner,25,64
+Salmon & Walleye,Notropis hudsonius,Spottail shiner,25,76
+Salmon & Walleye,Notropis oxyrhynchus,Sharpnose shiner,25,95
+Salmon & Walleye,Notropis sabinae,Sabine shiner,25,57
+Salmon & Walleye,Notropis shumardi,Silverband shiner,25,100
+Salmon & Walleye,Notropis stramineus,Sand shiner,25,76
+Salmon & Walleye,Notropis texanus,Weed shiner,25,56
+Salmon & Walleye,Notropis topeka,Topeka shiner,25,76
+Salmon & Walleye,Notropis volucellus,Mimic shiner,25,76
+Salmon & Walleye,Oncorhynchus clarki,Cutthroat trout,25,381
+Salmon & Walleye,Oncorhynchus gorbuscha,Pink salmon,25,610
+Salmon & Walleye,Oncorhynchus keta,Chum salmon,25,635
+Salmon & Walleye,Oncorhynchus kisutch,Coho salmon,25,656
+Salmon & Walleye,Oncorhynchus mykiss,Rainbow or Steelhead trout,25,762
+Salmon & Walleye,Oncorhynchus nerka,Sockeye salmon,25,610
+Salmon & Walleye,Oncorhynchus tshawytscha,Chinook salmon,25,915
+Salmon & Walleye,Perca flavescens,Yellow perch,25,254
+Salmon & Walleye,Perca fluviatilis,European perch,25,600
+Salmon & Walleye,Pimephales promelas,Fathead minnow,25,51
+Salmon & Walleye,Pimephales vigilax,Bullhead minnow,25,79
+Salmon & Walleye,Platygobio gracilus,Flathead chub,25,178
+Salmon & Walleye,Pogonichthys macrolepidotus,Sacramento splittail,25,440
+Salmon & Walleye,Prosopium williamsoni,Mountain whitefish,25,305
+Salmon & Walleye,Ptychocheilus lucius,Colorado squawfish,25,1800
+Salmon & Walleye,Ptychocheilus oregonensis,Northern squawfish,25,305
+Salmon & Walleye,Rhinichthys atratulus,Blacknose dace,25,64
+Salmon & Walleye,Rhinichthys cataractae,Longnose dace,25,76
+Salmon & Walleye,Rhinichthys osculus,Speckled dace,25,76
+Salmon & Walleye,Richardsonius balteatus,Redside shiner,25,127
+Salmon & Walleye,Rutilus rutilus,Roach,25,500
+Salmon & Walleye,Salmo salar,Atlantic salmon,25,457
+Salmon & Walleye,Salmo trutta,Brown trout,25,406
+Salmon & Walleye,Salvelinus alpinus,Arctic char,25,457
+Salmon & Walleye,Salvelinus confluentus,Bull trout,25,1030
+Salmon & Walleye,Salvelinus fontinalis,Brook trout,25,305
+Salmon & Walleye,Salvelinus namaycush,Lake trout,25,508
+Salmon & Walleye,Sander vitreus,Walleye,25,508
+Salmon & Walleye,Semotilus atromaculatus,Creek chub,25,102
+Salmon & Walleye,Stenodus leucichthys,Inconnu,25,762
+Salmon & Walleye,Thymallus arcticus,Arctic grayling,25,381
+Salmon & Walleye,Thymallus thymallus,European grayling,25,600
+Sturgeon,Acipenser brevirostrum,Shortnose sturgeon,25,912
+Sturgeon,Acipenser fulvescens,Lake sturgeon,25,1425
+Sturgeon,Acipenser transmontanus,White sturgeon,25,6100
+Sturgeon,Scaphirhynchus albus,Pallid sturgeon,25,2000
+Sturgeon,Scaphirhynchus platorynchus,Shovelnose sturgeon,25,1080

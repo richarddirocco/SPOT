@@ -1,0 +1,11 @@
+---
+output: 
+  html_document:
+    css: style.css
+    theme: cosmo
+---
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
+<iframe src="http://34.193.104.83/distancevelocity/" width="100%" height="1500px" style="border:none"></iframe>

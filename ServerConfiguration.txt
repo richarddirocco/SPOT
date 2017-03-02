@@ -1,0 +1,43 @@
+# Edit the shiny-server configuration file by entering this into the terminal:
+
+sudo pico //etc/shiny-server/shiny-server.conf
+
+# After editing this conf file, you must restart the server using this command:
+
+sudo systemctl restart shiny-server
+
+# Edit nginx rstudio config files using:
+
+sudo pico //etc/nginx/RStudioAMI/rstudio.conf
+
+# change location of rstudio to /rstudio instead of just the ip adress
+
+    location /rstudio/ {
+      rewrite ^/rstudio/(.*)$ /$1 break;
+      proxy_pass http://localhost:8787;
+      proxy_redirect http://localhost:8787/ $scheme://$host/rstudio/;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection $connection_upgrade;
+      proxy_read_timeout 20d;
+    }
+
+# Edit nginx shiny configuration files using:
+
+sudo pico //etc/nginx/RStudioAMI/shiny.conf
+
+# change location of shiny to just the ipaddress 
+
+    location / {
+      proxy_pass http://localhost:3838;
+      proxy_redirect http://localhost:3838/ $scheme://$host/;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection $connection_upgrade;
+      proxy_read_timeout 20d;
+    }
+    
+    
+# Restart nginx:
+
+/etc/init.d/nginx restart

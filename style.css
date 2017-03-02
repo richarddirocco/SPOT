@@ -1,0 +1,15 @@
+body {
+    padding-top: 80px !important;
+  }
+  
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: #222222 !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+  background-color: #222222 !important
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+    background-color: #222222 !important;
+}

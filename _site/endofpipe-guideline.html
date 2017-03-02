@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Fisheries and Oceans Canada" />
+
+<meta name="date" content="2017-01-01" />
+
+<title>[DRAFT] Freshwater Intake End-of-Pipe Fish Screen Guideline</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("section-TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#section-TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#section-TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#section-TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="section-TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- NOTE: add "navbar-inverse" class for an alternate navbar background -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Fisheries Protection Program Tools</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="speedtime.html">Swim Speed & Swim Time</a></li>
+        <li><a href="distancevelocity.html">Swim Distance & Water Velocity</a></li>
+                <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">End-of-Pipe Screen <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="endofpipe-guideline.html">Draft Guideline</a></li>
+            <li><a href="endofpipe-tool.html">Screen Size Calculator</a></li>
+          </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="section-header">
+
+
+
+<h1 class="title toc-ignore">[DRAFT] Freshwater Intake End-of-Pipe Fish Screen Guideline</h1>
+<h4 class="author"><em>Fisheries and Oceans Canada</em></h4>
+<h4 class="date"><em>2017</em></h4>
+
+</div>
+
+
+<!-- Google Analytics Script  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Favicon -->
+<p><link rel="shortcut icon" type="image/png" href="favicon.ico"/></p>
+<!-- This script corrects the footnote links -->
+<script>
+  var shiftWindow = function() { scrollBy(0, -100) };
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+</script>
+<div id="section-introduction" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>Improperly designed or installed fish screens can result in the death of fish through entrainment<a href="#section-fn1" class="footnoteRef" id="section-fnref1"><sup>1</sup></a> or impingement<a href="#section-fn2" class="footnoteRef" id="section-fnref2"><sup>2</sup></a>. The severity of the impact on the fisheries resource and habitat depends on the water velocity, flow, depth, and intake design, as well as the abundance, distribution, size, swimming ability, and behaviour of the organisms in the vicinity of the intake.</p>
+<p>Causing the death of fish that are part of or support a commercial, recreational, or Aboriginal fishery is prohibited in Canada under Section 35(1) of the Fisheries Act <span class="citation">(Government of Canada 1985)</span>. Fisheries and Oceans Canada (DFO) has prepared the Freshwater Intake End-of-Pipe Fish Screen Guideline to assist proponents in the design and installation of fish screens to reduce or eliminate death of fish associated with freshwater intake pipes.</p>
+<p>This document is an update to the 1995 guideline of the same name <span class="citation">(Department of Fisheries and Oceans 1995)</span>. The main purpose of this updated version is to incorporate a better understanding of fish swimming performance and increase the maximum amount of water extraction from 120 L/s to 1000 L/s.</p>
+<center>
+<div style="width:400px; height=200px">
+<div class="figure">
+<img src="Figures/ScreenExample.png" alt="Figure 1. Example of a typical end-of-pipe screen installation" />
+<p class="caption">Figure 1. Example of a typical end-of-pipe screen installation</p>
+</div>
+</div>
+</center>
+</div>
+<div id="section-guideline-objectives" class="section level1">
+<h1><span class="header-section-number">2</span> Guideline Objectives</h1>
+<p>The objective of this guideline is to provide a national standard-of-practice and guidance for end-of-pipe fish screens at freshwater intakes to prevent potential losses of fish due to entrainment or impingement. The Freshwater Intake End-of-Pipe Fish Screen Guideline deals exclusively with the sizing and design of fixed screens that are often placed at the end of a pipe used to extract water up to 1 m<sup>3</sup>/s (1000 L/s). The guideline is intended for use in addressing fish screens for small permanent and temporary withdrawals for irrigation, construction, small municipal and private water supplies, etc. It is not intended for application to hydroelectric or canal screen designs; however, such proposals can be considered by regulatory agencies on a site-specific basis. The guideline focuses on the technical aspects of intake screens and the protection of fish rather than on policy, legislation, or environmental assessment processes and their application.</p>
+<p>This guideline has been developed to provide protection of freshwater fish with a minimum fork length of 25 mm. Plankton<a href="#section-fn3" class="footnoteRef" id="section-fnref3"><sup>3</sup></a> are highly susceptible to entrainment since they are unable to swim against intake-current and are likely to fit through the openings on an intake screen. Plankton are an important food source for freshwater fishes in Canada and although relatively few ichthyoplankton<a href="#section-fn4" class="footnoteRef" id="section-fnref4"><sup>4</sup></a> naturally survive to adulthood, additional deaths caused by water intakes could reduce recruitment<a href="#section-fn5" class="footnoteRef" id="section-fnref5"><sup>5</sup></a>. Protection of plankton is not one of the objective of this document but proponents should be aware of this potential effect of water withdrawal on the fishery.</p>
+</div>
+<div id="section-guidelines" class="section level1">
+<h1><span class="header-section-number">3</span> Guidelines</h1>
+<p>The appropriate design of a fish screen is largely dependent upon the species and the size of fish requiring protection. Appropriate installation and maintenance/cleaning of the screen are also important in keeping approach velocities low and ensuring satisfactory operation of the screen. For the purposes of this guideline, emphasis is placed on the protection of freshwater fish with a minimum fork length<a href="#section-fn6" class="footnoteRef" id="section-fnref6"><sup>6</sup></a> of 25 mm from entrainment and impingement due to water extraction activities. Depending upon site-specific circumstances, a case may be made whereby the minimum fork length size of fish to be protected is greater than 25 mm. In this instance, the fish screen criteria for open screen area<a href="#section-fn7" class="footnoteRef" id="section-fnref7"><sup>7</sup></a> presented in Table 1 and screen mesh size (2.54 mm) do not apply. For fish larger than 25 mm, the swim speed must be estimated using the Screen Size Calculator application or refer to <span class="citation">Katopodis and Gervais (2016)</span>. The estimated swim speed over a 10 minute period will determine the design approach velocity.</p>
+<p>The following sections address the appropriate design of fixed freshwater intake end-of-pipe fish screens for the protection of fish with a minimum fork length of 25 mm. Guidance on installation, cleaning, and maintenance is provided. Common types of intake screens and associated intakes are also presented in Figure 2.</p>
+<div id="section-fish-screen-criteria" class="section level2">
+<h2><span class="header-section-number">3.1</span> Fish Screen Criteria</h2>
+<p>To protect fish from impingement or entrainment, the approach velocity (i.e., the water velocity into, or perpendicular to, the face of an intake screen) should not exceed certain values based on the swimming performance group of the species present in the watercourse. Species groups with similar swimming performance are based on analysis of performance data and include the following: “Catfish &amp; Sunfish Group”,“Eel Group”, “Herring Group”, “Pike Group”, “Salmon &amp; Walleye Group”, and “Sturgeon Group” <span class="citation">(Katopodis and Gervais 2016)</span>. Table 3 lists the species in each of these fish swimming performance groups. Contact DFO or provincial fisheries agencies regarding fish species that are not included in Table 3.</p>
+<p>Approach velocities for each swimming performance group correspond to speed estimates which fish have a 97.5% chance of exceeding. A fork length of 25 mm and an endurance time of 10 minutes (the time the fish is in front of the face of the screen before it can elude it) were used to estimate fish speeds. The required open screen areas (m<sup>2</sup>) for several flows or water extraction quantities (L/s) to meet these approach velocity criteria were calculated and are presented in Table 1 and the Screen Size Calculator application (Section 3.2). Open screen area is defined as the total submerged screen area which includes the screen face material but excludes major structural members. Open screen area is calculated using the following equation:</p>
+<p><span class="math display">\[\text{Open Screen Area (m$^2$)} = \frac{\text{Flow Rate (m$^3$)}}{\text{Velocity (m)}}\]</span></p>
+<p>Table 1 presents the required open screen area for end-of-pipe intake screens with a capacity up to 1 m<sup>3</sup> (1000 L/s). The open screen area is the area of all open spaces on the screen available for the free flow of water. The open screen area can also be calculated using the Screen Size Calculator application (Section 3.2). The application will calculate the required open screen area based on user selected fish species, fish length and time.</p>
+<table style="width:96%;">
+<caption>Table 1. Open screen area required for end-of-pipe water intakes.</caption>
+<colgroup>
+<col width="18%" />
+<col width="18%" />
+<col width="20%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Species Group</th>
+<th align="center">Design approach velocity (m/s)</th>
+<th align="center">Screen area (m<sup>2</sup>) per 1000 L/s of water</th>
+<th align="center">Screen area (m<sup>2</sup>) per 100 L/s of water</th>
+<th align="center">Screen area (m<sup>2</sup>) per 10 L/s of water</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="center">0.106</td>
+<td align="center">9.4</td>
+<td align="center">0.94</td>
+<td align="center">0.094</td>
+</tr>
+<tr class="even">
+<td align="left">Eel</td>
+<td align="center">0.035</td>
+<td align="center">28.7</td>
+<td align="center">2.87</td>
+<td align="center">0.287</td>
+</tr>
+<tr class="odd">
+<td align="left">Herring</td>
+<td align="center">0.093</td>
+<td align="center">10.8</td>
+<td align="center">1.08</td>
+<td align="center">0.108</td>
+</tr>
+<tr class="even">
+<td align="left">Pike</td>
+<td align="center">0.055</td>
+<td align="center">18.2</td>
+<td align="center">1.82</td>
+<td align="center">0.182</td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="center">0.098</td>
+<td align="center">10.2</td>
+<td align="center">1.02</td>
+<td align="center">0.102</td>
+</tr>
+<tr class="even">
+<td align="left">Sturgeon</td>
+<td align="center">0.082</td>
+<td align="center">12.2</td>
+<td align="center">1.22</td>
+<td align="center">0.122</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="section-screen-size-calculator" class="section level2">
+<h2><span class="header-section-number">3.2</span> Screen Size Calculator</h2>
+<p>The End-of-Pipe Fish Screen tool calculates the screen area required to prevent impingement of 97.5% of fish based on species, length and the amount of time required for a fish to escape the face of the screen.</p>
+<center>
+<iframe src="http://34.193.104.83/endofpipeguide/" style="border: none; width: 500px; height: 900px">
+</iframe>
+</center>
+</div>
+<div id="section-design-of-fixed-end-of-pipe-fish-screens" class="section level2">
+<h2><span class="header-section-number">3.3</span> Design of Fixed End-of-Pipe Fish Screens</h2>
+<p>Keeping fish screens clean maintains their effectiveness for supplying water and protecting fish. Active screens are those equipped with proven cleaning capability which keeps them free of any debris that will restrict flow area and increase approach velocities. Passive screens are those without an automated cleaning system and require larger screen areas to cope with the higher risk of flow area restriction due to plugging. It is important to calculate the available open screen area of clean screens and allow a factor of safety for screens that are not regularly cleaned. Open screen area is the area occupied by the open spaces available for the free flow of water and excludes the screen face material.</p>
+<p>Once the required open screen area has been found (Table 1 or Section 3.2), the total screen area<a href="#section-fn8" class="footnoteRef" id="section-fnref8"><sup>8</sup></a> can be calculated as follows:</p>
+<p><span class="math display">\[\text{Total Screen Area} =
+\text{Open Screen Area} \div \left(\frac{\text{% Open Area (Table 2)}}{100}\right)\]</span></p>
+<p>It should be noted that if the percent (%) open screen area is maximized, then the total screen area required for a given flow is minimized. The narrowest dimension of any opening on the screen is referred to as the design opening, regardless of opening shape. The maximum design opening for a fish of 25 mm fork length is estimated at 2.54 mm. The screen openings may be round, square, rectangular, or any combination thereof, but should not have any protrusions that could injure fish.</p>
+<p>Screen materials may include brass, bronze, aluminum, monel metal, galvanized or stainless steel, and plastics. The screen material should be resistant to corrosion and UV light. Welded wedge wire screens offer reduced debris clogging and increased open area and screen stiffness, in comparison to round wire mesh and punch plate. Table 2 presents several common types of screening material that meet the requirements of wire diameter, clear opening width and percent open area.</p>
+<p>The dimensions of the fish screen can be calculated after the correct shape, configuration, location, and method of installation have been determined. This will usually be determined after a site investigation and a review of these guidelines. Included in Figure 3 are common screen shapes and the associated dimensions and area formulae. These are just examples of the many shapes and sizes in which fish screens can be fabricated. Screens are instream structures and, as such, should have sufficient strength and durability, and be capable of withstanding any potential large forces and impacts. Figure 1 illustrates an example configuration of an end-of-pipe fish screen. Figure 2 illustrates some examples of end-of-pipe screen designs.</p>
+<table>
+<caption>Table 2. Examples of screen material.</caption>
+<thead>
+<tr class="header">
+<th align="left">Material</th>
+<th align="center">Wire Thickness (mm)</th>
+<th align="center">Opening Width (mm)</th>
+<th align="center">% Open Area</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">8 <span class="math inline">\(\times\)</span> 8 Stainless Steel Alloy Mesh</td>
+<td align="center">0.711</td>
+<td align="center">2.44</td>
+<td align="center">60</td>
+</tr>
+<tr class="even">
+<td align="left">#7 Mesh Wire Cloth</td>
+<td align="center">1.025</td>
+<td align="center">2.54</td>
+<td align="center">51</td>
+</tr>
+<tr class="odd">
+<td align="left">#8 Mesh Wire Cloth</td>
+<td align="center">0.875</td>
+<td align="center">2.25</td>
+<td align="center">52</td>
+</tr>
+<tr class="even">
+<td align="left">#8 Mesh Wire Cloth</td>
+<td align="center">0.700</td>
+<td align="center">2.54</td>
+<td align="center">62</td>
+</tr>
+<tr class="odd">
+<td align="left">#60 Wedge Wire Screen</td>
+<td align="center">1.500</td>
+<td align="center">2.54</td>
+<td align="center">63</td>
+</tr>
+<tr class="even">
+<td align="left">#45 Wedge Wire Screen</td>
+<td align="center">1.100</td>
+<td align="center">2.54</td>
+<td align="center">69</td>
+</tr>
+</tbody>
+</table>
+<center>
+<div style="width:400px; height=200px">
+<div class="figure">
+<img src="Figures/ScreenTypes.png" alt="Figure 2. Typical end-of-pipe screen designs" />
+<p class="caption">Figure 2. Typical end-of-pipe screen designs</p>
+</div>
+</div>
+</center>
+</div>
+<div id="section-installation" class="section level2">
+<h2><span class="header-section-number">3.4</span> Installation</h2>
+<p>Screens should be located in areas and depths of water with low concentrations of fish throughout the year. This includes areas with natural or man-made structures that attract fish during migration, spawning, or rearing. Screens should be installed at least 300 mm above the bed of the waterbody to reduce entrainment of sediment and benthos<a href="#section-fn9" class="footnoteRef" id="section-fnref9"><sup>9</sup></a>. All openings for guides and seals should be smaller than the opening width of the screen material (usually 2.54 mm) so fish cannot pass through. Cylindrical and box-type screens should have a manifold installed to ensure the water velocity is evenly distributed across the screen surface.</p>
+<center>
+<div style="width:400px; height=200px">
+<div class="figure">
+<img src="Figures/ScreenShapes.png" alt="Figure 3: Common screen area shapes and area formul" />
+<p class="caption">Figure 3: Common screen area shapes and area formul</p>
+</div>
+</div>
+</center>
+<p>Depending on the size of the screen and the flow at the installation location, structural support may be needed to prevent sagging or collapse of the screen panels. When designing a screen, account for the area blocked by supports while meeting the total screen area recommended in this guide. Heavier cages or trash racks can be fabricated out of bar (150 mm spacing is typical) or grating to protect the finer fish screen, especially where there is debris loading from woody material, leaves, or algae mats.</p>
+</div>
+<div id="section-cleaning-maintenance" class="section level2">
+<h2><span class="header-section-number">3.5</span> Cleaning &amp; Maintenance</h2>
+<p>Debris or damage to screens can cause uneven intake flow across the screen surface. Uneven flow may result in higher intake velocities on some sections of the screen, increasing the occurrences of impinged fish. Provision should be made for the inspection and cleaning of screens. Cleaning apparatuses, seals, and screens should be properly maintained. To facilitate intake screen cleaning and maintenance, design and installation features such as orientation of the screen (e.g., in a cove) or variation in mesh shape (i.e., square wire/bars versus round wire/bars), etc. may be considered for regularly cleaned screens. Flexible suction pipe may be used instead of solid, fixed piping for ease of screen removal and cleaning. If the screen must be removed for cleaning or maintenance, the intake pump should be turned off. Pump suction pressure can be measured to assess the need for screen cleaning. For screens that will not be cleaned regularly, provision of considerably more open screen area (e.g., four times more) than determined from Table 1 or the Screen Size Calculator application (Section 3.2) may be considered.</p>
+</div>
+</div>
+<div id="section-sample-calculation" class="section level1">
+<h1><span class="header-section-number">4</span> Sample Calculation</h1>
+<p>A proponent wishes to withdraw water at a rate of 0.1 m<sup>3</sup>/s from a nearby pond. The pond supports populations of brown trout, brook trout, and American eel. The intake is proposed to be cylindrical with the ends solid and #60 wedge wire screen around the cylinder. What size must the intake screen be to satisfy the guideline requirements?</p>
+<p>There are 4 steps to finding the answer</p>
+<ol style="list-style-type: decimal">
+<li>Determine the fish swimming group</li>
+<li>Determine the open screen area</li>
+<li>Determine the dimensions necessary to produce the total screen area</li>
+<li>Determine the total screen area</li>
+</ol>
+<div id="section-solution" class="section level2">
+<h2><span class="header-section-number">4.1</span> Solution</h2>
+<ol style="list-style-type: decimal">
+<li><p><b>Fish Swimming Group:</b> The fish swimming group can be determined by referencing Table 3 where the common and scientific names of species in each group are listed. Brown trout and brook trout are in the “Salmon &amp; Walleye” group. American eel are in the “Eel” group.</p></li>
+<li><p><b>Open Screen Area:</b> Table 1 lists the required effective screen area for each fish swimming performance group for flows up to 1000 L/s. To use the table, if necessary, first convert the flow from cubic metres per second to litres per second.</p>
+<span class="math display">\[0.1 \text{ m}^3 / \text{s} \times 1000 \text{ L} / \text{m}^3 =100 \text{ L} / \text{s}\]</span> For a flow of 100 L/s, Table 1 indicates that the open screen area must be:
+<ul>
+<li>1.02 m<sup>2</sup> for the “Salmon &amp; Walleye” group</li>
+<li>2.87 m<sup>2</sup> for the “Eel” group</li>
+</ul>
+<p>The higher number (2.87 m<sup>2</sup>) is the more stringent requirement and therefore it is used in the calculation of effective screen area. Alternatively, you could use the Screen Size Calculator application to determine the open screen area. <br></p></li>
+<li><b>Total Screen Area:</b> The screen material in this case is # 60 Wedge Wire. A review of Table 2 indicates that the % Open Area for this material is 63%. With this value and the previously determined Open Screen Area from Step 2, the following formula is used to determine the Total Screen Area for an active screen (i.e. with self-cleaning mechanism). <span class="math display">\[\begin{eqnarray} \text{Total Screen Area} &amp;=&amp; \text{Open Screen Area} \div \left(\frac{\text{% Open Area}}{100}\right) \\ &amp;=&amp; 2.87\text{ m}^2 \div \left(\frac{63}{100}\right)\\ &amp;=&amp; 4.56\text{ m}^2 \end{eqnarray}\]</span> For passive screens, without regular cleaning, the Open Screen Area must be multiplied by 4: <span class="math display">\[\begin{eqnarray} &amp;=&amp; 4.56 \text{ m}^2 \times 4 \\ &amp;=&amp; 18.23 \text{ m}^2 \end{eqnarray}\]</span></li>
+<li><p><b>Dimension of Intake Screen:</b> Figure 3 lists several common screen shapes and their respective area formulae. For a cylindrical screen where the ends are solid and screening is around the cylinder, the following formula applies: <span class="math display">\[\begin{eqnarray} \text{Area} &amp;=&amp; \pi \text{DL} \end{eqnarray}\]</span> The unknown dimensions are diameter (D) and length (L). These dimensions are determined by choosing a value for one and solving the equation for the other. If the diameter is 0.60 m, then the length follows as: <span class="math display">\[\begin{eqnarray} 4.56 \text{ m}^2 &amp;=&amp; \pi (0.60 \text{ m})\text{L}\\ 4.56 \text{ m}^2 &amp;=&amp; (1.885 \text{ m})\text{L}\\ \text{L} &amp;=&amp; 4.56 \text{ m}^2 \div 1.885 \text{ m}\\ \text{L} &amp;=&amp; 2.42 \text{ m} \end{eqnarray}\]</span> A regularly cleaned 0.60 m diameter, 2.42 m long cylindrical screen would meet the design requirements. It should be noted that the dimensions given are representative of the screening area only; they do not include any screen that may be blocked by framing, etc.</p></li>
+</ol>
+</div>
+</div>
+<div id="section-species-groups" class="section level1">
+<h1><span class="header-section-number">5</span> Species Groups</h1>
+<p>The following table contains a list of fishes with swimming performance data available. This is not an exhaustive list of fishes in Canada. If a species is not listed in Table 3, contact DFO or use a closely related species to determine which group is the best fit for an unlisted species.</p>
+<table>
+<caption>Table 3. Summary of fish species in each fish swimming performance groups.</caption>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Group</th>
+<th align="left">Common Name</th>
+<th align="left">Scientific Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Blue catfish</td>
+<td align="left"><em>Ictalurus furcatus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Bluegill</td>
+<td align="left"><em>Lepomis macrochirus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Channel catfish</td>
+<td align="left"><em>Ictalurus punctatus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Channel <span class="math inline">\(\times\)</span> blue hybrid catfish</td>
+<td align="left"><em>Ictalurus punctatus</em> <span class="math inline">\(\times\)</span> <em>furcatus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Largemouth bass</td>
+<td align="left"><em>Micropterus salmoides</em></td>
+</tr>
+<tr class="even">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Longear sunfish</td>
+<td align="left"><em>Lepomis megalotis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Redbreast sunfish</td>
+<td align="left"><em>Leomis auritus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Smallmouth bass</td>
+<td align="left"><em>Micropterus dolomieu</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">Sunfish</td>
+<td align="left"><em>Lepomis incisor</em></td>
+</tr>
+<tr class="even">
+<td align="left">Catfish &amp; Sunfish</td>
+<td align="left">White crappie</td>
+<td align="left"><em>Pomoxis annularis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Eel</td>
+<td align="left">Burbot</td>
+<td align="left"><em>Lota lota</em></td>
+</tr>
+<tr class="even">
+<td align="left">Eel</td>
+<td align="left">European eel</td>
+<td align="left"><em>Anguilla anguilla</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Eel</td>
+<td align="left">Pacific lamprey</td>
+<td align="left"><em>Lampetra tridentata</em></td>
+</tr>
+<tr class="even">
+<td align="left">Eel</td>
+<td align="left">Sea lamprey</td>
+<td align="left"><em>Petromyzon marinus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Herring</td>
+<td align="left">Alewife</td>
+<td align="left"><em>Alosa pseudoharengus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Herring</td>
+<td align="left">American shad</td>
+<td align="left"><em>Alosa sapidissima</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Herring</td>
+<td align="left">Blueback herring</td>
+<td align="left"><em>Alosa aestivalis</em></td>
+</tr>
+<tr class="even">
+<td align="left">Herring</td>
+<td align="left">Twaite shad</td>
+<td align="left"><em>Alosa fallax</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Pike</td>
+<td align="left">Northern pike</td>
+<td align="left"><em>Esox lucius</em></td>
+</tr>
+<tr class="even">
+<td align="left">Pike</td>
+<td align="left">Tiger muskellunge</td>
+<td align="left"><em>Esox sp.</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Arctic char</td>
+<td align="left"><em>Salvelinus alpinus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Arctic cisco</td>
+<td align="left"><em>Coregonus autumnalis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Arctic grayling</td>
+<td align="left"><em>Thymallus arcticus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Atlantic salmon</td>
+<td align="left"><em>Salmo salar</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Barbel</td>
+<td align="left"><em>Barbus barbus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Blacknose dace</td>
+<td align="left"><em>Rhinichthys atratulus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Blackspot shiner</td>
+<td align="left"><em>Notropis atrocaudalis</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Blacktail shiner</td>
+<td align="left"><em>Cyprinella venusta</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Bonytail chub</td>
+<td align="left"><em>Gila elegans</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Bream</td>
+<td align="left"><em>Abramis brama</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Broad whitefish</td>
+<td align="left"><em>Coregonus nasus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Brook trout</td>
+<td align="left"><em>Salvelinus fontinalis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Brown trout</td>
+<td align="left"><em>Salmo trutta</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Bull trout</td>
+<td align="left"><em>Salvelinus confluentus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Bullhead minnow</td>
+<td align="left"><em>Pimephales vigilax</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Carp</td>
+<td align="left"><em>Cyprinus carpio</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Central stoneroller</td>
+<td align="left"><em>Campostoma anomalum</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Chinook salmon</td>
+<td align="left"><em>Oncorhynchus tshawytscha</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Chum salmon</td>
+<td align="left"><em>Oncorhynchus keta</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Cisco</td>
+<td align="left"><em>Coregonus artedii</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Coho salmon</td>
+<td align="left"><em>Oncorhynchus kisutch</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Colorado squawfish</td>
+<td align="left"><em>Ptychocheilus lucius</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Creek chub</td>
+<td align="left"><em>Semotilus atromaculatus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Crucian carp</td>
+<td align="left"><em>Carassius carassius</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Cutthroat trout</td>
+<td align="left"><em>Oncorhynchus clarki</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Dace</td>
+<td align="left"><em>Leuciscus leuciscus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Emerald shiner</td>
+<td align="left"><em>Notropis atherinoides</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">European chub</td>
+<td align="left"><em>Leuciscus cephalus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">European grayling</td>
+<td align="left"><em>Thymallus thymallus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">European perch</td>
+<td align="left"><em>Perca fluviatilis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Fathead minnow</td>
+<td align="left"><em>Pimephales promelas</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Flannelmouth sucker</td>
+<td align="left"><em>Catostomus laipinnis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Flathead chub</td>
+<td align="left"><em>Platygobio gracilus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Ghost shiner</td>
+<td align="left"><em>Notropis buchanani</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Gudgeon</td>
+<td align="left"><em>Gobio gobio</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Humpback chub</td>
+<td align="left"><em>Gila cypha</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Inconnu</td>
+<td align="left"><em>Stenodus leucichthys</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">June sucker</td>
+<td align="left"><em>Chasmistes liorus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Lake trout</td>
+<td align="left"><em>Salvelinus namaycush</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Lake whitefish</td>
+<td align="left"><em>Coregonus clupeaformis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Largescale sucker</td>
+<td align="left"><em>Catostomus macrocheilus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Least chub</td>
+<td align="left"><em>Iotichthys phlegethontis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Least cisco</td>
+<td align="left"><em>Coregonus sardinella</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Longnose dace</td>
+<td align="left"><em>Rhinichthys cataractae</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Longnose sucker</td>
+<td align="left"><em>Catostomus catostomus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Mimic shiner</td>
+<td align="left"><em>Notropis volucellus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Mountain sucker</td>
+<td align="left"><em>Catostomus platyrhynchus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Mountain whitefish</td>
+<td align="left"><em>Prosopium williamsoni</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Northern squawfish</td>
+<td align="left"><em>Ptychocheilus oregonensis</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Pink salmon</td>
+<td align="left"><em>Oncorhynchus gorbuscha</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Plains minnow</td>
+<td align="left"><em>Hybognathus placitus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Proserpine shiner</td>
+<td align="left"><em>Cyprinella proserpina</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Rainbow/Steelhead trout</td>
+<td align="left"><em>Oncorhynchus mykiss</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Red River shiner</td>
+<td align="left"><em>Notropis bairdi</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Red shiner</td>
+<td align="left"><em>Cyprinella lutrensis</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Redfin shiner</td>
+<td align="left"><em>Lythrurus umbratilis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Redside shiner</td>
+<td align="left"><em>Richardsonius balteatus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Ribbon shiner</td>
+<td align="left"><em>Lythrurus fumeus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Rio Grande darter</td>
+<td align="left"><em>Etheostoma grahami</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Roach</td>
+<td align="left"><em>Rutilus rutilus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Sabine shiner</td>
+<td align="left"><em>Notropis sabinae</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Sacramento splittail</td>
+<td align="left"><em>Pogonichthys macrolepidotus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Sand shiner</td>
+<td align="left"><em>Notropis stramineus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Sharpnose shiner</td>
+<td align="left"><em>Notropis oxyrhynchus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Silverband shiner</td>
+<td align="left"><em>Notropis shumardi</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Silvery minnow</td>
+<td align="left"><em>Hybognathus amarus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Smalleye shiner</td>
+<td align="left"><em>Notropis buccula</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Sockeye salmon</td>
+<td align="left"><em>Oncorhynchus nerka</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Southern leatherside chub</td>
+<td align="left"><em>Lepidomeda aliciae</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Speckled chub</td>
+<td align="left"><em>Macrhybopsis aestivalis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Speckled dace</td>
+<td align="left"><em>Rhinichthys osculus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Spottail shiner</td>
+<td align="left"><em>Notropis hudsonius</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Steelhead trout</td>
+<td align="left"><em>Oncorhynchus mykiss</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Striped bass</td>
+<td align="left"><em>Morone saxatilis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Striped shiner</td>
+<td align="left"><em>Luxilus chrysocephalus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Texas shiner</td>
+<td align="left"><em>Notropis amabilis</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Topeka shiner</td>
+<td align="left"><em>Notropis topeka</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Walleye</td>
+<td align="left"><em>Sander vitreus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Weed shiner</td>
+<td align="left"><em>Notropis texanus</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">White perch</td>
+<td align="left"><em>Morone americana</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">White sucker</td>
+<td align="left"><em>Catostomus commersoni</em></td>
+</tr>
+<tr class="even">
+<td align="left">Salmon &amp; Walleye</td>
+<td align="left">Yellow perch</td>
+<td align="left"><em>Perca flavescens</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Sturgeon</td>
+<td align="left">Lake sturgeon</td>
+<td align="left"><em>Acipenser fulvescens</em></td>
+</tr>
+<tr class="even">
+<td align="left">Sturgeon</td>
+<td align="left">Pallid sturgeon</td>
+<td align="left"><em>Scaphirhynchus albus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Sturgeon</td>
+<td align="left">Shortnose sturgeon</td>
+<td align="left"><em>Acipenser brevirostrum</em></td>
+</tr>
+<tr class="even">
+<td align="left">Sturgeon</td>
+<td align="left">Shovelnose sturgeon</td>
+<td align="left"><em>Scaphirhynchus platorynchus</em></td>
+</tr>
+<tr class="odd">
+<td align="left">Sturgeon</td>
+<td align="left">White sturgeon</td>
+<td align="left"><em>Acipenser transmontanus</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="section-references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="section-refs" class="references">
+<div id="section-ref-EndOfPipe">
+<p>Department of Fisheries and Oceans. 1995. Freshwater intake end-of-pipe fish screen guidelines.</p>
+</div>
+<div id="section-ref-FisheriesAct">
+<p>Government of Canada. 1985. Fisheries Act.</p>
+</div>
+<div id="section-ref-katopodis2016fish">
+<p>Katopodis, C., and Gervais, R. 2016. Fish swimming performance data base and analyses. DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.: 550.</p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="section-fn1"><p>When a fish is drawn into a water intake and cannot escape<a href="#section-fnref1">↩</a></p></li>
+<li id="section-fn2"><p>When an entrapped fish is held in contact with the intake screen and is unable to free itself<a href="#section-fnref2">↩</a></p></li>
+<li id="section-fn3"><p>Plankton are free floating or drifting organisms<a href="#section-fnref3">↩</a></p></li>
+<li id="section-fn4"><p>the eggs and larvae of fish<a href="#section-fnref4">↩</a></p></li>
+<li id="section-fn5"><p>Fish surviving to enter the fishery or maturity<a href="#section-fnref5">↩</a></p></li>
+<li id="section-fn6"><p>The straight line distance measured from the tip of the nose to the fork of the tail<a href="#section-fnref6">↩</a></p></li>
+<li id="section-fn7"><p>The area of all open spaces on the screen available for the free flow of water<a href="#section-fnref7">↩</a></p></li>
+<li id="section-fn8"><p>The area occupied by the open spaces (i.e., open screen area) and screen material available for the free flow of water<a href="#section-fnref8">↩</a></p></li>
+<li id="section-fn9"><p>Organisms that occupy the bottom of bodies of water<a href="#section-fnref9">↩</a></p></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
