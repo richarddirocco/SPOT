@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Manual: Swim Distance &amp; Water Velocity Tool</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -204,13 +204,49 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Manual: Swim Distance &amp; Water Velocity Tool</h1>
 
 </div>
 
 
-<!-- Favicon -->
-<p><link rel="shortcut icon" type="image/png" href="favicon.ico"/></p>
-<p><br> <iframe src="http://34.193.104.83/endofpipe/" width="100%" height="1500px" style="border:none"></iframe></p>
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<p>The <a href="http://34.193.104.83/distancevelocity.html">Swim Distance &amp; Water Velocity tool</a> generates a plot showing swim distance versus water velocity. The plot is dynamically generated based on the fish species/group and the length selected. This tool uses the models described in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>. In this guide, a sample problem will be answered using this tool.</p>
+<div id="question" class="section level2">
+<h2>Question</h2>
+<p>A proponent wishes to install a 30 meter culvert. What is the maximum water velocity that 97.5% of 400 mm northern pike can pass through?</p>
+</div>
+<div id="steps" class="section level2">
+<h2>Steps</h2>
+<ol style="list-style-type: decimal">
+<li>Go to the <a href="http://34.193.104.83/distancevelocity.html">Swim Speed &amp; Swim Time tool</a>.</li>
+<li>Below “Select Fish by:”, click the “Common name” radio button.</li>
+<li>In the “Select species” drop down menu, choose “Northern Pike”.</li>
+<li>Drag the “Fish length” slider to 400 mm.</li>
+<li>Below “Calculations:”, press the “Water velocity” radio button</li>
+<li>Enter “30” in the “Swim distance in meter:” box.</li>
+</ol>
+<p>Once these steps are completed, the tool should look like this:</p>
+<iframe src="http://34.193.104.83/distancevelocity/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Northern%20pike%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true&quot;" width="100%" height="600px" style="border:none">
+</iframe>
+</div>
+<div id="solution" class="section level2">
+<h2>Solution</h2>
+<p>This culvert should not exceed a maximum water velocity of 0.35 m/s to allow passage of 97.5% of 400 mm northern pike.</p>
+</div>
+<div id="calculating-swim-distance" class="section level2">
+<h2>Calculating swim distance</h2>
+<p>The tool can also be used to determine swim distance based on water velocity. For example, select the “Swim distance” radio button below “Calculations” and enter 0.35 into the “Water velocity” box. The plot will update and show 97.5% of 400 mm Pike in 0.35 m/s current can swim 30 m.</p>
+</div>
 
 
 

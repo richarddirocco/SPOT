@@ -1,0 +1,49 @@
+---
+title: "Manual: Swim Distance & Water Velocity Tool"
+output: 
+  html_document:
+    css: style.css
+    theme: cosmo
+---
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+The [Swim Distance &amp; Water Velocity tool](http://34.193.104.83/distancevelocity.html) generates a plot showing swim distance versus water velocity. The plot is dynamically generated based on the fish species/group and the length selected. This tool uses the models described in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf). In this guide, a sample problem will be answered using this tool.
+
+##Question
+
+A proponent wishes to install a 30 meter culvert. What is the maximum water velocity that 97.5% of 400 mm northern pike can pass through?
+
+##Steps
+
+
+1.  Go to the [Swim Speed &amp; Swim Time tool](http://34.193.104.83/distancevelocity.html).
+2.	Below “Select Fish by:”, click the “Common name” radio button.
+3.	In the “Select species” drop down menu, choose “Northern Pike”.
+4.	Drag the “Fish length” slider to 400 mm.
+5.	Below “Calculations:”, press the “Water velocity” radio button 
+6.	Enter “30” in the “Swim distance in meter:” box.
+
+
+Once these steps are completed, the tool should look like this:
+
+
+<iframe src=http://34.193.104.83/distancevelocity/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Northern%20pike%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true" width="100%" height="600px" style="border:none"></iframe>
+
+##Solution
+
+This culvert should not exceed a maximum water velocity of 0.35 m/s to allow passage of 97.5% of 400 mm northern pike.  
+
+##Calculating swim distance
+
+The tool can also be used to determine swim distance based on water velocity. For example, select the "Swim distance" radio button below "Calculations" and enter 0.35 into the "Water velocity" box. The plot will update and show 97.5% of 400 mm Pike in 0.35 m/s current can swim 30 m. 

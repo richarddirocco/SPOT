@@ -1,5 +1,5 @@
 ---
-title: "Fisheries Protection Program Tools"
+title: "Fish Protection Tools"
 output: 
   html_document:
     css: style.css
@@ -16,9 +16,6 @@ output:
   ga('send', 'pageview');
 
 </script>
-
-<!-- Favicon -->
-<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
 
 
 The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. This website predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf). The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval.
@@ -41,4 +38,3 @@ The <b>Swim Speed & Swim Time tool</b> and the <b>Swim Distance & Water Velocity
 <br>
 
 The <b>End-of-Pipe Fish Screen tool</b> calculates the screen area required to prevent impingement of 97.5% of fish based on species, length and the amount of time required for a fish to escape the face of the screen. The tool specifically estimates the required Open Screen Area which is simply the area of all open spaces on the screen available for the free flow of water.
-

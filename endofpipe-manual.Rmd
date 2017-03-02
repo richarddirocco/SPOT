@@ -1,0 +1,50 @@
+---
+title: "Manual: End-of-Pipe Screen Size Tool"
+output: 
+  html_document:
+    css: style.css
+    theme: cosmo
+---
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+The [End-of-Pipe Screen Size tool](http://34.193.104.83/endofpipe-tool.html) is used to calculate the required Open Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. Open screen area is the amount of area available for the free flow of water. It does not include the space obstructed by the screen mesh or any supports. 
+
+##Question
+
+A proponent wishes to withdraw water at a rate of 100 L/s from a nearby pond. The pond supports populations of brown trout, brook trout, and American eel. How much open screen area is required?
+
+##Steps
+
+
+1.  Go to the Select the [End-of-Pipe Screen Size](http://34.193.104.83/endofpipe-tool.html).
+2.	Below “Select Fish by:”, click the “Group” radio button.
+3.	Below “Select groups:”, check the “Eel” and “Salmon & Walleye” boxes.
+4.	Leave the “Fish length” slider at the default value of 25 mm.
+5.	Leave the “Time” slider at the default value of 10 min.
+6.	Drag the “Flow rate:” slider to 100 L/s. 
+
+
+Once these steps are completed, the tool should look like this:
+
+<iframe src=http://34.193.104.83/endofpipe/?_inputs_&CatfishSunfish=false&Eel=true&EoP_CName=%22Brook%20trout%22&EoP_flowrate=100&EoP_l=25&EoP_Selecter=%220%22&EoP_SName=%22Salvelinus%20fontinalis%22&EoP_time=10&Herring=false&Pike=false&SalmonWalleye=true&Sturgeon=false" width="100%" height="900px" style="border:none"></iframe>
+
+##Solution
+
+The end-of-pipe screen requires an open area of 2.87 m<sup>2</sup>.  
+
+##Additional information
+
+Read the draft [Freshwater Intake End-of-Pipe Fish Screen Guideline](http://34.193.104.83/endofpipe-guideline.html) for more information on end-of-pipe screens. This tool allows the for much more control than previously possible through the [1995 guideline](http://www.dfo-mpo.gc.ca/Library/223669.pdf) including the ability to change the amount of time required for a fish to escape the face of a screen. Caution should be used when decreasing this variable from the default value of 10 minutes.
+
+The end-of-pipe screen size tool can be used to calculate the open screen area needed to prevent most entrainment and impingement with no information other than the intake flow rate. To do this, ensure all groups are selected and the fish length is set to 25 mm. Enter the intake flow and the open screen area will prevent nearly all fish larger than 25 mm from being entrained or impinged at that water intake. It is important to remember that these screens do little to protect plankton, such as early life-stage fish, from becoming entrained or impinged. 

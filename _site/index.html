@@ -11,7 +11,7 @@
 
 
 
-<title>Fisheries Protection Program Tools</title>
+<title>Fish Protection Tools</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -172,17 +172,25 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Fisheries Protection Program Tools</a>
+      <a class="navbar-brand" href="index.html">Fish Protection Tools</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="speedtime.html">Swim Speed & Swim Time</a></li>
         <li><a href="distancevelocity.html">Swim Distance & Water Velocity</a></li>
-                <li class="dropdown">
+        <li><a href="lengthmaturity.html">Length at Maturity</a></li>
+        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">End-of-Pipe Screen <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="endofpipe-guideline.html">Draft Guideline</a></li>
             <li><a href="endofpipe-tool.html">Screen Size Calculator</a></li>
+          </ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="speedtime-manual.html">Swim Speed & Swim Time</a></li>
+            <li><a href="distancevelocity-manual.html">Swim Distance & Water Velocity</a></li>
+            <li><a href="endofpipe-manual.html">Screen Size Calculator</a></li>
           </ul>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -196,7 +204,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Fisheries Protection Program Tools</h1>
+<h1 class="title toc-ignore">Fish Protection Tools</h1>
 
 </div>
 
@@ -212,8 +220,6 @@ $(document).ready(function () {
   ga('send', 'pageview');
 
 </script>
-<!-- Favicon -->
-<p><link rel="shortcut icon" type="image/png" href="favicon.ico"/></p>
 <p>The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. This website predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>. The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval.</p>
 <p>Three tools have been built using the modeled data:</p>
 <ul>

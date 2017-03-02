@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Manual: End-of-Pipe Screen Size Tool</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -204,13 +204,50 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Manual: End-of-Pipe Screen Size Tool</h1>
 
 </div>
 
 
-<!-- Favicon -->
-<p><link rel="shortcut icon" type="image/png" href="favicon.ico"/></p>
-<p><br> <iframe src="http://34.193.104.83/endofpipe/" width="100%" height="1500px" style="border:none"></iframe></p>
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<p>The <a href="http://34.193.104.83/endofpipe-tool.html">End-of-Pipe Screen Size tool</a> is used to calculate the required Open Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. Open screen area is the amount of area available for the free flow of water. It does not include the space obstructed by the screen mesh or any supports.</p>
+<div id="question" class="section level2">
+<h2>Question</h2>
+<p>A proponent wishes to withdraw water at a rate of 100 L/s from a nearby pond. The pond supports populations of brown trout, brook trout, and American eel. How much open screen area is required?</p>
+</div>
+<div id="steps" class="section level2">
+<h2>Steps</h2>
+<ol style="list-style-type: decimal">
+<li>Go to the Select the <a href="http://34.193.104.83/endofpipe-tool.html">End-of-Pipe Screen Size</a>.</li>
+<li>Below “Select Fish by:”, click the “Group” radio button.</li>
+<li>Below “Select groups:”, check the “Eel” and “Salmon &amp; Walleye” boxes.</li>
+<li>Leave the “Fish length” slider at the default value of 25 mm.</li>
+<li>Leave the “Time” slider at the default value of 10 min.</li>
+<li>Drag the “Flow rate:” slider to 100 L/s.</li>
+</ol>
+<p>Once these steps are completed, the tool should look like this:</p>
+<iframe src="http://34.193.104.83/endofpipe/?_inputs_&amp;CatfishSunfish=false&amp;Eel=true&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=100&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Herring=false&amp;Pike=false&amp;SalmonWalleye=true&amp;Sturgeon=false&quot;" width="100%" height="900px" style="border:none">
+</iframe>
+</div>
+<div id="solution" class="section level2">
+<h2>Solution</h2>
+<p>The end-of-pipe screen requires an open area of 2.87 m<sup>2</sup>.</p>
+</div>
+<div id="additional-information" class="section level2">
+<h2>Additional information</h2>
+<p>Read the draft <a href="http://34.193.104.83/endofpipe-guideline.html">Freshwater Intake End-of-Pipe Fish Screen Guideline</a> for more information on end-of-pipe screens. This tool allows the for much more control than previously possible through the <a href="http://www.dfo-mpo.gc.ca/Library/223669.pdf">1995 guideline</a> including the ability to change the amount of time required for a fish to escape the face of a screen. Caution should be used when decreasing this variable from the default value of 10 minutes.</p>
+<p>The end-of-pipe screen size tool can be used to calculate the open screen area needed to prevent most entrainment and impingement with no information other than the intake flow rate. To do this, ensure all groups are selected and the fish length is set to 25 mm. Enter the intake flow and the open screen area will prevent nearly all fish larger than 25 mm from being entrained or impinged at that water intake. It is important to remember that these screens do little to protect plankton, such as early life-stage fish, from becoming entrained or impinged.</p>
+</div>
 
 
 
