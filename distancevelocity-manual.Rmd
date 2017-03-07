@@ -18,7 +18,11 @@ output:
 
 </script>
 
-The [Swim Distance &amp; Water Velocity tool](http://34.193.104.83/distancevelocity.html) generates a plot showing swim distance versus water velocity. The plot is dynamically generated based on the fish species/group and the length selected. This tool uses the models described in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf). In this guide, a sample problem will be answered using this tool.
+## Background
+
+The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The [Swim Distance &amp; Water Velocity tool](http://www.fishprotectiontools.ca/distancevelocity.html) generates a plot showing swim distance versus water velocity using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf). The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval.
+
+In this manual, a sample question will be answered using this tool.
 
 ##Question
 
@@ -27,7 +31,7 @@ A proponent wishes to install a 30 meter culvert. What is the maximum water velo
 ##Steps
 
 
-1.  Go to the [Swim Speed &amp; Swim Time tool](http://34.193.104.83/distancevelocity.html).
+1.  Go to the [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/distancevelocity.html).
 2.	Below “Select Fish by:”, click the “Common name” radio button.
 3.	In the “Select species” drop down menu, choose “Northern Pike”.
 4.	Drag the “Fish length” slider to 400 mm.
@@ -38,7 +42,7 @@ A proponent wishes to install a 30 meter culvert. What is the maximum water velo
 Once these steps are completed, the tool should look like this:
 
 
-<iframe src=http://34.193.104.83/distancevelocity/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Northern%20pike%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true" width="100%" height="600px" style="border:none"></iframe>
+<iframe src=http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Northern%20pike%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true" width="100%" height="650px" style="border:none"></iframe>
 
 ##Solution
 

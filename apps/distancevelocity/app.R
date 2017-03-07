@@ -47,6 +47,11 @@ ui <- function(request){
                     sidebarLayout(
                         sidebarPanel(
                           
+                          helpText(
+                            "Need help? Visit the ",
+                            a(href="http://www.fishprotectiontools.ca/distancevelocity-manual.html",target="_blank", "Manual"), align = "center"
+                          ),
+                          
                           radioButtons("VvD_Selecter", label = "Select fish by:",
                                        choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0),
                           

@@ -1,7 +1,7 @@
 ---
 title: '[DRAFT] Freshwater Intake End-of-Pipe Fish Screen Guideline'
-author: "Fisheries and Oceans Canada"
-date: "2017"
+#author: "Fisheries and Oceans Canada"
+#date: "2017"
 bibliography: bibliography.bib
 csl: CJFAS.csl
 output: 

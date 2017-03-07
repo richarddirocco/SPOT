@@ -23,7 +23,7 @@ MaturityData <- MaturityData[!with(MaturityData,is.na(Lm) & is.na(LengthMatMin))
 # Add common names to dataframe
 MaturityData$comname <- SpeciesList$CommonName[match(MaturityData$sciname,SpeciesList$ScientificName)]
 
-#import list of countries and their respective country_codes
+# Import list of countries and their respective country_codes
 CountryCodes <- read.csv("~/RMarkdownWebsite/apps/lengthmaturity/Country_Codes.csv", stringsAsFactors = FALSE)
 
 # Replace country codes with country names
@@ -40,7 +40,7 @@ MaturityData <- MaturityData[,c("sciname","comname","Sex","LengthMatMin","Lm", "
 MaturityData$LengthMatRef <- paste0("<a href=http://fishbase.us/references/ReferencesList.php?Author=&Year=&Title=&Source=&RefNo=",MaturityData$LengthMatRef," target='_blank' >Reference</a>")
 
 # Rename columns
-colnames(MaturityData) <- c("ScientificName", "CommonName", "Sex", "Minimum length at first maturity", "Mean length at first maturity (Lm)", "Measurement", "Country", "Locality", "Reference")
+colnames(MaturityData) <- c("ScientificName", "CommonName", "Sex", "Minimum length at first maturity", "Mean length at first maturity (Lm)", "Measurement type", "Country", "Locality", "Reference")
 
 # Create function to make first letter uppercase
 # From: http://stackoverflow.com/questions/18509527/first-letter-to-upper-case
@@ -52,11 +52,16 @@ firstup <- function(x) {
 MaturityData$Sex <- firstup(MaturityData$Sex)
 MaturityData$Locality <- firstup(MaturityData$Locality)
 
-
-# Write CSV in R
-write.csv(MaturityData, file = "~/RMarkdownWebsite/apps/lengthmaturity/MaturityData.csv")
-
-# Create an archive CSV
+#Get current date for archive and name file
 CurrentDate <- Sys.Date()
 csvFileName <- paste("~/RMarkdownWebsite/apps/lengthmaturity/ArchivedData/MaturityData_",CurrentDate,".csv",sep="") 
-write.csv(MaturityData, file = csvFileName)
+
+# Use if statement to make sure the dataframe isn't empty
+if(nrow(MaturityData) > 200){
+  # Write CSV and make it available for length at maturity app
+  write.csv(MaturityData, file = "~/RMarkdownWebsite/apps/lengthmaturity/MaturityData.csv")
+  # Write CSV and place it in the archive
+  write.csv(MaturityData, file = csvFileName)
+}
+
+

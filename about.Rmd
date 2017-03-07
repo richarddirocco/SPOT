@@ -1,5 +1,6 @@
 ---
 title: "About This Website"
+bibliography: bibliography.bib
 output: 
   html_document:
     css: style.css
@@ -18,7 +19,15 @@ output:
 
 </script>
 
-<!-- Favicon -->
-<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+<br>
 
-This website hosts prototype tools built for the Central & Arctic Region's <a href='http://www.dfo-mpo.gc.ca/pnw-ppe/fpp-ppp/index-eng.html'> Fisheries Protection Program</a>. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in  <a href='https://www.r-project.org/' target='_blank'>R</a> using the <a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a>, <a href='http://ggplot2.org/' target='_blank'> ggplot2</a>, and <a href="http://rmarkdown.rstudio.com/" target='_blank'> R Markdown</a> packages. This website is still in development and bugs/suggestions should be sent <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.
+This website hosts prototype tools built for the Central & Arctic Region's <a href='http://www.dfo-mpo.gc.ca/pnw-ppe/fpp-ppp/index-eng.html'> Fisheries Protection Program</a>. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in  <a href='https://www.r-project.org/' target='_blank'>R</a> [@R] using the following packages:
+
+* <a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a> [@shiny]
+* <a href='http://ggplot2.org/' target='_blank'> ggplot2</a> [@ggplot2]
+* <a href='http://rmarkdown.rstudio.com/' target='_blank'>R Markdown</a> [@rmarkdown]
+* <a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a> [@rfishbase]
+
+This website is still in development and bugs/suggestions should be sent <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.
+
+### References

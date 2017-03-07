@@ -220,7 +220,11 @@ $(document).ready(function () {
   ga('send', 'pageview');
 
 </script>
-<p>The <a href="http://34.193.104.83/speedtime.html">Swim Speed &amp; Swim Time tool</a> generates a plot showing swim speed versus swim time. The plot is dynamically generated based on the fish species/group and the length selected. This tool uses the models described in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>. In this guide, a sample problem will be answered using this tool.</p>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The <a href="http://www.fishprotectiontools.ca/speedtime.html">Swim Speed &amp; Swim Time tool</a> generates a plot showing swim speed versus swim time using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>. The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval.</p>
+<p>In this manual, a sample problem will be answered using this tool.</p>
+</div>
 <div id="question" class="section level2">
 <h2>Question</h2>
 <p>How long can the average 250 mm rainbow trout swim 1 m/s?</p>
@@ -228,7 +232,7 @@ $(document).ready(function () {
 <div id="steps" class="section level2">
 <h2>Steps</h2>
 <ol style="list-style-type: decimal">
-<li>Go to the <a href="http://34.193.104.83/speedtime.html">Swim Speed &amp; Swim Time tool</a>.</li>
+<li>Go to the <a href="http://www.fishprotectiontools.ca/speedtime.html">Swim Speed &amp; Swim Time tool</a>.</li>
 <li>Below “Select Fish by:”, click the “Common name” radio button.</li>
 <li>In the “Select species” drop down menu, choose “Rainbow or Steelhead trout”.</li>
 <li>Drag the “Fish length” slider to 250 mm.</li>
@@ -236,7 +240,7 @@ $(document).ready(function () {
 <li>Enter “1” in the “Swim speed” box.</li>
 </ol>
 <p>Once these steps are completed, the tool should look like this:</p>
-<iframe src="http://34.193.104.83/speedtime/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Rainbow%20or%20Steelhead%20trout%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true&quot;" width="100%" height="600px" style="border:none">
+<iframe src="http://www.fishprotectiontools.ca/speedtime/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Rainbow%20or%20Steelhead%20trout%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true&quot;" width="100%" height="650px" style="border:none">
 </iframe>
 </div>
 <div id="solution" class="section level2">

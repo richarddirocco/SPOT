@@ -46,7 +46,10 @@ ui <- function(request){
   tags$head(tags$link(rel="shortcut icon", href="favicon.ico")),
                       sidebarLayout(
                         sidebarPanel(
-                          helpText("This tool calculates the screen area required to prevent impingement of 97.5% of fish based on the factors below."),
+                          helpText(
+                            "Need help? Visit the ",
+                            a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
+                          ),
                           radioButtons("EoP_Selecter", label = "Select fish by:",
                                        choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0),
                           

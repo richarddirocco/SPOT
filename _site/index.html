@@ -220,14 +220,21 @@ $(document).ready(function () {
   ga('send', 'pageview');
 
 </script>
-<p>The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. This website predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>. The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval.</p>
-<p>Three tools have been built using the modeled data:</p>
+<h3>
+<center>
+<span style="color:red">Please update your bookmark to the new domain name: <a href="http://fishprotectiontools.ca/" class="uri">http://fishprotectiontools.ca/</a></span>
+</center>
+</h3>
+<p><br></p>
+<p>The objective of this website is to host tools which can be used to protect fish. These interactive web based tools can perform complex calculations reliably and automatically. The estimates provided by these tools could be useful in the development and design of fish passage, exclusion, and guidance systems.</p>
+<div id="swim-speed-swim-time-tool" class="section level2">
+<h2>Swim Speed &amp; Swim Time Tool</h2>
+<p>The <a href="http://www.fishprotectiontools.ca/speedtime.html">Swim Speed &amp; Swim Time Tool</a> generates a plot showing swim speed versus swim time and allows one to be estimating using the other (see Figure 1). This tool requires the fish species/group and the fish length to perform the calculations. This tool can be used to answer questions like:</p>
 <ul>
-<li>Swim Speed &amp; Swim Time</li>
-<li>Swim Distance &amp; Water Velocity</li>
-<li>End-of-Pipe Screen Size</li>
+<li>How long can a 100 mm white sucker maintain a swim speed of 0.5 m/s?</li>
+<li>How fast can a 200 mm rainbow trout swim for 5 minutes??</li>
 </ul>
-<p>The <b>Swim Speed &amp; Swim Time tool</b> and the <b>Swim Distance &amp; Water Velocity tool</b> dynamically draw plots based on fish species and length selected by the user. Using the “calculate” button within either tool draws a black dotted line on the plot. At the locations where the black line intersects the prediction intervals, additional coloured lines are drawn on the plot (see Figure 1). The values corresponding to these locations are printed in the “Estimates” section below the plot area.</p>
+For more information on this tool and a sample problem, visit the <a href="http://www.fishprotectiontools.ca/speedtime-manual.html">Swim Speed &amp; Swim Time Tool Manual</a>.
 <center>
 <figure>
 <img src="Figures/SpeedTimePlot.png" width=500>
@@ -237,7 +244,24 @@ Figure 1. Sample plot from the Swim Speed &amp; Swim Time tool
 </figure>
 </center>
 <p><br></p>
-<p>The <b>End-of-Pipe Fish Screen tool</b> calculates the screen area required to prevent impingement of 97.5% of fish based on species, length and the amount of time required for a fish to escape the face of the screen. The tool specifically estimates the required Open Screen Area which is simply the area of all open spaces on the screen available for the free flow of water.</p>
+</div>
+<div id="swim-distance-water-velocity-tool" class="section level2">
+<h2>Swim Distance &amp; Water Velocity Tool</h2>
+<p>The <a href="http://www.fishprotectiontools.ca/distancevelocity.html">Swim Distance &amp; Water Velocity Tool</a> is very similar to the Swim Speed &amp; Swim Time Tool but it plots Swim Distance versus Water Velocity. This tool can be used to answer questions like:</p>
+<ul>
+<li>What is the maximum velocity a 1000 mm lake sturgeon could overcome when swimming 60 m?</li>
+<li>How far could a 150 mm Brook Trout swim in 0.5 m/s current?</li>
+</ul>
+<p>For more information on this tool and a sample problem, visit the <a href="http://www.fishprotectiontools.ca/distancevelocity-manual.html">Swim Distance &amp; Water Velocity Tool Manual</a>.</p>
+</div>
+<div id="length-at-maturity-tool" class="section level2">
+<h2>Length at Maturity Tool</h2>
+<p>The <a href="http://www.fishprotectiontools.ca/lengthmaturity.html">Length at Maturity Tool</a> can be used to look up the maturation data of a species. The tool provides a table of references with minimum and mean length at maturity. In situations where mature fish must pass an obstacle to complete their life cycle, the length at maturity may be helpful when estimating swimming performance using another tool on this site. For example, if migrating Atlantic salmon must pass a 30 meter culvert to reach spawning habitat, what fish length would be appropriate to use in the Swim Distance &amp; Water Velocity Tool?</p>
+</div>
+<div id="end-of-pipe-screen-size" class="section level2">
+<h2>End-of-Pipe Screen Size</h2>
+<p>The <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Fish Screen tool</a> calculates the screen area required at a water intake to prevent impingement of 97.5% of fish based on species, length and the amount of time required for a fish to escape the face of the screen. For more information on water intakes, see the draft <a href="http://www.fishprotectiontools.ca/endofpipe-guideline.html">Freshwater Intake End-of-Pipe Fish Screen Guideline</a>. There is additional information on the tool and a sample problem in the <a href="http://www.fishprotectiontools.ca/endofpipe-manual.html">End-of-Pipe Scree Size Tool Manual</a>.</p>
+</div>
 
 
 

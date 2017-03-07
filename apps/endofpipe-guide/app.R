@@ -48,6 +48,10 @@ ui <- function(request){
                       fluidRow(
                         wellPanel(
                         column(12,
+                          helpText(
+                             "Need help? Visit the ",
+                             a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
+                          ),
                           radioButtons("EoP_Selecter", label = "Select fish by:",
                                        choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0, inline=TRUE),
                           

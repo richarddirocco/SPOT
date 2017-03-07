@@ -220,7 +220,11 @@ $(document).ready(function () {
   ga('send', 'pageview');
 
 </script>
-<p>The <a href="http://34.193.104.83/distancevelocity.html">Swim Distance &amp; Water Velocity tool</a> generates a plot showing swim distance versus water velocity. The plot is dynamically generated based on the fish species/group and the length selected. This tool uses the models described in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>. In this guide, a sample problem will be answered using this tool.</p>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The <a href="http://www.fishprotectiontools.ca/distancevelocity.html">Swim Distance &amp; Water Velocity tool</a> generates a plot showing swim distance versus water velocity using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>. The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval.</p>
+<p>In this manual, a sample question will be answered using this tool.</p>
+</div>
 <div id="question" class="section level2">
 <h2>Question</h2>
 <p>A proponent wishes to install a 30 meter culvert. What is the maximum water velocity that 97.5% of 400 mm northern pike can pass through?</p>
@@ -228,7 +232,7 @@ $(document).ready(function () {
 <div id="steps" class="section level2">
 <h2>Steps</h2>
 <ol style="list-style-type: decimal">
-<li>Go to the <a href="http://34.193.104.83/distancevelocity.html">Swim Speed &amp; Swim Time tool</a>.</li>
+<li>Go to the <a href="http://www.fishprotectiontools.ca/distancevelocity.html">Swim Speed &amp; Swim Time tool</a>.</li>
 <li>Below “Select Fish by:”, click the “Common name” radio button.</li>
 <li>In the “Select species” drop down menu, choose “Northern Pike”.</li>
 <li>Drag the “Fish length” slider to 400 mm.</li>
@@ -236,7 +240,7 @@ $(document).ready(function () {
 <li>Enter “30” in the “Swim distance in meter:” box.</li>
 </ol>
 <p>Once these steps are completed, the tool should look like this:</p>
-<iframe src="http://34.193.104.83/distancevelocity/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Northern%20pike%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true&quot;" width="100%" height="600px" style="border:none">
+<iframe src="http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Northern%20pike%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true&quot;" width="100%" height="650px" style="border:none">
 </iframe>
 </div>
 <div id="solution" class="section level2">
