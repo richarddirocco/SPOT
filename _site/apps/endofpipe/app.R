@@ -88,7 +88,7 @@ ui <- function(request){
                           
                         ),    #close sidebarPanel
                         mainPanel(
-                          h1("End-of-Pipe Screen Size"),
+                          #h1("End-of-Pipe Screen Size"),
                           plotOutput("EoP_Plot", height = "auto"),
                           br(),
                           htmlOutput("EoP_Text"),

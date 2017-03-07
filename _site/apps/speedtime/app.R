@@ -94,7 +94,7 @@ ui <- function(request){
                                            checkboxInput("SSEst", label = "Plot estimates", value = TRUE))
                         ),
                         mainPanel(
-                          h1(textOutput("GroupTitle")),
+                          h2(textOutput("GroupTitle")),
                           plotOutput("Plot0", height = "auto"),
                           br(),
                           conditionalPanel("input.Calculate == '1'", 

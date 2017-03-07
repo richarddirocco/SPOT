@@ -95,7 +95,7 @@ ui <- function(request){
                         ),
                         
                         mainPanel(
-                          h1(textOutput("GroupTitle2")),        
+                          h2(textOutput("GroupTitle2")),        
                           plotOutput("Plot1", height = "auto"),
                           br(),                
                           conditionalPanel("input.Calculate2 == '1'", 
