@@ -40,8 +40,15 @@ How long can the average 250 mm rainbow trout swim 1 m/s?
 
 Once these steps are completed, the tool should look like this:
 
+<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/speedtime/?_inputs_&Calculate=%222%22&CName=%22Rainbow%20or%20Steelhead%20trout%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true" width="100%" frameBorder="0" scrolling="no"></iframe>
 
-<iframe src=http://www.fishprotectiontools.ca/speedtime/?_inputs_&Calculate=%222%22&CName=%22Rainbow%20or%20Steelhead%20trout%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true" width="100%" height="650px" style="border:none"></iframe>
+<!-- Load JS to automatically resize iframe depending on height of shiny app  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./JS/ie8.polyfils.min.js"></script>
+<script type="text/javascript" src="./JS/iframeResizer.min.js"></script>
+<script type="text/javascript">
+   iFrameResize({heightCalculationMethod: "lowestElement"});
+</script>
 
 ##Solution
 

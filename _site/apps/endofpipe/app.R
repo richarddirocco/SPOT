@@ -31,70 +31,53 @@ Flow <- seq(from=0, to=1, by=0.0005)
 ui <- function(request){
   (fluidPage(
   
-  #Add Google anaylytics script to track application usage
-  tags$head(includeScript("google-analytics.js")),
+  # Add script to resize iframe automatically
+  # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
+  tags$head(includeScript("iframeResizer.contentWindow.min.js")),
   
   theme = shinytheme("cosmo"),
   
-  #Logo title
-  # titlePanel(title=div(img(src='DFOwordmark.png', align = "right", width = 400), ""), windowTitle = "Fish Swimming Performance Tools"),
-  # br(),
-  # br(),
-  # br(),
-  
-  #add favicon
-  tags$head(tags$link(rel="shortcut icon", href="favicon.ico")),
-                      sidebarLayout(
-                        sidebarPanel(
-                          helpText(
-                            "Need help? Visit the ",
-                            a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
-                          ),
-                          radioButtons("EoP_Selecter", label = "Select fish by:",
-                                       choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0),
+  sidebarLayout(
+    sidebarPanel(
+      helpText("Need help? Visit the ",
+               a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
+      ),
+      
+      radioButtons("EoP_Selecter", label = "Select fish by:", choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0),
                           
-                          conditionalPanel("input.EoP_Selecter == '0'",
-                                           h5(strong("Select groups:")),
-                                           checkboxInput("CatfishSunfish",label = "Catfish & Sunfish", value = TRUE),
-                                           checkboxInput("Eel", label = "Eel", value = TRUE),
-                                           checkboxInput("Herring", label="Herring", value=TRUE),
-                                           checkboxInput("Pike", label="Pike", value =TRUE),
-                                           checkboxInput("SalmonWalleye", label = "Salmon & Walleye", value = TRUE),
-                                           checkboxInput("Sturgeon", label = "Sturgeon", value = TRUE)
-                          ),
+      conditionalPanel("input.EoP_Selecter == '0'",
+        h5(strong("Select groups:")),
+        checkboxInput("CatfishSunfish",label = "Catfish & Sunfish", value = TRUE),
+        checkboxInput("Eel", label = "Eel", value = TRUE),
+        checkboxInput("Herring", label="Herring", value=TRUE),
+        checkboxInput("Pike", label="Pike", value =TRUE),
+        checkboxInput("SalmonWalleye", label = "Salmon & Walleye", value = TRUE),
+        checkboxInput("Sturgeon", label = "Sturgeon", value = TRUE)
+      ),
                           
-                          conditionalPanel("input.EoP_Selecter == '1'",selectInput("EoP_CName", 
-                                                                                   label = "Select species",
-                                                                                   choices = sort(FishList$CommonName),
-                                                                                   selected = "Brook trout")),
+      conditionalPanel("input.EoP_Selecter == '1'",
+        selectInput("EoP_CName", label = "Select species", choices = sort(FishList$CommonName), selected = "Brook trout")),
                           
-                          conditionalPanel("input.EoP_Selecter == '2'",selectInput("EoP_SName", 
-                                                                                   label = "Select species",
-                                                                                   choices = sort(FishList$ScientificName),
-                                                                                   selected = "Salvelinus fontinalis")),
-                          sliderInput("EoP_l", 
-                                      label = "Fish length (mm):",
-                                      min = 25, max = 1000, value = 2.5, step = 5),
+      conditionalPanel("input.EoP_Selecter == '2'",
+        selectInput("EoP_SName", label = "Select species", choices = sort(FishList$ScientificName), selected = "Salvelinus fontinalis")),
+      
+      sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, value = 2.5, step = 5),
                           
+      sliderInput("EoP_time", label = "Time (min):", min = 1, max = 30, value = 10, step = 0.5),
+      
+      helpText("Description: The amount of time required for a fish to escape the face of the screen (default: 10 min)."),
+      
+      numericInput("EoP_flowrate", label = "Intake flow rate (L/s):", min = 0, max = 1000, value = 0, step = 0.5)
                           
-                          sliderInput("EoP_time", 
-                                      label = "Time (min):",
-                                      min = 1, max = 30, value = 10, step = 0.5),
-                          helpText("Description: The amount of time required for a fish to escape the face of the screen (default: 10 min)."),
-                          
-                          numericInput("EoP_flowrate", 
-                                      label = "Intake flow rate (L/s):",
-                                      min = 0, max = 1000, value = 0, step = 0.5)
-                          
-                        ),    #close sidebarPanel
-                        mainPanel(
-                          #h1("End-of-Pipe Screen Size"),
-                          plotOutput("EoP_Plot", height = "auto"),
-                          br(),
-                          htmlOutput("EoP_Text"),
-                          align = "center"
-                        )    #close mainpanel
-                      )      #close sidebarLayout
+    ),    #close sidebarPanel
+    
+    mainPanel(
+      plotOutput("EoP_Plot", height = "auto"),
+      br(),
+      htmlOutput("EoP_Text"),
+      align = "center"
+    )    #close mainpanel
+  )      #close sidebarLayout
 ))}       #close fluidpage
 
 

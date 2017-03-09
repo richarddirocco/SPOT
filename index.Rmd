@@ -29,7 +29,7 @@ The [Swim Speed & Swim Time Tool](http://www.fishprotectiontools.ca/speedtime.ht
 
 
 * How long can a 100 mm white sucker maintain a swim speed of 0.5 m/s?
-* How fast can a 200 mm rainbow trout swim for 5 minutes??
+* How fast can a 200 mm rainbow trout swim for 5 minutes?
 
 For more information on this tool and a sample problem, visit the [Swim Speed & Swim Time Tool Manual](http://www.fishprotectiontools.ca/speedtime-manual.html).
 <center>

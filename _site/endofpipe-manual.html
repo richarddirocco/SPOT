@@ -240,8 +240,15 @@ $(document).ready(function () {
 <li>Drag the “Flow rate:” slider to 100 L/s.</li>
 </ol>
 <p>Once these steps are completed, the tool should look like this:</p>
-<iframe src="http://www.fishprotectiontools.ca/endofpipe/?_inputs_&amp;CatfishSunfish=false&amp;Eel=true&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=100&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Herring=false&amp;Pike=false&amp;SalmonWalleye=true&amp;Sturgeon=false&quot;" width="100%" height="900px" style="border:none">
+<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/endofpipe/?_inputs_&amp;CatfishSunfish=false&amp;Eel=true&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=100&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Herring=false&amp;Pike=false&amp;SalmonWalleye=true&amp;Sturgeon=false" width="100%" frameBorder="0" scrolling="no">
 </iframe>
+<!-- Load JS to automatically resize iframe depending on height of shiny app  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./JS/ie8.polyfils.min.js"></script>
+<script type="text/javascript" src="./JS/iframeResizer.min.js"></script>
+<script type="text/javascript">
+   iFrameResize({heightCalculationMethod: "lowestElement"});
+</script>
 </div>
 <div id="solution" class="section level2">
 <h2>Solution</h2>

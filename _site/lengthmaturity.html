@@ -211,6 +211,15 @@ $(document).ready(function () {
 
 <iframe src="http://www.fishprotectiontools.ca/lengthmaturity/" width="100%" height="3000px" style="border:none">
 </iframe>
+<iframe id="nestedIFrame" src http: www.fishprotectiontools.ca lengthmaturity " width="100%" frameBorder="0" scrolling="no">
+</iframe>
+<!-- Load JS to automatically resize iframe depending on height of shiny app  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./JS/ie8.polyfils.min.js"></script>
+<script type="text/javascript" src="./JS/iframeResizer.min.js"></script>
+<script type="text/javascript">
+   iFrameResize({heightCalculationMethod: "lowestElement"});
+</script>
 
 
 

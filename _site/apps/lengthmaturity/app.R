@@ -28,7 +28,9 @@ MaturityData$Mean.length.at.first.maturity..Lm. <- MaturityData$Mean.length.at.f
 
 ui <- fluidPage(
   
-  tags$body(tags$script(src="iframeResizer.contentWindow.min.js")),
+  # Add script to resize iframe automatically
+  # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
+  tags$head(includeScript("iframeResizer.contentWindow.min.js")),
   
   # Set theme
   theme = shinytheme("cosmo"),

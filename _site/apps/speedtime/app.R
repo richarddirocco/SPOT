@@ -31,92 +31,74 @@ Flow <- seq(from=0, to=1, by=0.0005)
 ui <- function(request){
   (fluidPage(
   
-  #Add Google anaylytics script to track application usage
-  tags$head(includeScript("google-analytics.js")),
+  # Add script to resize iframe automatically
+  # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
+  tags$head(includeScript("iframeResizer.contentWindow.min.js")),
   
   theme = shinytheme("cosmo"),
-  
-  #Logo title
-  # titlePanel(title=div(img(src='DFOwordmark.png', align = "right", width = 400), ""), windowTitle = "Fish Swimming Performance Tools"),
-  # br(),
-  # br(),
-  # br(),
-  
-  #add favicon
-  tags$head(tags$link(rel="shortcut icon", href="favicon.ico")),
-  
+
   sidebarLayout(
-                        sidebarPanel(
+    sidebarPanel(
                           
-                          helpText(
-                            "Need help? Visit the ",
-                            a(href="http://www.fishprotectiontools.ca/speedtime-manual.html",target="_blank", "Manual"), align = "center"
-                          ),
+      helpText("Need help? Visit the ",
+               a(href="http://www.fishprotectiontools.ca/speedtime-manual.html",target="_blank", "Manual"), align = "center"
+      ),
                           
-                          radioButtons("Selecter", label = "Select fish by:",
-                                       choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0),
+      radioButtons("Selecter", label = "Select fish by:", choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0),
                           
-                          conditionalPanel("input.Selecter == '0'",selectInput("Group", 
-                                                                               label = "Select group",
-                                                                               choices = list("Catfish & Sunfish", "Eel", "Herring", "Salmon & Walleye", "Sturgeon", "Pike (derived)"),
+      conditionalPanel("input.Selecter == '0'",
+          selectInput("Group", label = "Select group",
+                      choices = list("Catfish & Sunfish", "Eel", "Herring", "Salmon & Walleye", "Sturgeon", "Pike (derived)"),
                                                                                selected = "Salmon & Walleye")),
                           
-                          conditionalPanel("input.Selecter == '1'",selectInput("CName", 
-                                                                               label = "Select species",
-                                                                               choices = sort(FishList$CommonName),
-                                                                               selected = "Brook trout")),
+      conditionalPanel("input.Selecter == '1'",
+          selectInput("CName", label = "Select species",choices = sort(FishList$CommonName), selected = "Brook trout")),
                           
-                          conditionalPanel("input.Selecter == '2'",selectInput("SName", 
-                                                                               label = "Select species",
-                                                                               choices = sort(FishList$ScientificName),
-                                                                               selected = "Salvelinus fontinalis")),
-                          sliderInput("l", 
-                                      label = "Fish length (mm):",
-                                      min = 25, max = 1000, value = c(2.5), step = 5),
+      conditionalPanel("input.Selecter == '2'",
+          selectInput("SName", label = "Select species",choices = sort(FishList$ScientificName),selected = "Salvelinus fontinalis")),
+
+      sliderInput("l", label = "Fish length (mm):", min = 25, max = 1000, value = c(2.5), step = 5),
                           
-                          radioButtons("Calculate", label = "Calculations:",
-                                       choices = list("None" = 0, "Swim speed" = 1, "Swim time" = 2)),
+      radioButtons("Calculate", label = "Calculations:", choices = list("None" = 0, "Swim speed" = 1, "Swim time" = 2)),
                           
-                          conditionalPanel("input.Calculate == '1'",
-                                           textInput("ST", 
-                                                     label = "Swim time in seconds (3-1800):",
-                                                     value = "600")),
+      conditionalPanel("input.Calculate == '1'",
+          textInput("ST", label = "Swim time in seconds (3-1800):", value = "600")),
                           
-                          conditionalPanel("input.Calculate == '1'",
-                                           checkboxInput("STEst", label = "Plot estimates", value = TRUE)),
+      conditionalPanel("input.Calculate == '1'",
+          checkboxInput("STEst", label = "Plot estimates", value = TRUE)),
                           
-                          conditionalPanel("input.Calculate == '2'",
-                                           textInput("SS", 
-                                                     label = "Swim speed in m/s",
-                                                     value = "0.3")),
+      conditionalPanel("input.Calculate == '2'",
+          textInput("SS", label = "Swim speed in m/s", value = "0.3")),
                           
-                          conditionalPanel("input.Calculate == '2'",
-                                           checkboxInput("SSEst", label = "Plot estimates", value = TRUE))
-                        ),
-                        mainPanel(
-                          h2(textOutput("GroupTitle")),
-                          plotOutput("Plot0", height = "auto"),
-                          br(),
-                          conditionalPanel("input.Calculate == '1'", 
-                                           h2("Estimates"),
-                                           textOutput("SpeedText5"),
-                                           textOutput("SpeedText25"),
-                                           textOutput("SpeedText50"),
-                                           textOutput("SpeedText75"),
-                                           textOutput("SpeedText95"),br(),br()
-                          ),
-                          conditionalPanel("input.Calculate == '2'", 
-                                           h2("Estimates"),
-                                           textOutput("TimeText5"),
-                                           textOutput("TimeText25"),
-                                           textOutput("TimeText50"),
-                                           textOutput("TimeText75"),
-                                           textOutput("TimeText95"),br(),br()
-                          ),
-                          align = "center"
-                        )    #close mainPanel
-                      )     #close sidebarLayout
-))}       #close fluidpage
+      conditionalPanel("input.Calculate == '2'",
+          checkboxInput("SSEst", label = "Plot estimates", value = TRUE))
+    ), # Close sidebarPanel
+    
+    mainPanel(
+      h2(textOutput("GroupTitle")),
+      plotOutput("Plot0", height = "auto"),
+      br(),
+      conditionalPanel("input.Calculate == '1'", 
+          h2("Estimates"),
+          textOutput("SpeedText5"),
+          textOutput("SpeedText25"),
+          textOutput("SpeedText50"),
+          textOutput("SpeedText75"),
+          textOutput("SpeedText95"),br(),br()
+      ),
+      conditionalPanel("input.Calculate == '2'", 
+          h2("Estimates"),
+          textOutput("TimeText5"),
+          textOutput("TimeText25"),
+          textOutput("TimeText50"),
+          textOutput("TimeText75"),
+          textOutput("TimeText95"),br(),br()
+      ),
+      align = "center"
+    )   # Close mainPanel
+  )     # Close sidebarLayout
+))      # Close fluidpage
+}       # Close UI
 
 
 

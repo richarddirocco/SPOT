@@ -32,19 +32,8 @@ Flow <- seq(from=0, to=1, by=0.0005)
 ui <- function(request){
   (fluidPage(
   
-  #Add Google anaylytics script to track application usage
-  tags$head(includeScript("/home/rdirocco/MainShinyPage/rmarkdown/app_endofpipe/google-analytics.js")),
-  
   theme = shinytheme("cosmo"),
   
-  #Logo title
-  # titlePanel(title=div(img(src='DFOwordmark.png', align = "right", width = 400), ""), windowTitle = "Fish Swimming Performance Tools"),
-  # br(),
-  # br(),
-  # br(),
-  
-  #add favicon
-  tags$head(tags$link(rel="shortcut icon", href="favicon.ico")),
                       fluidRow(
                         wellPanel(
                         column(12,

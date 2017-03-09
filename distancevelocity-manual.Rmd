@@ -41,8 +41,16 @@ A proponent wishes to install a 30 meter culvert. What is the maximum water velo
 
 Once these steps are completed, the tool should look like this:
 
+<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Northern%20pike%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true" width="100%" frameBorder="0" scrolling="no"></iframe>
 
-<iframe src=http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Northern%20pike%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true" width="100%" height="650px" style="border:none"></iframe>
+<!-- Load JS to automatically resize iframe depending on height of shiny app  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./JS/ie8.polyfils.min.js"></script>
+<script type="text/javascript" src="./JS/iframeResizer.min.js"></script>
+<script type="text/javascript">
+   iFrameResize({heightCalculationMethod: "lowestElement"});
+</script>
+
 
 ##Solution
 
