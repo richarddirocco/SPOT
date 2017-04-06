@@ -17,10 +17,7 @@ output:
 
 </script>
 
-
-<h3><center><span style="color:red">Please update your bookmark to the new domain name: http://fishprotectiontools.ca/</span></center></h3>
 <br>
-
 The objective of this website is to host tools which can be used to protect fish. These interactive web based tools can perform complex calculations reliably and automatically. The estimates provided by these tools could be useful in the development and design of fish passage, exclusion, and guidance systems. 
 
 ## Swim Speed & Swim Time Tool

@@ -31,9 +31,6 @@ Flow <- seq(from=0, to=1, by=0.0005)
 ui <- function(request){
   (fluidPage(
   
-  # Add Google anaylytics script to track application usage
-  tags$head(includeScript("google-analytics.js")),
-  
   # Add script to resize iframe automatically
   # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
   tags$head(includeScript("iframeResizer.contentWindow.min.js")),

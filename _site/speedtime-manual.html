@@ -258,6 +258,36 @@ $(document).ready(function () {
 <h2>Calculating swim speed</h2>
 <p>The tool can also be used to determine swim speed based on swim time. For example, select the “Swim speed” radio button below “Calculations” and enter 250 s into the “Swim time” box. The plot will update and show the average rainbow trout can swim 1 m/s for 250 s.</p>
 </div>
+<div id="manual-calculations" class="section level2">
+<h2>Manual calculations</h2>
+<p>The fish swimming performance models presented in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a> are potentially useful but required solving complex equations. The web tool reliably and quickly performs these calculations, reducing the likelihood of an erroneous result. In this section, the simplified equations from the report are displayed for reference.</p>
+<p>Fish swimming speed is calculated using the following formula:</p>
+<p><span class="math display">\[U = kt^b \sqrt{gl}\left(\frac{l}{g}\right)^{-b/2}\]</span> Where:</p>
+<ul>
+<li><em>U</em> is the fish swimming speed in m/s</li>
+<li><em>t</em> is endurance time in seconds and is limited from 3 to 1800 seconds</li>
+<li><em>g</em> is gravitational acceleration (9.81 m/s<sup>2</sup>)</li>
+<li><em>l</em> is fish length in meters</li>
+<li><em>k</em> and <em>b</em> are coefficients derived from Deming regression analysis
+<ul>
+<li>These values can be found in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a></li>
+</ul></li>
+</ul>
+<p>The formula can be rearranged to estimate time based on fish swimming speed:</p>
+<p><span class="math display">\[t = \left(\frac{U(l/g)^{b/2}}{k \sqrt{gl}}\right) ^{1/b} \]</span></p>
+</div>
+<div id="model-limitations" class="section level2">
+<h2>Model limitations</h2>
+<p>Some fish swimming performance groups had limited data available. This lack of data for certain groups may affect the estimated performance. These limitations are outlined below:</p>
+<ul>
+<li><strong>Catfish &amp; Sunfish</strong>: Limited data on burst range</li>
+<li><strong>Eel</strong>: Comprehensive data set</li>
+<li><strong>Herring</strong>: Lack of prolonged data</li>
+<li><strong>Salmon &amp; Walleye</strong>: Comprehensive data set</li>
+<li><strong>Sturgeon</strong>: Lack of burst data</li>
+<li><strong>Pike</strong>: Lack of burst data, curve derived by assuming burst performance is similar to Salmon &amp; Walleye and Eel groups</li>
+</ul>
+</div>
 
 
 

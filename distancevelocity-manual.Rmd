@@ -59,3 +59,41 @@ This culvert should not exceed a maximum water velocity of 0.35 m/s to allow pas
 ##Calculating swim distance
 
 The tool can also be used to determine swim distance based on water velocity. For example, select the "Swim distance" radio button below "Calculations" and enter 0.35 into the "Water velocity" box. The plot will update and show 97.5% of 400 mm Pike in 0.35 m/s current can swim 30 m. 
+
+##Manual calculations
+
+The fish swimming performance models presented in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf) are potentially useful but required solving complex equations. The web tool reliably and quickly performs these calculations, reducing the likelihood of an erroneous result. In this section, the simplified equations from the report are displayed for reference.
+
+First, calculate Swim Speed using this formula: 
+
+$$U = kt^b \sqrt{gl}\left(\frac{l}{g}\right)^{-b/2}$$
+
+Where:
+
+*   *U* is the fish swimming speed in m/s
+*   *t* is endurance time in seconds and is limited from 3 to 1800 seconds
+*   *g* is gravitational acceleration (9.81 m/s^2^)
+*   *l* is fish length in meters
+*   *k* and *b* are coefficients derived from Deming regression analysis
+    + These values can be found in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf)
+    
+Once Swim Speed *(U)* has been calculated, Distance *(X)* can be calculated using:
+
+$$X = M\left(\frac{ U(1+b)}{\sqrt{gl}} \right) ^a \times l$$
+Where *M* and *a* are coefficients derived from dimensionless speed vs. time regression. *M* and *a* are reported in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf).
+
+Alternatively, Swim Speed *(U)* can be converted to Water Velocity *(V)* in m/s using:
+
+$$ V = U(1+b) $$
+
+
+##Model limitations
+
+Some fish swimming performance groups had limited data available. This lack of data for certain groups may affect the estimated performance. These limitations are outlined below: 
+
+*   **Catfish & Sunfish**: Limited data on burst range
+*   **Eel**: Comprehensive data set
+*   **Herring**: Lack of prolonged data
+*   **Salmon & Walleye**: Comprehensive data set
+*   **Sturgeon**: Lack of burst data
+*   **Pike**: Lack of burst data, curve derived by assuming burst performance is similar to Salmon & Walleye and Eel groups
