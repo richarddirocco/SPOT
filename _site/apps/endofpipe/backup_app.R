@@ -2,7 +2,6 @@ library(shiny)
 library(shinythemes)
 library(ggplot2)
 library(scales)
-library(shinydashboard)
 
 #change plot fonts from defaults
 library(showtext)
@@ -12,12 +11,12 @@ showtext.auto()
 options(scipen=5)
 
 #import K and b values for each group of fish (used in equations)
-data <- read.csv("/home/rdirocco/MainShinyPage/rmarkdown/app_endofpipe/GroupVariables.csv")
+data <- read.csv("GroupVariables.csv")
 rownames(data)<-data$Group
 data$Group <- NULL
 
 #import list of common and scientific names and their respective lengths
-FishList <- read.csv("/home/rdirocco/MainShinyPage/rmarkdown/app_endofpipe/FishList.csv", stringsAsFactors=FALSE)
+FishList <- read.csv("FishList.csv", stringsAsFactors=FALSE)
 FishList$GroupName <- as.character(FishList$GroupName)
 
 Velocity = data.frame(seq(from=0.1, to=10, by=0.01))
@@ -32,67 +31,55 @@ Flow <- seq(from=0, to=1, by=0.0005)
 ui <- function(request){
   (fluidPage(
   
+  # Add script to resize iframe automatically
+  # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
+  tags$head(includeScript("iframeResizer.contentWindow.min.js")),
+  
   theme = shinytheme("cosmo"),
   
-                      fluidRow(
-                        wellPanel(
-                        column(12,
-                          helpText(
-                             "Need help? Visit the ",
-                             a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
-                          ),
-                          radioButtons("EoP_Selecter", label = "Select fish by:",
-                                       choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0, inline=TRUE),
+  sidebarLayout(
+    sidebarPanel(
+      helpText("Need help? Visit the ",
+               a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
+      ),
+      
+      radioButtons("EoP_Selecter", label = "Select fish by:", choices = list("All" = 4, "Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=4),
                           
-                          conditionalPanel("input.EoP_Selecter == '0'",
-                                           checkboxGroupInput(inputId = "SelectedGroups", label = "Selected groups:",
-                                                              choices = c("Catfish & Sunfish" = "CatfishSunfish", 
-                                                                          "Eel" = "Eel",
-                                                                          "Herring" = "Herring",
-                                                                          "Pike"= "Pike",
-                                                                          "Salmon & Walleye" = "SalmonWalleye",
-                                                                          "Sturgeon" = "Sturgeon"),
-                                                              selected = c("Catfish & Sunfish" = "CatfishSunfish", 
-                                                                           "Eel" = "Eel",
-                                                                           "Herring" = "Herring",
-                                                                           "Pike"= "Pike",
-                                                                           "Salmon & Walleye" = "SalmonWalleye",
-                                                                           "Sturgeon" = "Sturgeon"),
-                                                              inline = TRUE)
-                          ),
+      conditionalPanel("input.EoP_Selecter == '0'",
+        h5(strong("Select groups:")),
+        checkboxInput("CatfishSunfish",label = "Catfish & Sunfish", value = TRUE),
+        checkboxInput("Eel", label = "Eel", value = TRUE),
+        checkboxInput("Herring", label="Herring", value=TRUE),
+        checkboxInput("Pike", label="Pike", value =TRUE),
+        checkboxInput("SalmonWalleye", label = "Salmon & Walleye", value = TRUE),
+        checkboxInput("Sturgeon", label = "Sturgeon", value = TRUE)
+      ),
                           
-                          conditionalPanel("input.EoP_Selecter == '1'",selectInput("EoP_CName", 
-                                                                                   label = "Select species",
-                                                                                   choices = sort(FishList$CommonName),
-                                                                                   selected = "Brook trout")),
+      conditionalPanel("input.EoP_Selecter == '1'",
+        selectInput("EoP_CName", label = "Select species", choices = sort(FishList$CommonName), selected = "Brook trout")),
                           
-                          conditionalPanel("input.EoP_Selecter == '2'",selectInput("EoP_SName", 
-                                                                                   label = "Select species",
-                                                                                   choices = sort(FishList$ScientificName),
-                                                                                   selected = "Salvelinus fontinalis")),
-                          sliderInput("EoP_l", 
-                                      label = "Fish length (mm):",
-                                      min = 25, max = 1000, value = 2.5, step = 5),
+      conditionalPanel("input.EoP_Selecter == '2'",
+        selectInput("EoP_SName", label = "Select species", choices = sort(FishList$ScientificName), selected = "Salvelinus fontinalis")),
+      
+      sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, value = 2.5, step = 5),
                           
+      sliderInput("EoP_time", label = "Time to escape screen face (min):", min = 1, max = 30, value = 10, step = 0.5),
+      
+      # helpText("Description: The amount of time required for a fish to escape the face of the screen (default: 10 min)."),
+      
+      numericInput("EoP_flowrate", label = "Intake flow rate (L/s):", min = 0, max = 1000, value = 0, step = 0.5)
                           
-                          sliderInput("EoP_time", 
-                                      label = "Time (min):",
-                                      min = 1, max = 30, value = 10, step = 0.5),
-                          helpText("Description: The amount of time required for a fish to escape the face of the screen (default: 10 min)."),
-                          
-                          numericInput("EoP_flowrate", 
-                                      label = "Intake flow rate (L/s):",
-                                      min = 0, max = 1000, value = 0, step = 0.5),
-                        align = "center"  
-                        )),    #close sidebarPanel
-                        mainPanel(
-                          h1("End-of-Pipe Screen Size"),
-                          plotOutput("EoP_Plot", height = "auto"),
-                          br(),
-                          htmlOutput("EoP_Text"),
-                          align = "center"
-                        )    #close mainpanel
-                      )      #close sidebarLayout
+    ),    #close sidebarPanel
+    
+    mainPanel(
+      plotOutput("EoP_Plot", height = "auto"),
+      br(),
+      span(textOutput("Warning_Text"), style="color:red"),
+      br(),
+      htmlOutput("EoP_Text"),
+      align = "center"
+    )    #close mainpanel
+  )      #close sidebarLayout
 ))}       #close fluidpage
 
 
@@ -148,6 +135,8 @@ server <- function(input, output, session){
       tempGroup <- (FishList[which(FishList$CommonName==input$EoP_CName),"GroupName"])}
     if(input$EoP_Selecter==2){(
       tempGroup <-FishList[which(FishList$ScientificName==input$EoP_SName),"GroupName"])}
+    if(input$EoP_Selecter==4){
+      tempGroup <- 0}
     tempGroup
   })
   
@@ -159,11 +148,13 @@ server <- function(input, output, session){
       scale <- FishList[which(FishList$CommonName==input$EoP_CName),"MaxSize"]}
     if(input$EoP_Selecter==2){
       scale <- FishList[which(FishList$ScientificName==input$EoP_SName),"MaxSize"]}
+    if(input$EoP_Selecter==4){
+      scale <- 1500}
     updateSliderInput(session, "EoP_l", min = 25, max = scale)
   })
   
   #Create functions to determine swimming speed (m/s) based on time (seconds)
-  EoP_U    = function (t,EoP_Group){data[EoP_Group,"k"]*sqrt(g*input$EoP_l/1000)*((sqrt(input$EoP_l/1000/g))^-data[rounEoP_Group,"b"])*t^data[EoP_Group,"b"]}
+  EoP_U    = function (t,EoP_Group){data[EoP_Group,"k"]*sqrt(g*input$EoP_l/1000)*((sqrt(input$EoP_l/1000/g))^-data[EoP_Group,"b"])*t^data[EoP_Group,"b"]}
   EoP_U75U = function (t,EoP_Group){data[EoP_Group,"X75U_k"]*sqrt(g*input$EoP_l/1000)*((sqrt(input$EoP_l/1000/g))^-data[EoP_Group,"X75U_b"])*t^data[EoP_Group,"X75U_b"]}
   EoP_U75L = function (t,EoP_Group){data[EoP_Group,"X75L_k"]*sqrt(g*input$EoP_l/1000)*((sqrt(input$EoP_l/1000/g))^-data[EoP_Group,"X75L_b"])*t^data[EoP_Group,"X75L_b"]}
   EoP_U95U = function (t,EoP_Group){data[EoP_Group,"X95U_k"]*sqrt(g*input$EoP_l/1000)*((sqrt(input$EoP_l/1000/g))^-data[EoP_Group,"X95U_b"])*t^data[EoP_Group,"X95U_b"]}
@@ -200,47 +191,53 @@ server <- function(input, output, session){
   #find the worst performing group for flow caculation
   EoP_Worst <- reactive({
     EoP_Weakest = 0
-    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & "CatfishSunfish" %in% input$SelectedGroups==TRUE &
+    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & input$CatfishSunfish==TRUE &
        EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Catfish_Sunfish_Area"] > EoP_Weakest){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Catfish_Sunfish_Area"]}
-    
-    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & "Eel" %in% input$SelectedGroups==TRUE &
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Catfish_Sunfish_Area"]}
+    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & input$Eel==TRUE &
        EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Eel_Area"] > EoP_Weakest){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Eel_Area"]}
-    
-    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & "Herring" %in% input$SelectedGroups==TRUE &
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Eel_Area"]}
+    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & input$Herring==TRUE &
        EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Herring_Area"] > EoP_Weakest){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Herring_Area"]}
-    
-    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & "Pike" %in% input$SelectedGroups==TRUE &
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Herring_Area"]}
+    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & input$Pike==TRUE &
        EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Pike_Area"] > EoP_Weakest){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Pike_Area"]}
-    
-    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & "SalmonWalleye" %in% input$SelectedGroups==TRUE &
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Pike_Area"]}
+    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & input$SalmonWalleye==TRUE &
        EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Salmon_Walleye_Area"] > EoP_Weakest){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Salmon_Walleye_Area"]}
-    
-    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & "Sturgeon" %in% input$SelectedGroups==TRUE &
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Salmon_Walleye_Area"]}
+    if(input$EoP_Selecter == 0 & input$EoP_flowrate > 0 & input$Sturgeon==TRUE &
        EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Sturgeon_Area"] > EoP_Weakest){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Sturgeon_Area"]}
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Sturgeon_Area"]}
     if(input$EoP_Selecter>0 & input$EoP_flowrate>0 & EoP_Group() == "Catfish & Sunfish"){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Catfish_Sunfish_Area"]}
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Catfish_Sunfish_Area"]}
     if(input$EoP_Selecter>0 & input$EoP_flowrate>0 & EoP_Group() == "Eel"){ 
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Eel_Area"]}
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Eel_Area"]}
     if(input$EoP_Selecter>0 & input$EoP_flowrate>0 & EoP_Group() == "Herring"){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Herring_Area"]}
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Herring_Area"]}
     if(input$EoP_Selecter>0 & input$EoP_flowrate>0 & EoP_Group() == "Pike (derived)"){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Pike_Area"]}
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Pike_Area"]}
     if(input$EoP_Selecter>0 & input$EoP_flowrate>0 & EoP_Group() == "Salmon & Walleye"){
-      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Salmon_Walleye_Area"]}
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Salmon_Walleye_Area"]}
     if(input$EoP_Selecter>0 & input$EoP_flowrate>0 & EoP_Group() == "Sturgeon"){
       EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Sturgeon_Area"]}
+    if(input$EoP_Selecter == 4 & input$EoP_flowrate > 0){
+      EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Eel_Area"]}
+    if(input$EoP_Selecter == 4 & input$EoP_flowrate > 0 & 
+       EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Sturgeon_Area"] >EoP_Weakest){
+          EoP_Weakest <- EoP_PlotData()[which(EoP_PlotData()$Flow_l_per_s == input$EoP_flowrate), "Sturgeon_Area"]}
     EoP_Weakest
   })
   
   output$EoP_Text <- renderUI({
     if(input$EoP_flowrate >0 & input$EoP_flowrate <= 1000 & input$EoP_flowrate %% 0.5 == 0 & is.na(as.numeric(input$EoP_flowrate))==FALSE){HTML("97.5% of", input$EoP_l, "mm fish in ", input$EoP_flowrate, "L/s flow with", input$EoP_time, "minutes to escape the screen need an Open Screen Area of", round(EoP_Worst(),3), "m<sup>2</sup>")}})
   
+  output$Warning_Text <- renderText({
+    Warning_Text <- ""
+    if(input$EoP_time < 10){
+      Warning_Text <- paste("Warning: 10 minutes is the default time given for fish to escape the screen face and should not be lowered in most situations")}
+    Warning_Text
+  })
   
   
   EoP_Plot_X_Max <- reactive({
@@ -283,19 +280,27 @@ server <- function(input, output, session){
         scale_x_continuous(name = expression('Intake flow rate (L/s)'), expand = c(0,0) , limits = c(0,EoP_Plot_X_Max())) +
         scale_y_continuous(name = expression('Open Screen Area (m'^2*')'), expand = c(0,0), limits=c(0,EoP_Plot_Y_Max()), breaks = scales::pretty_breaks(n = 6))+
         
-        #draw Group lines if fish are selected by Groups
-        {if(input$EoP_Selecter==0 & "CatfishSunfish" %in% input$SelectedGroups==TRUE) 
+        #draw Group lines if fish are selected by All
+        {if(input$EoP_Selecter==4) 
           geom_line(aes(y= Catfish_Sunfish_Area, colour = "Catfish & Sunfish  "), size = 1)}+
-        {if(input$EoP_Selecter==0 & "Eel" %in% input$SelectedGroups==TRUE)
+        {if(input$EoP_Selecter==4) 
           geom_line(aes(y= Eel_Area, colour = "Eel  "), size = 1)}+
-        {if(input$EoP_Selecter==0 & "Herring" %in% input$SelectedGroups==TRUE)
+        {if(input$EoP_Selecter==4)
           geom_line(aes(y= Herring_Area, colour = "Herring  "), size = 1)}+
-        {if(input$EoP_Selecter==0 & "Pike" %in% input$SelectedGroups==TRUE)
+        {if(input$EoP_Selecter==4) 
           geom_line(aes(y= Pike_Area, colour = "Pike  "), size = 1)}+
-        {if(input$EoP_Selecter==0 & "SalmonWalleye" %in% input$SelectedGroups==TRUE)
+        {if(input$EoP_Selecter==4) 
           geom_line(aes(y= Salmon_Walleye_Area, colour = "Salmon & Walleye  "), size = 1)}+
-        {if(input$EoP_Selecter==0 & "Sturgeon" %in% input$SelectedGroups==TRUE)
+        {if(input$EoP_Selecter==4) 
           geom_line(aes(y= Sturgeon_Area, colour = "Sturgeon  "), size = 1)}+
+        
+        #draw Group lines if fish are selected by Groups
+        {if(input$EoP_Selecter==0 & input$CatfishSunfish==TRUE) geom_line(aes(y= Catfish_Sunfish_Area, colour = "Catfish & Sunfish  "), size = 1)}+
+        {if(input$EoP_Selecter==0 & input$Eel==TRUE)            geom_line(aes(y= Eel_Area, colour = "Eel  "), size = 1)}+
+        {if(input$EoP_Selecter==0 & input$Herring==TRUE)        geom_line(aes(y= Herring_Area, colour = "Herring  "), size = 1)}+
+        {if(input$EoP_Selecter==0 & input$Pike==TRUE)           geom_line(aes(y= Pike_Area, colour = "Pike  "), size = 1)}+
+        {if(input$EoP_Selecter==0 & input$SalmonWalleye==TRUE)  geom_line(aes(y= Salmon_Walleye_Area, colour = "Salmon & Walleye  "), size = 1)}+
+        {if(input$EoP_Selecter==0 & input$Sturgeon==TRUE)       geom_line(aes(y= Sturgeon_Area, colour = "Sturgeon  "), size = 1)}+
         
         #draw group lines if fish are selected by Species
         {if(input$EoP_Selecter>0 & EoP_Group() == "Catfish & Sunfish")
@@ -328,7 +333,7 @@ server <- function(input, output, session){
                                        "Sturgeon  "= "#A65628"))
     },
     height = function() {
-      session$clientData$output_EoP_Plot_width*0.5
+      session$clientData$output_EoP_Plot_width*0.6
     }
   )
   

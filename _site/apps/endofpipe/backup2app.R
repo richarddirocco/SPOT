@@ -42,7 +42,12 @@ ui <- function(request){
         helpText("Need help? Visit the ",
                  a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
         ),
-
+        
+        selectInput("EoP_Proportion",
+                    label = "Proportion of fish protected",
+                    choices = c("97.5%", "87.5%", "50.0%", "12.5%", "2.5%"),
+                    selected = "97.5%"),
+        
         radioButtons("EoP_Selecter", label = "Select fish by:", 
                      choices = list("All" = 4, "Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=4),
         
@@ -57,32 +62,18 @@ ui <- function(request){
         ),
         
         conditionalPanel("input.EoP_Selecter == '1'",
-                         selectInput("EoP_CName", label = "Select species", choices = sort(FishList$CommonName), selected = "Brook trout")
-        ),
+                         selectInput("EoP_CName", label = "Select species", choices = sort(FishList$CommonName), selected = "Brook trout")),
         
         conditionalPanel("input.EoP_Selecter == '2'",
-                         selectInput("EoP_SName", label = "Select species", choices = sort(FishList$ScientificName), selected = "Salvelinus fontinalis")
-        ),
+                         selectInput("EoP_SName", label = "Select species", choices = sort(FishList$ScientificName), selected = "Salvelinus fontinalis")),
         
-        numericInput("EoP_flowrate", label = "Intake flow rate (L/s):", min = 0, max = 1000, value = 0, step = 0.5),
+        sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, value = 2.5, step = 5),
         
-        checkboxInput("Mode",label = "Show advanced options", value = FALSE),
+        sliderInput("EoP_time", label = "Time to escape screen face (min):", min = 1, max = 30, value = 10, step = 0.5),
         
-        # Advanced mode inputs:
-        conditionalPanel("input.Mode == true",
-                         selectInput("EoP_Proportion",
-                                     label = "Proportion of fish protected",
-                                     choices = c("97.5%", "87.5%", "50.0%", "12.5%", "2.5%"),
-                                     selected = "97.5%")
-        ),
+        # helpText("Description: The amount of time required for a fish to escape the face of the screen (default: 10 min)."),
         
-        conditionalPanel("input.Mode == true",
-                         sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, value = 2.5, step = 5)
-        ),
-        
-        conditionalPanel("input.Mode == true",
-                         sliderInput("EoP_time", label = "Time to escape screen face (min):", min = 1, max = 30, value = 10, step = 0.5)
-        )
+        numericInput("EoP_flowrate", label = "Intake flow rate (L/s):", min = 0, max = 1000, value = 0, step = 0.5)
         
       ),    # close sidebarPanel
       

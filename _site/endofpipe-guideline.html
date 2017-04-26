@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
@@ -165,107 +162,6 @@ $(document).ready(function () {
 
 
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#section-TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<style type="text/css">
-
-#section-TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#section-TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="section-TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
@@ -312,6 +208,24 @@ div.tocify {
 
 </div>
 
+<div id="section-TOC">
+<ul>
+<li><a href="#section-introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#section-guideline-objectives"><span class="toc-section-number">2</span> Guideline Objectives</a></li>
+<li><a href="#section-guidelines"><span class="toc-section-number">3</span> Guidelines</a><ul>
+<li><a href="#section-fish-screen-criteria"><span class="toc-section-number">3.1</span> Fish Screen Criteria</a></li>
+<li><a href="#section-screen-size-calculator"><span class="toc-section-number">3.2</span> Screen Size Calculator</a></li>
+<li><a href="#section-design-of-fixed-end-of-pipe-fish-screens"><span class="toc-section-number">3.3</span> Design of Fixed End-of-Pipe Fish Screens</a></li>
+<li><a href="#section-installation"><span class="toc-section-number">3.4</span> Installation</a></li>
+<li><a href="#section-cleaning-maintenance"><span class="toc-section-number">3.5</span> Cleaning &amp; Maintenance</a></li>
+</ul></li>
+<li><a href="#section-sample-calculation"><span class="toc-section-number">4</span> Sample Calculation</a><ul>
+<li><a href="#section-solution"><span class="toc-section-number">4.1</span> Solution</a></li>
+</ul></li>
+<li><a href="#section-species-groups"><span class="toc-section-number">5</span> Species Groups</a></li>
+<li><a href="#section-references">References</a></li>
+</ul>
+</div>
 
 <!-- Google Analytics Script  -->
 <script>
@@ -426,10 +340,18 @@ div.tocify {
 <div id="section-screen-size-calculator" class="section level2">
 <h2><span class="header-section-number">3.2</span> Screen Size Calculator</h2>
 <p>The End-of-Pipe Fish Screen tool calculates the screen area required to prevent impingement of 97.5% of fish based on species, length and the amount of time required for a fish to escape the face of the screen.</p>
-<center>
-<iframe src="http://34.193.104.83/endofpipeguide/" style="border: none; width: 500px; height: 900px">
+<!-- <center> -->
+<!-- <iframe src="http://fishprotectiontools.ca/endofpipeguide/" style="border: none; width: 500px; height: 1000px"></iframe> -->
+<!-- </center> -->
+<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/endofpipe" width="100%" frameBorder="0" scrolling="no">
 </iframe>
-</center>
+<!-- Load JS to automatically resize iframe depending on height of shiny app  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./JS/ie8.polyfils.min.js"></script>
+<script type="text/javascript" src="./JS/iframeResizer.min.js"></script>
+<script type="text/javascript">
+   iFrameResize({heightCalculationMethod: "lowestElement"});
+</script>
 </div>
 <div id="section-design-of-fixed-end-of-pipe-fish-screens" class="section level2">
 <h2><span class="header-section-number">3.3</span> Design of Fixed End-of-Pipe Fish Screens</h2>
@@ -1108,7 +1030,7 @@ div.tocify {
 <p>Government of Canada. 1985. Fisheries Act.</p>
 </div>
 <div id="section-ref-katopodis2016fish">
-<p>Katopodis, C., and Gervais, R. 2016. Fish swimming performance data base and analyses. DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.: 550.</p>
+<p>Katopodis, C., and Gervais, R. 2016. Fish swimming performance database and analyses. DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.: 550.</p>
 </div>
 </div>
 </div>
@@ -1129,8 +1051,6 @@ div.tocify {
 
 
 
-</div>
-</div>
 
 </div>
 

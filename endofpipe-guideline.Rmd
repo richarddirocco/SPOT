@@ -9,10 +9,10 @@ output:
     css: style.css
     number_sections: yes
     toc: true
-    toc_float:
-      collapsed: false
-      smooth_scroll: true
-      print: true
+    # toc_float:
+    #   collapsed: false
+    #   smooth_scroll: true
+    #   print: true
     toc_depth: 3
     theme: cosmo
 runtime: shiny
@@ -95,10 +95,19 @@ Table 1 presents the required open screen area for end-of-pipe intake screens wi
 
 The End-of-Pipe Fish Screen tool calculates the screen area required to prevent impingement of 97.5% of fish based on species, length and the amount of time required for a fish to escape the face of the screen.
 
-<center>
-<iframe src="http://34.193.104.83/endofpipeguide/" style="border: none; width: 500px; height: 900px"></iframe>
-</center>
+<!-- <center> -->
+<!-- <iframe src="http://fishprotectiontools.ca/endofpipeguide/" style="border: none; width: 500px; height: 1000px"></iframe> -->
+<!-- </center> -->
 
+<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/endofpipe" width="100%" frameBorder="0" scrolling="no"></iframe>
+
+<!-- Load JS to automatically resize iframe depending on height of shiny app  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./JS/ie8.polyfils.min.js"></script>
+<script type="text/javascript" src="./JS/iframeResizer.min.js"></script>
+<script type="text/javascript">
+   iFrameResize({heightCalculationMethod: "lowestElement"});
+</script>
 
 ##Design of Fixed End-of-Pipe Fish Screens
 
