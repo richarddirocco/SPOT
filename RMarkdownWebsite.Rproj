@@ -13,4 +13,4 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
-WebsitePath: apps/Fish_Length_at_Maturity
+WebsitePath: ~/RMarkdownWebsite

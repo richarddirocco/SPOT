@@ -52,6 +52,7 @@ firstup <- function(x) {
 MaturityData$Sex <- firstup(MaturityData$Sex)
 MaturityData$Locality <- firstup(MaturityData$Locality)
 
+
 #Get current date for archive and name file
 CurrentDate <- Sys.Date()
 csvFileName <- paste("~/RMarkdownWebsite/apps/lengthmaturity/ArchivedData/MaturityData_",CurrentDate,".csv",sep="") 

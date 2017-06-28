@@ -212,17 +212,19 @@ $(document).ready(function () {
 <ul>
 <li><a href="#section-introduction"><span class="toc-section-number">1</span> Introduction</a></li>
 <li><a href="#section-guideline-objectives"><span class="toc-section-number">2</span> Guideline Objectives</a></li>
-<li><a href="#section-guidelines"><span class="toc-section-number">3</span> Guidelines</a><ul>
-<li><a href="#section-fish-screen-criteria"><span class="toc-section-number">3.1</span> Fish Screen Criteria</a></li>
-<li><a href="#section-screen-size-calculator"><span class="toc-section-number">3.2</span> Screen Size Calculator</a></li>
-<li><a href="#section-design-of-fixed-end-of-pipe-fish-screens"><span class="toc-section-number">3.3</span> Design of Fixed End-of-Pipe Fish Screens</a></li>
-<li><a href="#section-installation"><span class="toc-section-number">3.4</span> Installation</a></li>
-<li><a href="#section-cleaning-maintenance"><span class="toc-section-number">3.5</span> Cleaning &amp; Maintenance</a></li>
+<li><a href="#section-information-requirements"><span class="toc-section-number">3</span> Information Requirements</a></li>
+<li><a href="#section-guidelines"><span class="toc-section-number">4</span> Guidelines</a><ul>
+<li><a href="#section-site-selection"><span class="toc-section-number">4.1</span> Site Selection</a></li>
+<li><a href="#section-fish-screen-criteria"><span class="toc-section-number">4.2</span> Fish Screen Criteria</a></li>
+<li><a href="#section-screen-size-calculator"><span class="toc-section-number">4.3</span> Screen Size Calculator</a></li>
+<li><a href="#section-design-of-fixed-end-of-pipe-fish-screens"><span class="toc-section-number">4.4</span> Design of Fixed End-of-Pipe Fish Screens</a></li>
+<li><a href="#section-installation"><span class="toc-section-number">4.5</span> Installation</a></li>
+<li><a href="#section-cleaning-maintenance"><span class="toc-section-number">4.6</span> Cleaning &amp; Maintenance</a></li>
 </ul></li>
-<li><a href="#section-sample-calculation"><span class="toc-section-number">4</span> Sample Calculation</a><ul>
-<li><a href="#section-solution"><span class="toc-section-number">4.1</span> Solution</a></li>
+<li><a href="#section-sample-calculation"><span class="toc-section-number">5</span> Sample Calculation</a><ul>
+<li><a href="#section-solution"><span class="toc-section-number">5.1</span> Solution</a></li>
 </ul></li>
-<li><a href="#section-species-groups"><span class="toc-section-number">5</span> Species Groups</a></li>
+<li><a href="#section-species-groups"><span class="toc-section-number">6</span> Species Groups</a></li>
 <li><a href="#section-references">References</a></li>
 </ul>
 </div>
@@ -244,11 +246,14 @@ $(document).ready(function () {
   if (location.hash) shiftWindow();
   window.addEventListener("hashchange", shiftWindow);
 </script>
+<center>
+<span style="color:red"> <strong>This document has not undergone any formal review and is intended to be used for testing the <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">prototype screen size calculator tool</a>.</strong> </span>
+</center>
 <div id="section-introduction" class="section level1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
-<p>Improperly designed or installed fish screens can result in the death of fish through entrainment<a href="#section-fn1" class="footnoteRef" id="section-fnref1"><sup>1</sup></a> or impingement<a href="#section-fn2" class="footnoteRef" id="section-fnref2"><sup>2</sup></a>. The severity of the impact on the fisheries resource and habitat depends on the water velocity, flow, depth, and intake design, as well as the abundance, distribution, size, swimming ability, and behaviour of the organisms in the vicinity of the intake.</p>
+<p>Improperly designed or installed fish screens can result in the death of fish through entrainment or impingement. Entrainment occurs when a fish is drawn into a water intake and cannot escape. Impingement occurs when a fish is held in contact with the intake screen and is unable to free itself. The severity of the impact on the fisheries resource and habitat depends on the water velocity, flow, depth, and intake design, as well as the abundance, distribution, size, swimming ability, and behaviour of the organisms in the vicinity of the intake.</p>
 <p>Causing the death of fish that are part of or support a commercial, recreational, or Aboriginal fishery is prohibited in Canada under Section 35(1) of the Fisheries Act <span class="citation">(Government of Canada 1985)</span>. Fisheries and Oceans Canada (DFO) has prepared the Freshwater Intake End-of-Pipe Fish Screen Guideline to assist proponents in the design and installation of fish screens to reduce or eliminate death of fish associated with freshwater intake pipes.</p>
-<p>This document is an update to the 1995 guideline of the same name <span class="citation">(Department of Fisheries and Oceans 1995)</span>. The main purpose of this updated version is to incorporate a better understanding of fish swimming performance and increase the maximum amount of water extraction from 120 L/s to 1000 L/s.</p>
+<p>This document is an update to the 1995 guideline of the same name <span class="citation">(Department of Fisheries and Oceans 1995)</span>. The main purpose of this updated version is to incorporate a better understanding of fish swimming performance and increase the maximum rate of water extraction from 120 L/s to 1000 L/s.</p>
 <center>
 <div style="width:400px; height=200px">
 <div class="figure">
@@ -260,19 +265,34 @@ $(document).ready(function () {
 </div>
 <div id="section-guideline-objectives" class="section level1">
 <h1><span class="header-section-number">2</span> Guideline Objectives</h1>
-<p>The objective of this guideline is to provide a national standard-of-practice and guidance for end-of-pipe fish screens at freshwater intakes to prevent potential losses of fish due to entrainment or impingement. The Freshwater Intake End-of-Pipe Fish Screen Guideline deals exclusively with the sizing and design of fixed screens that are often placed at the end of a pipe used to extract water up to 1 m<sup>3</sup>/s (1000 L/s). The guideline is intended for use in addressing fish screens for small permanent and temporary withdrawals for irrigation, construction, small municipal and private water supplies, etc. It is not intended for application to hydroelectric or canal screen designs; however, such proposals can be considered by regulatory agencies on a site-specific basis. The guideline focuses on the technical aspects of intake screens and the protection of fish rather than on policy, legislation, or environmental assessment processes and their application.</p>
-<p>This guideline has been developed to provide protection of freshwater fish with a minimum fork length of 25 mm. Plankton<a href="#section-fn3" class="footnoteRef" id="section-fnref3"><sup>3</sup></a> are highly susceptible to entrainment since they are unable to swim against intake-current and are likely to fit through the openings on an intake screen. Plankton are an important food source for freshwater fishes in Canada and although relatively few ichthyoplankton<a href="#section-fn4" class="footnoteRef" id="section-fnref4"><sup>4</sup></a> naturally survive to adulthood, additional deaths caused by water intakes could reduce recruitment<a href="#section-fn5" class="footnoteRef" id="section-fnref5"><sup>5</sup></a>. Protection of plankton is not one of the objective of this document but proponents should be aware of this potential effect of water withdrawal on the fishery.</p>
+<p>The objective of this guideline is to provide a national standard-of-practice and guidance for end-of-pipe fish screens at freshwater intakes to prevent potential losses of fish due to entrainment or impingement. The Freshwater Intake End-of-Pipe Fish Screen Guideline deals exclusively with the sizing and design of fixed screens that are often placed at the end of a pipe used to extract water up to 1 m<sup>3</sup>/s (1000 L/s). The guideline is intended for use in addressing fish screens for permanent and temporary withdrawals for irrigation, construction, small municipal and private water supplies, etc. It is not intended for application to hydroelectric or canal screen designs; however, such proposals can be considered by regulatory agencies on a site-specific basis. The guideline focuses on the technical aspects of intake screens and the protection of fish rather than on policy, legislation, or environmental assessment processes and their application.</p>
+<p>This guideline has been developed to provide protection of freshwater fish with a minimum fork length of 25 mm. Plankton are free floating or drifting organisms, including early life-stage fish (ichthyoplankton). Plankton are highly susceptible to entrainment since they are unable to swim against intake-current and are likely to fit through the openings on an intake screen. Plankton are an important food source for freshwater fishes in Canada and although relatively few ichthyoplankton naturally survive to adulthood, additional deaths caused by water intakes could reduce recruitment. Protection of plankton is not one of the objectives of this document but proponents should be aware of this potential effect of water withdrawal on the fishery.</p>
+</div>
+<div id="section-information-requirements" class="section level1">
+<h1><span class="header-section-number">3</span> Information Requirements</h1>
+<p>When submitting a water intake project for review, the maximum intake flow rate, open screen area, and total screen area must be included so a Fisheries Protection Program biologist can determine if the proposed screen provides adequate protection. If possible, additional information that may be helpful includes:</p>
+<ul>
+<li>rationale for site selection</li>
+<li>fish presence, species, size, and sampling methods</li>
+<li>presence/absence of species listed under the Species at Risk Act <span class="citation">(Government of Canada 2002)</span> in surrounding area</li>
+<li>screen materials, method of installation and supporting structures</li>
+<li>screen maintenance, cleaning and other requirements</li>
+</ul>
 </div>
 <div id="section-guidelines" class="section level1">
-<h1><span class="header-section-number">3</span> Guidelines</h1>
-<p>The appropriate design of a fish screen is largely dependent upon the species and the size of fish requiring protection. Appropriate installation and maintenance/cleaning of the screen are also important in keeping approach velocities low and ensuring satisfactory operation of the screen. For the purposes of this guideline, emphasis is placed on the protection of freshwater fish with a minimum fork length<a href="#section-fn6" class="footnoteRef" id="section-fnref6"><sup>6</sup></a> of 25 mm from entrainment and impingement due to water extraction activities. Depending upon site-specific circumstances, a case may be made whereby the minimum fork length size of fish to be protected is greater than 25 mm. In this instance, the fish screen criteria for open screen area<a href="#section-fn7" class="footnoteRef" id="section-fnref7"><sup>7</sup></a> presented in Table 1 and screen mesh size (2.54 mm) do not apply. For fish larger than 25 mm, the swim speed must be estimated using the Screen Size Calculator application or refer to <span class="citation">Katopodis and Gervais (2016)</span>. The estimated swim speed over a 10 minute period will determine the design approach velocity.</p>
+<h1><span class="header-section-number">4</span> Guidelines</h1>
+<p>The appropriate design of a fish screen is largely dependent upon the species and the size of fish requiring protection. Appropriate installation, cleaning and maintenance of the screen are also important in keeping approach velocities low and ensuring satisfactory operation of the screen. For the purposes of this guideline, emphasis is placed on the protection of freshwater fish with a minimum fork length of 25 mm from entrainment and impingement due to water extraction activities. Depending upon site-specific circumstances, a case may be made whereby the minimum fork length size of fish to be protected is greater than 25 mm. In this instance, the fish screen criteria for open screen area (the area of all open spaces on the screen available for the free flow of water) presented in Table 1 and screen mesh size (2.54 mm) do not apply. For fish larger than 25 mm, the swim speed must be estimated using the methods described in <span class="citation">Katopodis and Gervais (2016)</span>. The estimated swim speed over a 10 minute period will determine the design approach velocity.</p>
 <p>The following sections address the appropriate design of fixed freshwater intake end-of-pipe fish screens for the protection of fish with a minimum fork length of 25 mm. Guidance on installation, cleaning, and maintenance is provided. Common types of intake screens and associated intakes are also presented in Figure 2.</p>
+<div id="section-site-selection" class="section level2">
+<h2><span class="header-section-number">4.1</span> Site Selection</h2>
+<p>The first step when designing a water intake is selecting an appropriate site. Water intakes should be located in areas and depths of water with low concentrations of fish throughout the year. This includes avoiding areas with natural or man-made structures that attract fish during migration, spawning, or rearing. If possible, it is best to avoid withdrawing water or reducing the amount of water withdrawn during the “Restricted Activity Timing Windows” identified by <span class="citation">Fisheries and Oceans Canada (2015)</span>. End-of-pipe screens should be installed at least 300 mm above the bed of the waterbody to reduce entrainment of sediment and benthos. Small fish, which are very susceptible to entrainment and impingement, are more likely to occupy shallow water near shore. Placing the water intake pipe in deeper water may greatly reduce the impact on these vulnerable fishes. Careful site selection is the primary method of preventing entrainment of plankton. In addition to the biological factors outlined above, consideration must be made for debris types and amounts, ice movement, seasonal flow rates (including potential flooding) and other abiotic factors at the site.</p>
+</div>
 <div id="section-fish-screen-criteria" class="section level2">
-<h2><span class="header-section-number">3.1</span> Fish Screen Criteria</h2>
-<p>To protect fish from impingement or entrainment, the approach velocity (i.e., the water velocity into, or perpendicular to, the face of an intake screen) should not exceed certain values based on the swimming performance group of the species present in the watercourse. Species groups with similar swimming performance are based on analysis of performance data and include the following: “Catfish &amp; Sunfish Group”,“Eel Group”, “Herring Group”, “Pike Group”, “Salmon &amp; Walleye Group”, and “Sturgeon Group” <span class="citation">(Katopodis and Gervais 2016)</span>. Table 3 lists the species in each of these fish swimming performance groups. Contact DFO or provincial fisheries agencies regarding fish species that are not included in Table 3.</p>
-<p>Approach velocities for each swimming performance group correspond to speed estimates which fish have a 97.5% chance of exceeding. A fork length of 25 mm and an endurance time of 10 minutes (the time the fish is in front of the face of the screen before it can elude it) were used to estimate fish speeds. The required open screen areas (m<sup>2</sup>) for several flows or water extraction quantities (L/s) to meet these approach velocity criteria were calculated and are presented in Table 1 and the Screen Size Calculator application (Section 3.2). Open screen area is defined as the total submerged screen area which includes the screen face material but excludes major structural members. Open screen area is calculated using the following equation:</p>
+<h2><span class="header-section-number">4.2</span> Fish Screen Criteria</h2>
+<p>To protect fish from impingement or entrainment, the approach velocity (i.e., the water velocity into, or perpendicular to, the face of an intake screen) should not exceed certain values based on the weakest swimming performance group of the species present in the watercourse. Species groups with similar swimming performance are based on analysis of performance data and include the following: “Catfish &amp; Sunfish Group”, “Eel Group”, “Herring Group”, “Pike Group”, “Salmon &amp; Walleye Group”, and “Sturgeon Group” <span class="citation">(Katopodis and Gervais 2016)</span>. Table 3 lists the species in each of these fish swimming performance groups. Contact DFO or provincial fisheries agencies regarding fish species that are not included in Table 3.</p>
+<p>Approach velocities for each swimming performance group correspond to speed estimates which fish have a 97.5% chance of exceeding. Fish swimming speeds were estimated using the models created by <span class="citation">Katopodis and Gervais (2016)</span> with the fork length variable set to 25 mm and the estimated time for a fish to elude the water intake was set to 10 minutes. The required open screen areas (m<sup>2</sup>) for several flows or water extraction quantities (L/s) to meet these approach velocity criteria were calculated and are presented in Table 1 and Figure 2. Open screen area is defined as the total submerged screen area which includes the screen face material but excludes major structural members. Open screen area is calculated using the following equation:</p>
 <p><span class="math display">\[\text{Open Screen Area (m$^2$)} = \frac{\text{Flow Rate (m$^3$)}}{\text{Velocity (m)}}\]</span></p>
-<p>Table 1 presents the required open screen area for end-of-pipe intake screens with a capacity up to 1 m<sup>3</sup> (1000 L/s). The open screen area is the area of all open spaces on the screen available for the free flow of water. The open screen area can also be calculated using the Screen Size Calculator application (Section 3.2). The application will calculate the required open screen area based on user selected fish species, fish length and time.</p>
+<p>Table 1 presents the required open screen area for end-of-pipe intake screens with a capacity up to 1 m<sup>3</sup> (1000 L/s). The open screen area is the area of all open spaces on the screen available for the free flow of water. Alternatively, the Screen Size Calculator (Section 4.3) can be used to determine the required Open Screen Area based on the intake flow rate.</p>
 <table style="width:96%;">
 <caption>Table 1. Open screen area required for end-of-pipe water intakes.</caption>
 <colgroup>
@@ -338,8 +358,8 @@ $(document).ready(function () {
 </table>
 </div>
 <div id="section-screen-size-calculator" class="section level2">
-<h2><span class="header-section-number">3.2</span> Screen Size Calculator</h2>
-<p>The End-of-Pipe Fish Screen tool calculates the screen area required to prevent impingement of 97.5% of fish based on species, length and the amount of time required for a fish to escape the face of the screen.</p>
+<h2><span class="header-section-number">4.3</span> Screen Size Calculator</h2>
+<p>The End-of-Pipe Fish Screen tool calculates the screen area required to prevent impingement of fish based on the species, length, amount of time required for a fish to escape the face of the screen, and the proportion of fish protected.</p>
 <!-- <center> -->
 <!-- <iframe src="http://fishprotectiontools.ca/endofpipeguide/" style="border: none; width: 500px; height: 1000px"></iframe> -->
 <!-- </center> -->
@@ -354,14 +374,14 @@ $(document).ready(function () {
 </script>
 </div>
 <div id="section-design-of-fixed-end-of-pipe-fish-screens" class="section level2">
-<h2><span class="header-section-number">3.3</span> Design of Fixed End-of-Pipe Fish Screens</h2>
+<h2><span class="header-section-number">4.4</span> Design of Fixed End-of-Pipe Fish Screens</h2>
 <p>Keeping fish screens clean maintains their effectiveness for supplying water and protecting fish. Active screens are those equipped with proven cleaning capability which keeps them free of any debris that will restrict flow area and increase approach velocities. Passive screens are those without an automated cleaning system and require larger screen areas to cope with the higher risk of flow area restriction due to plugging. It is important to calculate the available open screen area of clean screens and allow a factor of safety for screens that are not regularly cleaned. Open screen area is the area occupied by the open spaces available for the free flow of water and excludes the screen face material.</p>
-<p>Once the required open screen area has been found (Table 1 or Section 3.2), the total screen area<a href="#section-fn8" class="footnoteRef" id="section-fnref8"><sup>8</sup></a> can be calculated as follows:</p>
+<p>Once the required open screen area has been found (Table 1 or Section 4.3), the total screen area (the area occupied by the open spaces [i.e., open screen area] and screen material available for the free flow of water) can be calculated as follows:</p>
 <p><span class="math display">\[\text{Total Screen Area} =
 \text{Open Screen Area} \div \left(\frac{\text{% Open Area (Table 2)}}{100}\right)\]</span></p>
 <p>It should be noted that if the percent (%) open screen area is maximized, then the total screen area required for a given flow is minimized. The narrowest dimension of any opening on the screen is referred to as the design opening, regardless of opening shape. The maximum design opening for a fish of 25 mm fork length is estimated at 2.54 mm. The screen openings may be round, square, rectangular, or any combination thereof, but should not have any protrusions that could injure fish.</p>
 <p>Screen materials may include brass, bronze, aluminum, monel metal, galvanized or stainless steel, and plastics. The screen material should be resistant to corrosion and UV light. Welded wedge wire screens offer reduced debris clogging and increased open area and screen stiffness, in comparison to round wire mesh and punch plate. Table 2 presents several common types of screening material that meet the requirements of wire diameter, clear opening width and percent open area.</p>
-<p>The dimensions of the fish screen can be calculated after the correct shape, configuration, location, and method of installation have been determined. This will usually be determined after a site investigation and a review of these guidelines. Included in Figure 3 are common screen shapes and the associated dimensions and area formulae. These are just examples of the many shapes and sizes in which fish screens can be fabricated. Screens are instream structures and, as such, should have sufficient strength and durability, and be capable of withstanding any potential large forces and impacts. Figure 1 illustrates an example configuration of an end-of-pipe fish screen. Figure 2 illustrates some examples of end-of-pipe screen designs.</p>
+<p>The dimensions of the fish screen can be calculated after the correct shape, configuration, location, and method of installation have been determined. This will usually be determined after a site investigation and a review of these guidelines. Included in Figure 4 are common screen shapes and the associated dimensions and area formulae. These are just examples of the many shapes and sizes in which fish screens can be fabricated. Screens are instream structures and, as such, should have sufficient strength and durability, and be capable of withstanding any potential large forces and impacts. Figure 1 illustrates an example configuration of an end-of-pipe fish screen. Figure 3 illustrates some examples of end-of-pipe screen designs.</p>
 <table>
 <caption>Table 2. Examples of screen material.</caption>
 <thead>
@@ -421,8 +441,10 @@ $(document).ready(function () {
 </center>
 </div>
 <div id="section-installation" class="section level2">
-<h2><span class="header-section-number">3.4</span> Installation</h2>
-<p>Screens should be located in areas and depths of water with low concentrations of fish throughout the year. This includes areas with natural or man-made structures that attract fish during migration, spawning, or rearing. Screens should be installed at least 300 mm above the bed of the waterbody to reduce entrainment of sediment and benthos<a href="#section-fn9" class="footnoteRef" id="section-fnref9"><sup>9</sup></a>. All openings for guides and seals should be smaller than the opening width of the screen material (usually 2.54 mm) so fish cannot pass through. Cylindrical and box-type screens should have a manifold installed to ensure the water velocity is evenly distributed across the screen surface.</p>
+<h2><span class="header-section-number">4.5</span> Installation</h2>
+<p>All openings for guides and seals should be smaller than the opening width of the screen material (usually 2.54 mm) so fish cannot pass through. Cylindrical and box-type screens should have a manifold installed to ensure the water velocity is evenly distributed across the screen surface. To accomplish this, the manifold should be equal distance from the outer screen at all locations to evenly draw water inwards. For example, the box screen and cylindrical screen in Figure 4 could have evenly spaced holes drilled in the centre pipe to ensure the water is pulled through the screen surface at an even rate.</p>
+<p>Depending on the size of the screen and the flow at the installation location, structural support may be needed to prevent sagging or collapse of the screen panels. When designing a screen, account for the area blocked by supports while meeting the total screen area recommended in this guide. Heavier cages or trash racks can be fabricated out of bar (150 mm spacing is typical) or grating to protect the finer fish screen, especially where there is debris loading from woody material, leaves, or algae mats.</p>
+<p>Once the screen installed, the through screen velocity should be measured using a flow-meter. The velocity of water in front of the fish screen should not exceed the design approach velocity listed in Table 1 at any location.</p>
 <center>
 <div style="width:400px; height=200px">
 <div class="figure">
@@ -431,41 +453,41 @@ $(document).ready(function () {
 </div>
 </div>
 </center>
-<p>Depending on the size of the screen and the flow at the installation location, structural support may be needed to prevent sagging or collapse of the screen panels. When designing a screen, account for the area blocked by supports while meeting the total screen area recommended in this guide. Heavier cages or trash racks can be fabricated out of bar (150 mm spacing is typical) or grating to protect the finer fish screen, especially where there is debris loading from woody material, leaves, or algae mats.</p>
 </div>
 <div id="section-cleaning-maintenance" class="section level2">
-<h2><span class="header-section-number">3.5</span> Cleaning &amp; Maintenance</h2>
-<p>Debris or damage to screens can cause uneven intake flow across the screen surface. Uneven flow may result in higher intake velocities on some sections of the screen, increasing the occurrences of impinged fish. Provision should be made for the inspection and cleaning of screens. Cleaning apparatuses, seals, and screens should be properly maintained. To facilitate intake screen cleaning and maintenance, design and installation features such as orientation of the screen (e.g., in a cove) or variation in mesh shape (i.e., square wire/bars versus round wire/bars), etc. may be considered for regularly cleaned screens. Flexible suction pipe may be used instead of solid, fixed piping for ease of screen removal and cleaning. If the screen must be removed for cleaning or maintenance, the intake pump should be turned off. Pump suction pressure can be measured to assess the need for screen cleaning. For screens that will not be cleaned regularly, provision of considerably more open screen area (e.g., four times more) than determined from Table 1 or the Screen Size Calculator application (Section 3.2) may be considered.</p>
+<h2><span class="header-section-number">4.6</span> Cleaning &amp; Maintenance</h2>
+<p>Debris or damage to screens can cause uneven intake flow across the screen surface. Uneven flow may result in higher intake velocities on some sections of the screen, increasing the occurrences of impinged fish. Provision should be made for the inspection and cleaning of screens. Cleaning apparatuses, seals, and screens should be properly maintained. To facilitate intake screen cleaning and maintenance, design and installation features such as orientation of the screen (e.g., in a cove) or variation in mesh shape (i.e., square wire/bars versus round wire/bars), etc. may be considered for regularly cleaned screens. Flexible suction pipe may be used instead of solid, fixed piping for ease of screen removal and cleaning. If the screen must be removed for cleaning or maintenance, the intake pump should be turned off. Pump suction pressure can be measured to assess the need for screen cleaning. For screens that will not be cleaned regularly, provision of considerably more open screen area (e.g., four times more) than determined from Table 1 or Section 4.3 may be considered.</p>
 </div>
 </div>
 <div id="section-sample-calculation" class="section level1">
-<h1><span class="header-section-number">4</span> Sample Calculation</h1>
-<p>A proponent wishes to withdraw water at a rate of 0.1 m<sup>3</sup>/s from a nearby pond. The pond supports populations of brown trout, brook trout, and American eel. The intake is proposed to be cylindrical with the ends solid and #60 wedge wire screen around the cylinder. What size must the intake screen be to satisfy the guideline requirements?</p>
+<h1><span class="header-section-number">5</span> Sample Calculation</h1>
+<p>A proponent wishes to withdraw water at a rate of 0.1 m<sup>3</sub>/s from a nearby pond. The pond supports populations of smallmouth bass, yellow perch, and northern pike. The intake is proposed to be cylindrical with the ends solid and #60 wedge wire screen around the cylinder. What size must the intake screen be to satisfy the guideline requirements?</p>
 <p>There are 4 steps to finding the answer</p>
 <ol style="list-style-type: decimal">
 <li>Determine the fish swimming group</li>
 <li>Determine the open screen area</li>
-<li>Determine the dimensions necessary to produce the total screen area</li>
 <li>Determine the total screen area</li>
+<li>Determine the dimensions necessary to produce the total screen area</li>
 </ol>
 <div id="section-solution" class="section level2">
-<h2><span class="header-section-number">4.1</span> Solution</h2>
+<h2><span class="header-section-number">5.1</span> Solution</h2>
 <ol style="list-style-type: decimal">
-<li><p><b>Fish Swimming Group:</b> The fish swimming group can be determined by referencing Table 3 where the common and scientific names of species in each group are listed. Brown trout and brook trout are in the “Salmon &amp; Walleye” group. American eel are in the “Eel” group.</p></li>
+<li><p><b>Fish Swimming Group:</b> The fish swimming group can be determined by referencing Table 3 where the common and scientific names of species in each group are listed. Smallmouth bass are in the “Catfish &amp; Sunfish” group, yellow perch are in the “Salmon &amp; Walleye” group, and northern pike are in the “Pike” group.</p></li>
 <li><p><b>Open Screen Area:</b> Table 1 lists the required effective screen area for each fish swimming performance group for flows up to 1000 L/s. To use the table, if necessary, first convert the flow from cubic metres per second to litres per second.</p>
 <span class="math display">\[0.1 \text{ m}^3 / \text{s} \times 1000 \text{ L} / \text{m}^3 =100 \text{ L} / \text{s}\]</span> For a flow of 100 L/s, Table 1 indicates that the open screen area must be:
 <ul>
+<li>0.94 m<sup>2</sup> for the “Catfish &amp; Sunfish” group</li>
 <li>1.02 m<sup>2</sup> for the “Salmon &amp; Walleye” group</li>
-<li>2.87 m<sup>2</sup> for the “Eel” group</li>
+<li>1.82 m<sup>2</sup> for the “Pike” group</li>
 </ul>
-<p>The higher number (2.87 m<sup>2</sup>) is the more stringent requirement and therefore it is used in the calculation of effective screen area. Alternatively, you could use the Screen Size Calculator application to determine the open screen area. <br></p></li>
-<li><b>Total Screen Area:</b> The screen material in this case is # 60 Wedge Wire. A review of Table 2 indicates that the % Open Area for this material is 63%. With this value and the previously determined Open Screen Area from Step 2, the following formula is used to determine the Total Screen Area for an active screen (i.e. with self-cleaning mechanism). <span class="math display">\[\begin{eqnarray} \text{Total Screen Area} &amp;=&amp; \text{Open Screen Area} \div \left(\frac{\text{% Open Area}}{100}\right) \\ &amp;=&amp; 2.87\text{ m}^2 \div \left(\frac{63}{100}\right)\\ &amp;=&amp; 4.56\text{ m}^2 \end{eqnarray}\]</span> For passive screens, without regular cleaning, the Open Screen Area must be multiplied by 4: <span class="math display">\[\begin{eqnarray} &amp;=&amp; 4.56 \text{ m}^2 \times 4 \\ &amp;=&amp; 18.23 \text{ m}^2 \end{eqnarray}\]</span></li>
-<li><p><b>Dimension of Intake Screen:</b> Figure 3 lists several common screen shapes and their respective area formulae. For a cylindrical screen where the ends are solid and screening is around the cylinder, the following formula applies: <span class="math display">\[\begin{eqnarray} \text{Area} &amp;=&amp; \pi \text{DL} \end{eqnarray}\]</span> The unknown dimensions are diameter (D) and length (L). These dimensions are determined by choosing a value for one and solving the equation for the other. If the diameter is 0.60 m, then the length follows as: <span class="math display">\[\begin{eqnarray} 4.56 \text{ m}^2 &amp;=&amp; \pi (0.60 \text{ m})\text{L}\\ 4.56 \text{ m}^2 &amp;=&amp; (1.885 \text{ m})\text{L}\\ \text{L} &amp;=&amp; 4.56 \text{ m}^2 \div 1.885 \text{ m}\\ \text{L} &amp;=&amp; 2.42 \text{ m} \end{eqnarray}\]</span> A regularly cleaned 0.60 m diameter, 2.42 m long cylindrical screen would meet the design requirements. It should be noted that the dimensions given are representative of the screening area only; they do not include any screen that may be blocked by framing, etc.</p></li>
+<p>The higher number (1.82 m<sup>2</sup>) is the more stringent requirement and therefore it is used in the calculation of effective screen area. Alternatively, you could use the Screen Size Calculator application to determine the open screen area. <br></p></li>
+<li><b>Total Screen Area:</b> The screen material in this case is # 60 Wedge Wire. A review of Table 2 indicates that the % Open Area for this material is 63%. With this value and the previously determined Open Screen Area from Step 2, the following formula is used to determine the Total Screen Area for an active screen (i.e. with self-cleaning mechanism). <span class="math display">\[\begin{eqnarray} \text{Total Screen Area} &amp;=&amp; \text{Open Screen Area} \div \left(\frac{\text{% Open Area}}{100}\right) \\ &amp;=&amp; 1.82\text{ m}^2 \div \left(\frac{63}{100}\right)\\ &amp;=&amp; 2.89\text{ m}^2 \end{eqnarray}\]</span> For passive screens, without regular cleaning, the Open Screen Area must be multiplied by 4: <span class="math display">\[\begin{eqnarray} &amp;=&amp; 2.89 \text{ m}^2 \times 4 \\ &amp;=&amp; 11.56 \text{ m}^2 \end{eqnarray}\]</span></li>
+<li><p><b>Dimension of Intake Screen:</b> Figure 3 lists several common screen shapes and their respective area formulae. For a cylindrical screen where the ends are solid and screening is around the cylinder, the following formula applies: <span class="math display">\[\begin{eqnarray} \text{Area} &amp;=&amp; \pi \text{DL} \end{eqnarray}\]</span> The unknown dimensions are diameter (D) and length (L). These dimensions are determined by choosing a value for one and solving the equation for the other. If the diameter is 0.60 m, then the length follows as: <span class="math display">\[\begin{eqnarray} 2.89 \text{ m}^2 &amp;=&amp; \pi (0.60 \text{ m})\text{L}\\ 2.89 \text{ m}^2 &amp;=&amp; (1.885 \text{ m})\text{L}\\ \text{L} &amp;=&amp; 2.89 \text{ m}^2 \div 1.885 \text{ m}\\ \text{L} &amp;=&amp; 1.53 \text{ m} \end{eqnarray}\]</span> A regularly cleaned 0.60 m diameter, 1.53 m long cylindrical screen would meet the design requirements. It should be noted that the dimensions given are representative of the screening area only; they do not include any screen that may be blocked by framing, etc.</p></li>
 </ol>
 </div>
 </div>
 <div id="section-species-groups" class="section level1">
-<h1><span class="header-section-number">5</span> Species Groups</h1>
+<h1><span class="header-section-number">6</span> Species Groups</h1>
 <p>The following table contains a list of fishes with swimming performance data available. This is not an exhaustive list of fishes in Canada. If a species is not listed in Table 3, contact DFO or use a closely related species to determine which group is the best fit for an unlisted species.</p>
 <table>
 <caption>Table 3. Summary of fish species in each fish swimming performance groups.</caption>
@@ -1026,27 +1048,19 @@ $(document).ready(function () {
 <div id="section-ref-EndOfPipe">
 <p>Department of Fisheries and Oceans. 1995. Freshwater intake end-of-pipe fish screen guidelines.</p>
 </div>
+<div id="section-ref-TimingWindows">
+<p>Fisheries and Oceans Canada. 2015. Timing windows to conduct projects in or around water. <a href="http://www.dfo-mpo.gc.ca/pnw-ppe/timing-periodes/index-eng.html" class="uri">http://www.dfo-mpo.gc.ca/pnw-ppe/timing-periodes/index-eng.html</a>.</p>
+</div>
 <div id="section-ref-FisheriesAct">
 <p>Government of Canada. 1985. Fisheries Act.</p>
+</div>
+<div id="section-ref-SpeciesAtRiskAct">
+<p>Government of Canada. 2002. Species at Risk Act.</p>
 </div>
 <div id="section-ref-katopodis2016fish">
 <p>Katopodis, C., and Gervais, R. 2016. Fish swimming performance database and analyses. DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.: 550.</p>
 </div>
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol>
-<li id="section-fn1"><p>When a fish is drawn into a water intake and cannot escape<a href="#section-fnref1">↩</a></p></li>
-<li id="section-fn2"><p>When an entrapped fish is held in contact with the intake screen and is unable to free itself<a href="#section-fnref2">↩</a></p></li>
-<li id="section-fn3"><p>Plankton are free floating or drifting organisms<a href="#section-fnref3">↩</a></p></li>
-<li id="section-fn4"><p>the eggs and larvae of fish<a href="#section-fnref4">↩</a></p></li>
-<li id="section-fn5"><p>Fish surviving to enter the fishery or maturity<a href="#section-fnref5">↩</a></p></li>
-<li id="section-fn6"><p>The straight line distance measured from the tip of the nose to the fork of the tail<a href="#section-fnref6">↩</a></p></li>
-<li id="section-fn7"><p>The area of all open spaces on the screen available for the free flow of water<a href="#section-fnref7">↩</a></p></li>
-<li id="section-fn8"><p>The area occupied by the open spaces (i.e., open screen area) and screen material available for the free flow of water<a href="#section-fnref8">↩</a></p></li>
-<li id="section-fn9"><p>Organisms that occupy the bottom of bodies of water<a href="#section-fnref9">↩</a></p></li>
-</ol>
 </div>
 
 
@@ -1072,7 +1086,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

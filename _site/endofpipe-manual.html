@@ -224,23 +224,29 @@ $(document).ready(function () {
 <h2>Background</h2>
 <iframe src="https://player.vimeo.com/video/212965322" width="320" height="240" style="float:right;margin-left:10px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 </iframe>
-<p>Water intakes without screens can entrain fish. The following video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel <span class="citation">(Mussen et al. 2014)</span>. To prevent entrainment, a screen should be fitted to water intakes. If the screen is too small, fish can be impinged on the screen. The <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size tool</a> is used to calculate the required Open Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Open screen area</b> is the amount of area available for the free flow of water. It does not include the space obstructed by the screen mesh or any supports. The draft <a href="http://www.fishprotectiontools.ca/endofpipe-guideline.html">Freshwater Intake End-of-Pipe Fish Screen Guideline</a> has more information on end-of-pipe screens. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>.</p>
+<p>Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel <span class="citation">(Mussen et al. 2014)</span>. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size tool</a> is used to calculate the required Open Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Open Screen Area</b> is the amount of area available for the free flow of water. It does not include the space obstructed by the screen mesh or any supports. The draft <a href="http://www.fishprotectiontools.ca/endofpipe-guideline.html">Freshwater Intake End-of-Pipe Fish Screen Guideline</a> has more information on end-of-pipe screens. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>.</p>
 <p>In this manual, a sample problem will be answered using this tool.</p>
 </div>
-<div id="question" class="section level2">
-<h2>Question</h2>
-<p>A proponent wishes to withdraw water at a rate of 100 L/s from a nearby pond. The pond supports populations of brown trout, brook trout, and American eel. How much open screen area is required?</p>
-</div>
-<div id="steps" class="section level2">
-<h2>Steps</h2>
-<ol style="list-style-type: decimal">
-<li>Go to the Select the <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size</a>.</li>
-<li>Below “Select fish by:”, click the “Group” radio button.</li>
-<li>Below “Select groups:”, check the “Eel” and “Salmon &amp; Walleye” boxes.</li>
-<li>Enter “100” in the “Intake flow rate (L/s):”&quot; box.</li>
+<div id="sample-question" class="section level2">
+<h2>Sample question</h2>
+<p>A proponent wishes to withdraw water at a rate of 90 L/s from a nearby pond. The pond supports populations of smallmouth bass, yellow perch, and northern pike. The intake is proposed to be cylindrical with the ends solid and #60 wedge wire screen around the cylinder. What size should the intake screen be?</p>
+<div id="steps" class="section level3">
+<h3>Steps</h3>
+<ol style="list-style-type: upper-alpha">
+<li>Determine the required open screen area</li>
+<li>Determine the required total screen area</li>
+<li>Determine the dimensions of the screen</li>
 </ol>
-<p>Once these steps are completed, the tool should look like this:</p>
-<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/endofpipe/?_inputs_&amp;CatfishSunfish=false&amp;Eel=true&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=100&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Herring=false&amp;Pike=false&amp;SalmonWalleye=true&amp;Sturgeon=false" width="100%" frameBorder="0" scrolling="no">
+<div id="a.-determining-open-screen-area" class="section level4">
+<h4>A. Determining open screen area</h4>
+<p>Complete these steps using the <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size tool</a></p>
+<ol style="list-style-type: decimal">
+<li>In the “Select fish by:” dropdown, choose “Group”.</li>
+<li>Below “Select groups:”, check the “Catfish &amp; Sunfish”, “Pike” and “Salmon &amp; Walleye” boxes.</li>
+<li>Enter “90” in the “Intake flow rate (L/s):”&quot; box.</li>
+</ol>
+<p>Once these steps are completed, the tool will indicate an Open Screen Area of 1.634 m<sup>2</sup> is required. The tool should look like this:</p>
+<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/endofpipe/?_inputs_&amp;CatfishSunfish=true&amp;Eel=false&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=90&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Herring=false&amp;Pike=true&amp;SalmonWalleye=true&amp;Sturgeon=false" width="100%" frameBorder="0" scrolling="no">
 </iframe>
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -250,13 +256,39 @@ $(document).ready(function () {
    iFrameResize({heightCalculationMethod: "lowestElement"});
 </script>
 </div>
-<div id="solution" class="section level2">
-<h2>Solution</h2>
-<p>The end-of-pipe screen requires an open area of 2.87 m<sup>2</sup>.</p>
+<div id="b.-determine-total-screen-area" class="section level4">
+<h4>B. Determine total screen area</h4>
+<p>The screen material in this case is # 60 Wedge Wire. A review of the end of pipe screen guideline indicates that the % Open Area for this material is 63%. With this value and the previously estimated Open Screen Area from Step A, the following formula is used to determine the Total Screen Area</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \text{Total Screen Area} &amp;= \text{Open Screen Area} \div \left(\frac{\text{% Open Area}}{100}\right) \\
+  &amp;= 1.634 \text{ m}^2 \div \left(\frac{63}{100}\right) \\
+  &amp;= 2.594 \text{ m}^2
+\end{aligned}
+\]</span></p>
+</div>
+<div id="c.-determine-dimensions-of-intake-screen" class="section level4">
+<h4>C. Determine dimensions of intake screen</h4>
+<p>For a cylindrical screen where the ends are solid and screening is around the cylinder, the following formula applies:</p>
+<p><span class="math display">\[Area = \pi DL\]</span> The unknown dimensions are diameter (D) and length (L). These dimensions are determined by choosing a value for one and solving the equation for the other. If the diameter is 0.60 m, then the length follows as:</p>
+<p><span class="math display">\[
+\begin{aligned}
+  2.594\text{ m}^2 &amp;= \pi (0.60 \text{ m})L \\
+  2.594\text{ m}^2 &amp;= (1.885\text{ m})L \\
+  L &amp;= 2.594\text{ m}^2 \div 1.855 \text{ m} \\
+  L &amp;= 1.40\text{ m}^2
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div id="solution" class="section level3">
+<h3>Solution</h3>
+<p>A regularly cleaned 0.60 m diameter, 1.40 m long cylindrical screen would meet the design requirements. It should be noted that the dimensions given are representative of the screening area only; they do not include any screen that may be blocked by framing, etc.</p>
+</div>
 </div>
 <div id="advanced-options" class="section level2">
 <h2>Advanced options</h2>
-<p>Clicking the “Show advanced options”&quot; check box allows for much more control than previously possible through the <a href="http://www.dfo-mpo.gc.ca/Library/223669.pdf">1995 guideline</a>, including the the ability to change the amount of time required for a fish to escape the face of a screen, the ability to decrease the proportion of fish protected below 97.5%, and the ability to increase the length of fish near the water intake. In most scenarios, these values should not be changed from their default values.</p>
+<p>Clicking the “Show advanced options”&quot; check box allows for much more control than previously possible through the <a href="http://www.dfo-mpo.gc.ca/Library/223669.pdf">1995 guideline</a>, including the ability to change the amount of time required for a fish to escape the face of a screen, the ability to decrease the proportion of fish protected below 97.5%, and the ability to increase the length of fish near the water intake. In most scenarios, these values should not be changed from their default values.</p>
 </div>
 <div id="additional-information" class="section level2">
 <h2>Additional information</h2>
@@ -295,7 +327,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>

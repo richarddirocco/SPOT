@@ -16,6 +16,13 @@ MaturityData$X1 <- NULL
 # Convert some variable to factors. This makes it easier to sort the table
 MaturityData$Sex <- as.factor(MaturityData$Sex)
 MaturityData$Country <- as.factor(MaturityData$Country)
+
+
+# Rename Measurement.type
+# MaturityData$Measurement.type[MaturityData$Measurement.type == "TL"] <- "Total length"
+# MaturityData$Measurement.type[MaturityData$Measurement.type == "FL"] <- "Fork length"
+# MaturityData$Measurement.type[MaturityData$Measurement.type == "SL"] <- "Standard length"
+# MaturityData$Measurement.type[MaturityData$Measurement.type == "NG"] <- "Not given"
 MaturityData$Measurement.type <- as.factor(MaturityData$Measurement.type)
 
 # Sort data by Country then Sex

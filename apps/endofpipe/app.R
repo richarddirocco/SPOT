@@ -43,7 +43,7 @@ ui <- function(request){
                  a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
         ),
 
-        radioButtons("EoP_Selecter", label = "Select fish by:", 
+        selectInput("EoP_Selecter", label = "Select fish by:", 
                      choices = list("All" = 4, "Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=4),
         
         conditionalPanel("input.EoP_Selecter == '0'",
@@ -73,14 +73,9 @@ ui <- function(request){
                          selectInput("EoP_Proportion",
                                      label = "Proportion of fish protected",
                                      choices = c("97.5%", "87.5%", "50.0%", "12.5%", "2.5%"),
-                                     selected = "97.5%")
-        ),
-        
-        conditionalPanel("input.Mode == true",
-                         sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, value = 2.5, step = 5)
-        ),
-        
-        conditionalPanel("input.Mode == true",
+                                     selected = "97.5%"),
+                         
+                         sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, value = 2.5, step = 5),
                          sliderInput("EoP_time", label = "Time to escape screen face (min):", min = 1, max = 30, value = 10, step = 0.5)
         )
         
