@@ -21,10 +21,12 @@ output:
 
 <br>
 
-This website hosts prototype tools built for the Central & Arctic Region's <a href='http://www.dfo-mpo.gc.ca/pnw-ppe/fpp-ppp/index-eng.html'> Fisheries Protection Program</a>. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in  <a href='https://www.r-project.org/' target='_blank'>R</a> [@R] using the following packages:
+This website hosts prototype tools built to expand on the <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html'> Fish Swimming Performance Database and Analyses </a> CSAS document. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in  <a href='https://www.r-project.org/' target='_blank'>R</a> [@R] using the following packages:
 
 * <a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a> [@shiny]
-* <a href='http://ggplot2.org/' target='_blank'> ggplot2</a> [@ggplot2]
+* <a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a> [@ggplot2]
+* <a href='http://ggvis.rstudio.com/' target='_blank'> ggvis</a> [@ggvis]
+* <a href='http://tidyr.tidyverse.org/' target='_blank'> tidyr</a> [@tidyr]
 * <a href='http://rmarkdown.rstudio.com/' target='_blank'>R Markdown</a> [@rmarkdown]
 * <a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a> [@rfishbase]
 
