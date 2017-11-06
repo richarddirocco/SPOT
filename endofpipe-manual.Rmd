@@ -23,7 +23,7 @@ output:
 
 <iframe src="https://player.vimeo.com/video/212965322" width="320" height="240" style="float:right;margin-left:10px"frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel [@mussen2014unscreened]. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The [End-of-Pipe Screen Size tool](http://www.fishprotectiontools.ca/endofpipe-tool.html) is used to calculate the required Open Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Open Screen Area</b> is the amount of area available for the free flow of water. It does not include the space obstructed by the screen mesh or any supports. The draft [Freshwater Intake End-of-Pipe Fish Screen Guideline](http://www.fishprotectiontools.ca/endofpipe-guideline.html) has more information on end-of-pipe screens. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf). 
+Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel [@mussen2014unscreened]. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The [End-of-Pipe Screen Size tool](http://www.fishprotectiontools.ca/endofpipe-tool.html) is used to calculate the required Open Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Open Screen Area</b> is the amount of area available for the free flow of water. It does not include the space obstructed by the screen mesh or any supports. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html). 
 
 
 
@@ -45,7 +45,7 @@ Complete these steps using the [End-of-Pipe Screen Size tool](http://www.fishpro
 
 1.	In the “Select fish by:” dropdown, choose “Group”.
 2.	Below “Select groups:”, check the “Catfish & Sunfish”, "Pike" and “Salmon & Walleye” boxes.
-3.	Enter "90" in the "Intake flow rate (L/s):"" box. 
+3.	Enter "90" in the "Intake flow rate (L/s):" box. 
 
 Once these steps are completed, the tool will indicate an Open Screen Area of 1.634 m^2^ is required. The tool should look like this:
 

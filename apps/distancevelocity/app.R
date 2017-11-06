@@ -71,7 +71,9 @@ ui <- function(request){
            textInput("SD", label = "Swim distance in meters:", value = "10")),
                           
        conditionalPanel("input.Calculate2 == '2'",
-            checkboxInput("SDEst", label = "Plot estimates", value = TRUE))
+            checkboxInput("SDEst", label = "Plot estimates", value = TRUE)),
+      
+      helpText(a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "Submit feedback"), align = "center")
       
     ), #close sidebar panel
                         

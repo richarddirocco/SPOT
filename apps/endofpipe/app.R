@@ -76,7 +76,9 @@ ui <- function(request){
                          
                          sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, value = 2.5, step = 5),
                          sliderInput("EoP_time", label = "Time to escape screen face (min):", min = 1, max = 30, value = 10, step = 0.5)
-        )
+        ),
+        
+        helpText(a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "Submit feedback"), align = "center")
         
       ),    # close sidebarPanel
       
@@ -271,17 +273,17 @@ server <- function(input, output, session){
   
   EoP_PlotData %>%
     ggvis(x= ~Flow, y=~OpenScreenArea, stroke = ~Group) %>%
-    layer_lines(strokeWidth := 2) %>%
+    layer_lines(strokeWidth := 2.5) %>%
     layer_points(size := 40, opacity := 0) %>%
-    add_axis("x", title = "Intake flow rate (L/s)", ticks = 5,
+    add_axis("y", offset = 1, title = "Open Screen Area (m²)", title_offset = 50, ticks = 6,
              properties = axis_props(
-               title = list(fontSize = 15),
+               title = list(fontSize = 15, fontWeight = "normal"),
                labels = list(fontSize = 12)
              )
     )%>%
-    add_axis("y", title = "Open Screen Area (m²)", title_offset = 50, ticks = 6,
+    add_axis("x" ,offset = 1, title = "Intake flow rate (L/s)", ticks = 5,
              properties = axis_props(
-               title = list(fontSize = 15),
+               title = list(fontSize = 15, fontWeight = "normal"),
                labels = list(fontSize = 12)
              )
     )%>%

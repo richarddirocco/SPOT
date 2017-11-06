@@ -71,7 +71,9 @@ ui <- function(request){
           textInput("SS", label = "Swim speed in m/s", value = "0.3")),
                           
       conditionalPanel("input.Calculate == '2'",
-          checkboxInput("SSEst", label = "Plot estimates", value = TRUE))
+          checkboxInput("SSEst", label = "Plot estimates", value = TRUE)),
+      
+      helpText(a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "Submit feedback"), align = "center")
     ), # Close sidebarPanel
     
     mainPanel(

@@ -20,7 +20,7 @@ output:
 
 ##Background
 
-The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/speedtime.html) generates a plot showing swim speed versus swim time using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf). The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval. 
+The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/speedtime.html) generates a plot showing swim speed versus swim time using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html). The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval. 
 
 In this manual, a sample problem will be answered using this tool.
 
@@ -60,7 +60,7 @@ The tool can also be used to determine swim speed based on swim time. For exampl
 
 ##Manual calculations
 
-The fish swimming performance models presented in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf) are potentially useful but required solving complex equations. The web tool reliably and quickly performs these calculations, reducing the likelihood of an erroneous result. In this section, the simplified equations from the report are displayed for reference.
+The fish swimming performance models presented in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html) are potentially useful but required solving complex equations. The web tool reliably and quickly performs these calculations, reducing the likelihood of an erroneous result. In this section, the simplified equations from the report are displayed for reference.
 
 Fish swimming speed is calculated using the following formula:
 
@@ -72,7 +72,7 @@ Where:
 *   *g* is gravitational acceleration (9.81 m/s^2^)
 *   *l* is fish length in meters
 *   *k* and *b* are coefficients derived from Deming regression analysis
-    + These values can be found in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf)
+    + These values can be found in [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html)
     
 The formula can be rearranged to estimate time based on fish swimming speed:
 

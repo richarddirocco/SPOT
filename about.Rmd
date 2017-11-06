@@ -30,6 +30,6 @@ This website hosts prototype tools built to expand on the <a href='http://www.df
 * <a href='http://rmarkdown.rstudio.com/' target='_blank'>R Markdown</a> [@rmarkdown]
 * <a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a> [@rfishbase]
 
-This website is still in development and bugs/suggestions should be sent <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.
+This website is still in development. Feedback is welcome and can be submitted <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.
 
 ### References
