@@ -176,15 +176,17 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="speedtime.html">Swim Speed & Swim Time</a></li>
-        <li><a href="distancevelocity.html">Swim Distance & Water Velocity</a></li>
+        <li><a href="speedtime.html">Swim Speed & Time</a></li>
+        <li><a href="distancevelocity.html">Swim Distance & Velocity</a></li>
         <li><a href="lengthmaturity.html">Length at Maturity</a></li>
-        <li class="dropdown">
+        <li><a href="endofpipe-tool.html">Calculate Screen Size</a></li>
+<!--        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">End-of-Pipe Screen <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="endofpipe-guideline.html">Draft Guideline</a></li>
             <li><a href="endofpipe-tool.html">Screen Size Calculator</a></li>
           </ul>
+-->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -224,7 +226,7 @@ $(document).ready(function () {
 <h2>Background</h2>
 <iframe src="https://player.vimeo.com/video/212965322" width="320" height="240" style="float:right;margin-left:10px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 </iframe>
-<p>Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel <span class="citation">(Mussen et al. 2014)</span>. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size tool</a> is used to calculate the required Open Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Open Screen Area</b> is the amount of area available for the free flow of water. It does not include the space obstructed by the screen mesh or any supports. The draft <a href="http://www.fishprotectiontools.ca/endofpipe-guideline.html">Freshwater Intake End-of-Pipe Fish Screen Guideline</a> has more information on end-of-pipe screens. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.pdf">Katopodis &amp; Gervais (2016)</a>.</p>
+<p>Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel <span class="citation">(Mussen et al. 2014)</span>. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size tool</a> is used to calculate the required Open Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Open Screen Area</b> is the amount of area available for the free flow of water. It does not include the space obstructed by the screen mesh or any supports. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis &amp; Gervais (2016)</a>.</p>
 <p>In this manual, a sample problem will be answered using this tool.</p>
 </div>
 <div id="sample-question" class="section level2">
@@ -243,7 +245,7 @@ $(document).ready(function () {
 <ol style="list-style-type: decimal">
 <li>In the “Select fish by:” dropdown, choose “Group”.</li>
 <li>Below “Select groups:”, check the “Catfish &amp; Sunfish”, “Pike” and “Salmon &amp; Walleye” boxes.</li>
-<li>Enter “90” in the “Intake flow rate (L/s):”&quot; box.</li>
+<li>Enter “90” in the “Intake flow rate (L/s):” box.</li>
 </ol>
 <p>Once these steps are completed, the tool will indicate an Open Screen Area of 1.634 m<sup>2</sup> is required. The tool should look like this:</p>
 <iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/endofpipe/?_inputs_&amp;CatfishSunfish=true&amp;Eel=false&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=90&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Herring=false&amp;Pike=true&amp;SalmonWalleye=true&amp;Sturgeon=false" width="100%" frameBorder="0" scrolling="no">

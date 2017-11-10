@@ -19,19 +19,11 @@ MaturityData$Country <- as.factor(MaturityData$Country)
 
 
 # Rename Measurement.type
-# MaturityData$Measurement.type[MaturityData$Measurement.type == "TL"] <- "Total length"
-# MaturityData$Measurement.type[MaturityData$Measurement.type == "FL"] <- "Fork length"
-# MaturityData$Measurement.type[MaturityData$Measurement.type == "SL"] <- "Standard length"
-# MaturityData$Measurement.type[MaturityData$Measurement.type == "NG"] <- "Not given"
 MaturityData$Measurement.type <- as.factor(MaturityData$Measurement.type)
 
 # Sort data by Country then Sex
 MaturityData <- MaturityData[order(MaturityData$Country, MaturityData$Sex),]
 
-
-# Convert length from cm to mm
-MaturityData$Minimum.length.at.first.maturity <- MaturityData$Minimum.length.at.first.maturity * 10
-MaturityData$Mean.length.at.first.maturity..Lm. <- MaturityData$Mean.length.at.first.maturity..Lm. * 10
 
 ui <- fluidPage(
   
@@ -46,7 +38,7 @@ ui <- fluidPage(
   br(),
   
   # Help text explaining how to use the tool
-  helpText("Select a species using the scientific or common name. The available length at maturity data for the selected species will be displayed in the table below. All data is from", a("FishBase.", href='http://www.fishbase.ca/'), "The Measurement type column shows the type of fish length measurement used: FL (Fork Length), SL (Standard Length), TL (Total Length), or NG (Not Given)."),
+  helpText("Select a species using the scientific or common name. The available length at maturity data for the selected species will be displayed in the table below. The data is from", a("FishBase", href='http://www.fishbase.ca/'), " and other sources (see reference column). The Measurement type column shows the type of fish length measurement used: FL (Fork Length), SL (Standard Length), TL (Total Length), or NG (Not Given)."),
   
   # Add break before selecter
   br(),
@@ -75,7 +67,9 @@ ui <- fluidPage(
   br(),
   
   # Create table
-  column(12, DT::dataTableOutput('MaturityData'))
+  column(12, DT::dataTableOutput('MaturityData')),
+  
+  column(12,helpText("Can't find the data you need? Request it ", a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "here.")), align = "center")
 )
 
 server <- function(input, output) {

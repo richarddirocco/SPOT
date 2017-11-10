@@ -176,15 +176,17 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="speedtime.html">Swim Speed & Swim Time</a></li>
-        <li><a href="distancevelocity.html">Swim Distance & Water Velocity</a></li>
+        <li><a href="speedtime.html">Swim Speed & Time</a></li>
+        <li><a href="distancevelocity.html">Swim Distance & Velocity</a></li>
         <li><a href="lengthmaturity.html">Length at Maturity</a></li>
-        <li class="dropdown">
+        <li><a href="endofpipe-tool.html">Calculate Screen Size</a></li>
+<!--        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">End-of-Pipe Screen <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="endofpipe-guideline.html">Draft Guideline</a></li>
             <li><a href="endofpipe-tool.html">Screen Size Calculator</a></li>
           </ul>
+-->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -221,14 +223,16 @@ $(document).ready(function () {
 
 </script>
 <p><br></p>
-<p>This website hosts prototype tools built for the Central &amp; Arctic Region’s <a href='http://www.dfo-mpo.gc.ca/pnw-ppe/fpp-ppp/index-eng.html'> Fisheries Protection Program</a>. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in <a href='https://www.r-project.org/' target='_blank'>R</a> <span class="citation">(R Core Team 2016)</span> using the following packages:</p>
+<p>This website hosts prototype tools built to expand on the <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html'> Fish Swimming Performance Database and Analyses </a> CSAS document. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in <a href='https://www.r-project.org/' target='_blank'>R</a> <span class="citation">(R Core Team 2016)</span> using the following packages:</p>
 <ul>
 <li><a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a> <span class="citation">(Chang et al. 2017)</span></li>
-<li><a href='http://ggplot2.org/' target='_blank'> ggplot2</a> <span class="citation">(Wickham 2009)</span></li>
+<li><a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a> <span class="citation">(Wickham 2009)</span></li>
+<li><a href='http://ggvis.rstudio.com/' target='_blank'> ggvis</a> <span class="citation">(Chang and Wickham 2016)</span></li>
+<li><a href='http://tidyr.tidyverse.org/' target='_blank'> tidyr</a> <span class="citation">(Wickham and Henry 2017)</span></li>
 <li><a href='http://rmarkdown.rstudio.com/' target='_blank'>R Markdown</a> <span class="citation">(Allaire et al. 2016)</span></li>
 <li><a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a> <span class="citation">(Boettiger, Temple Lang, and Wainwright 2012)</span></li>
 </ul>
-<p>This website is still in development and bugs/suggestions should be sent <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.</p>
+<p>This website is still in development. Feedback is welcome and can be submitted <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.</p>
 <div id="references" class="section level3 unnumbered">
 <h3>References</h3>
 <div id="refs" class="references">
@@ -238,6 +242,9 @@ $(document).ready(function () {
 <div id="ref-rfishbase">
 <p>Boettiger, Carl, Duncan Temple Lang, and Peter Wainwright. 2012. <em>rfishbase: Exploring, Manipulating and Visualizing Fishbase Data from R</em>. <em>Journal of Fish Biology</em>.</p>
 </div>
+<div id="ref-ggvis">
+<p>Chang, Winston, and Hadley Wickham. 2016. <em>Ggvis: Interactive Grammar of Graphics</em>.</p>
+</div>
 <div id="ref-shiny">
 <p>Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan McPherson. 2017. <em>Shiny: Web Application Framework for R</em>.</p>
 </div>
@@ -246,6 +253,9 @@ $(document).ready(function () {
 </div>
 <div id="ref-ggplot2">
 <p>Wickham, Hadley. 2009. <em>ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York.</p>
+</div>
+<div id="ref-tidyr">
+<p>Wickham, Hadley, and Lionel Henry. 2017. <em>Tidyr: Easily Tidy Data with ’Spread()’ and ’Gather()’ Functions</em>.</p>
 </div>
 </div>
 </div>
