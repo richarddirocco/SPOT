@@ -33,3 +33,9 @@ body {
         float:none;
     }
 }
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}

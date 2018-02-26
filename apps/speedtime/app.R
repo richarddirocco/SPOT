@@ -41,21 +41,26 @@ ui <- function(request){
     sidebarPanel(
                           
       helpText("Need help? Visit the ",
-               a(href="http://www.fishprotectiontools.ca/speedtime-manual.html",target="_blank", "Manual"), align = "center"
+               a(href="http://www.fishprotectiontools.ca/userguide.html",target="_blank", "Manual"), align = "center"
       ),
                           
       radioButtons("Selecter", label = "Select fish by:", choices = list("Group" = 0, "Common name" = 1, "Scientific name" = 2), selected=0),
                           
       conditionalPanel("input.Selecter == '0'",
           selectInput("Group", label = "Select group",
-                      choices = list("Catfish & Sunfish", "Eel", "Herring", "Salmon & Walleye", "Sturgeon", "Pike (derived)"),
-                                                                               selected = "Salmon & Walleye")),
+                      choices = list("Catfish & Sunfish", "Eel", "Herring", "Salmon & Walleye", 
+                                     "Sturgeon", "Pike (derived)"),
+                      selected = "Salmon & Walleye")),
                           
       conditionalPanel("input.Selecter == '1'",
-          selectInput("CName", label = "Select species",choices = sort(FishList$CommonName), selected = "Brook trout")),
+          selectInput("CName", label = "Select species",
+                      choices = sort(FishList$CommonName), 
+                      selected = "Brook trout")),
                           
       conditionalPanel("input.Selecter == '2'",
-          selectInput("SName", label = "Select species",choices = sort(FishList$ScientificName),selected = "Salvelinus fontinalis")),
+          selectInput("SName", label = "Select species",
+                      choices = sort(FishList$ScientificName),
+                      selected = "Salvelinus fontinalis")),
 
       sliderInput("l", label = "Fish length (mm):", min = 25, max = 1000, value = c(2.5), step = 5),
                           
@@ -260,19 +265,19 @@ server <- function(input, output, session){
   
   #Create output text for swim speed based on swim time
   output$SpeedText5 <- renderText({
-    paste("2.5% of ", input$l, "mm", Group(), "can achieve ", signif(U5Num(), digits = 2), "m/s when swimming for ", STnum(), "s" )
+    paste("2.5% of ", input$l, "mm", Group(), "can achieve ", signif(U5Num(), digits = 3), "m/s when swimming for ", STnum(), "s" )
   })
   output$SpeedText25 <- renderText({
-    paste("12.5% of ", input$l, "mm", Group(), "can achieve ", signif(U25Num(), digits = 2), "m/s when swimming for ", STnum(), "s" )
+    paste("12.5% of ", input$l, "mm", Group(), "can achieve ", signif(U25Num(), digits = 3), "m/s when swimming for ", STnum(), "s" )
   })
   output$SpeedText50 <- renderText({
-    paste("50% of ", input$l, "mm", Group(), "can achieve ", signif(U50Num(), digits = 2), "m/s when swimming for ", STnum(), "s" )
+    paste("50% of ", input$l, "mm", Group(), "can achieve ", signif(U50Num(), digits = 3), "m/s when swimming for ", STnum(), "s" )
   })
   output$SpeedText75 <- renderText({
-    paste("87.5% of ", input$l, "mm", Group(), "can achieve ", signif(U75Num(), digits = 2), "m/s when swimming for ", STnum(), "s" )
+    paste("87.5% of ", input$l, "mm", Group(), "can achieve ", signif(U75Num(), digits = 3), "m/s when swimming for ", STnum(), "s" )
   })
   output$SpeedText95 <- renderText({
-    paste("97.5% of ", input$l, "mm", Group(), "can achieve ", signif(U95Num(), digits = 2), "m/s when swimming for ", STnum(), "s" )
+    paste("97.5% of ", input$l, "mm", Group(), "can achieve ", signif(U95Num(), digits = 3), "m/s when swimming for ", STnum(), "s" )
   })
   
   #Create output text for Swim time based on swim speed
@@ -280,7 +285,7 @@ server <- function(input, output, session){
     if(T5Num()<3){
       TT5 <- paste("2.5% of ", input$l, "mm", Group(), "cannot swim", SSnum(), " m/s.")}
     if(T5Num()>=3 & T5Num()<=1800){
-      TT5 <- paste("2.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T5Num(), digits = 2), "s")}
+      TT5 <- paste("2.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T5Num(), digits = 3), "s")}
     if(T5Num()>1800){
       TT5 <- paste("2.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for longer than 1800 s")}
     TT5
@@ -290,7 +295,7 @@ server <- function(input, output, session){
     if(T25Num()<3){
       TT25 <- paste("12.5% of ", input$l, "mm", Group(), "cannot swim", SSnum(), " m/s.")}
     if(T25Num()>=3 & T25Num()<=1800){
-      TT25 <- paste("12.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T25Num(), digits = 2), "s")}
+      TT25 <- paste("12.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T25Num(), digits = 3), "s")}
     if(T25Num()>1800){
       TT25 <- paste("12.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for longer than 1800 s")}
     TT25
@@ -300,7 +305,7 @@ server <- function(input, output, session){
     if(T50Num()<3){
       TT50 <- paste("50% of ", input$l, "mm", Group(), "cannot swim", SSnum(), " m/s.")}
     if(T50Num()>=3 & T50Num()<=1800){
-      TT50 <- paste("50% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T50Num(), digits = 2), "s")}
+      TT50 <- paste("50% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T50Num(), digits = 3), "s")}
     if(T50Num()>1800){
       TT50 <- paste("50% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for longer than 1800 s")}
     TT50
@@ -310,7 +315,7 @@ server <- function(input, output, session){
     if(T75Num()<3){
       TT75 <- paste("87.5% of ", input$l, "mm", Group(), "cannot swim", SSnum(), " m/s.")}
     if(T75Num()>=3 & T75Num()<=1800){
-      TT75 <- paste("87.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T75Num(), digits = 2), "s")}
+      TT75 <- paste("87.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T75Num(), digits = 3), "s")}
     if(T75Num()>1800){
       TT75 <- paste("87.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for longer than 1800 s")}
     TT75
@@ -320,7 +325,7 @@ server <- function(input, output, session){
     if(T95Num()<3){
       TT95 <- paste("97.5% of ", input$l, "mm", Group(), "cannot swim", SSnum(), " m/s.")}
     if(T95Num()>=3 & T95Num()<=1800){
-      TT95 <- paste("97.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T95Num(), digits = 2), "s")}
+      TT95 <- paste("97.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for at least ", signif(T95Num(), digits = 3), "s")}
     if(T95Num()>1800){
       TT95 <- paste("97.5% of ", input$l, "mm", Group(), " can swim", SSnum(), " m/s for longer than 1800 s")}
     TT95

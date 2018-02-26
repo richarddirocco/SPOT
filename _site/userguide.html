@@ -1,0 +1,2434 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Fish Swimming Performance User Guide</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+<!DOCTYPE html>
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- NOTE: add "navbar-inverse" class for an alternate navbar background -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Fish Protection Tools</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="speedtime.html">Swim Speed & Time</a></li>
+        <li><a href="distancevelocity.html">Swim Distance & Velocity</a></li>
+        <li><a href="lengthmaturity.html">Length at Maturity</a></li>
+        <li><a href="endofpipe-tool.html">Calculate Screen Size</a></li>
+<!--        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">End-of-Pipe Screen <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="endofpipe-guideline.html">Draft Guideline</a></li>
+            <li><a href="endofpipe-tool.html">Screen Size Calculator</a></li>
+          </ul>
+-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="userguide.html">Fish Swimming Performance User Guide</a></li>
+            <li><a href="endofpipe-manual.html">Screen Size Calculator</a></li>
+          </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+</html>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Fish Swimming Performance User Guide</h1>
+
+</div>
+
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>This guide presents a collection of fish swimming performance fatigue (swim speed versus endurance time) and distance (swim distance versus water velocity) curves that were produced from data collected from the literature. The focus of the analysis was on freshwater species (e.g. potamodromous) and species with a life cycle stage that requires the use of freshwater (e.g. diadromous species, including anadromous salmonids and catadromous eels).</p>
+<p>Data from fish performance studies were collected in the laboratory or the field through a variety of methods and constitute the database for analyses conducted. Data from swim chamber tests, such as time to fatigue (fixed velocity) and increasing velocity (critical swim speed), as well as fish speed and endurance from volitional open channels were used. Regressions were performed to generate fatigue curves for endurance in the range of 3 s (seconds) to 30 min (minutes). This range was considered the most practical and relevant for fish passage and other protection measures related to the swimming ability of fish.</p>
+<p>Data grouping was used to produce more inclusive and diverse datasets that capture measurements from a wide range of data sources. Furthermore, data grouping helps bridge data gaps related to limited or missing data, makes the results more universal and reduces the potential bias when data is limited. Each independent swim test should be regarded as a point in time measurement that reflects the performance of the specific fish that were tested and the conditions under which they were tested. Environmental conditions that can affect swimming capacity of fish are variable in the natural world, and include factors such as water velocity, water temperature, the fish’s energy stores related to food supply, fish health, and others. Testing may not capture the potential variation in performance from all these factors and therefore it is important to be aware of this when using swimming performance data.</p>
+<p>Fish length appears to be a major factor affecting swimming performance. Longer fish have higher fish speeds (U) expressed in m/s, than shorter ones. Fish speed is also expressed in body lengths per second (BL/s) or if l is fish length, U/l. In this case, shorter fish usually have higher relative speeds than longer ones. Estimates in BL/s are often used for various species, indicating swimming performance similarity between different species. A dimensionless speed (U<sub>*</sub>) is another way of expressing fish speed and is defined as U(gl)<sup>-0.5</sup>, where g has a constant value of 9.81 m/s<sup>2</sup>. The dimensionless speed identifies fish species with similar swimming performance more clearly and provides better regressions compared to BL/s or m/s.</p>
+<p>Regression analysis of available data was used to formulate a collection of dimensionless fatigue curves (dimensionless swim speed versus dimensionless endurance time) derived by grouping fish species with similar swimming performance. Dimensionless fatigue curves, for the 3 s to 30 min time range and corresponding distance curves, were generated for the following groups: 1) Eel; 2) Salmon and Walleye; 3) Catfish and Sunfish; 4) Sturgeon; 5) Herring; and 6) Pike (derived). The “Eel Group” and the “Salmon and Walleye Group”, which correspond to the previously named “anguilliform” and “subcarangiform” groups, have the more complete data sets and more robust regressions. The “Catfish and Sunfish” and “Sturgeon” groups lack burst or high fish speed data, while the “Herring Group” has limited prolonged or low speed fish data. These limitations should be kept in mind when using the results.</p>
+<p>The “Pike Group” was a special case where a lack of data at the higher swimming speeds prevented the creation of a complete fatigue curve. Given the importance of pike for certain regions, a special curve was developed to provide some guidance on swimming capacity. The derived curve was based on existing pike swimming data at the lower end of the curve. Pike are known for strong burst speeds so the high end of the curve was estimated from the similar highest speeds from the “Eel” and the “Salmon and Walleye” groups. The derived curve was considered a more effective option that trying to include pike with one of the other groups where the fit may be more compromised.</p>
+<p>A more detailed description of the analysis and derivation of the swimming performance curves presented in this guide can be found in <span class="citation">Katopodis and Gervais (2016)</span>.</p>
+</div>
+<div id="using-the-equations" class="section level2">
+<h2>Using the Equations</h2>
+<p>This document contains a series of equations that can be used to estimate:</p>
+<ol style="list-style-type: decimal">
+<li>fatigue which relates swimming speed and endurance time and</li>
+<li>swim distance which relates swimming distance and water velocity</li>
+</ol>
+<p>Both sets of relationships are based on grouped data made up of a collection of different fish species. The swimming performance of a particular fish species is represented by the group. For example, to estimate the swimming performance of rainbow trout, the Salmon &amp; Walleye Group would be used, since rainbow trout is part of this group. <a href="#group-summary-by-species">Table 4</a> contains a listing of species and the groups those species belong to. The fatigue equations and webtool provide a regression line with 75% and 95% prediction interval lines. Distance equations were generated from the fatigue equations and correspond to the fatigue lines. Prediction intervals are sometimes known as probability intervals and are different from confidence intervals. The prediction interval is a statistical interval calculated to include one or more future observations from the same population with a specified confidence. A prediction interval is used to predict the range within which a single observation is expected to fall. It was included to capture the variation in performance (scatter above and below the regression line) which is important when quantifying performance. For example, the 95% prediction interval for the swim distance would represent the range where there is a 95% chance that the next measurement would fall within. For a 95% prediction interval, there is a 2.5% chance that an observation will be below the lower bound of the interval and a 2.5% chance an observation will be above the upper bound of the interval. Consequently, the lower boundary line of this prediction interval would represent the dividing point above which there is 97.5% chance that a fish would be able swim that distance. The choice of which line to use, should reflect the overall risk to the particular species and watershed. For example, where fish passage is a concern and the goal is to minimize long term impact to a particular population, the lower boundary curve would be used to reflect a higher degree of passage to be achieved. It is important to emphasize that swimming speeds are but one of several factors to be considered in achieving desirable levels of upstream or downstream fish passage and should not be used exclusively to judge designs or effectiveness.</p>
+</div>
+<div id="fatigue-curves" class="section level2">
+<h2>Fatigue Curves</h2>
+<p>The <a href="#fatigue-equations">fatigue equations</a> section contains the dimensionless equations for the fatigue curves and summary tables of coefficients (k and b) for the regression line with 75% and 95% prediction intervals for each of the groups. The equations can be used to calculate the following:</p>
+<ul>
+<li>endurance time (t in s) given fish species, fish length (l in m) and swimming speed (U in m/s)</li>
+<li>swim speed (U in m/s) given fish species, fish length (l in m) and endurance time (t in s)</li>
+<li>fish length (l in m) given fish species, swim speed (U in m/s) and endurance time (t in s)</li>
+</ul>
+</div>
+<div id="fatigue-equations" class="section level2">
+<h2>Fatigue Equations</h2>
+<p>Dimensionless fatigue curves are relationships between dimensionless fish speed (U<sub>*</sub>) and dimensionless endurance time (t<sub>*</sub>).</p>
+<p><span class="math display">\[U_* = K(t_*)^b \]</span></p>
+<p>Where: <span class="math display">\[U_* = \frac{U}{\sqrt{gl}}\]</span> And: <span class="math display">\[t_* = \frac{t}{\sqrt{l/g}}\]</span></p>
+<p>Where:</p>
+<ul>
+<li><em>U</em><sub>*</sub> is the fish swimming speed in m/s</li>
+<li><em>t</em><sub>*</sub> is endurance time in seconds and is limited from 3 to 1800 seconds</li>
+<li><em>g</em> is gravitational acceleration (9.81 m/s<sup>2</sup>)</li>
+<li><em>l</em> is fish length in meters</li>
+<li><em>k</em> and <em>b</em> are coefficients derived from Deming regression analysis</li>
+</ul>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Table 1. Dimensionless fatigue regression equations.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Group
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+<th style="text-align:center;">
+R<sup>2</sup>
+</th>
+<th style="text-align:center;">
+ChiSQ
+</th>
+<th style="text-align:center;">
+Count
+</th>
+<th style="text-align:left;">
+Comments
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:center;">
+2.176
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+<td style="text-align:center;">
+0.64
+</td>
+<td style="text-align:center;">
+59.5
+</td>
+<td style="text-align:center;">
+1282
+</td>
+<td style="text-align:left;">
+Limited data on burst range
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Eel
+</td>
+<td style="text-align:center;">
+3.722
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+<td style="text-align:center;">
+0.84
+</td>
+<td style="text-align:center;">
+124.7
+</td>
+<td style="text-align:center;">
+1747
+</td>
+<td style="text-align:left;">
+Most comprehensive data sets
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Herring
+</td>
+<td style="text-align:center;">
+10.119
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+<td style="text-align:center;">
+0.90
+</td>
+<td style="text-align:center;">
+7.4
+</td>
+<td style="text-align:center;">
+592
+</td>
+<td style="text-align:left;">
+Lack of prolonged data; b could be high
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:center;">
+4.004
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+<td style="text-align:center;">
+0.70
+</td>
+<td style="text-align:center;">
+1933.2
+</td>
+<td style="text-align:center;">
+17085
+</td>
+<td style="text-align:left;">
+Most comprehensive data sets
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Sturgeon
+</td>
+<td style="text-align:center;">
+0.756
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+<td style="text-align:center;">
+0.69
+</td>
+<td style="text-align:center;">
+22.7
+</td>
+<td style="text-align:center;">
+1008
+</td>
+<td style="text-align:left;">
+Lack of burst data; b could be low
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Pike (derived)
+</td>
+<td style="text-align:center;">
+3.811
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:left;">
+All points in low prolonged range; lack of burst data; curve derived by assuming burst performance similar to Salmon &amp; Walleye and Eel groups
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Table 2. Dimensionless fatigue equations for 75% and 95% prediction interval coefficients.
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+95% Prediction Interval
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+75% Prediction Interval
+</div>
+</th>
+</tr>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Upper Boundary
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Lower Boundary
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Upper Boundary
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Lower Boundary
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Group
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:center;">
+3.326
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+<td style="text-align:center;">
+1.424
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+<td style="text-align:center;">
+2.791
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+<td style="text-align:center;">
+1.696
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Eel
+</td>
+<td style="text-align:center;">
+6.295
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+<td style="text-align:center;">
+2.201
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+<td style="text-align:center;">
+5.066
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+<td style="text-align:center;">
+2.735
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Herring
+</td>
+<td style="text-align:center;">
+12.605
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+<td style="text-align:center;">
+8.123
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+<td style="text-align:center;">
+11.511
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+<td style="text-align:center;">
+8.895
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:center;">
+7.744
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+<td style="text-align:center;">
+2.070
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+<td style="text-align:center;">
+5.897
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+<td style="text-align:center;">
+2.719
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Sturgeon
+</td>
+<td style="text-align:center;">
+1.018
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+<td style="text-align:center;">
+0.562
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+<td style="text-align:center;">
+0.900
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+<td style="text-align:center;">
+0.635
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Pike (derived)
+</td>
+<td style="text-align:center;">
+5.962
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+<td style="text-align:center;">
+2.437
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+<td style="text-align:center;">
+4.950
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+<td style="text-align:center;">
+2.935
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="distance-curves" class="section level2">
+<h2>Distance Curves</h2>
+<p>The <a href="#distance-equations">distance equations</a> section contains the dimensionless equations for the distance curves and summary tables of the coefficients (M and a) for the regression line with 75% and 95% prediction intervals for each of the groups. The equations can be used to calculate the following:</p>
+<ul>
+<li>swim distance (X in m) given fish species, fish length (l in m) and water velocity (V in m/s)</li>
+<li>water velocity (V in m/s) given fish species, fish length (l in m) and swim distance (X in m)</li>
+<li>fish length (l in m) given fish species, water velocity (V in m/s) and swim distance (X in m)</li>
+</ul>
+</div>
+<div id="distance-equations" class="section level2">
+<h2>Distance Equations</h2>
+<p>Dimensionless swim distance curves are relationships between dimensionless water velocity (V<sub>*</sub>) and dimensionless swimming distance (X<sub>*</sub>).</p>
+<p><span class="math display">\[X_* = M(V_*)^a\]</span> Where: <span class="math display">\[X_* = X/l\]</span> And: <span class="math display">\[V_* = \frac{V}{\sqrt{gl}}\]</span></p>
+<p>Where:</p>
+<ul>
+<li><em>X</em><sub>*</sub> = dimensionless swimming speed</li>
+<li><em>X</em> = swimming distance (m)</li>
+<li><em>V</em><sub>*</sub> = dimensionless water velocity</li>
+<li><em>V</em> = water velocity (m/s)</li>
+<li><em>l</em> = fish length (meters)</li>
+<li><em>g</em> = gravitational acceleration = 9.81 m/s<sup>2</sup></li>
+<li><em>M</em> and <em>a</em> are coefficients derived from dimensionless speed vs. time regression</li>
+</ul>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Table 3. Dimensionless swim distance equations and prediction interval coefficients derived from fatigue regressions.
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="3">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+95% Prediction Interval
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+75% Prediction Interval
+</div>
+</th>
+</tr>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+X<sub>•</sub> vs. V<sub>•</sub>
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Upper Boundary
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Lower Boundary
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Upper Boundary
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Lower Boundary
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Group
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:center;">
+3.892
+</td>
+<td style="text-align:center;">
+-3.953
+</td>
+<td style="text-align:center;">
+31.668
+</td>
+<td style="text-align:center;">
+-3.948
+</td>
+<td style="text-align:center;">
+0.4760
+</td>
+<td style="text-align:center;">
+-3.958
+</td>
+<td style="text-align:center;">
+13.321
+</td>
+<td style="text-align:center;">
+-3.950
+</td>
+<td style="text-align:center;">
+1.136
+</td>
+<td style="text-align:center;">
+-3.956
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Eel
+</td>
+<td style="text-align:center;">
+5.982
+</td>
+<td style="text-align:center;">
+-1.723
+</td>
+<td style="text-align:center;">
+25.017
+</td>
+<td style="text-align:center;">
+-1.723
+</td>
+<td style="text-align:center;">
+1.4300
+</td>
+<td style="text-align:center;">
+-1.724
+</td>
+<td style="text-align:center;">
+13.850
+</td>
+<td style="text-align:center;">
+-1.723
+</td>
+<td style="text-align:center;">
+2.584
+</td>
+<td style="text-align:center;">
+-1.723
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Herring
+</td>
+<td style="text-align:center;">
+59.340
+</td>
+<td style="text-align:center;">
+-1.489
+</td>
+<td style="text-align:center;">
+102.933
+</td>
+<td style="text-align:center;">
+-1.491
+</td>
+<td style="text-align:center;">
+34.2390
+</td>
+<td style="text-align:center;">
+-1.487
+</td>
+<td style="text-align:center;">
+81.967
+</td>
+<td style="text-align:center;">
+-1.490
+</td>
+<td style="text-align:center;">
+42.973
+</td>
+<td style="text-align:center;">
+-1.488
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:center;">
+26.919
+</td>
+<td style="text-align:center;">
+-2.994
+</td>
+<td style="text-align:center;">
+374.991
+</td>
+<td style="text-align:center;">
+-2.993
+</td>
+<td style="text-align:center;">
+1.9320
+</td>
+<td style="text-align:center;">
+-2.994
+</td>
+<td style="text-align:center;">
+126.330
+</td>
+<td style="text-align:center;">
+-2.994
+</td>
+<td style="text-align:center;">
+5.736
+</td>
+<td style="text-align:center;">
+-2.994
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Sturgeon
+</td>
+<td style="text-align:center;">
+0.006
+</td>
+<td style="text-align:center;">
+-6.669
+</td>
+<td style="text-align:center;">
+0.059
+</td>
+<td style="text-align:center;">
+-6.668
+</td>
+<td style="text-align:center;">
+0.0006
+</td>
+<td style="text-align:center;">
+-6.669
+</td>
+<td style="text-align:center;">
+0.023
+</td>
+<td style="text-align:center;">
+-6.668
+</td>
+<td style="text-align:center;">
+0.002
+</td>
+<td style="text-align:center;">
+-6.669
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Pike (derived)
+</td>
+<td style="text-align:center;">
+8.512
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+<td style="text-align:center;">
+33.161
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+<td style="text-align:center;">
+2.1850
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+<td style="text-align:center;">
+18.839
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+<td style="text-align:center;">
+3.846
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="speed-vs.time-example" class="section level2">
+<h2>Speed vs. Time Example</h2>
+<p>Question: How long can the average 250 mm rainbow trout swim 1 m/s?</p>
+<p>There are two ways to answer this question. The first and recommended method is using the interactive <a href="#webtoolspeedtime">webtool</a>. The webtool automatically and reliably performs the calculations contained in this guide. Alternatively, you can <a href="#formulaspeedtime">manually perform the calculations</a>.</p>
+<div id="webtoolspeedtime" class="section level3">
+<h3>WebTool - Speed vs. Time</h3>
+<ol style="list-style-type: decimal">
+<li>Go to the <a href="http://www.fishprotectiontools.ca/speedtime.html">Swim Speed &amp; Swim Time tool</a>.</li>
+<li>Below “Select Fish by:”, click the “Common name” radio button.</li>
+<li>In the “Select species” drop down menu, choose “Rainbow or Steelhead trout”.</li>
+<li>Drag the “Fish length” slider to 250 mm.</li>
+<li>Below “Calculations:” press the “Swim time” radio button.</li>
+<li>Enter “1” in the “Swim speed” box.</li>
+</ol>
+<p>Once these steps are completed, the tool should look like this:</p>
+<center>
+<iframe src="http://www.fishprotectiontools.ca/speedtime/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Rainbow%20or%20Steelhead%20trout%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="672" height="1260px">
+</iframe>
+</center>
+</div>
+<div id="formulaspeedtime" class="section level3">
+<h3>Formula - Speed vs. Time</h3>
+<ol style="list-style-type: decimal">
+<li>Identify the correct group for rainbow trout. The <a href="#group-summary-by-species">Group Summary by Species</a> contains a list of species for each group and from the table, rainbow trout is part of the ‘Salmon and Walleye’ Group.</li>
+<li>Endurance time can be calculated using the <a href="#fatigue-equations">fatigue equations</a>. To use the equations, find the k and b coefficients. For average endurance time use the regression equation coefficients.</li>
+</ol>
+<p><span class="math display">\[U_* = 4.004(t_*)^-0.25\]</span> Where: <span class="math display">\[U_* = \frac{1.0}{\sqrt{9.81\times0.250}} = 0.639\]</span></p>
+<p>And: <span class="math display">\[ t_* = \frac{t}{\sqrt{0.250/9.81}} = 6.264t\]</span> Substitute the values of U<sub>*</sub> and t<sub>*</sub> into the first equation: <span class="math display">\[0.639 = 4.004(6.264t)^{0.25}\]</span> Solving for t: <span class="math display">\[ t = \left(\frac{0.639}{4.004}\right)^{-1/0.25}\div6.264 = 246 \text{ seconds}\]</span></p>
+</div>
+<div id="solution---speed-vs.time" class="section level3">
+<h3>Solution - Speed vs. Time</h3>
+<p>The average 250 mm rainbow trout can swim 1 m/s for 246 seconds.</p>
+</div>
+</div>
+<div id="distance-vs.velocity-example" class="section level2">
+<h2>Distance vs. Velocity Example</h2>
+<p>Question: A proponent wishes to install a 30 meter culvert. What is the maximum water velocity that 87.5% of 400 mm northern pike can pass through?</p>
+<p>There are two ways to answer this question. The first and recommended method is using the interactive <a href="#webtooldistancevelocity">webtool</a>. The webtool automatically and reliably performs the calculations contained in this guide. Alternatively, you can <a href="#formuladistancevelocity">manually perform the calculations</a>.</p>
+<div id="webtooldistancevelocity" class="section level3">
+<h3>Webtool - Distance vs. Velocity</h3>
+<ol style="list-style-type: decimal">
+<li>Go to the <a href="http://www.fishprotectiontools.ca/distancevelocity.html">Swim Speed &amp; Swim Time tool</a>.</li>
+<li>Below “Select Fish by:”, click the “Common name” radio button.</li>
+<li>In the “Select species” drop down menu, choose “Northern Pike”.</li>
+<li>Drag the “Fish length” slider to 400 mm.</li>
+<li>Below “Calculations:”, press the “Water velocity” radio button</li>
+<li>Enter “30” in the “Swim distance in meter:” box.</li>
+</ol>
+Once these steps are completed, the tool should look like this:
+<center>
+<iframe src="http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Northern%20pike%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true" width="672" height="1260px">
+</iframe>
+</center>
+</div>
+<div id="formuladistancevelocity" class="section level3">
+<h3>Formula - Distance vs. Velocity</h3>
+<ol style="list-style-type: decimal">
+<li>Identify the correct group for northern pike. The <a href="#group-summary-by-species">Group Summary by Species</a> contains a list of species for each group and from the table, northern pike is part of the ‘Pike (derived)’ Group.</li>
+<li>Swim distance can be calculated using the <a href="#distance-equations">distance equations</a>. To use the equations, find the k and b coefficients. For average endurance time use the regression equation coefficients.</li>
+</ol>
+<p><span class="math display">\[X_* = 3.846(V_*)^{2.040}\]</span></p>
+<p>Where: <span class="math display">\[X_* = \frac{30.0}{0.4} = 75\]</span></p>
+<p>And: <span class="math display">\[V_* = \frac{V}{\sqrt{9.81\times0.4}} = 0.505V\]</span> <span class="math display">\[75 = 3.846(0.505V)^{-2.040}\]</span></p>
+<p>Solving for V: <span class="math display">\[V = \left(\frac{75}{3.846}\right)^{-1/2.040} \div 0.505 = 0.46 \text{ m/s}\]</span></p>
+</div>
+<div id="solution---distance-vs.velocity" class="section level3">
+<h3>Solution - Distance vs. Velocity</h3>
+<p>This culvert should not exceed a maximum water velocity of 0.46 m/s to allow passage of 87.5% of 400 mm northern pike.</p>
+</div>
+</div>
+<div id="concluding-remarks" class="section level2">
+<h2>Concluding Remarks</h2>
+<p>The following are some general observations related to fish swimming performance, the testing that has been used to measure performance and the analysis of the data to produce the estimates of performance.</p>
+<ul>
+<li>An extensive database on fish swimming performance was generated from the literature for both diadromous and potamodromous species.</li>
+<li>There are limited standards for measuring the swimming capacity of fish. Data were collected through a variety of fish swimming performance tests, which tend to cover different parts of fatigue curves.</li>
+<li>The database contains a mix of mean and individual swimming data; for more consistency, data were grouped.</li>
+<li>Burst speed data collected in volitional channels complement prolonged speed data from swim tunnels and assist in defining fatigue curves over a large time range.</li>
+<li>Extrapolating curves derived from volitional channel data only, would underestimate prolonged performance, as fatigue curves based on burst data only are characterised by steep slopes. The reverse is also true, i.e. fatigue curves based on data from swim tunnel only, tend to have flatter slopes and would underestimate burst performance, if extrapolated.</li>
+<li>Large variability in individual swimming performance is indicated. This is not surprising since fish species and populations have survived for millions of years at least in part because of different group or individual abilities or strategies.</li>
+<li>There are insufficient data available for many species to derive individual fatigue curves. An ecohydraulic approach using dimensionless variables allowed more global data analyses for groups of fish species and the ability to use limited data sets.</li>
+<li>Although variability in swimming performance exists between species and individuals within a species, data analyses indicate broad similarities in relative performance for groups of species.</li>
+<li>Grouping of species by family and swimming mode was used to create 6 fish groups. Two of these groups, the “Eel” and the “Salmon and Walleye”, have the best data sets and most robust regressions. These two groups correspond to update versions of the previously labelled “Anguilliform” and “Subcarangiform” species. The other 4 groups have data limitations which should be considered when using the results.</li>
+<li>Speed-time regressions provided estimates of swim distance – water velocity relationships for different confidence levels.</li>
+<li>Swim distance estimates from fatigue curves, were comparable with available direct measurements.</li>
+<li>Estimates of fatigue time or distance may be useful when considering physiological aspects in practical applications, such as fish screens and fishways.</li>
+<li>In nature, survival often depends on the efficient use of energy stores and fish may limit activities that demand high energy usage.</li>
+<li>The results of these analyses may represent a “best effort” given the limitations of the data available. Swimming performance depends on factors which cannot be measured conclusively. Actual fish passage structures often generate hydraulic conditions which defer from those tested in swimming performance devices.</li>
+</ul>
+</div>
+<div id="group-summary-by-species" class="section level2">
+<h2>Group Summary by Species</h2>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Table 4. Summary of the families and species that were used in the analysis to define the different swimming performance groups; taxonomic classification source: Integrated Taxonomic Information System - ITIS (<a href="http://www.itis.gov/" class="uri">http://www.itis.gov/</a>).
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+GroupName
+</th>
+<th style="text-align:left;">
+ScientificName
+</th>
+<th style="text-align:left;">
+CommonName
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Ictalurus furcatus
+</td>
+<td style="text-align:left;">
+Blue catfish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Ictalurus punctatus
+</td>
+<td style="text-align:left;">
+Channel catfish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Ictalurus punctatus x furcatus
+</td>
+<td style="text-align:left;">
+Channel x blue hybrid catfish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Lepomis auritus
+</td>
+<td style="text-align:left;">
+Redbreast sunfish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Lepomis incisor
+</td>
+<td style="text-align:left;">
+Sunfish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Lepomis macrochirus
+</td>
+<td style="text-align:left;">
+Bluegill
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Lepomis megalotis
+</td>
+<td style="text-align:left;">
+Longear sunfish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Micropterus dolomieu
+</td>
+<td style="text-align:left;">
+Smallmouth bass
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Micropterus salmoides
+</td>
+<td style="text-align:left;">
+Largemouth bass
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Catfish &amp; Sunfish
+</td>
+<td style="text-align:left;">
+Pomoxis annularis
+</td>
+<td style="text-align:left;">
+White crappie
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eel
+</td>
+<td style="text-align:left;">
+Anguilla anguilla
+</td>
+<td style="text-align:left;">
+European eel
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eel
+</td>
+<td style="text-align:left;">
+Lampetra tridentata
+</td>
+<td style="text-align:left;">
+Pacific lamprey
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eel
+</td>
+<td style="text-align:left;">
+Lota lota
+</td>
+<td style="text-align:left;">
+Burbot
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eel
+</td>
+<td style="text-align:left;">
+Petromyzon marinus
+</td>
+<td style="text-align:left;">
+Sea lamprey
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Herring
+</td>
+<td style="text-align:left;">
+Alosa aestivalis
+</td>
+<td style="text-align:left;">
+Blueback herring
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Herring
+</td>
+<td style="text-align:left;">
+Alosa fallax
+</td>
+<td style="text-align:left;">
+Twaite shad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Herring
+</td>
+<td style="text-align:left;">
+Alosa pseudoharengus
+</td>
+<td style="text-align:left;">
+Alewife
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Herring
+</td>
+<td style="text-align:left;">
+Alosa sapidissima
+</td>
+<td style="text-align:left;">
+American shad
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pike (derived)
+</td>
+<td style="text-align:left;">
+Esox lucius
+</td>
+<td style="text-align:left;">
+Northern pike
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pike (derived)
+</td>
+<td style="text-align:left;">
+Esox sp.
+</td>
+<td style="text-align:left;">
+Tiger muskellunge
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Abramis brama
+</td>
+<td style="text-align:left;">
+Bream
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Barbus barbus
+</td>
+<td style="text-align:left;">
+Barbel
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Campostoma anomalum
+</td>
+<td style="text-align:left;">
+Central stoneroller
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Carassius carassius
+</td>
+<td style="text-align:left;">
+Crucian carp
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Catostomus catostomus
+</td>
+<td style="text-align:left;">
+Longnose sucker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Catostomus commersoni
+</td>
+<td style="text-align:left;">
+White sucker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Catostomus laipinnis
+</td>
+<td style="text-align:left;">
+Flannelmouth sucker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Catostomus macrocheilus
+</td>
+<td style="text-align:left;">
+Largescale sucker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Catostomus platyrhynchus
+</td>
+<td style="text-align:left;">
+Mountain sucker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Chasmistes liorus
+</td>
+<td style="text-align:left;">
+June sucker
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Coregonus artedii
+</td>
+<td style="text-align:left;">
+Cisco
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Coregonus autumnalis
+</td>
+<td style="text-align:left;">
+Arctic cisco
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Coregonus clupeaformis
+</td>
+<td style="text-align:left;">
+Lake whitefish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Coregonus nasus
+</td>
+<td style="text-align:left;">
+Broad whitefish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Coregonus sardinella
+</td>
+<td style="text-align:left;">
+Least cisco
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Cyprinella lutrensis
+</td>
+<td style="text-align:left;">
+Red shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Cyprinella proserpina
+</td>
+<td style="text-align:left;">
+Proserpine shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Cyprinella venusta
+</td>
+<td style="text-align:left;">
+Blacktail shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Cyprinus carpio
+</td>
+<td style="text-align:left;">
+Carp
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Etheostoma grahami
+</td>
+<td style="text-align:left;">
+Rio Grande darter
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Gila cypha
+</td>
+<td style="text-align:left;">
+Humpback chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Gila elegans
+</td>
+<td style="text-align:left;">
+Bonytail chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Gobio gobio
+</td>
+<td style="text-align:left;">
+Gudgeon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Hybognathus amarus
+</td>
+<td style="text-align:left;">
+Silvery minnow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Hybognathus placitus
+</td>
+<td style="text-align:left;">
+Plains minnow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Iotichthys phlegethontis
+</td>
+<td style="text-align:left;">
+Least chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Lepidomeda aliciae
+</td>
+<td style="text-align:left;">
+Southern leatherside chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Leuciscus cephalus
+</td>
+<td style="text-align:left;">
+European chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Leuciscus leuciscus
+</td>
+<td style="text-align:left;">
+Dace
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Luxilus chrysocephalus
+</td>
+<td style="text-align:left;">
+Striped shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Lythrurus fumeus
+</td>
+<td style="text-align:left;">
+Ribbon shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Lythrurus umbratilis
+</td>
+<td style="text-align:left;">
+Redfin shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Macrhybopsis aestivalis
+</td>
+<td style="text-align:left;">
+Speckled chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Morone americana
+</td>
+<td style="text-align:left;">
+White perch
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Morone saxatilis
+</td>
+<td style="text-align:left;">
+Striped bass
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis amabilis
+</td>
+<td style="text-align:left;">
+Texas shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis atherinoides
+</td>
+<td style="text-align:left;">
+Emerald shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis atrocaudalis
+</td>
+<td style="text-align:left;">
+Blackspot shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis bairdi
+</td>
+<td style="text-align:left;">
+Red River shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis buccula
+</td>
+<td style="text-align:left;">
+Smalleye shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis buchanani
+</td>
+<td style="text-align:left;">
+Ghost shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis hudsonius
+</td>
+<td style="text-align:left;">
+Spottail shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis oxyrhynchus
+</td>
+<td style="text-align:left;">
+Sharpnose shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis sabinae
+</td>
+<td style="text-align:left;">
+Sabine shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis shumardi
+</td>
+<td style="text-align:left;">
+Silverband shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis stramineus
+</td>
+<td style="text-align:left;">
+Sand shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis texanus
+</td>
+<td style="text-align:left;">
+Weed shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis topeka
+</td>
+<td style="text-align:left;">
+Topeka shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Notropis volucellus
+</td>
+<td style="text-align:left;">
+Mimic shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Oncorhynchus clarki
+</td>
+<td style="text-align:left;">
+Cutthroat trout
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Oncorhynchus gorbuscha
+</td>
+<td style="text-align:left;">
+Pink salmon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Oncorhynchus keta
+</td>
+<td style="text-align:left;">
+Chum salmon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Oncorhynchus kisutch
+</td>
+<td style="text-align:left;">
+Coho salmon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Oncorhynchus mykiss
+</td>
+<td style="text-align:left;">
+Rainbow or Steelhead trout
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Oncorhynchus nerka
+</td>
+<td style="text-align:left;">
+Sockeye salmon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Oncorhynchus tshawytscha
+</td>
+<td style="text-align:left;">
+Chinook salmon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Perca flavescens
+</td>
+<td style="text-align:left;">
+Yellow perch
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Perca fluviatilis
+</td>
+<td style="text-align:left;">
+European perch
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Pimephales promelas
+</td>
+<td style="text-align:left;">
+Fathead minnow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Pimephales vigilax
+</td>
+<td style="text-align:left;">
+Bullhead minnow
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Platygobio gracilus
+</td>
+<td style="text-align:left;">
+Flathead chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Pogonichthys macrolepidotus
+</td>
+<td style="text-align:left;">
+Sacramento splittail
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Prosopium williamsoni
+</td>
+<td style="text-align:left;">
+Mountain whitefish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Ptychocheilus lucius
+</td>
+<td style="text-align:left;">
+Colorado squawfish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Ptychocheilus oregonensis
+</td>
+<td style="text-align:left;">
+Northern squawfish
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Rhinichthys atratulus
+</td>
+<td style="text-align:left;">
+Blacknose dace
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Rhinichthys cataractae
+</td>
+<td style="text-align:left;">
+Longnose dace
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Rhinichthys osculus
+</td>
+<td style="text-align:left;">
+Speckled dace
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Richardsonius balteatus
+</td>
+<td style="text-align:left;">
+Redside shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Rutilus rutilus
+</td>
+<td style="text-align:left;">
+Roach
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Salmo salar
+</td>
+<td style="text-align:left;">
+Atlantic salmon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Salmo trutta
+</td>
+<td style="text-align:left;">
+Brown trout
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Salvelinus alpinus
+</td>
+<td style="text-align:left;">
+Arctic char
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Salvelinus confluentus
+</td>
+<td style="text-align:left;">
+Bull trout
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Salvelinus fontinalis
+</td>
+<td style="text-align:left;">
+Brook trout
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Salvelinus namaycush
+</td>
+<td style="text-align:left;">
+Lake trout
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Sander vitreus
+</td>
+<td style="text-align:left;">
+Walleye
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Semotilus atromaculatus
+</td>
+<td style="text-align:left;">
+Creek chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Stenodus leucichthys
+</td>
+<td style="text-align:left;">
+Inconnu
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Thymallus arcticus
+</td>
+<td style="text-align:left;">
+Arctic grayling
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Salmon &amp; Walleye
+</td>
+<td style="text-align:left;">
+Thymallus thymallus
+</td>
+<td style="text-align:left;">
+European grayling
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sturgeon
+</td>
+<td style="text-align:left;">
+Acipenser brevirostrum
+</td>
+<td style="text-align:left;">
+Shortnose sturgeon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sturgeon
+</td>
+<td style="text-align:left;">
+Acipenser fulvescens
+</td>
+<td style="text-align:left;">
+Lake sturgeon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sturgeon
+</td>
+<td style="text-align:left;">
+Acipenser transmontanus
+</td>
+<td style="text-align:left;">
+White sturgeon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sturgeon
+</td>
+<td style="text-align:left;">
+Scaphirhynchus albus
+</td>
+<td style="text-align:left;">
+Pallid sturgeon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sturgeon
+</td>
+<td style="text-align:left;">
+Scaphirhynchus platorynchus
+</td>
+<td style="text-align:left;">
+Shovelnose sturgeon
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references">
+<div id="ref-katopodis2016fish">
+<p>Katopodis, C, and R Gervais. 2016. “Fish Swimming Performance Database and Analyses.” <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,5 +1,7 @@
 # This script runs on the first of every month at midnight
 # To edit when the crontab starts, use the terminal command: sudo crontab -u rdirocco -e
+# Run monthly using this command:
+# 0 0 1 * * Rscript  /home/rdirocco/RMarkdownWebsite/apps/lengthmaturity/Fish_Length_at_Maturity.R
 # View the log by entering: grep CRON /var/log/syslog
 
 # Load packages
@@ -34,7 +36,7 @@ MaturityData$Country <- CountryCodes$Country.English[match(MaturityData$C_Code, 
 MaturityData$LengthMatRef[is.na(MaturityData$LengthMatRef)] <- MaturityData$MaturityRefNo[is.na(MaturityData$LengthMatRef)]
 
 # Create function to make clickable links with short citation from fishbase
-links <- function(x) paste0("<a href=http://fishbase.us/references/FBRefSummary.php?id=",MaturityData$LengthMatRef[x]," target='_blank' >", references(codes = MaturityData$LengthMatRef[x], fields = "ShortCitation" )[2], "</a>")
+links <- function(x) paste0("<a href=http://fishbase.ca/references/FBRefSummary.php?id=",MaturityData$LengthMatRef[x]," target='_blank' >", references(codes = MaturityData$LengthMatRef[x], fields = "ShortCitation" )[2], "</a>")
 
 # Convert reference number to a clickable link
   MaturityData$LengthMatRef <- mapply(links, 1:nrow(MaturityData))
@@ -51,7 +53,7 @@ MaturityData$"Mean length at first maturity (Lm)" <- MaturityData$"Mean length a
 
 
 # Import data derived from Coker et al., 2001
-OtherLengthAtMaturity <- read_csv("apps/lengthmaturity/OtherLengthAtMaturityData.csv")
+OtherLengthAtMaturity <- read_csv("~/RMarkdownWebsite/apps/lengthmaturity/OtherLengthAtMaturityData.csv")
 
 # Replace NAs in sex with "Unsexed"
 OtherLengthAtMaturity$Sex[is.na(OtherLengthAtMaturity$Sex)] <- "Unsexed"

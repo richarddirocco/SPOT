@@ -1,0 +1,297 @@
+---
+title: "Fish Swimming Performance User Guide"
+#author:
+#- R. Gervais
+#- C. Katopodis - Katopodis Ecohydraulics Ltd.
+#- R. Di Rocco
+#date: 2018-02-16
+output: 
+  html_document:
+    css: style.css
+    theme: cosmo
+    toc: true
+    toc_float: 
+      collapsed: false
+bibliography: bibliography.bib
+---
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+##Background
+
+This guide presents a collection of fish swimming performance fatigue (swim speed versus
+endurance time) and distance (swim distance versus water velocity) curves that were produced
+from data collected from the literature. The focus of the analysis was on freshwater species (e.g.
+potamodromous) and species with a life cycle stage that requires the use of freshwater (e.g.
+diadromous species, including anadromous salmonids and catadromous eels).
+
+Data from fish performance studies were collected in the laboratory or the field through a variety
+of methods and constitute the database for analyses conducted. Data from swim chamber tests,
+such as time to fatigue (fixed velocity) and increasing velocity (critical swim speed), as well as
+fish speed and endurance from volitional open channels were used. Regressions were performed
+to generate fatigue curves for endurance in the range of 3 s (seconds) to 30 min (minutes). This
+range was considered the most practical and relevant for fish passage and other protection
+measures related to the swimming ability of fish.
+
+Data grouping was used to produce more inclusive and diverse datasets that capture
+measurements from a wide range of data sources. Furthermore, data grouping helps bridge data
+gaps related to limited or missing data, makes the results more universal and reduces the
+potential bias when data is limited. Each independent swim test should be regarded as a point in
+time measurement that reflects the performance of the specific fish that were tested and the
+conditions under which they were tested. Environmental conditions that can affect swimming
+capacity of fish are variable in the natural world, and include factors such as water velocity,
+water temperature, the fish’s energy stores related to food supply, fish health, and others. Testing
+may not capture the potential variation in performance from all these factors and therefore it is
+important to be aware of this when using swimming performance data.
+
+Fish length appears to be a major factor affecting swimming performance. Longer fish have
+higher fish speeds (U) expressed in m/s, than shorter ones. Fish speed is also expressed in body
+lengths per second (BL/s) or if l is fish length, U/l. In this case, shorter fish usually have higher
+relative speeds than longer ones. Estimates in BL/s are often used for various species, indicating
+swimming performance similarity between different species. A dimensionless speed (U<sub>\*</sub>) is
+another way of expressing fish speed and is defined as U(gl)<sup>-0.5</sup>, where g has a constant value of
+9.81 m/s<sup>2</sup>. The dimensionless speed identifies fish species with similar swimming performance
+more clearly and provides better regressions compared to BL/s or m/s.
+
+Regression analysis of available data was used to formulate a collection of dimensionless fatigue
+curves (dimensionless swim speed versus dimensionless endurance time) derived by grouping
+fish species with similar swimming performance. Dimensionless fatigue curves, for the 3 s to 30
+min time range and corresponding distance curves, were generated for the following groups: 1)
+Eel; 2) Salmon and Walleye; 3) Catfish and Sunfish; 4) Sturgeon; 5) Herring; and 6) Pike
+(derived). The “Eel Group” and the “Salmon and Walleye Group”, which correspond to the
+previously named “anguilliform” and “subcarangiform” groups, have the more complete data
+sets and more robust regressions. The “Catfish and Sunfish” and “Sturgeon” groups lack burst or
+high fish speed data, while the “Herring Group” has limited prolonged or low speed fish data.
+These limitations should be kept in mind when using the results.
+
+The “Pike Group” was a special case where a lack of data at the higher swimming speeds
+prevented the creation of a complete fatigue curve. Given the importance of pike for certain
+regions, a special curve was developed to provide some guidance on swimming capacity. The
+derived curve was based on existing pike swimming data at the lower end of the curve. Pike are
+known for strong burst speeds so the high end of the curve was estimated from the similar
+highest speeds from the “Eel” and the “Salmon and Walleye” groups. The derived curve was
+considered a more effective option that trying to include pike with one of the other groups where
+the fit may be more compromised.
+
+A more detailed description of the analysis and derivation of the swimming performance curves
+presented in this guide can be found in @katopodis2016fish.
+
+##Using the Equations
+
+This document contains a series of equations that can be used to estimate: 
+
+1. fatigue which relates swimming speed and endurance time and 
+2. swim distance which relates swimming distance and water velocity 
+
+Both sets of relationships are based on grouped data made up of a collection of different fish species. The swimming performance of a particular fish species is represented by the group. For example, to estimate the swimming performance of rainbow trout, the Salmon & Walleye Group would be used, since rainbow trout is part of this group. [Table 4](#group-summary-by-species) contains a listing of species and the groups those species belong to. The fatigue equations and webtool provide a regression line with 75% and 95% prediction interval lines. Distance equations were generated from the fatigue equations and correspond to the fatigue lines. Prediction intervals are sometimes known as probability intervals and are different from confidence intervals. The prediction interval is a statistical interval calculated to include one or more future observations from the same population with a specified confidence. A prediction interval is used to predict the range within which a single observation is expected to fall. It was included to capture the variation in performance (scatter above and below the regression line) which is important when quantifying performance. For example, the 95% prediction interval for the swim distance would represent the range where there is a 95% chance that the next measurement would fall within. For a 95% prediction interval, there is a 2.5% chance that an observation will be below the lower bound of the interval and a 2.5% chance an observation will be above the upper bound of the interval. Consequently, the lower boundary line of this prediction interval would represent the dividing point above which there is 97.5% chance that a fish would be able swim that distance. The choice of which line to use, should reflect the overall risk to the particular species and watershed. For example, where fish passage is a concern and the goal is to minimize long term impact to a particular population, the lower boundary curve would be used to reflect a higher degree of passage to be achieved. It is important to emphasize that swimming speeds are but one of several factors to be considered in achieving desirable levels of upstream or downstream fish passage and should not be used exclusively to judge designs or effectiveness.
+
+##Fatigue Curves
+
+The [fatigue equations](#fatigue-equations) section contains the dimensionless equations for the fatigue curves and summary tables of coefficients (k and b) for the regression line with 75% and 95% prediction intervals for each of the groups. The equations can be used to calculate the following:
+
+* endurance time (t in s) given fish species, fish length (l in m) and swimming speed (U in m/s)
+* swim speed (U in m/s) given fish species, fish length (l in m) and endurance time (t in s)
+* fish length (l in m) given fish species, swim speed (U in m/s) and endurance time (t in s)
+
+##Fatigue Equations
+
+Dimensionless fatigue curves are relationships between dimensionless fish speed (U<sub>\*</sub>) and dimensionless endurance time (t<sub>\*</sub>).
+
+$$U_* = K(t_*)^b $$
+
+Where: $$U_* = \frac{U}{\sqrt{gl}}$$
+And: $$t_* = \frac{t}{\sqrt{l/g}}$$
+
+Where:
+
+*   *U*<sub>\*</sub> is the fish swimming speed in m/s
+*   *t*<sub>\*</sub> is endurance time in seconds and is limited from 3 to 1800 seconds
+*   *g* is gravitational acceleration (9.81 m/s^2^)
+*   *l* is fish length in meters
+*   *k* and *b* are coefficients derived from Deming regression analysis
+
+```{r echo = FALSE, results = 'asis'}
+library(DT)
+library(knitr)
+library(kableExtra)
+dt <- read.csv("Tables/Fatigue.csv")
+
+kable(dt, "html", align="lcccccl", col.names = c("Group","k", "b","R^2^","ChiSQ","Count","Comments"), caption = "Table 1. Dimensionless fatigue regression equations.") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  column_spec(1, width = "9em")
+```
+
+```{r echo = FALSE, results = 'asis'}
+dt <- read.csv("Tables/FatigueBounds.csv")
+
+kable(dt, "html", align="lcccccccc", col.names = c("Group","k", "b","k", "b","k", "b","k", "b"), caption = "Table 2. Dimensionless fatigue equations for 75% and 95% prediction interval coefficients.") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  add_header_above(c(" " = 1, "Upper Boundary" = 2, "Lower Boundary" = 2, "Upper Boundary" = 2, "Lower Boundary" = 2)) %>%
+  add_header_above(c(" " = 1, "95% Prediction Interval" = 4, "75% Prediction Interval" = 4)) %>%
+  column_spec(1, width = "9em")
+```
+
+##Distance Curves
+
+The [distance equations](#distance-equations) section contains the dimensionless equations for the distance curves and summary tables of the coefficients (M and a) for the regression line with 75% and 95% prediction intervals for each of the groups. The equations can be used to calculate the following:
+
+* swim distance (X in m) given fish species, fish length (l in m) and water velocity (V in m/s)
+* water velocity (V in m/s) given fish species, fish length (l in m) and swim distance (X in m)
+* fish length (l in m) given fish species, water velocity (V in m/s) and swim distance (X in m)
+
+##Distance Equations
+
+Dimensionless swim distance curves are relationships between dimensionless water velocity (V<sub>\*</sub>) and dimensionless swimming distance (X<sub>\*</sub>).
+
+$$X_* = M(V_*)^a$$
+Where: $$X_* = X/l$$
+And: $$V_* = \frac{V}{\sqrt{gl}}$$
+
+Where:
+
+* *X*<sub>\*</sub> = dimensionless swimming speed
+* *X* = swimming distance (m)
+* *V*<sub>\*</sub> = dimensionless water velocity
+* *V* = water velocity (m/s)
+* *l* = fish length (meters)
+* *g* = gravitational acceleration = 9.81 m/s<sup>2</sup>
+* *M* and *a* are coefficients derived from dimensionless speed vs. time regression
+
+```{r echo = FALSE, results = 'asis'}
+dt <- read.csv("Tables/Distance.csv")
+
+kable(dt, "html", align="lcccccccccc", col.names = c("Group","M","a","M","a","M","a","M","a","M","a"), caption = "Table 3. Dimensionless swim distance equations and prediction interval coefficients derived from fatigue regressions.") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  add_header_above(c(" " = 1, "X~•~ vs. V~•~" = 2, "Upper Boundary" = 2, "Lower Boundary" = 2, "Upper Boundary" = 2, "Lower Boundary" = 2)) %>%
+  add_header_above(c(" " = 3, "95% Prediction Interval" = 4, "75% Prediction Interval" = 4)) %>%
+  column_spec(1, width = "9em")
+```
+
+##Speed vs. Time Example
+
+Question: How long can the average 250 mm rainbow trout swim 1 m/s?
+
+There are two ways to answer this question. The first and recommended method is using the interactive [webtool](#webtoolspeedtime). The webtool automatically and reliably performs the calculations contained in this guide. Alternatively, you can [manually perform the calculations](#formulaspeedtime).
+
+### WebTool - Speed vs. Time {#webtoolspeedtime}
+
+1. Go to the [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/speedtime.html).
+2. Below "Select Fish by:", click the "Common name" radio button.
+3. In the "Select species" drop down menu, choose "Rainbow or Steelhead trout".
+4. Drag the "Fish length" slider to 250 mm.
+5. Below "Calculations:" press the "Swim time" radio button.
+6. Enter "1" in the "Swim speed" box.
+
+Once these steps are completed, the tool should look like this:
+
+<center>
+```{r echo = FALSE}
+knitr::include_app("http://www.fishprotectiontools.ca/speedtime/?_inputs_&Calculate=%222%22&CName=%22Rainbow%20or%20Steelhead%20trout%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true",
+                    height = "1260px")
+```
+</center>
+
+### Formula - Speed vs. Time {#formulaspeedtime}
+
+1. Identify the correct group for rainbow trout. The [Group Summary by Species](#group-summary-by-species) contains a list of species for each group and from the table, rainbow trout is part of the 'Salmon and Walleye' Group.
+2. Endurance time can be calculated using the [fatigue equations](#fatigue-equations). To use the equations, find the k and b coefficients. For average endurance time use the regression equation coefficients.
+
+$$U_* = 4.004(t_*)^-0.25$$
+Where: 
+$$U_* = \frac{1.0}{\sqrt{9.81\times0.250}} = 0.639$$
+
+And: 
+$$ t_* = \frac{t}{\sqrt{0.250/9.81}} = 6.264t$$
+Substitute the values of U<sub>\*</sub> and t<sub>\*</sub> into the first equation:
+$$0.639 = 4.004(6.264t)^{0.25}$$
+Solving for t: 
+$$ t = \left(\frac{0.639}{4.004}\right)^{-1/0.25}\div6.264 = 246 \text{ seconds}$$
+
+###Solution - Speed vs. Time 
+
+The average 250 mm rainbow trout can swim 1 m/s for 246 seconds. 
+
+##Distance vs. Velocity Example
+
+Question: A proponent wishes to install a 30 meter culvert. What is the maximum water velocity that 87.5% of 400 mm northern pike can pass through?
+
+There are two ways to answer this question. The first and recommended method is using the interactive [webtool](#webtooldistancevelocity). The webtool automatically and reliably performs the calculations contained in this guide. Alternatively, you can [manually perform the calculations](#formuladistancevelocity).
+
+###Webtool - Distance vs. Velocity {#webtooldistancevelocity}
+
+1.  Go to the [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/distancevelocity.html).
+2.	Below “Select Fish by:”, click the “Common name” radio button.
+3.	In the “Select species” drop down menu, choose “Northern Pike”.
+4.	Drag the “Fish length” slider to 400 mm.
+5.	Below “Calculations:”, press the “Water velocity” radio button 
+6.	Enter “30” in the “Swim distance in meter:” box.
+
+Once these steps are completed, the tool should look like this:
+<center>
+```{r echo = FALSE}
+knitr::include_app("http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Northern%20pike%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true",
+                    height = "1260px")
+```
+</center>
+
+###Formula - Distance vs. Velocity {#formuladistancevelocity}
+
+1. Identify the correct group for northern pike. The [Group Summary by Species](#group-summary-by-species) contains a list of species for each group and from the table, northern pike is part of the 'Pike (derived)' Group.
+2. Swim distance can be calculated using the [distance equations](#distance-equations). To use the equations, find the k and b coefficients. For average endurance time use the regression equation coefficients.
+
+$$X_* = 3.846(V_*)^{2.040}$$
+
+Where:
+$$X_* = \frac{30.0}{0.4} = 75$$
+
+And:
+$$V_* = \frac{V}{\sqrt{9.81\times0.4}} = 0.505V$$
+$$75 = 3.846(0.505V)^{-2.040}$$
+
+Solving for V:
+$$V = \left(\frac{75}{3.846}\right)^{-1/2.040} \div 0.505 = 0.46 \text{ m/s}$$
+
+###Solution - Distance vs. Velocity
+
+This culvert should not exceed a maximum water velocity of 0.46 m/s to allow passage of 87.5% of 400 mm northern pike.
+
+##Concluding Remarks
+
+The following are some general observations related to fish swimming performance, the testing that has been used to measure performance and the analysis of the data to produce the estimates of performance.
+
+* An extensive database on fish swimming performance was generated from the literature for both diadromous and potamodromous species.
+* There are limited standards for measuring the swimming capacity of fish. Data were collected through a variety of fish swimming performance tests, which tend to cover different parts of fatigue curves.
+* The database contains a mix of mean and individual swimming data; for more consistency, data were grouped.
+* Burst speed data collected in volitional channels complement prolonged speed data from swim tunnels and assist in defining fatigue curves over a large time range.
+* Extrapolating curves derived from volitional channel data only, would underestimate prolonged performance, as fatigue curves based on burst data only are characterised by steep slopes. The reverse is also true, i.e. fatigue curves based on data from swim tunnel only, tend to have flatter slopes and would underestimate burst performance, if extrapolated.
+* Large variability in individual swimming performance is indicated. This is not surprising since fish species and populations have survived for millions of years at least in part because of different group or individual abilities or strategies.
+* There are insufficient data available for many species to derive individual fatigue curves. An ecohydraulic approach using dimensionless variables allowed more global data analyses for groups of fish species and the ability to use limited data sets.
+* Although variability in swimming performance exists between species and individuals within a species, data analyses indicate broad similarities in relative performance for groups of species.
+* Grouping of species by family and swimming mode was used to create 6 fish groups.  Two of these groups, the “Eel” and the “Salmon and Walleye”, have the best data sets and most robust regressions.  These two groups correspond to update versions of the previously labelled “Anguilliform” and “Subcarangiform” species. The other 4 groups have data limitations which should be considered when using the results. 
+* Speed-time regressions provided estimates of swim distance – water velocity relationships for different confidence levels. 
+* Swim distance estimates from fatigue curves, were comparable with available direct measurements.
+* Estimates of fatigue time or distance may be useful when considering physiological aspects in practical applications, such as fish screens and fishways.
+* In nature, survival often depends on the efficient use of energy stores and fish may limit activities that demand high energy usage.
+* The results of these analyses may represent a “best effort” given the limitations of the data available. Swimming performance depends on factors which cannot be measured conclusively. Actual fish passage structures often generate hydraulic conditions which defer from those tested in swimming performance devices.
+
+##Group Summary by Species
+
+```{r echo = FALSE, results = 'asis'}
+dt <- read.csv("Tables/FishList.csv")
+dt[4:5] <- NULL
+
+kable(dt, "html", caption = "Table 4. Summary of the families and species that were used in the analysis to define the different swimming performance groups; taxonomic classification source: Integrated Taxonomic Information System - ITIS (http://www.itis.gov/).") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+##References

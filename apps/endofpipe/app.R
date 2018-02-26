@@ -220,13 +220,13 @@ server <- function(input, output, session){
       EoP_dataSet$Flow <-  EoP_dataSet$Flow*1000
 
       EoP_dataSet <- EoP_dataSet %>%
-        gather(EoP_Group(), key="Group", value=OpenScreenArea)
+        gather(EoP_Group(), key="Group", value=EffectiveScreenArea)
 
-      EoP_dataSet$OpenScreenArea <- signif(EoP_dataSet$OpenScreenArea, digits = 4)
+      EoP_dataSet$EffectiveScreenArea <- signif(EoP_dataSet$EffectiveScreenArea, digits = 4)
       
       EoP_dataSet
     } else {
-      EoP_dataSet <- data.frame(Flow=c(1),Group=c("Catfish & Sunfish"),OpenScreenArea=c(1))
+      EoP_dataSet <- data.frame(Flow=c(1),Group=c("Catfish & Sunfish"),EffectiveScreenArea=c(1))
       EoP_dataSet
     }
     
@@ -234,17 +234,17 @@ server <- function(input, output, session){
 
   
   EoP_Worst <- reactive({
-    max(EoP_PlotData()$OpenScreenArea)
+    max(EoP_PlotData()$EffectiveScreenArea)
   })
   
   EoP_Worst_Group <- reactive({
-    with(EoP_PlotData(),Group[which.max(OpenScreenArea)])
+    with(EoP_PlotData(),Group[which.max(EffectiveScreenArea)])
   })
 
   
   output$EoP_Text <- renderUI({
     if(is.numeric(input$EoP_flowrate) & !is.null(EoP_Group())){
-        HTML(input$EoP_Proportion, " of", input$EoP_l, "mm fish in ", input$EoP_flowrate, "L/s flow with", input$EoP_time, "minutes to escape the screen need an Open Screen Area of", round(EoP_Worst(),3), "m<sup>2</sup>.")
+        HTML(input$EoP_Proportion, " of", input$EoP_l, "mm fish in ", input$EoP_flowrate, "L/s flow with", input$EoP_time, "minutes to escape the screen need an Effective Screen Area of", round(EoP_Worst(),3), "m<sup>2</sup>.")
     }
   })
   
@@ -272,10 +272,10 @@ server <- function(input, output, session){
   
   
   EoP_PlotData %>%
-    ggvis(x= ~Flow, y=~OpenScreenArea, stroke = ~Group) %>%
+    ggvis(x= ~Flow, y=~EffectiveScreenArea, stroke = ~Group) %>%
     layer_lines(strokeWidth := 2.5) %>%
     layer_points(size := 40, opacity := 0) %>%
-    add_axis("y", offset = 1, title = "Open Screen Area (m²)", title_offset = 50, ticks = 6,
+    add_axis("y", offset = 1, title = "Effective Screen Area (m²)", title_offset = 50, ticks = 6,
              properties = axis_props(
                title = list(fontSize = 15, fontWeight = "normal"),
                labels = list(fontSize = 12)
