@@ -1,0 +1,259 @@
+---
+title: "Guide de l’utilisateur sur la performance natatoire des poissons"
+#author:
+#- R. Gervais
+#- C. Katopodis - Katopodis Ecohydraulics Ltd.
+#- R. Di Rocco
+#date: 2018-02-16
+output: 
+  html_document:
+    css: style.css
+    theme: cosmo
+    toc: true
+    toc_float: 
+      collapsed: false
+bibliography: bibliography.bib
+---
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+##Contexte
+
+Ce guide présente une collection de courbes de fatigue de nage (vitesse de nage par rapport au temps d’endurance) et de distance (distance de nage par rapport à la vitesse de l’eau) produites à l’aide de données recueillies dans divers documents. L’analyse est axée sur les espèces d’eau douce (p. ex., potamodrome) et les espèces dont l’étape du cycle de vie nécessite l’utilisation d’eau douce (p. ex., espèce diadrome, y compris les salmonidés anadromes et les anguilles catadromes).
+
+Les données provenant d’études sur la performance des poissons ont été recueillies en laboratoire ou sur le terrain au moyen de diverses méthodes, et elles constituent la base de données utilisée pour les analyses. Les données des essais en chambre de nage, comme le temps de fatigue (vitesse fixe) et la vitesse croissante (vitesse de nage critique) ainsi que la vitesse et l’endurance volontaires du poisson dans les chenaux ouverts ont été utilisées. On a effectué des régressions pour générer les courbes de fatigue relatives à l’endurance dans la plage de 3 s (secondes) à 30 min (minutes). On a jugé cette plage comme étant la plus pratique et pertinente pour le passage du poisson et autres mesures de protection relatives aux capacités de nage.
+
+Le regroupement des données a servi à produire des ensembles de données plus inclusifs et diversifiés qui comprennent des mesures provenant d’un vaste éventail de sources de données. De plus, le regroupement des données contribue à combler les écarts imposés par des données limitées ou manquantes, ce qui confère aux données un caractère plus universel et réduit la possibilité de biais quand les données sont limitées. Chaque essai de nage indépendant doit être considéré comme la mesure d’un point dans le temps qui correspond à la performance du poisson en particulier mis à l’essai et des conditions dans lesquelles il l’a été. Dans le monde naturel, les conditions environnementales qui peuvent avoir une incidence sur la capacité de nage du poisson sont variables. Elles comprennent des facteurs comme la vitesse et la température de l’eau, les réserves d’énergie du poisson par rapport aux réserves de nourriture, la santé du poisson et d’autres facteurs. Les essais peuvent ne pas constater la variation potentielle de la performance à partir de tous ces facteurs. En conséquence, il est important d’en être conscient quand on utilise les données sur la performance natatoire.
+
+La longueur des poissons semble être un facteur important ayant une incidence sur la performance natatoire. Les poissons plus longs présentent des vitesses (U) plus rapides, exprimées en m/s, comparativement aux plus petits poissons. La vitesse des poissons est également exprimée par la longueur du corps par seconde (LC/s) ou, si « l » est la longueur du poisson, U/l. Dans ce cas, les poissons plus petits présentent des vitesses relatives plus rapides que les poissons plus longs. Les estimations LC/s sont souvent utilisées pour diverses espèces. Elles indiquent la similitude de performance natatoire entre différentes espèces. Une vitesse dimensionnelle (U<sub>\*</sub>) est une autre façon d’exprimer la vitesse du poisson. Elle se définit par U(gl)<sup>-0.5</sup>, où « g » a une valeur constante de 9,81 m/s2. La vitesse adimensionnelle cible mieux les espèces de poissons dont la performance natatoire est semblable et assure de meilleures régressions comparativement à la méthode LC/s ou m/s.
+
+L’analyse de la régression des données disponibles a été utilisée pour formuler une collection de courbes de fatigue adimensionnelles (vitesse de nage dimensionnelle par rapport au temps d’endurance adimensionnel) établies en regroupant les espèces de poissons dont la performance natatoire est semblable. Les courbes de fatigue dimensionnelles dans la plage de temps entre 3 s et 30 min et les courbes de distance correspondantes ont été générées pour les groupes suivants : 1) anguille; 2) saumon et doré jaune; 3) poisson-chat et malachigan; 4) esturgeon; 5) hareng; 6) brochet (dérivé). Le « Groupe des anguilles » et le « Groupe des saumons et des dorés jaunes », qui correspondent aux groupes anciennement nommés « anguilliforme » et « subcarangiforme », présentent les ensembles de données les plus complets et les régressions les plus robustes. Les groupes des « poissons-chats et des malachigans » et des « esturgeons » n’ont pas de données sur les vitesses de nage élevées, et le « groupe des harengs » a des données limitées sur les vitesses de nage prolongée ou faible. Il faut garder ces limites à l’esprit quand on utilise les résultats.
+
+Le « groupe des brochets » était un cas spécial en ce sens qu’un manque de données sur les vitesses de nage supérieures empêchait la création d’une courbe de fatigue complète. En raison de l’importance du brochet dans certaines régions, une courbe spéciale a été créée pour offrir une certaine orientation sur les capacités de nage. La courbe dérivée était fondée sur les données de nage existantes du brochet à l’extrémité inférieure de la courbe. Le brochet est connu pour ses puissants élans de vitesse. Ainsi, l’extrémité supérieure de la courbe a été estimée à partir des vitesses élevées semblables des groupes des « anguilles » et des « saumons et des dorés jaunes ». La courbé dérivée fut jugée une option plus efficace que de tenter d’inclure le brochet dans l’un des autres groupes dans lesquels l’adéquation pourrait s’avérer moins idéale.
+
+Une description plus détaillée de l’analyse et de la déduction des courbes de performance natatoire présentées dans ce guide se trouve dans @katopodis2016fish.
+
+##Utilisation des équations
+
+Le présent document contient une série d’équations qui peuvent servir à estimer ce qui suit :
+
+1.	la fatigue associée à la vitesse de nage et au temps d’endurance et
+2.	la distance de nage associée à la distance de nage et la vitesse de l’eau
+
+Les deux ensembles de relations sont fondés sur des données regroupées composées d’un ensemble d’espèces de poissons différents. La performance natatoire d’une espèce de poissons en particulier est représentée par le groupe. Par exemple, pour estimer la performance natatoire de la truite arc-en-ciel, le groupe des saumons et des dorés jaunes est utilisé, car la truite arc-en-ciel fait partie de ce groupe. Le [tableau 4](#tableu4) contient une liste d’espèces et les groupes auxquels appartiennent ces espèces. Les équations relatives à la fatigue et l’outil Web présentent une ligne de régression avec des lignes d’intervalle de prédiction de 75 % et 95 %. Les équations relatives à la distance ont été générées à partir des équations relatives à la fatigue et correspondent aux lignes de fatigue. Les intervalles de prédiction, parfois connus sous le nom d’intervalles de probabilité, sont différents des intervalles de confiance. L’intervalle de prédiction est un intervalle statistique calculé pour comprendre au moins une observation future de la même population avec un degré de confiance précis. L’intervalle de prédiction sert à prédire la plage dans laquelle on s’attend à ce qu’une observation unique se situe. Il a été inclus pour refléter la variation de performance (dispersion au-dessus et en dessous de la ligne de régression), ce qui est important pour quantifier la performance. Par exemple, l’intervalle de prédiction de 95 % pour la distance de nage représente la plage dans laquelle la prochaine mesure aurait 95 % de chance de se situer. Pour un intervalle de prédiction de 95 %, il existe une chance de 2,5 % qu’une observation se situe sous la limite inférieure de l’intervalle et une chance de 2,5 % qu’elle se situe au-dessus de la limite supérieure. En conséquence, la ligne de la limite inférieure de cet intervalle de prédiction représenterait le point de séparation au-dessus duquel il existe une chance de 97,5 % qu’un poisson puisse nager sur cette distance en particulier. Le choix de la ligne à utiliser doit tenir compte du risque global pour cette espèce en particulier ainsi que du bassin hydrographique. Par exemple, quand le passage du poisson est problématique et que le but est de minimiser les répercussions à long terme sur une population en particulier, la courbe de limite inférieure devrait être utilisée pour tenir compte d’un degré plus élevé de passage à atteindre. Il est important de souligner que les vitesses de nage ne sont qu’un facteur parmi tant d’autres dont il faut tenir compte pour obtenir les niveaux souhaitables de passage du poisson en amont et en aval, et elles ne doivent pas être utilisées exclusivement pour juger des conceptions ou de l’efficacité.
+
+
+##Courbes de fatigue
+
+La section [Équations relatives à la fatigue](#equationsfatique) comprend les équations adimensionnelles pour les courbes de fatigue et les tableaux récapitulatifs des coefficients (k et b) pour la ligne de régression avec des intervalles de prédiction de 75 % et 95 % pour chacun des groupes. Les équations peuvent être utilisées pour calculer ce qui suit :
+
+
+* le temps d’endurance (t en s) en fonction de l’espèce, de la longueur du poisson (l en m) et de la vitesse de nage (U en m/s)
+* la vitesse de nage (U en m/s) en fonction de l’espèce, de la longueur du poisson (l en m) et du temps d’endurance (t en s)
+* la longueur du poisson (l en m) en fonction de l’espèce, de la vitesse de nage (U en m/s) et du temps d’endurance (t en s)
+
+##Équations relatives à la fatigue {#equationsfatique}
+
+Les courbes de fatigue adimensionnelles sont des relations entre la vitesse adimensionnelle du poisson (U<sub>\*</sub>) et le temps d’endurance adimensionnel (t<sub>\*</sub>).
+
+
+$$U_* = K(t_*)^b $$
+
+Où : $$U_* = \frac{U}{\sqrt{gl}}$$
+Et : $$t_* = \frac{t}{\sqrt{l/g}}$$
+
+Où :
+
+*   *U*<sub>\*</sub> est la vitesse de nage du poisson en m/s
+*	  *t*<sub>\*</sub> est le temps d’endurance en secondes qui est limité entre 3 et 1 800 secondes
+* 	*g* est l’accélération gravitationnelle (9,81 m/s^2^)
+*   *l* est la longueur du poisson en mètres
+*   *k* et *b* sont les coefficients dérivés de l’analyse de la régression de Deming
+
+```{r echo = FALSE, results = 'asis'}
+library(DT)
+library(knitr)
+library(kableExtra)
+dt <- read.csv("Tables/Fatigue.csv")
+
+kable(dt, "html", align="lcccccl", col.names = c("Groupe","k", "b","R^2^","ChiSQ","Count","Comments"), caption = "Tableau 1. Équations de régression relatives à la fatigue adimensionnelle.") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  column_spec(1, width = "9em")
+```
+
+```{r echo = FALSE, results = 'asis'}
+dt <- read.csv("Tables/FatigueBounds.csv")
+
+kable(dt, "html", align="lcccccccc", col.names = c("Groupe","k", "b","k", "b","k", "b","k", "b"), caption = "Tableau 2. Équations relatives à la fatigue adimensionnelle pour les coefficients d’intervalles de prédiction de 75 % et 95 %.") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  add_header_above(c(" " = 1, "Limite supérieure" = 2, "Limite inférieure" = 2, "Limite supérieure" = 2, "Limite inférieure" = 2)) %>%
+  add_header_above(c(" " = 1, "Intervalle de prédiction de 95 %" = 4, "Intervalle de prédiction de 75 %" = 4)) %>%
+  column_spec(1, width = "9em")
+```
+
+##Courbes de distance
+
+La section [Équations relatives à la distance](#equationsdistance) comprend les équations adimensionnelles pour les courbes de distance et les tableaux récapitulatifs des coefficients (M et a) pour la ligne de régression avec des intervalles de prédiction de 75 % et 95 % pour chacun des groupes. Les équations peuvent être utilisées pour calculer ce qui suit :
+
+*   la distance de nage (X en m) en fonction de l’espèce, de la longueur du poisson (l en m) et de la vitesse de l’eau (V en m/s)
+*   la vitesse de l’eau (V en m/s) en fonction de l’espèce, de la longueur du poisson (l en m) et de la distance de nage (X en m)
+*   la longueur du poisson (l en m) en fonction de l’espèce, de la vitesse de l’eau (V en m/s) et de la distance de nage (X en m)
+
+
+##Équations relatives à la distance {#equationsdistance}
+
+Les courbes de distance de nage adimensionnelles sont des relations entre la vitesse adimensionnelle de l’eau (V<sub>\*</sub>) et la distance de nage adimensionnelle (X<sub>\*</sub>).
+
+$$X_* = M(V_*)^a$$
+Où : $$X_* = X/l$$
+Et : $$V_* = \frac{V}{\sqrt{gl}}$$
+
+Où :
+
+
+*   *X*<sub>\*</sub> = vitesse de nage adimensionnelle
+*   *X* = distance de nage (m)
+*   *V*<sub>\*</sub> = vitesse de l’eau adimensionnelle
+*   *V* = vitesse de l’eau (m/s)
+*   *l* = longueur du poisson (mètres)
+*   *g* = accélération gravitationnelle = 9,81 m/s<sup>2</sup>
+*   *M* et *a* sont des coefficients dérivés de la vitesse adimensionnelle par rapport à la régression de temps
+
+```{r echo = FALSE, results = 'asis'}
+dt <- read.csv("Tables/Distance.csv")
+
+kable(dt, "html", align="lcccccccccc", col.names = c("Group","M","a","M","a","M","a","M","a","M","a"), caption = "Tableau 3. Équations relatives à la distance de nage adimensionnelle et coefficients d’intervalle de prédiction dérivés des régressions de fatigue.") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  add_header_above(c(" " = 1, "X• par rapport à V•" = 2, "Limite supérieure" = 2, "Limite inférieure" = 2, "Limite supérieure" = 2, "Limite inférieure" = 2)) %>%
+  add_header_above(c(" " = 3, "Intervalle de prédiction de 95 %" = 4, "Intervalle de prédiction de 75 %" = 4)) %>%
+  column_spec(1, width = "9em")
+```
+
+##Exemple de vitesse par rapport au temps
+
+Question : pendant combien de temps une truite arc-en-ciel moyenne de 250 mm peut-elle nager à 1 m/s?
+
+Il y a deux façons de répondre à cette question. La première méthode, celle qui est recommandée, est d’utiliser [l’outil Web](#outilweb1) interactif. L’outil Web effectue de façon automatique et fiable les calculs présentés dans ce guide. Autrement, on peut [faire les calculs manuellement](#formulevitessetemps).
+
+### Outil Web – vitesse par rapport au temps {#outilweb1}
+
+1. Consultez [l’outil de vitesse et de temps de nage](http://www.fishprotectiontools.ca/fr/vitessetemps.html).
+2. Sous « Sélectionner le poisson par : », cliquer sur le bouton d’option « Nom courant ».
+3. Dans le menu déroulant « Sélectionner l’espèce », choisir « Truite arc-en-ciel ».
+4. Faire glisser le curseur nommé « Longueur du poisson » jusqu’à 250 mm.
+5. Sous « Calculs : », cliquer sur le bouton d’option « Temps de nage ».
+6. Entrer « 1 » dans la boîte « Vitesse de nage ».
+
+Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
+
+<center>
+```{r echo = FALSE}
+knitr::include_app("http://www.fishprotectiontools.ca/fr/vitessetemps/?_inputs_&Calculate=%222%22&CName=%22Truite%20arc-en-ciel%20et%20saumon%20arc-en-ciel%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true",
+                    height = "1260px")
+```
+</center>
+
+### Formule – Vitesse par rapport au temps {#formulevitessetemps}
+
+1.	Déterminer le bon groupe de la truite arc-en-ciel. Le [Résumé de groupe par espèce](#tableu4) contient une liste d’espèces pour chaque groupe. Dans le tableau, la truite arc-en-ciel fait partie du groupe « Saumon et doré jaune ».
+2.	On peut calculer le temps d’endurance à l’aide des [équations relatives à la fatigue](#equationsfatique). Pour utiliser les équations, trouver les coefficients k et b. Pour le temps d’endurance moyen, utiliser les coefficients d’équation de régression.
+
+1. Identify the correct group for rainbow trout. The [Group Summary by Species](#group-summary-by-species) contains a list of species for each group and from the table, rainbow trout is part of the 'Salmon and Walleye' Group.
+2. Endurance time can be calculated using the [fatigue equations](#fatigue-equations). To use the equations, find the k and b coefficients. For average endurance time use the regression equation coefficients.
+
+$$U_* = 4.004(t_*)^-0.25$$
+Où : $$U_* = \frac{1.0}{\sqrt{9.81\times0.250}} = 0.639$$
+
+Et : $$ t_* = \frac{t}{\sqrt{0.250/9.81}} = 6.264t$$
+Remplacer les valeurs de U<sub>\*</sub> et de t<sub>\*</sub> dans la première équation :
+$$0.639 = 4.004(6.264t)^{0.25}$$
+Calculer t : 
+$$ t = \left(\frac{0.639}{4.004}\right)^{-1/0.25}\div6.264 = 246 \text{ seconds}$$
+
+Solution – Vitesse par rapport au temps
+
+La truite arc-en-ciel moyenne de 250 mm peut nager à 1 m/s pendant 246 secondes.
+
+##Exemple de distance par rapport à la vitesse
+
+Question : un soumissionnaire souhaite installer un ponceau de 30 mètres. Quelle est la vitesse maximale de l’eau que 87,5 % des grands brochets peuvent surmonter?
+
+Il y a deux façons de répondre à cette question. La première méthode, celle qui est recommandée, est d’utiliser [l’outil Web interactif](#outilweb2). L’outil Web effectue de façon automatique et fiable les calculs présentés dans ce guide. Autrement, on peut [faire les calculs manuellement](#formuledistancevitesse).
+
+
+###Outil Web – distance par rapport à la vitesse {#outilweb2}
+
+1.	Consultez [l’outil de vitesse et de temps de nage](http://www.fishprotectiontools.ca/fr/distancevitesse.html).
+2.	Sous « Sélectionner le poisson par : », cliquer sur le bouton d’option « Nom courant ».
+3.	Dans le menu déroulant « Sélectionner l’espèce », choisir « Grand brochet ».
+4.	Faire glisser le curseur nommé « Longueur du poisson » jusqu’à 400 mm.
+5.	Sous « Calculs : », cliquer sur le bouton d’option « Vitesse de l’eau ».
+6.	Entrer « 30 » dans la boîte « Distance de nage en mètres : ».
+
+Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
+<center>
+```{r echo = FALSE}
+knitr::include_app("http://www.fishprotectiontools.ca/fr/distancevitesse/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Grand%20brochet%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true",
+                    height = "1260px")
+```
+</center>
+
+###Formule – Distance par rapport à la vitesse {#formuledistancevitesse}
+
+1.	Déterminer le bon groupe du grand brochet. Le [Résumé de groupe par espèce](#tableu4) contient une liste d’espèces pour chaque groupe. Dans le tableau, le grand brochet fait partie du groupe « Brochet (dérivé) ».
+2.	On peut calculer la distance de nage à l’aide des [équations relatives à la distance](#equationsdistance). Pour utiliser les équations, trouver les coefficients k et b. Pour le temps d’endurance moyen, utiliser les coefficients d’équation de régression.
+
+
+$$X_* = 3.846(V_*)^{2.040}$$
+
+Où : $$X_* = \frac{30.0}{0.4} = 75$$
+
+Et :  $$V_* = \frac{V}{\sqrt{9.81\times0.4}} = 0.505V$$
+      $$75 = 3.846(0.505V)^{-2.040}$$
+
+Calculer V : $$V = \left(\frac{75}{3.846}\right)^{-1/2.040} \div 0.505 = 0.46 \text{ m/s}$$
+
+###Solution – Distance par rapport à la vitesse
+
+Ce ponceau ne doit pas dépasser une vitesse de l’eau de 0,46 m/s pour permettre le passage de 87,5 % des grands brochets de 400 mm.
+
+##Mot de la fin
+
+Voici des observations de nature générale relatives à la performance natatoire des poissons, les essais utilisés pour mesurer la performance et l’analyse des données pour obtenir les estimations de la performance.
+
+*	Une vaste base de données sur la performance natatoire des poissons a été produite à partir de la littérature concernant les espèces diadromes et potamodromes.
+*	Les normes pour mesurer la capacité de nage des poissons sont limitées. Les données ont été recueillies au moyen de divers tests de performance natatoire des poissons, qui ont tendance à couvrir différentes parties des courbes de fatigue.
+*	Les bases de données contiennent un mélange de données de nage moyennes et individuelles. Par souci d’uniformité, on a regroupé les données.
+*	Les données sur les vitesses d’élan recueillies dans les chenaux volontaires complètent les données sur les vitesses prolongées recueillies dans les tunnels de nage. Elles contribuent à déterminer les courbes de fatigue sur une vaste plage de temps.
+*	Des courbes d’extrapolation obtenues à partir des données relatives au chenal volontaire uniquement sous-estimeraient la performance prolongée étant donné que les courbes de fatigue fondées uniquement sur des données relatives à la vitesse d’élan sont caractérisées par des pentes raides. L’inverse est également vrai, c.-à-d. que les courbes de fatigue fondées sur des données provenant des tunnels de nage seulement ont tendance à être plus planes et sous-estimeraient la performance en vitesse d’élan, en cas d’extrapolation.
+*	Des variations importantes ont été constatées dans la performance natatoire individuelle. Ce n’est pas surprenant étant donné que les espèces et les populations de poissons ont survécu pendant des millions d’années en partie en raison des capacités et des stratégies des groupes différents et des individus.
+*	Pour de nombreuses espèces, les données disponibles sont insuffisantes pour créer des courbes de fatigue individuelles. Une approche écohydraulique utilisant des variables adimensionnelles a permis de réaliser des analyses de données plus globales pour des groupes d’espèces de poissons et d’utiliser des ensembles de données limités.
+*	Même s’il existe une variabilité de la performance natatoire entre les espèces et les individus d’une même espèce, les analyses de données indiquent d’importantes similitudes de la performance relative pour certains groupes d’espèces.
+*	Le regroupement des espèces par famille et mode de nage a servi à créer six  groupes de poissons. Deux de ces groupes, soit les groupes « Anguille » et « Saumon et doré jaune », présentent les meilleurs ensembles de données et les régressions les plus robustes. Ces deux groupes correspondent aux versions à jour des espèces anciennement nommées « anguilliforme » et « subcarangiforme ». Les quatre autres groupes présentent des limites au niveau des données dont il faut tenir compte quand on utilise les résultats.
+*	Des régressions vitesse-temps ont fourni des estimations de la relation entre la distance de nage et la vitesse de l’eau pour différents niveaux de confiance.
+*	Les estimations de la distance de nage à partir des courbes de fatigue étaient comparables avec les mesures directes disponibles.
+*	Les estimations du temps ou de la distance de fatigue seraient utiles pour étudier les aspects physiologiques dans des applications pratiques telles que les grillages à poissons et les passes à poissons.
+*	Dans la nature, la survie dépend souvent de l’utilisation efficace des réserves d’énergie, et le poisson peut limiter les activités qui exigent une grande dépense d’énergie.
+*	Les résultats de ces analyses peuvent représenter un « meilleur effort » en raison des limites des données disponibles. La performance natatoire dépend de facteurs qui ne peuvent pas être mesurés de façon concluante. Les structures de passage des poissons réelles génèrent souvent des conditions hydrauliques qui diffèrent de celles mises à l’essai dans des dispositifs de performance natatoire.
+
+
+##Résumé de groupe par espèce {#tableu4}
+
+```{r echo = FALSE, results = 'asis'}
+dt <- read.csv("Tables/FishList.csv", fileEncoding = "ISO-8859-13")
+
+kable(dt, "html", caption = "Tableau 4. Le résumé des familles et des espèces utilisées pour effectuer l’analyse visant à définir les différents groupes de performance natatoire; source de la classification taxonomique : Integrated Taxonomic Information System – ITIS (http://www.itis.gov/).", col.names = c("Groupe","Nom scientifique","Nom courant")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+##Références

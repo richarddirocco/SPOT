@@ -1,0 +1,41 @@
+h1.title {
+    font-size: 38px;
+    text-align: center !important;
+}
+
+body {
+    padding-top: 80px !important;
+  }
+  
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: #222222 !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+  background-color: #222222 !important
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+    background-color: #222222 !important;
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}

@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Guide de l’utilisateur sur la performance natatoire des poissons</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+<!DOCTYPE html>
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- NOTE: add "navbar-inverse" class for an alternate navbar background -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Outils de protection des poisons</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Outils <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="vitessetemps.html">Vitesse et temps de nage</a></li>
+            <li><a href="distancevitesse.html">Distance de nage et vitesse de l’eau</a></li>
+            <li><a href="longueurmaturite.html">Longueur à maturité</a></li>
+            <li><a href="prisedeau.html">Calculer dimension du grillage</a></li>
+          </ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuels <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="utilisateur.html">Guide de l’utilisateur sur la performance natatoire des poissons</a></li>
+            <li><a href="manuel-prisedeau.html">Manuel : Outil de dimension du grillage à l’entrée d’une prise d’eau</a></li>
+          </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="http://fishprotectiontools.ca">English</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+</html>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Guide de l’utilisateur sur la performance natatoire des poissons</h1>
+
+</div>
+
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div id="contexte" class="section level2">
+<h2>Contexte</h2>
+<p>Ce guide présente une collection de courbes de fatigue de nage (vitesse de nage par rapport au temps d’endurance) et de distance (distance de nage par rapport à la vitesse de l’eau) produites à l’aide de données recueillies dans divers documents. L’analyse est axée sur les espèces d’eau douce (p. ex., potamodrome) et les espèces dont l’étape du cycle de vie nécessite l’utilisation d’eau douce (p. ex., espèce diadrome, y compris les salmonidés anadromes et les anguilles catadromes).</p>
+<p>Les données provenant d’études sur la performance des poissons ont été recueillies en laboratoire ou sur le terrain au moyen de diverses méthodes, et elles constituent la base de données utilisée pour les analyses. Les données des essais en chambre de nage, comme le temps de fatigue (vitesse fixe) et la vitesse croissante (vitesse de nage critique) ainsi que la vitesse et l’endurance volontaires du poisson dans les chenaux ouverts ont été utilisées. On a effectué des régressions pour générer les courbes de fatigue relatives à l’endurance dans la plage de 3 s (secondes) à 30 min (minutes). On a jugé cette plage comme étant la plus pratique et pertinente pour le passage du poisson et autres mesures de protection relatives aux capacités de nage.</p>
+<p>Le regroupement des données a servi à produire des ensembles de données plus inclusifs et diversifiés qui comprennent des mesures provenant d’un vaste éventail de sources de données. De plus, le regroupement des données contribue à combler les écarts imposés par des données limitées ou manquantes, ce qui confère aux données un caractère plus universel et réduit la possibilité de biais quand les données sont limitées. Chaque essai de nage indépendant doit être considéré comme la mesure d’un point dans le temps qui correspond à la performance du poisson en particulier mis à l’essai et des conditions dans lesquelles il l’a été. Dans le monde naturel, les conditions environnementales qui peuvent avoir une incidence sur la capacité de nage du poisson sont variables. Elles comprennent des facteurs comme la vitesse et la température de l’eau, les réserves d’énergie du poisson par rapport aux réserves de nourriture, la santé du poisson et d’autres facteurs. Les essais peuvent ne pas constater la variation potentielle de la performance à partir de tous ces facteurs. En conséquence, il est important d’en être conscient quand on utilise les données sur la performance natatoire.</p>
+<p>La longueur des poissons semble être un facteur important ayant une incidence sur la performance natatoire. Les poissons plus longs présentent des vitesses (U) plus rapides, exprimées en m/s, comparativement aux plus petits poissons. La vitesse des poissons est également exprimée par la longueur du corps par seconde (LC/s) ou, si « l » est la longueur du poisson, U/l. Dans ce cas, les poissons plus petits présentent des vitesses relatives plus rapides que les poissons plus longs. Les estimations LC/s sont souvent utilisées pour diverses espèces. Elles indiquent la similitude de performance natatoire entre différentes espèces. Une vitesse dimensionnelle (U<sub>*</sub>) est une autre façon d’exprimer la vitesse du poisson. Elle se définit par U(gl)<sup>-0.5</sup>, où « g » a une valeur constante de 9,81 m/s2. La vitesse adimensionnelle cible mieux les espèces de poissons dont la performance natatoire est semblable et assure de meilleures régressions comparativement à la méthode LC/s ou m/s.</p>
+<p>L’analyse de la régression des données disponibles a été utilisée pour formuler une collection de courbes de fatigue adimensionnelles (vitesse de nage dimensionnelle par rapport au temps d’endurance adimensionnel) établies en regroupant les espèces de poissons dont la performance natatoire est semblable. Les courbes de fatigue dimensionnelles dans la plage de temps entre 3 s et 30 min et les courbes de distance correspondantes ont été générées pour les groupes suivants : 1) anguille; 2) saumon et doré jaune; 3) poisson-chat et malachigan; 4) esturgeon; 5) hareng; 6) brochet (dérivé). Le « Groupe des anguilles » et le « Groupe des saumons et des dorés jaunes », qui correspondent aux groupes anciennement nommés « anguilliforme » et « subcarangiforme », présentent les ensembles de données les plus complets et les régressions les plus robustes. Les groupes des « poissons-chats et des malachigans » et des « esturgeons » n’ont pas de données sur les vitesses de nage élevées, et le « groupe des harengs » a des données limitées sur les vitesses de nage prolongée ou faible. Il faut garder ces limites à l’esprit quand on utilise les résultats.</p>
+<p>Le « groupe des brochets » était un cas spécial en ce sens qu’un manque de données sur les vitesses de nage supérieures empêchait la création d’une courbe de fatigue complète. En raison de l’importance du brochet dans certaines régions, une courbe spéciale a été créée pour offrir une certaine orientation sur les capacités de nage. La courbe dérivée était fondée sur les données de nage existantes du brochet à l’extrémité inférieure de la courbe. Le brochet est connu pour ses puissants élans de vitesse. Ainsi, l’extrémité supérieure de la courbe a été estimée à partir des vitesses élevées semblables des groupes des « anguilles » et des « saumons et des dorés jaunes ». La courbé dérivée fut jugée une option plus efficace que de tenter d’inclure le brochet dans l’un des autres groupes dans lesquels l’adéquation pourrait s’avérer moins idéale.</p>
+<p>Une description plus détaillée de l’analyse et de la déduction des courbes de performance natatoire présentées dans ce guide se trouve dans <span class="citation">Katopodis and Gervais (2016)</span>.</p>
+</div>
+<div id="utilisation-des-equations" class="section level2">
+<h2>Utilisation des équations</h2>
+<p>Le présent document contient une série d’équations qui peuvent servir à estimer ce qui suit :</p>
+<ol style="list-style-type: decimal">
+<li>la fatigue associée à la vitesse de nage et au temps d’endurance et</li>
+<li>la distance de nage associée à la distance de nage et la vitesse de l’eau</li>
+</ol>
+<p>Les deux ensembles de relations sont fondés sur des données regroupées composées d’un ensemble d’espèces de poissons différents. La performance natatoire d’une espèce de poissons en particulier est représentée par le groupe. Par exemple, pour estimer la performance natatoire de la truite arc-en-ciel, le groupe des saumons et des dorés jaunes est utilisé, car la truite arc-en-ciel fait partie de ce groupe. Le <a href="#tableu4">tableau 4</a> contient une liste d’espèces et les groupes auxquels appartiennent ces espèces. Les équations relatives à la fatigue et l’outil Web présentent une ligne de régression avec des lignes d’intervalle de prédiction de 75 % et 95 %. Les équations relatives à la distance ont été générées à partir des équations relatives à la fatigue et correspondent aux lignes de fatigue. Les intervalles de prédiction, parfois connus sous le nom d’intervalles de probabilité, sont différents des intervalles de confiance. L’intervalle de prédiction est un intervalle statistique calculé pour comprendre au moins une observation future de la même population avec un degré de confiance précis. L’intervalle de prédiction sert à prédire la plage dans laquelle on s’attend à ce qu’une observation unique se situe. Il a été inclus pour refléter la variation de performance (dispersion au-dessus et en dessous de la ligne de régression), ce qui est important pour quantifier la performance. Par exemple, l’intervalle de prédiction de 95 % pour la distance de nage représente la plage dans laquelle la prochaine mesure aurait 95 % de chance de se situer. Pour un intervalle de prédiction de 95 %, il existe une chance de 2,5 % qu’une observation se situe sous la limite inférieure de l’intervalle et une chance de 2,5 % qu’elle se situe au-dessus de la limite supérieure. En conséquence, la ligne de la limite inférieure de cet intervalle de prédiction représenterait le point de séparation au-dessus duquel il existe une chance de 97,5 % qu’un poisson puisse nager sur cette distance en particulier. Le choix de la ligne à utiliser doit tenir compte du risque global pour cette espèce en particulier ainsi que du bassin hydrographique. Par exemple, quand le passage du poisson est problématique et que le but est de minimiser les répercussions à long terme sur une population en particulier, la courbe de limite inférieure devrait être utilisée pour tenir compte d’un degré plus élevé de passage à atteindre. Il est important de souligner que les vitesses de nage ne sont qu’un facteur parmi tant d’autres dont il faut tenir compte pour obtenir les niveaux souhaitables de passage du poisson en amont et en aval, et elles ne doivent pas être utilisées exclusivement pour juger des conceptions ou de l’efficacité.</p>
+</div>
+<div id="courbes-de-fatigue" class="section level2">
+<h2>Courbes de fatigue</h2>
+<p>La section <a href="#equationsfatique">Équations relatives à la fatigue</a> comprend les équations adimensionnelles pour les courbes de fatigue et les tableaux récapitulatifs des coefficients (k et b) pour la ligne de régression avec des intervalles de prédiction de 75 % et 95 % pour chacun des groupes. Les équations peuvent être utilisées pour calculer ce qui suit :</p>
+<ul>
+<li>le temps d’endurance (t en s) en fonction de l’espèce, de la longueur du poisson (l en m) et de la vitesse de nage (U en m/s)</li>
+<li>la vitesse de nage (U en m/s) en fonction de l’espèce, de la longueur du poisson (l en m) et du temps d’endurance (t en s)</li>
+<li>la longueur du poisson (l en m) en fonction de l’espèce, de la vitesse de nage (U en m/s) et du temps d’endurance (t en s)</li>
+</ul>
+</div>
+<div id="equationsfatique" class="section level2">
+<h2>Équations relatives à la fatigue</h2>
+<p>Les courbes de fatigue adimensionnelles sont des relations entre la vitesse adimensionnelle du poisson (U<sub>*</sub>) et le temps d’endurance adimensionnel (t<sub>*</sub>).</p>
+<p><span class="math display">\[U_* = K(t_*)^b \]</span></p>
+<p>Où : <span class="math display">\[U_* = \frac{U}{\sqrt{gl}}\]</span> Et : <span class="math display">\[t_* = \frac{t}{\sqrt{l/g}}\]</span></p>
+<p>Où :</p>
+<ul>
+<li><em>U</em><sub>*</sub> est la vitesse de nage du poisson en m/s</li>
+<li><em>t</em><sub>*</sub> est le temps d’endurance en secondes qui est limité entre 3 et 1 800 secondes</li>
+<li><em>g</em> est l’accélération gravitationnelle (9,81 m/s<sup>2</sup>)</li>
+<li><em>l</em> est la longueur du poisson en mètres</li>
+<li><em>k</em> et <em>b</em> sont les coefficients dérivés de l’analyse de la régression de Deming</li>
+</ul>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Tableau 1. Équations de régression relatives à la fatigue adimensionnelle.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Groupe
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+<th style="text-align:center;">
+R<sup>2</sup>
+</th>
+<th style="text-align:center;">
+ChiSQ
+</th>
+<th style="text-align:center;">
+Count
+</th>
+<th style="text-align:left;">
+Comments
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Poisson-chat et malachigan
+</td>
+<td style="text-align:center;">
+2.176
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+<td style="text-align:center;">
+0.64
+</td>
+<td style="text-align:center;">
+59.5
+</td>
+<td style="text-align:center;">
+1282
+</td>
+<td style="text-align:left;">
+Données limitées sur la distance d’élan
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Anguille
+</td>
+<td style="text-align:center;">
+3.722
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+<td style="text-align:center;">
+0.84
+</td>
+<td style="text-align:center;">
+124.7
+</td>
+<td style="text-align:center;">
+1747
+</td>
+<td style="text-align:left;">
+Ensembles de données les plus complets
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Hareng
+</td>
+<td style="text-align:center;">
+10.119
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+<td style="text-align:center;">
+0.90
+</td>
+<td style="text-align:center;">
+7.4
+</td>
+<td style="text-align:center;">
+592
+</td>
+<td style="text-align:left;">
+Manque de données prolongées; b peut être élevé
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Saumon et doré jaune
+</td>
+<td style="text-align:center;">
+4.004
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+<td style="text-align:center;">
+0.70
+</td>
+<td style="text-align:center;">
+1933.2
+</td>
+<td style="text-align:center;">
+17085
+</td>
+<td style="text-align:left;">
+Ensembles de données les plus complets
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Esturgeon
+</td>
+<td style="text-align:center;">
+0.756
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+<td style="text-align:center;">
+0.69
+</td>
+<td style="text-align:center;">
+22.7
+</td>
+<td style="text-align:center;">
+1008
+</td>
+<td style="text-align:left;">
+Manque de données sur l’élan; b peut être faible
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Brochet (dérivé)
+</td>
+<td style="text-align:center;">
+3.811
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:left;">
+Tous les points se situent dans la plage prolongée faible; manque de données sur l’élan; courbe dérivée en supposant une performance d’élan semblable à celle du groupe des saumons et des dorés jaunes et du groupe des anguilless
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Tableau 2. Équations relatives à la fatigue adimensionnelle pour les coefficients d’intervalles de prédiction de 75 % et 95 %.
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Intervalle de prédiction de 95 %
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Intervalle de prédiction de 75 %
+</div>
+</th>
+</tr>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Limite supérieure
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Limite inférieure
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Limite supérieure
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Limite inférieure
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Groupe
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+<th style="text-align:center;">
+k
+</th>
+<th style="text-align:center;">
+b
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Poisson-chat et malachigan
+</td>
+<td style="text-align:center;">
+3.326
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+<td style="text-align:center;">
+1.424
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+<td style="text-align:center;">
+2.791
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+<td style="text-align:center;">
+1.696
+</td>
+<td style="text-align:center;">
+-0.202
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Anguille
+</td>
+<td style="text-align:center;">
+6.295
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+<td style="text-align:center;">
+2.201
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+<td style="text-align:center;">
+5.066
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+<td style="text-align:center;">
+2.735
+</td>
+<td style="text-align:center;">
+-0.367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Hareng
+</td>
+<td style="text-align:center;">
+12.605
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+<td style="text-align:center;">
+8.123
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+<td style="text-align:center;">
+11.511
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+<td style="text-align:center;">
+8.895
+</td>
+<td style="text-align:center;">
+-0.402
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Saumon et doré jaune
+</td>
+<td style="text-align:center;">
+7.744
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+<td style="text-align:center;">
+2.070
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+<td style="text-align:center;">
+5.897
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+<td style="text-align:center;">
+2.719
+</td>
+<td style="text-align:center;">
+-0.250
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Esturgeon
+</td>
+<td style="text-align:center;">
+1.018
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+<td style="text-align:center;">
+0.562
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+<td style="text-align:center;">
+0.900
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+<td style="text-align:center;">
+0.635
+</td>
+<td style="text-align:center;">
+-0.130
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Brochet (dérivé)
+</td>
+<td style="text-align:center;">
+5.962
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+<td style="text-align:center;">
+2.437
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+<td style="text-align:center;">
+4.950
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+<td style="text-align:center;">
+2.935
+</td>
+<td style="text-align:center;">
+-0.329
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="courbes-de-distance" class="section level2">
+<h2>Courbes de distance</h2>
+<p>La section <a href="#equationsdistance">Équations relatives à la distance</a> comprend les équations adimensionnelles pour les courbes de distance et les tableaux récapitulatifs des coefficients (M et a) pour la ligne de régression avec des intervalles de prédiction de 75 % et 95 % pour chacun des groupes. Les équations peuvent être utilisées pour calculer ce qui suit :</p>
+<ul>
+<li>la distance de nage (X en m) en fonction de l’espèce, de la longueur du poisson (l en m) et de la vitesse de l’eau (V en m/s)</li>
+<li>la vitesse de l’eau (V en m/s) en fonction de l’espèce, de la longueur du poisson (l en m) et de la distance de nage (X en m)</li>
+<li>la longueur du poisson (l en m) en fonction de l’espèce, de la vitesse de l’eau (V en m/s) et de la distance de nage (X en m)</li>
+</ul>
+</div>
+<div id="equationsdistance" class="section level2">
+<h2>Équations relatives à la distance</h2>
+<p>Les courbes de distance de nage adimensionnelles sont des relations entre la vitesse adimensionnelle de l’eau (V<sub>*</sub>) et la distance de nage adimensionnelle (X<sub>*</sub>).</p>
+<p><span class="math display">\[X_* = M(V_*)^a\]</span> Où : <span class="math display">\[X_* = X/l\]</span> Et : <span class="math display">\[V_* = \frac{V}{\sqrt{gl}}\]</span></p>
+<p>Où :</p>
+<ul>
+<li><em>X</em><sub>*</sub> = vitesse de nage adimensionnelle</li>
+<li><em>X</em> = distance de nage (m)</li>
+<li><em>V</em><sub>*</sub> = vitesse de l’eau adimensionnelle</li>
+<li><em>V</em> = vitesse de l’eau (m/s)</li>
+<li><em>l</em> = longueur du poisson (mètres)</li>
+<li><em>g</em> = accélération gravitationnelle = 9,81 m/s<sup>2</sup></li>
+<li><em>M</em> et <em>a</em> sont des coefficients dérivés de la vitesse adimensionnelle par rapport à la régression de temps</li>
+</ul>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Tableau 3. Équations relatives à la distance de nage adimensionnelle et coefficients d’intervalle de prédiction dérivés des régressions de fatigue.
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="3">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Intervalle de prédiction de 95 %
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="4">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Intervalle de prédiction de 75 %
+</div>
+</th>
+</tr>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+X• par rapport à V•
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Limite supérieure
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Limite inférieure
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Limite supérieure
+</div>
+</th>
+<th style="text-align:center; border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Limite inférieure
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Group
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+<th style="text-align:center;">
+M
+</th>
+<th style="text-align:center;">
+a
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Poisson-chat et malachigan
+</td>
+<td style="text-align:center;">
+3.892
+</td>
+<td style="text-align:center;">
+-3.953
+</td>
+<td style="text-align:center;">
+31.668
+</td>
+<td style="text-align:center;">
+-3.948
+</td>
+<td style="text-align:center;">
+0.4760
+</td>
+<td style="text-align:center;">
+-3.958
+</td>
+<td style="text-align:center;">
+13.321
+</td>
+<td style="text-align:center;">
+-3.950
+</td>
+<td style="text-align:center;">
+1.136
+</td>
+<td style="text-align:center;">
+-3.956
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Anguille
+</td>
+<td style="text-align:center;">
+5.982
+</td>
+<td style="text-align:center;">
+-1.723
+</td>
+<td style="text-align:center;">
+25.017
+</td>
+<td style="text-align:center;">
+-1.723
+</td>
+<td style="text-align:center;">
+1.4300
+</td>
+<td style="text-align:center;">
+-1.724
+</td>
+<td style="text-align:center;">
+13.850
+</td>
+<td style="text-align:center;">
+-1.723
+</td>
+<td style="text-align:center;">
+2.584
+</td>
+<td style="text-align:center;">
+-1.723
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Hareng
+</td>
+<td style="text-align:center;">
+59.340
+</td>
+<td style="text-align:center;">
+-1.489
+</td>
+<td style="text-align:center;">
+102.933
+</td>
+<td style="text-align:center;">
+-1.491
+</td>
+<td style="text-align:center;">
+34.2390
+</td>
+<td style="text-align:center;">
+-1.487
+</td>
+<td style="text-align:center;">
+81.967
+</td>
+<td style="text-align:center;">
+-1.490
+</td>
+<td style="text-align:center;">
+42.973
+</td>
+<td style="text-align:center;">
+-1.488
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Saumon et doré jaune
+</td>
+<td style="text-align:center;">
+26.919
+</td>
+<td style="text-align:center;">
+-2.994
+</td>
+<td style="text-align:center;">
+374.991
+</td>
+<td style="text-align:center;">
+-2.993
+</td>
+<td style="text-align:center;">
+1.9320
+</td>
+<td style="text-align:center;">
+-2.994
+</td>
+<td style="text-align:center;">
+126.330
+</td>
+<td style="text-align:center;">
+-2.994
+</td>
+<td style="text-align:center;">
+5.736
+</td>
+<td style="text-align:center;">
+-2.994
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Esturgeon
+</td>
+<td style="text-align:center;">
+0.006
+</td>
+<td style="text-align:center;">
+-6.669
+</td>
+<td style="text-align:center;">
+0.059
+</td>
+<td style="text-align:center;">
+-6.668
+</td>
+<td style="text-align:center;">
+0.0006
+</td>
+<td style="text-align:center;">
+-6.669
+</td>
+<td style="text-align:center;">
+0.023
+</td>
+<td style="text-align:center;">
+-6.668
+</td>
+<td style="text-align:center;">
+0.002
+</td>
+<td style="text-align:center;">
+-6.669
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 9em; ">
+Brochet (dérivé)
+</td>
+<td style="text-align:center;">
+8.512
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+<td style="text-align:center;">
+33.161
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+<td style="text-align:center;">
+2.1850
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+<td style="text-align:center;">
+18.839
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+<td style="text-align:center;">
+3.846
+</td>
+<td style="text-align:center;">
+-2.040
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="exemple-de-vitesse-par-rapport-au-temps" class="section level2">
+<h2>Exemple de vitesse par rapport au temps</h2>
+<p>Question : pendant combien de temps une truite arc-en-ciel moyenne de 250 mm peut-elle nager à 1 m/s?</p>
+<p>Il y a deux façons de répondre à cette question. La première méthode, celle qui est recommandée, est d’utiliser <a href="#outilweb1">l’outil Web</a> interactif. L’outil Web effectue de façon automatique et fiable les calculs présentés dans ce guide. Autrement, on peut <a href="#formulevitessetemps">faire les calculs manuellement</a>.</p>
+<div id="outilweb1" class="section level3">
+<h3>Outil Web – vitesse par rapport au temps</h3>
+<ol style="list-style-type: decimal">
+<li>Consultez <a href="http://www.fishprotectiontools.ca/fr/vitessetemps.html">l’outil de vitesse et de temps de nage</a>.</li>
+<li>Sous « Sélectionner le poisson par : », cliquer sur le bouton d’option « Nom courant ».</li>
+<li>Dans le menu déroulant « Sélectionner l’espèce », choisir « Truite arc-en-ciel ».</li>
+<li>Faire glisser le curseur nommé « Longueur du poisson » jusqu’à 250 mm.</li>
+<li>Sous « Calculs : », cliquer sur le bouton d’option « Temps de nage ».</li>
+<li>Entrer « 1 » dans la boîte « Vitesse de nage ».</li>
+</ol>
+<p>Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :</p>
+<center>
+<iframe src="http://www.fishprotectiontools.ca/fr/vitessetemps/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Truite%20arc-en-ciel%20et%20saumon%20arc-en-ciel%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="672" height="1260px">
+</iframe>
+</center>
+</div>
+<div id="formulevitessetemps" class="section level3">
+<h3>Formule – Vitesse par rapport au temps</h3>
+<ol style="list-style-type: decimal">
+<li>Déterminer le bon groupe de la truite arc-en-ciel. Le <a href="#tableu4">Résumé de groupe par espèce</a> contient une liste d’espèces pour chaque groupe. Dans le tableau, la truite arc-en-ciel fait partie du groupe « Saumon et doré jaune ».</li>
+<li><p>On peut calculer le temps d’endurance à l’aide des <a href="#equationsfatique">équations relatives à la fatigue</a>. Pour utiliser les équations, trouver les coefficients k et b. Pour le temps d’endurance moyen, utiliser les coefficients d’équation de régression.</p></li>
+<li>Identify the correct group for rainbow trout. The <a href="#group-summary-by-species">Group Summary by Species</a> contains a list of species for each group and from the table, rainbow trout is part of the ‘Salmon and Walleye’ Group.</li>
+<li><p>Endurance time can be calculated using the <a href="#fatigue-equations">fatigue equations</a>. To use the equations, find the k and b coefficients. For average endurance time use the regression equation coefficients.</p></li>
+</ol>
+<p><span class="math display">\[U_* = 4.004(t_*)^-0.25\]</span> Où : <span class="math display">\[U_* = \frac{1.0}{\sqrt{9.81\times0.250}} = 0.639\]</span></p>
+<p>Et : <span class="math display">\[ t_* = \frac{t}{\sqrt{0.250/9.81}} = 6.264t\]</span> Remplacer les valeurs de U<sub>*</sub> et de t<sub>*</sub> dans la première équation : <span class="math display">\[0.639 = 4.004(6.264t)^{0.25}\]</span> Calculer t : <span class="math display">\[ t = \left(\frac{0.639}{4.004}\right)^{-1/0.25}\div6.264 = 246 \text{ seconds}\]</span></p>
+<p>Solution – Vitesse par rapport au temps</p>
+<p>La truite arc-en-ciel moyenne de 250 mm peut nager à 1 m/s pendant 246 secondes.</p>
+</div>
+</div>
+<div id="exemple-de-distance-par-rapport-a-la-vitesse" class="section level2">
+<h2>Exemple de distance par rapport à la vitesse</h2>
+<p>Question : un soumissionnaire souhaite installer un ponceau de 30 mètres. Quelle est la vitesse maximale de l’eau que 87,5 % des grands brochets peuvent surmonter?</p>
+<p>Il y a deux façons de répondre à cette question. La première méthode, celle qui est recommandée, est d’utiliser <a href="#outilweb2">l’outil Web interactif</a>. L’outil Web effectue de façon automatique et fiable les calculs présentés dans ce guide. Autrement, on peut <a href="#formuledistancevitesse">faire les calculs manuellement</a>.</p>
+<div id="outilweb2" class="section level3">
+<h3>Outil Web – distance par rapport à la vitesse</h3>
+<ol style="list-style-type: decimal">
+<li>Consultez <a href="http://www.fishprotectiontools.ca/fr/distancevitesse.html">l’outil de vitesse et de temps de nage</a>.</li>
+<li>Sous « Sélectionner le poisson par : », cliquer sur le bouton d’option « Nom courant ».</li>
+<li>Dans le menu déroulant « Sélectionner l’espèce », choisir « Grand brochet ».</li>
+<li>Faire glisser le curseur nommé « Longueur du poisson » jusqu’à 400 mm.</li>
+<li>Sous « Calculs : », cliquer sur le bouton d’option « Vitesse de l’eau ».</li>
+<li>Entrer « 30 » dans la boîte « Distance de nage en mètres : ».</li>
+</ol>
+Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
+<center>
+<iframe src="http://www.fishprotectiontools.ca/fr/distancevitesse/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Grand%20brochet%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true" width="672" height="1260px">
+</iframe>
+</center>
+</div>
+<div id="formuledistancevitesse" class="section level3">
+<h3>Formule – Distance par rapport à la vitesse</h3>
+<ol style="list-style-type: decimal">
+<li>Déterminer le bon groupe du grand brochet. Le <a href="#tableu4">Résumé de groupe par espèce</a> contient une liste d’espèces pour chaque groupe. Dans le tableau, le grand brochet fait partie du groupe « Brochet (dérivé) ».</li>
+<li>On peut calculer la distance de nage à l’aide des <a href="#equationsdistance">équations relatives à la distance</a>. Pour utiliser les équations, trouver les coefficients k et b. Pour le temps d’endurance moyen, utiliser les coefficients d’équation de régression.</li>
+</ol>
+<p><span class="math display">\[X_* = 3.846(V_*)^{2.040}\]</span></p>
+<p>Où : <span class="math display">\[X_* = \frac{30.0}{0.4} = 75\]</span></p>
+<p>Et : <span class="math display">\[V_* = \frac{V}{\sqrt{9.81\times0.4}} = 0.505V\]</span> <span class="math display">\[75 = 3.846(0.505V)^{-2.040}\]</span></p>
+<p>Calculer V : <span class="math display">\[V = \left(\frac{75}{3.846}\right)^{-1/2.040} \div 0.505 = 0.46 \text{ m/s}\]</span></p>
+</div>
+<div id="solution-distance-par-rapport-a-la-vitesse" class="section level3">
+<h3>Solution – Distance par rapport à la vitesse</h3>
+<p>Ce ponceau ne doit pas dépasser une vitesse de l’eau de 0,46 m/s pour permettre le passage de 87,5 % des grands brochets de 400 mm.</p>
+</div>
+</div>
+<div id="mot-de-la-fin" class="section level2">
+<h2>Mot de la fin</h2>
+<p>Voici des observations de nature générale relatives à la performance natatoire des poissons, les essais utilisés pour mesurer la performance et l’analyse des données pour obtenir les estimations de la performance.</p>
+<ul>
+<li>Une vaste base de données sur la performance natatoire des poissons a été produite à partir de la littérature concernant les espèces diadromes et potamodromes.</li>
+<li>Les normes pour mesurer la capacité de nage des poissons sont limitées. Les données ont été recueillies au moyen de divers tests de performance natatoire des poissons, qui ont tendance à couvrir différentes parties des courbes de fatigue.</li>
+<li>Les bases de données contiennent un mélange de données de nage moyennes et individuelles. Par souci d’uniformité, on a regroupé les données.</li>
+<li>Les données sur les vitesses d’élan recueillies dans les chenaux volontaires complètent les données sur les vitesses prolongées recueillies dans les tunnels de nage. Elles contribuent à déterminer les courbes de fatigue sur une vaste plage de temps.</li>
+<li>Des courbes d’extrapolation obtenues à partir des données relatives au chenal volontaire uniquement sous-estimeraient la performance prolongée étant donné que les courbes de fatigue fondées uniquement sur des données relatives à la vitesse d’élan sont caractérisées par des pentes raides. L’inverse est également vrai, c.-à-d. que les courbes de fatigue fondées sur des données provenant des tunnels de nage seulement ont tendance à être plus planes et sous-estimeraient la performance en vitesse d’élan, en cas d’extrapolation.</li>
+<li>Des variations importantes ont été constatées dans la performance natatoire individuelle. Ce n’est pas surprenant étant donné que les espèces et les populations de poissons ont survécu pendant des millions d’années en partie en raison des capacités et des stratégies des groupes différents et des individus.</li>
+<li>Pour de nombreuses espèces, les données disponibles sont insuffisantes pour créer des courbes de fatigue individuelles. Une approche écohydraulique utilisant des variables adimensionnelles a permis de réaliser des analyses de données plus globales pour des groupes d’espèces de poissons et d’utiliser des ensembles de données limités.</li>
+<li>Même s’il existe une variabilité de la performance natatoire entre les espèces et les individus d’une même espèce, les analyses de données indiquent d’importantes similitudes de la performance relative pour certains groupes d’espèces.</li>
+<li>Le regroupement des espèces par famille et mode de nage a servi à créer six groupes de poissons. Deux de ces groupes, soit les groupes « Anguille » et « Saumon et doré jaune », présentent les meilleurs ensembles de données et les régressions les plus robustes. Ces deux groupes correspondent aux versions à jour des espèces anciennement nommées « anguilliforme » et « subcarangiforme ». Les quatre autres groupes présentent des limites au niveau des données dont il faut tenir compte quand on utilise les résultats.</li>
+<li>Des régressions vitesse-temps ont fourni des estimations de la relation entre la distance de nage et la vitesse de l’eau pour différents niveaux de confiance.</li>
+<li>Les estimations de la distance de nage à partir des courbes de fatigue étaient comparables avec les mesures directes disponibles.</li>
+<li>Les estimations du temps ou de la distance de fatigue seraient utiles pour étudier les aspects physiologiques dans des applications pratiques telles que les grillages à poissons et les passes à poissons.</li>
+<li>Dans la nature, la survie dépend souvent de l’utilisation efficace des réserves d’énergie, et le poisson peut limiter les activités qui exigent une grande dépense d’énergie.</li>
+<li>Les résultats de ces analyses peuvent représenter un « meilleur effort » en raison des limites des données disponibles. La performance natatoire dépend de facteurs qui ne peuvent pas être mesurés de façon concluante. Les structures de passage des poissons réelles génèrent souvent des conditions hydrauliques qui diffèrent de celles mises à l’essai dans des dispositifs de performance natatoire.</li>
+</ul>
+</div>
+<div id="tableu4" class="section level2">
+<h2>Résumé de groupe par espèce</h2>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<caption>
+Tableau 4. Le résumé des familles et des espèces utilisées pour effectuer l’analyse visant à définir les différents groupes de performance natatoire; source de la classification taxonomique : Integrated Taxonomic Information System – ITIS (<a href="http://www.itis.gov/" class="uri">http://www.itis.gov/</a>).
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Groupe
+</th>
+<th style="text-align:left;">
+Nom scientifique
+</th>
+<th style="text-align:left;">
+Nom courant
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Ictalurus furcatus
+</td>
+<td style="text-align:left;">
+Poisson-chat bleu
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Ictalurus punctatus
+</td>
+<td style="text-align:left;">
+Barbue de rivičre
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Ictalurus punctatus x furcatus
+</td>
+<td style="text-align:left;">
+Poisson-chat tacheté x poisson-chat bleu hybride
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Lepomis auritus
+</td>
+<td style="text-align:left;">
+Crapet rouge
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Lepomis incisor
+</td>
+<td style="text-align:left;">
+Crapet-soleil
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Lepomis macrochirus
+</td>
+<td style="text-align:left;">
+Crapet arlequin
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Lepomis megalotis
+</td>
+<td style="text-align:left;">
+Crapet ą longues oreilles
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Micropterus dolomieu
+</td>
+<td style="text-align:left;">
+Achigan ą petite bouche
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Micropterus salmoides
+</td>
+<td style="text-align:left;">
+Achigan ą grande bouche
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Poissons-chats et malachigans
+</td>
+<td style="text-align:left;">
+Pomoxis annularis
+</td>
+<td style="text-align:left;">
+Marigane blanche
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Anguilles
+</td>
+<td style="text-align:left;">
+Anguilla anguilla
+</td>
+<td style="text-align:left;">
+Anguille européenne
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Anguilles
+</td>
+<td style="text-align:left;">
+Lampetra tridentata
+</td>
+<td style="text-align:left;">
+Lamproie du Pacifique
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Anguilles
+</td>
+<td style="text-align:left;">
+Lota lota
+</td>
+<td style="text-align:left;">
+Lotte
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Anguilles
+</td>
+<td style="text-align:left;">
+Petromyzon marinus
+</td>
+<td style="text-align:left;">
+Lamproie marine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Harengs
+</td>
+<td style="text-align:left;">
+Alosa aestivalis
+</td>
+<td style="text-align:left;">
+Hareng ą dos bleu
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Harengs
+</td>
+<td style="text-align:left;">
+Alosa fallax
+</td>
+<td style="text-align:left;">
+Alose finte
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Harengs
+</td>
+<td style="text-align:left;">
+Alosa pseudoharengus
+</td>
+<td style="text-align:left;">
+Gaspareau
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Harengs
+</td>
+<td style="text-align:left;">
+Alosa sapidissima
+</td>
+<td style="text-align:left;">
+Alose savoureuse
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brochets
+</td>
+<td style="text-align:left;">
+Esox lucius
+</td>
+<td style="text-align:left;">
+Grand brochet
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brochets
+</td>
+<td style="text-align:left;">
+Esox sp.
+</td>
+<td style="text-align:left;">
+Maskinongé
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Abramis brama
+</td>
+<td style="text-align:left;">
+Brčme
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Barbus barbus
+</td>
+<td style="text-align:left;">
+Barbillon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Campostoma anomalum
+</td>
+<td style="text-align:left;">
+Roule-caillou
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Carassius carassius
+</td>
+<td style="text-align:left;">
+Carassin
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Catostomus catostomus
+</td>
+<td style="text-align:left;">
+Meunier rouge
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Catostomus commersoni
+</td>
+<td style="text-align:left;">
+Meunier noir
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Catostomus laipinnis
+</td>
+<td style="text-align:left;">
+Meunier ą grosses nageoires
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Catostomus macrocheilus
+</td>
+<td style="text-align:left;">
+Meunier ą grandes écailles
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Catostomus platyrhynchus
+</td>
+<td style="text-align:left;">
+Meunier des montagnes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Chasmistes liorus
+</td>
+<td style="text-align:left;">
+Catostome noir nain
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Coregonus artedii
+</td>
+<td style="text-align:left;">
+Cisco
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Coregonus autumnalis
+</td>
+<td style="text-align:left;">
+Cisco arctique
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Coregonus clupeaformis
+</td>
+<td style="text-align:left;">
+Grand corégone
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Coregonus nasus
+</td>
+<td style="text-align:left;">
+Corégone tschir
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Coregonus sardinella
+</td>
+<td style="text-align:left;">
+Cisco sardinelle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Cyprinella lutrensis
+</td>
+<td style="text-align:left;">
+Méné rouge
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Cyprinella proserpina
+</td>
+<td style="text-align:left;">
+Méné de Proserpine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Cyprinella venusta
+</td>
+<td style="text-align:left;">
+Méné ą queue noire
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Cyprinus carpio
+</td>
+<td style="text-align:left;">
+Carpe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Etheostoma grahami
+</td>
+<td style="text-align:left;">
+Dard Rio Grande
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Gila cypha
+</td>
+<td style="text-align:left;">
+Méné ą bosses
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Gila elegans
+</td>
+<td style="text-align:left;">
+Squalius moreoticus
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Gobio gobio
+</td>
+<td style="text-align:left;">
+Goujon
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Hybognathus amarus
+</td>
+<td style="text-align:left;">
+Méné dargent
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Hybognathus placitus
+</td>
+<td style="text-align:left;">
+Méné des plaines
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Iotichthys phlegethontis
+</td>
+<td style="text-align:left;">
+Méné des rapides
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Lepidomeda aliciae
+</td>
+<td style="text-align:left;">
+Southern leatherside chub
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Leuciscus cephalus
+</td>
+<td style="text-align:left;">
+Chevaine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Leuciscus leuciscus
+</td>
+<td style="text-align:left;">
+Vandoise
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Luxilus chrysocephalus
+</td>
+<td style="text-align:left;">
+Méné rayé
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Lythrurus fumeus
+</td>
+<td style="text-align:left;">
+Méné ruban
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Lythrurus umbratilis
+</td>
+<td style="text-align:left;">
+Méné dombre
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Macrhybopsis aestivalis
+</td>
+<td style="text-align:left;">
+Méné moucheté
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Morone americana
+</td>
+<td style="text-align:left;">
+Baret
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Morone saxatilis
+</td>
+<td style="text-align:left;">
+Bar rayé
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis amabilis
+</td>
+<td style="text-align:left;">
+Méné du Texas
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis atherinoides
+</td>
+<td style="text-align:left;">
+Méné émeraude
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis atrocaudalis
+</td>
+<td style="text-align:left;">
+Méné ą tache noire
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis bairdi
+</td>
+<td style="text-align:left;">
+Red River shiner
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis buccula
+</td>
+<td style="text-align:left;">
+Méné ą petits yeux
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis buchanani
+</td>
+<td style="text-align:left;">
+Méné fantōme
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis hudsonius
+</td>
+<td style="text-align:left;">
+Queue ą tache noire
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis oxyrhynchus
+</td>
+<td style="text-align:left;">
+Méné ą nez pointu
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis sabinae
+</td>
+<td style="text-align:left;">
+Méné Sabine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis shumardi
+</td>
+<td style="text-align:left;">
+Méné miroir
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis stramineus
+</td>
+<td style="text-align:left;">
+Méné paille
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis texanus
+</td>
+<td style="text-align:left;">
+Méné dherbe
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis topeka
+</td>
+<td style="text-align:left;">
+Méné Topeka
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Notropis volucellus
+</td>
+<td style="text-align:left;">
+Méné pāle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Oncorhynchus clarki
+</td>
+<td style="text-align:left;">
+Truite fardée
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Oncorhynchus gorbuscha
+</td>
+<td style="text-align:left;">
+Saumon rose
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Oncorhynchus keta
+</td>
+<td style="text-align:left;">
+Saumon kéta
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Oncorhynchus kisutch
+</td>
+<td style="text-align:left;">
+Saumon coho
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Oncorhynchus mykiss
+</td>
+<td style="text-align:left;">
+Truite arc-en-ciel et saumon arc-en-ciel
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Oncorhynchus nerka
+</td>
+<td style="text-align:left;">
+Saumon rouge
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Oncorhynchus tshawytscha
+</td>
+<td style="text-align:left;">
+Saumon quinnat
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Perca flavescens
+</td>
+<td style="text-align:left;">
+Perchaude
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Perca fluviatilis
+</td>
+<td style="text-align:left;">
+Perche commune
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Pimephales promelas
+</td>
+<td style="text-align:left;">
+Tźte-de-boule
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Pimephales vigilax
+</td>
+<td style="text-align:left;">
+Pimephales vigilax
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Platygobio gracilus
+</td>
+<td style="text-align:left;">
+Méné ą tźte plate
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Pogonichthys macrolepidotus
+</td>
+<td style="text-align:left;">
+Sacramento splittail
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Prosopium williamsoni
+</td>
+<td style="text-align:left;">
+Ménomini des montagnes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Ptychocheilus lucius
+</td>
+<td style="text-align:left;">
+Cyprinoļde du Colorado
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Ptychocheilus oregonensis
+</td>
+<td style="text-align:left;">
+Cyprinoļde nordique
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Rhinichthys atratulus
+</td>
+<td style="text-align:left;">
+Naseux noir
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Rhinichthys cataractae
+</td>
+<td style="text-align:left;">
+Naseux des rapides
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Rhinichthys osculus
+</td>
+<td style="text-align:left;">
+Naseux moucheté
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Richardsonius balteatus
+</td>
+<td style="text-align:left;">
+Méné rose
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Rutilus rutilus
+</td>
+<td style="text-align:left;">
+Chevaine
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Salmo salar
+</td>
+<td style="text-align:left;">
+Saumon de lAtlantique
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Salmo trutta
+</td>
+<td style="text-align:left;">
+Truite brune
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Salvelinus alpinus
+</td>
+<td style="text-align:left;">
+Omble ą tźte plate
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Salvelinus confluentus
+</td>
+<td style="text-align:left;">
+Mouchetée
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Salvelinus fontinalis
+</td>
+<td style="text-align:left;">
+Omble chevalier
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Salvelinus namaycush
+</td>
+<td style="text-align:left;">
+Touladi
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Sander vitreus
+</td>
+<td style="text-align:left;">
+Doré jaune
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Semotilus atromaculatus
+</td>
+<td style="text-align:left;">
+Mulet ą cornes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Stenodus leucichthys
+</td>
+<td style="text-align:left;">
+Inconnu
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Thymallus arcticus
+</td>
+<td style="text-align:left;">
+Ombre de lArctique
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Saumons et dorés jaunes
+</td>
+<td style="text-align:left;">
+Thymallus thymallus
+</td>
+<td style="text-align:left;">
+Ombre commun
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Esturgeons
+</td>
+<td style="text-align:left;">
+Acipenser brevirostrum
+</td>
+<td style="text-align:left;">
+Esturgeon ą museau court
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Esturgeons
+</td>
+<td style="text-align:left;">
+Acipenser fulvescens
+</td>
+<td style="text-align:left;">
+Esturgeon jaune
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Esturgeons
+</td>
+<td style="text-align:left;">
+Acipenser transmontanus
+</td>
+<td style="text-align:left;">
+Esturgeon blanc
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Esturgeons
+</td>
+<td style="text-align:left;">
+Scaphirhynchus albus
+</td>
+<td style="text-align:left;">
+Esturgeon pāle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Esturgeons
+</td>
+<td style="text-align:left;">
+Scaphirhynchus platorynchus
+</td>
+<td style="text-align:left;">
+Esturgeon ą museau plat
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>Références</h2>
+<div id="refs" class="references">
+<div id="ref-katopodis2016fish">
+<p>Katopodis, C, and R Gervais. 2016. “Fish Swimming Performance Database and Analyses.” <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

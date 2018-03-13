@@ -1,0 +1,107 @@
+GroupName,FrenchGroupName,ScientificName,CommonName,FrenchName,MinSize,MaxSize
+Catfish & Sunfish,Poissons-chats et malachigans,Ictalurus furcatus,Blue catfish,Poisson-chat bleu,25,1650
+Catfish & Sunfish,Poissons-chats et malachigans,Ictalurus punctatus,Channel catfish,Barbue de rivière,25,533
+Catfish & Sunfish,Poissons-chats et malachigans,Ictalurus punctatus x furcatus,Channel x blue hybrid catfish,Poisson-chat tacheté x poisson-chat bleu hybride,25,1650
+Catfish & Sunfish,Poissons-chats et malachigans,Lepomis auritus,Redbreast sunfish,Crapet rouge,25,178
+Catfish & Sunfish,Poissons-chats et malachigans,Lepomis incisor,Sunfish,Crapet-soleil,25,203
+Catfish & Sunfish,Poissons-chats et malachigans,Lepomis macrochirus,Bluegill,Crapet arlequin,25,203
+Catfish & Sunfish,Poissons-chats et malachigans,Lepomis megalotis,Longear sunfish,Crapet à longues oreilles,25,152
+Catfish & Sunfish,Poissons-chats et malachigans,Micropterus dolomieu,Smallmouth bass,Achigan à petite bouche,25,381
+Catfish & Sunfish,Poissons-chats et malachigans,Micropterus salmoides,Largemouth bass,Achigan à grande bouche,25,381
+Catfish & Sunfish,Poissons-chats et malachigans,Pomoxis annularis,White crappie,Marigane blanche,25,254
+Eel,Anguilles,Anguilla anguilla,European eel,Anguille européenne,25,1220
+Eel,Anguilles,Lampetra tridentata,Pacific lamprey,Lamproie du Pacifique,25,680
+Eel,Anguilles,Lota lota,Burbot,Lotte,25,381
+Eel,Anguilles,Petromyzon marinus,Sea lamprey,Lamproie marine,25,860
+Herring,Harengs,Alosa aestivalis,Blueback herring,Hareng à dos bleu,25,203
+Herring,Harengs,Alosa fallax,Twaite shad,Alose finte,25,600
+Herring,Harengs,Alosa pseudoharengus,Alewife,Gaspareau,25,152
+Herring,Harengs,Alosa sapidissima,American shad,Alose savoureuse,25,381
+Pike (derived),Brochets,Esox lucius,Northern pike,Grand brochet,25,762
+Pike (derived),Brochets,Esox sp.,Tiger muskellunge,Maskinongé,25,1830
+Salmon & Walleye,Saumons et dorés jaunes,Abramis brama,Bream,Brème,25,820
+Salmon & Walleye,Saumons et dorés jaunes,Barbus barbus,Barbel,Barbillon,25,120
+Salmon & Walleye,Saumons et dorés jaunes,Campostoma anomalum,Central stoneroller,Roule-caillou,25,161
+Salmon & Walleye,Saumons et dorés jaunes,Carassius carassius,Crucian carp,Carassin,25,640
+Salmon & Walleye,Saumons et dorés jaunes,Catostomus catostomus,Longnose sucker,Meunier rouge,25,356
+Salmon & Walleye,Saumons et dorés jaunes,Catostomus commersoni,White sucker,Meunier noir,25,508
+Salmon & Walleye,Saumons et dorés jaunes,Catostomus laipinnis,Flannelmouth sucker,Meunier à grosses nageoires,25,560
+Salmon & Walleye,Saumons et dorés jaunes,Catostomus macrocheilus,Largescale sucker,Meunier à grandes écailles,25,432
+Salmon & Walleye,Saumons et dorés jaunes,Catostomus platyrhynchus,Mountain sucker,Meunier des montagnes,25,203
+Salmon & Walleye,Saumons et dorés jaunes,Chasmistes liorus,June sucker,Catostome noir nain,25,610
+Salmon & Walleye,Saumons et dorés jaunes,Coregonus artedii,Cisco,Cisco,25,305
+Salmon & Walleye,Saumons et dorés jaunes,Coregonus autumnalis,Arctic cisco,Cisco arctique,25,381
+Salmon & Walleye,Saumons et dorés jaunes,Coregonus clupeaformis,Lake whitefish,Grand corégone,25,381
+Salmon & Walleye,Saumons et dorés jaunes,Coregonus nasus,Broad whitefish,Corégone tschir,25,457
+Salmon & Walleye,Saumons et dorés jaunes,Coregonus sardinella,Least cisco,Cisco sardinelle,25,254
+Salmon & Walleye,Saumons et dorés jaunes,Cyprinella lutrensis,Red shiner,Méné rouge,25,90
+Salmon & Walleye,Saumons et dorés jaunes,Cyprinella proserpina,Proserpine shiner,Méné de Proserpine,25,75
+Salmon & Walleye,Saumons et dorés jaunes,Cyprinella venusta,Blacktail shiner,Méné à queue noire,25,152
+Salmon & Walleye,Saumons et dorés jaunes,Cyprinus carpio,Carp,Carpe,25,457
+Salmon & Walleye,Saumons et dorés jaunes,Etheostoma grahami,Rio Grande darter,Dard Rio Grande,25,60
+Salmon & Walleye,Saumons et dorés jaunes,Gila cypha,Humpback chub,Méné à bosses,25,380
+Salmon & Walleye,Saumons et dorés jaunes,Gila elegans,Bonytail chub,Squalius moreoticus,25,620
+Salmon & Walleye,Saumons et dorés jaunes,Gobio gobio,Gudgeon,Goujon,25,200
+Salmon & Walleye,Saumons et dorés jaunes,Hybognathus amarus,Silvery minnow,Méné d’argent,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Hybognathus placitus,Plains minnow,Méné des plaines,25,130
+Salmon & Walleye,Saumons et dorés jaunes,Iotichthys phlegethontis,Least chub,Méné des rapides,25,64
+Salmon & Walleye,Saumons et dorés jaunes,Lepidomeda aliciae,Southern leatherside chub,Southern leatherside chub,25,127
+Salmon & Walleye,Saumons et dorés jaunes,Leuciscus cephalus,European chub,Chevaine,25,600
+Salmon & Walleye,Saumons et dorés jaunes,Leuciscus leuciscus,Dace,Vandoise,25,400
+Salmon & Walleye,Saumons et dorés jaunes,Luxilus chrysocephalus,Striped shiner,Méné rayé,25,200
+Salmon & Walleye,Saumons et dorés jaunes,Lythrurus fumeus,Ribbon shiner,Méné ruban,25,70
+Salmon & Walleye,Saumons et dorés jaunes,Lythrurus umbratilis,Redfin shiner,Méné d’ombre,25,64
+Salmon & Walleye,Saumons et dorés jaunes,Macrhybopsis aestivalis,Speckled chub,Méné moucheté,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Morone americana,White perch,Baret,25,178
+Salmon & Walleye,Saumons et dorés jaunes,Morone saxatilis,Striped bass,Bar rayé,25,457
+Salmon & Walleye,Saumons et dorés jaunes,Notropis amabilis,Texas shiner,Méné du Texas,25,62
+Salmon & Walleye,Saumons et dorés jaunes,Notropis atherinoides,Emerald shiner,Méné émeraude,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Notropis atrocaudalis,Blackspot shiner,Méné à tache noire,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Notropis bairdi,Red River shiner,Red River shiner,25,80
+Salmon & Walleye,Saumons et dorés jaunes,Notropis buccula,Smalleye shiner,Méné à petits yeux,25,44
+Salmon & Walleye,Saumons et dorés jaunes,Notropis buchanani,Ghost shiner,Méné fantôme,25,64
+Salmon & Walleye,Saumons et dorés jaunes,Notropis hudsonius,Spottail shiner,Queue à tache noire,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Notropis oxyrhynchus,Sharpnose shiner,Méné à nez pointu,25,95
+Salmon & Walleye,Saumons et dorés jaunes,Notropis sabinae,Sabine shiner,Méné Sabine,25,57
+Salmon & Walleye,Saumons et dorés jaunes,Notropis shumardi,Silverband shiner,Méné miroir,25,100
+Salmon & Walleye,Saumons et dorés jaunes,Notropis stramineus,Sand shiner,Méné paille,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Notropis texanus,Weed shiner,Méné d’herbe,25,56
+Salmon & Walleye,Saumons et dorés jaunes,Notropis topeka,Topeka shiner,Méné Topeka,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Notropis volucellus,Mimic shiner,Méné pâle,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Oncorhynchus clarki,Cutthroat trout,Truite fardée,25,381
+Salmon & Walleye,Saumons et dorés jaunes,Oncorhynchus gorbuscha,Pink salmon,Saumon rose,25,610
+Salmon & Walleye,Saumons et dorés jaunes,Oncorhynchus keta,Chum salmon,Saumon kéta,25,635
+Salmon & Walleye,Saumons et dorés jaunes,Oncorhynchus kisutch,Coho salmon,Saumon coho,25,656
+Salmon & Walleye,Saumons et dorés jaunes,Oncorhynchus mykiss,Rainbow or Steelhead trout,Truite arc-en-ciel et saumon arc-en-ciel,25,762
+Salmon & Walleye,Saumons et dorés jaunes,Oncorhynchus nerka,Sockeye salmon,Saumon rouge,25,610
+Salmon & Walleye,Saumons et dorés jaunes,Oncorhynchus tshawytscha,Chinook salmon,Saumon quinnat,25,915
+Salmon & Walleye,Saumons et dorés jaunes,Perca flavescens,Yellow perch,Perchaude,25,254
+Salmon & Walleye,Saumons et dorés jaunes,Perca fluviatilis,European perch,Perche commune,25,600
+Salmon & Walleye,Saumons et dorés jaunes,Pimephales promelas,Fathead minnow,Tête-de-boule,25,51
+Salmon & Walleye,Saumons et dorés jaunes,Pimephales vigilax,Bullhead minnow,Pimephales vigilax,25,79
+Salmon & Walleye,Saumons et dorés jaunes,Platygobio gracilus,Flathead chub,Méné à tête plate,25,178
+Salmon & Walleye,Saumons et dorés jaunes,Pogonichthys macrolepidotus,Sacramento splittail,Sacramento splittail,25,440
+Salmon & Walleye,Saumons et dorés jaunes,Prosopium williamsoni,Mountain whitefish,Ménomini des montagnes,25,305
+Salmon & Walleye,Saumons et dorés jaunes,Ptychocheilus lucius,Colorado squawfish,Cyprinoïde du Colorado,25,1800
+Salmon & Walleye,Saumons et dorés jaunes,Ptychocheilus oregonensis,Northern squawfish,Cyprinoïde nordique,25,305
+Salmon & Walleye,Saumons et dorés jaunes,Rhinichthys atratulus,Blacknose dace,Naseux noir,25,64
+Salmon & Walleye,Saumons et dorés jaunes,Rhinichthys cataractae,Longnose dace,Naseux des rapides,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Rhinichthys osculus,Speckled dace,Naseux moucheté,25,76
+Salmon & Walleye,Saumons et dorés jaunes,Richardsonius balteatus,Redside shiner,Méné rose,25,127
+Salmon & Walleye,Saumons et dorés jaunes,Rutilus rutilus,Roach,Chevaine,25,500
+Salmon & Walleye,Saumons et dorés jaunes,Salmo salar,Atlantic salmon,Saumon de l’Atlantique,25,457
+Salmon & Walleye,Saumons et dorés jaunes,Salmo trutta,Brown trout,Truite brune,25,406
+Salmon & Walleye,Saumons et dorés jaunes,Salvelinus alpinus,Arctic char,Omble à tête plate,25,457
+Salmon & Walleye,Saumons et dorés jaunes,Salvelinus confluentus,Bull trout,Mouchetée,25,1030
+Salmon & Walleye,Saumons et dorés jaunes,Salvelinus fontinalis,Brook trout,Omble chevalier,25,305
+Salmon & Walleye,Saumons et dorés jaunes,Salvelinus namaycush,Lake trout,Touladi,25,508
+Salmon & Walleye,Saumons et dorés jaunes,Sander vitreus,Walleye,Doré jaune,25,508
+Salmon & Walleye,Saumons et dorés jaunes,Semotilus atromaculatus,Creek chub,Mulet à cornes,25,102
+Salmon & Walleye,Saumons et dorés jaunes,Stenodus leucichthys,Inconnu,Inconnu,25,762
+Salmon & Walleye,Saumons et dorés jaunes,Thymallus arcticus,Arctic grayling,Ombre de l’Arctique,25,381
+Salmon & Walleye,Saumons et dorés jaunes,Thymallus thymallus,European grayling,Ombre commun,25,600
+Sturgeon,Esturgeons,Acipenser brevirostrum,Shortnose sturgeon,Esturgeon à museau court,25,912
+Sturgeon,Esturgeons,Acipenser fulvescens,Lake sturgeon,Esturgeon jaune,25,1425
+Sturgeon,Esturgeons,Acipenser transmontanus,White sturgeon,Esturgeon blanc,25,6100
+Sturgeon,Esturgeons,Scaphirhynchus albus,Pallid sturgeon,Esturgeon pâle,25,2000
+Sturgeon,Esturgeons,Scaphirhynchus platorynchus,Shovelnose sturgeon,Esturgeon à museau plat,25,1080

@@ -1,0 +1,7 @@
+Groupe,k,b,R^2,ChiSQ,Nombre,Commentaires
+Poisson-chat et malachigan,2.176,-0.202,0.64,59.5,1282,Données limitées sur la distance d’élan
+Anguille,3.722,-0.367,0.84,124.7,1747,Ensembles de données les plus complets
+Hareng,10.119,-0.402,0.9,7.4,592,Manque de données prolongées; b peut être élevé
+Saumon et doré jaune,4.004,-0.25,0.7,1933.2,17085,Ensembles de données les plus complets
+Esturgeon,0.756,-0.13,0.69,22.7,1008,Manque de données sur l’élan; b peut être faible
+Brochet (dérivé),3.811,-0.329,,,,Tous les points se situent dans la plage prolongée faible; manque de données sur l’élan; courbe dérivée en supposant une performance d’élan semblable à celle du groupe des saumons et des dorés jaunes et du groupe des anguilless

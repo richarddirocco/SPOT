@@ -1,0 +1,35 @@
+---
+title: "À propos de ce site Web"
+bibliography: bibliography.bib
+output: 
+  html_document:
+    css: style.css
+    theme: cosmo
+---
+
+<!-- Google Analytics Script  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<br>
+
+Ce site Web héberge des prototypes d’outils élaborés pour développer le document du <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html' > SCCS Analyses et base de données des performances natatoires du poisson</a>. Ce site Web a été codé par <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> en R (R Core Team 2016) à l’aide des trousses suivantes :
+
+* <a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a> [@shiny]
+* <a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a> [@ggplot2]
+* <a href='http://ggvis.rstudio.com/' target='_blank'> ggvis</a> [@ggvis]
+* <a href='http://tidyr.tidyverse.org/' target='_blank'> tidyr</a> [@tidyr]
+* <a href='http://rmarkdown.rstudio.com/' target='_blank'>R Markdown</a> [@rmarkdown]
+* <a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a> [@rfishbase]
+
+Ce site Web est en cours de développement. Les commentaires sont les bienvenus. On peut les transmettre  <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>ici</a>.
+
+### Références

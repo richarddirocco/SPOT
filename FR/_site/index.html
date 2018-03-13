@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<!DOCTYPE html>
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- NOTE: add "navbar-inverse" class for an alternate navbar background -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Outils de protection des poisons</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Outils <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="vitessetemps.html">Vitesse et temps de nage</a></li>
+            <li><a href="distancevitesse.html">Distance de nage et vitesse de l’eau</a></li>
+            <li><a href="longueurmaturite.html">Longueur à maturité</a></li>
+            <li><a href="prisedeau.html">Calculer dimension du grillage</a></li>
+          </ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuels <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="utilisateur.html">Guide de l’utilisateur sur la performance natatoire des poissons</a></li>
+            <li><a href="manuel-prisedeau.html">Manuel : Outil de dimension du grillage à l’entrée d’une prise d’eau</a></li>
+          </ul>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="http://fishprotectiontools.ca">English</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+</html>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Bienvenue dans les OPNL <br> Outils de performance natatoire en ligne
+<hr></h1>
+
+</div>
+
+
+<!-- Google Analytics Script -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<p>Les OPNL sont une collection d’outils servant à estimer la performance natatoire des poissons. Les estimations présentées par ces outils peuvent s’avérer utiles pour élaborer et concevoir des systèmes de passage, d’exclusion et d’orientation du poisson. Ces outils interactifs en ligne effectuent des calculs complexes de façon fiable et automatique. Pour obtenir plus de renseignements sur ces outils et les calculs qu’ils effectuent, consultez le <a href="http://www.fishprotectiontools.ca/fr/utilisateur.html">Guide de l’utilisateur</a>. Un aperçu de chaque outil est présenté ci-dessous.</p>
+<div id="outil-de-vitesse-et-de-temps-de-nage" class="section level3">
+<h3>Outil de vitesse et de temps de nage</h3>
+<p>L’<a href="http://www.fishprotectiontools.ca/fr/vitessetemps.html">outil de vitesse et de temps de nage</a> génère un tracé qui indique la vitesse de nage par rapport au temps de nage et permet d’estimer un de ces éléments en fonction de l’autre (voir la figure 1). Cet outil nécessite l’espèce ou le groupe de poissons ainsi que la longueur des poissons pour effectuer les calculs. Cet outil peut servir à répondre à des questions comme :</p>
+<ul>
+<li>Pendant combien de temps un meunier noir de 100 mm peut-il garder une vitesse de nage de 0,5 m/s?</li>
+<li>À quelle vitesse une truite arc-en-ciel de 200 mm peut-elle nager pendant 5 minutes?</li>
+</ul>
+<p>Pour obtenir de plus amples renseignements sur cet outil et un échantillon de problème, consultez le <a href="http://www.fishprotectiontools.ca/fr/utilisateur.html#exemple_de_vitesse_par_rapport_au_temps">Manuel sur l’outil de vitesse et de temps de nage</a>.</p>
+<center>
+<figure>
+<img src="Figures/SpeedTimePlot.png" width=500>
+<figcaption>
+Figure 1. Exemple de tracé généré par l’outil de vitesse et de temps de nage.
+</figcaption>
+</figure>
+</center>
+<p><br></p>
+</div>
+<div id="outil-de-distance-de-nage-et-de-vitesse-de-leau" class="section level3">
+<h3>Outil de distance de nage et de vitesse de l’eau</h3>
+<p>L’<a href="http://www.fishprotectiontools.ca/fr/distancevitesse.html">outil de distance de nage et de vitesse de l’eau</a> ressemble beaucoup à l’outil de vitesse et de temps de nage, mais il trace la distance de nage par rapport à la vitesse de l’eau. Cet outil peut servir à répondre à des questions comme :</p>
+<ul>
+<li>Quelle est la vitesse maximale qu’un esturgeon jaune de 1 000 mm peut surmonter quand il nage sur une distance de 60 m?</li>
+<li>À quelle distance une truite mouchetée de 150 mm peut-elle nager dans un courant de 0,5 m/s?</li>
+<li>Pour obtenir de plus amples renseignements sur cet outil et un échantillon de problème, consultez le <a href="http://www.fishprotectiontools.ca/fr/utilisateur.html#exemple_de_distance_par_rapport_%C3%A0_la_vitesse">Manuel sur l’outil de distance de nage et de vitesse de l’eau</a>.</li>
+</ul>
+</div>
+<div id="outil-de-longueur-a-maturite" class="section level3">
+<h3>Outil de longueur à maturité</h3>
+<p>L’<a href="http://www.fishprotectiontools.ca/fr/longueurmaturite.html">outil de longueur à maturité</a> peut servir à consulter les données sur la maturité d’une espèce. L’outil présente un tableau de références dans lequel sont indiquées les longueurs minimales et moyennes à maturité. Dans les cas où le poisson mature doit franchir un obstacle pour compléter son cycle vital, la longueur à maturité peut s’avérer utile pour estimer la performance natatoire au moyen d’un autre outil du présent site Web. Par exemple, si le saumon de l’Atlantique en migration doit franchir un ponceau de 30 mètres pour atteindre un habitat de frai, quelle longueur de poisson conviendrait-il d’utiliser dans l’outil de distance de nage et de vitesse de l’eau?</p>
+</div>
+<div id="outil-de-dimension-du-grillage-a-lentree-dune-prise-deau" class="section level3">
+<h3>Outil de dimension du grillage à l’entrée d’une prise d’eau</h3>
+<p>L’<a href="http://www.fishprotectiontools.ca/fr/prisedeau.html">outil de dimension du grillage à l’entrée d’une prise d’eau</a> calcule la superficie de grillage nécessaire au niveau de la prise d’eau pour éviter l’impaction de 97,5 % des poissons selon l’espèce, la longueur et la durée nécessaire pour qu’un poisson s’éloigne de la face du grillage. Des renseignements supplémentaires et un échantillon de problème se trouvent dans le <a href="http://www.fishprotectiontools.ca/fr/manuel-prisedeau.html">Manuel sur l’outil de dimension du grillage à l’entrée d’une prise d’eau</a>.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
