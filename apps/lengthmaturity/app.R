@@ -1,6 +1,7 @@
 library(shiny)
 library(shinythemes)
 library(DT)
+library(readr)
 
 # Change plot fonts from defaults
 library(showtext)
@@ -10,8 +11,7 @@ showtext.auto()
 options(scipen=5)
 
 # Import Maturity Data
-MaturityData <- read.csv("MaturityData.csv")
-MaturityData$X1 <- NULL
+MaturityData <- read.csv("MaturityData.csv", fileEncoding = "ISO-8859-1")
 
 # Convert some variable to factors. This makes it easier to sort the table
 MaturityData$Sex <- as.factor(MaturityData$Sex)

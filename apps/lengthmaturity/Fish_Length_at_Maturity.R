@@ -10,7 +10,7 @@ library(readr)
 
 # Import list of common and scientific names of Canadian Species
 # Downloadeded from here: http://fishbase.org/Country/CountryChecklist.php?showAll=yes&c_code=124&vhabitat=fresh
-SpeciesList <- read.csv("~/RMarkdownWebsite/apps/lengthmaturity/FishList.csv", stringsAsFactors = FALSE)
+SpeciesList <- read_csv("~/RMarkdownWebsite/apps/lengthmaturity/FishList.csv")
 
 # Download species code (SpecCode) for each species, this is needed for maturity data
 # The database has multiple species codes for some species so a new table is required
@@ -39,10 +39,12 @@ MaturityData$LengthMatRef[is.na(MaturityData$LengthMatRef)] <- MaturityData$Matu
 links <- function(x) paste0("<a href=http://fishbase.ca/references/FBRefSummary.php?id=",MaturityData$LengthMatRef[x]," target='_blank' >", references(codes = MaturityData$LengthMatRef[x], fields = "ShortCitation" )[2], "</a>")
 
 # Convert reference number to a clickable link
-  MaturityData$LengthMatRef <- mapply(links, 1:nrow(MaturityData))
+MaturityData$LengthMatRef <- mapply(links, 1:nrow(MaturityData))
 
+
+  
 # Reorder columns and delete fluff
-MaturityData <- MaturityData[,c("sciname","comname","Sex","LengthMatMin","Lm", "Type1", "Country","Locality","LengthMatRef")]
+MaturityData <- MaturityData[,c("sciname","comname", "Sex","LengthMatMin","Lm", "Type1", "Country","Locality","LengthMatRef")]
 
 # Rename columns
 colnames(MaturityData) <- c("ScientificName", "CommonName", "Sex", "Minimum length at first maturity", "Mean length at first maturity (Lm)", "Measurement type", "Country", "Locality", "Reference")
@@ -67,6 +69,26 @@ OtherLengthAtMaturity$URL <- NULL
 # Add two data frames together 
 MaturityData <- rbind(MaturityData, OtherLengthAtMaturity)
 
+
+
+# Add french names to dataframe
+FrenchList <- data.frame(unique(MaturityData$ScientificName))
+names(FrenchList) <- c("SciName")
+FrenchList$FrenchName <- NA
+
+for (i in 1:nrow(FrenchList[1])) {
+  temp <- sci_to_common(FrenchList[i,1], Language = "French", limit = 5000)
+#  print(unlist(sci_to_common(FrenchList[i,1], Language = "French"))) #for testing
+  if (temp=="NULL") next 
+  FrenchList[i,2] <- unlist(temp)
+}
+
+for (i in 1:nrow(MaturityData)) {
+  MaturityData$FrenchName[i] <- FrenchList$FrenchName[which(FrenchList$SciName==MaturityData$ScientificName[i])]
+}
+
+
+
 # Create function to make first letter uppercase
 # From: http://stackoverflow.com/questions/18509527/first-letter-to-upper-case
 firstup <- function(x) {
@@ -82,12 +104,14 @@ MaturityData$CommonName <- firstup(MaturityData$CommonName)
 
 # Get current date for archive and name file
 CurrentDate <- Sys.Date()
-csvFileName <- paste("~/RMarkdownWebsite/apps/lengthmaturity/ArchivedData/MaturityData_",CurrentDate,".csv",sep="") 
+csvFileName <- paste("~/RMarkdownWebsite/apps/lengthmaturity/ArchivedData/MaturityData_",CurrentDate,".csv",sep=";") 
 
 # Use if statement to make sure the dataframe isn't empty
 if(nrow(MaturityData) > 300){
    # Write CSV and make it available for length at maturity app
-   write.csv(MaturityData, file = "~/RMarkdownWebsite/apps/lengthmaturity/MaturityData.csv")
+   write_csv(MaturityData, path = "~/RMarkdownWebsite/apps/lengthmaturity/MaturityData.csv")
+   # Write to french app folder
+   write_csv(MaturityData, path = "~/RMarkdownWebsite/FR/apps/longueurmaturité/MaturityData.csv")
    # Write CSV and place it in the archive
-   write.csv(MaturityData, file = csvFileName)
+   write_csv(MaturityData, path = csvFileName)
 }
