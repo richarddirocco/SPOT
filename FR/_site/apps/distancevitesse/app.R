@@ -5,8 +5,8 @@ library(scales)
 
 # Change plot fonts from defaults
 library(showtext)
-font.add.google("Lato","lato")
-showtext.auto()
+font_add_google("Lato","lato")
+showtext_auto()
 
 options(scipen=5)
 
@@ -40,7 +40,7 @@ ui <- function(request){
   sidebarLayout(
     sidebarPanel(
       helpText("Besoin d’aide? Consultez le ",
-               a(href="http://www.fishprotectiontools.ca/userguide.html",target="_blank", "Manuel"), align = "center"
+               a(href="http://fishprotectiontools.ca/fr/utilisateur.html",target="_blank", "Manuel"), align = "center"
       ),
                           
       radioButtons("VvD_Selecter", label = "Sélectionner le poisson par :", choices = list("groupe" = 0, "nom courant" = 1, "nom scientifique" = 2), selected=0),
@@ -67,7 +67,7 @@ ui <- function(request){
           )
       ),
       
-      sliderInput("VvD_l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = c(2.5), step = 5),
+      sliderInput("VvD_l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = c(2.5), step = 5, ticks = FALSE),
                           
       radioButtons("Calculate2", label = "Calculs :", choices = list("aucun" = 0, "Distance de nage" = 1, "Vitesse de l’eau" = 2)),
                           

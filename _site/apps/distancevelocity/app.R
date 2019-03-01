@@ -2,11 +2,14 @@ library(shiny)
 library(shinythemes)
 library(ggplot2)
 library(scales)
+#library(Cairo)
+#options(shiny.usecairo=T)
+
 
 # Change plot fonts from defaults
 library(showtext)
-font.add.google("Lato","lato")
-showtext.auto()
+font_add_google("Lato","lato")
+showtext_auto()
 
 options(scipen=5)
 
@@ -57,7 +60,7 @@ ui <- function(request){
       conditionalPanel("input.VvD_Selecter == '2'", 
           selectInput("VvD_SName", label = "Select species", choices = sort(FishList$ScientificName), selected = "Salvelinus fontinalis")),
       
-      sliderInput("VvD_l", label = "Fish length (mm):", min = 25, max = 1000, value = c(2.5), step = 5),
+      sliderInput("VvD_l", label = "Fish length (mm):", min = 25, max = 1000, value = c(2.5), step = 5, ticks = FALSE),
                           
       radioButtons("Calculate2", label = "Calculations:", choices = list("None" = 0, "Swim distance" = 1, "Water velocity" = 2)),
                           
@@ -280,8 +283,8 @@ server <- function(input, output, session){
         theme_classic()+ 
         theme(axis.line.x = element_line(color="black", size = .5),
               axis.line.y = element_line(color="black", size = .5))+
-        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=14, family="lato"))+
-        theme(axis.text = element_text(size=14, family="lato"), axis.title = element_text(size=16, family="lato"))+
+        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=20, family="lato"))+
+        theme(axis.text = element_text(size=20, family="lato"), axis.title = element_text(size=20, family="lato"))+
         scale_x_log10(name = "Water velocity (m/s)", limits=c(0.1, 10), breaks = c(0.1,1,10))+
         scale_y_log10(name = "Swim distance (m)", limits=c(0.1, 1000), breaks = c(0.1,1,10,100,1000))+
         annotation_logticks(base = 10, sides = "b")+

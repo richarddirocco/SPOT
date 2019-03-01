@@ -8,8 +8,8 @@ options(OutDec= ",")
 
 #change plot fonts from defaults
 library(showtext)
-font.add.google("Lato","lato")
-showtext.auto()
+font_add_google("Lato","lato")
+showtext_auto()
 
 options(scipen=5)
 
@@ -44,7 +44,7 @@ ui <- function(request){
     sidebarPanel(
                           
       helpText("Besoin d’aide? Consultez le  ",
-               a(href="http://www.fishprotectiontools.ca/userguide.html",target="_blank", "Manuel"), align = "center"
+               a(href="http://fishprotectiontools.ca/fr/utilisateur.html",target="_blank", "Manuel"), align = "center"
       ),
                           
       radioButtons("Selecter", label = "Sélectionner le poisson par :", choices = list("groupe" = 0, "nom courant" = 1, "nom scientifique" = 2), selected=0),
@@ -65,7 +65,7 @@ ui <- function(request){
                       choices = sort(FishList$ScientificName),
                       selected = "Salvelinus fontinalis")),
 
-      sliderInput("l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = c(2.5), step = 5),
+      sliderInput("l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = c(2.5), step = 5, ticks = FALSE),
                           
       radioButtons("Calculate", label = "Calculs :", choices = list("aucun" = 0, "vitesse de nage" = 1, "temps de nage" = 2)),
                           

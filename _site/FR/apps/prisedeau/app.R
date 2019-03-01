@@ -39,7 +39,7 @@ ui <- function(request){
     sidebarLayout(
       sidebarPanel(
         helpText("Besoin d’aide? Consultez le ",
-                 a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manuel"), align = "center"
+                 a(href="http://fishprotectiontools.ca/fr/manuel-prisedeau.html",target="_blank", "Manuel"), align = "center"
         ),
         
         selectInput("EoP_Selecter", label = "Sélection par : ", 
@@ -76,9 +76,10 @@ ui <- function(request){
                                      choices = c("97.5%", "87.5%", "50.0%", "12.5%", "2.5%"),
                                      selected = "97.5%"),
                          
-                         sliderInput("EoP_l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = 2.5, step = 5),
+                         sliderInput("EoP_l", label = "Longueur du poisson (mm) :", 
+                                     min = 25, max = 1000, value = 2.5, step = 5, ticks = FALSE),
                          sliderInput("EoP_time", label = "Temps pour s’éloigner de la face du grillage (min.) :", 
-                                     min = 1, max = 30, value = 10, step = 0.5)
+                                     min = 1, max = 30, value = 10, step = 0.5, ticks = FALSE)
         ),
         
         helpText(a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "Soumettre des commentaires"), align = "center")
@@ -280,13 +281,13 @@ server <- function(input, output, session){
     ggvis(x= ~Flow, y=~EffectiveScreenArea, stroke = ~Group) %>%
     layer_lines(strokeWidth := 2.5) %>%
     layer_points(size := 40, opacity := 0) %>%
-    add_axis("y", offset = 1, title = "Effective Screen Area (m²)", title_offset = 50, ticks = 6,
+    add_axis("y", offset = 1, title = "Superficie utile du grillage  (m²)", title_offset = 50, ticks = 6,
              properties = axis_props(
                title = list(fontSize = 15, fontWeight = "normal"),
                labels = list(fontSize = 12)
              )
     )%>%
-    add_axis("x" ,offset = 1, title = "Intake flow rate (L/s)", ticks = 5,
+    add_axis("x" ,offset = 1, title = "Débit d’entrée maximal (L/s)", ticks = 5,
              properties = axis_props(
                title = list(fontSize = 15, fontWeight = "normal"),
                labels = list(fontSize = 12)

@@ -1,0 +1,36 @@
+Warning in install.packages :
+  dependencies ‘R2wd’, ‘Biobase’, ‘annotate’, ‘GO.db’, ‘moe430a.db’, ‘globaltest’, ‘genefilter’, ‘golubEsets’, ‘Rcompression’, ‘graph’, ‘marray’, ‘affy’, ‘limma’, ‘Rgraphviz’, ‘rnaturalearthhires’, ‘lqa’, ‘FRB’, ‘cacheSweave’, ‘weaver’, ‘spDataLarge’, ‘ComplexHeatmap’, ‘RDCOMClient’, ‘Rcampdf’, ‘tm.lexicon.GeneralInquirer’, ‘R2Cuba’, ‘ActuDistns’ are not available
+Warning in install.packages :
+  installation of package ‘knitcitations’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘analogsea’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘benchr’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘TMB’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘styler’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘futile.logger’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘biclust’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘BayesXsrc’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘usethis’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘antiword’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘Rpoppler’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘optmatch’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘Amelia’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘sjlabelled’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘extrafont’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘circlize’ had non-zero exit status
+Warning in install.packages :
+  installation of package ‘loo’ had non-zero exit status

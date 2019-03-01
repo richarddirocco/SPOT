@@ -3,7 +3,7 @@ Lampetra ayresii,river lamprey,,,162,,,,Coker et al. 2001,http://fishbase.us/ref
 Lethenteron camtschaticum,Arctic lamprey,,,180,,United States,Alaska,"Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
 Lampetra richardsoni,western brook lamprey,,,165,,Canada,British Columbia,"Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
 Entosphenus tridentatus,Pacific lamprey,,,537,,Canada,"Thompson and Nicola Rivers, British Columbia",Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
-Lethenteron?alaskense,darktail lamprey,,150,180,,United States,Alaska,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
+Lethenteron alaskense,darktail lamprey,,150,180,,United States,Alaska,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
 Petromyzon marinus,sea lamprey,,,140,,United States,New York,"Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
 Acipenser brevirostrum,shortnose sturgeon,Female,,550,FL,Canada,,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
 Acipenser fulvescens,lake sturgeon,,,950,TL,,,"Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
@@ -15,7 +15,7 @@ Anguilla rostrata,American eel,Female,,460,TL,,,Coad et al. 1995,http://fishbase
 Alosa aestivalis,blueback herring,,,195,,Canada,,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
 Alosa pseudoharengus,alewife,,,138,SL,,,Minns et al. 1993,http://science-catalogue.canada.ca/record=b3889726~S6
 Alosa sapidissima,American shad,,,470,,,,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
-Dorosoma cepedianum ',gizzard shad,,,279,SL,,,Minns et al. 1993,http://science-catalogue.canada.ca/record=b3889726~S6
+Dorosoma cepedianum,gizzard shad,,,279,SL,,,Minns et al. 1993,http://science-catalogue.canada.ca/record=b3889726~S6
 Campostoma anomalum,central stoneroller,Female,70,,,Canada,"Thames River, Ontario",Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
 Campostoma anomalum,central stoneroller,Male,75,,,Canada,"Thames River, Ontario",Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
 Carassius auratus,goldfish,,,175,,,,Minns et al. 1993,http://science-catalogue.canada.ca/record=b3889726~S6
@@ -34,14 +34,14 @@ Notropis heterolepis,blacknose shiner,,,24,SL,,,Portt et al. 1988,http://science
 Notropis hudsonius,spottail shiner,,,55,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
 Notropis photogenis,silver shiner,,,57,SL,Canada,Ontario,"McKee and Parker, 1982",https://doi.org/10.1139/z82-182
 Notropis rubellus,rosyface shiner,,,50,SL,United States,New York,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
-(Notropis stramineus,sand shiner,,,29,SL,,,"Jenkins and Burkhead, 1993",http://fishbase.us/references/FBRefSummary.php?id=54724
+Notropis stramineus,sand shiner,,,29,SL,,,"Jenkins and Burkhead, 1993",http://fishbase.us/references/FBRefSummary.php?id=54724
 Notropis texanus,weed shiner,,,42,TL,United States,Wisconsin,Coker et al. 2001,http://science-catalogue.canada.ca/record=b3896533~S6
 Notropis volucellus,mimic shiner,,,35,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
 Chrosomus eos,northern redbelly dace,,,46,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
 Chrosomus neogaeus,finescale dace,,,59,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
 Pimephales notatus,bluntnose minnow,,,50,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
 Pimephales promelas,fathead minnow,,,54,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
-Platygobio?gracilis,flathead chub,,,180,,Canada,"Peace River, Alberta","Nelson and Paetz, 1992",http://www.fishbase.org/References/FBRefSummary.php?id=78981
+Platygobio gracilis,flathead chub,,,180,,Canada,"Peace River, Alberta","Nelson and Paetz, 1992",http://www.fishbase.org/References/FBRefSummary.php?id=78981
 Ptychocheilus oregonensis,northern squawfish,,,305,,Canada,British Columbia,"Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
 Rhinichthys atratulus,blacknose dace,,,49,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
 Rhinichthys cataractae,longnose dace,,,74,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
@@ -63,7 +63,7 @@ Ictiobus niger,black buffalo,,225,308,,United States,,Coker et al. 2001,http://f
 Minytrema melanops,spotted sucker,,,270,TL,United States,Oklahoma,"Becker, 1983",http://fishbase.us/references/FBRefSummary.php?id=54725
 Moxostoma anisurum,silver redhorse,,,391,,,,Minns et al. 1993,http://fishbase.us/references/FBRefSummary.php?id=58584
 Moxostoma carinatum,river redhorse,,,335,TL,,,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
-Moxostoma duquesni,black redhorse,,,230,,United States,Wisconsin,"Becker, 1983",http://fishbase.us/references/FBRefSummary.php?id=54725
+Moxostoma duquesnii,black redhorse,,,230,,United States,Wisconsin,"Becker, 1983",http://fishbase.us/references/FBRefSummary.php?id=54725
 Moxostoma erythrurum,golden redhorse,,,259,,United States,Wisconsin,"Becker, 1983",http://fishbase.us/references/FBRefSummary.php?id=54725
 Moxostoma hubbsi,copper redhorse,Mixed,,652,,Canada,Quebec,"Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
 Moxostoma macrolepidotum,shorthead redhorse,,,195,,,,Minns et al. 1993,http://fishbase.us/references/FBRefSummary.php?id=58584
@@ -74,7 +74,7 @@ Ameiurus nebulosus,brown bullhead,,,161,SL,Canada,Ontario lake,Portt et al. 1988
 Ictalurus punctatus,channel catfish,,,337,,,,Minns et al. 1993,http://fishbase.us/references/FBRefSummary.php?id=58584
 Noturus flavus,stonecat,,,89,SL,United States,Ohio,"Scott and Crossman, 1973",http://fishbase.us/references/FBRefSummary.php?id=52559
 Noturus gyrinus,tadpole madtom,,,62,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
-margined madtom,margined madtom,,,103,TL,,,"Carlander, 1969",http://fishbase.us/references/FBRefSummary.php?id=3527
+Noturus insignis,margined madtom,,,103,TL,,,"Carlander, 1969",http://fishbase.us/references/FBRefSummary.php?id=3527
 Noturus miurus,brindled madtom,,51,61,,United States,Ohio,"Scott and Crossman, 1973",http://fishbase.us/references/FBRefSummary.php?id=52559
 Noturus stigmosus,northern madtom,,,60,,United States,Ohio,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=3987
 Esox americanus americanus,redfin pickerel,,140,178,FL,United States,North Carolina,"Scott and Crossman, 1973",http://fishbase.us/references/FBRefSummary.php?id=52559
@@ -89,7 +89,7 @@ Osmerus mordax,rainbow smelt,,,125,SL,,,Portt et al. 1988,http://science-catalog
 Spirinchus thaleichthys,longfin smelt,,,107,SL,,,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
 Thaleichthys pacificus,eulachon,,104,124,FL,Canada,British Columbia,"Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
 Coregonus artedi,cisco,,,246,SL,,,Portt et al. 1988,http://fishbase.us/references/FBRefSummary.php?id=10280
-Coregonus hoyi?,bloater,,,208,FL,Canada,Lake Ontario,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
+Coregonus hoyi,bloater,,,208,FL,Canada,Lake Ontario,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
 Coregonus kiyi,kiyi,Male,,178,TL,United States,Lake Michigan,"Becker, 1983",http://fishbase.us/references/FBRefSummary.php?id=54725
 Coregonus kiyi,kiyi,Female,,173,TL,United States,Lake Michigan,"Becker, 1983",http://fishbase.us/references/FBRefSummary.php?id=54725
 Coregonus laurettae,Bering cisco,,,345,FL,United States,Alaska,"Alt, 1973",http://fishbase.us/references/FBRefSummary.php?id=28864
@@ -101,7 +101,7 @@ Prosopium coulterii,pygmy whitefish,Female,107,,TL,,Lake Superior,"Eschmeyer and
 Prosopium cylindraceum,round whitefish,,,183,,,,Minns et al. 1993,http://fishbase.us/references/FBRefSummary.php?id=58584
 Prosopium williamsoni,mountain whitefish,,,230,,Canada,British Columbia,Ford et al. 1995,http://publications.gc.ca/pub?id=9.562530&sl=0
 Stenodus leucichthys,inconnu,,,610,SL,Canada,"Great Slave Lake, Northwest Territories","Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
-Oncorhynchus mykiss aguabonita,golden trout,,,335,TL,United States,Montana,"Wydoski and Whitney, 1979",http://fishbase.us/references/FBRefSummary.php?id=58470
+Oncorhynchus aguabonita,golden trout,,,335,TL,United States,Montana,"Wydoski and Whitney, 1979",http://fishbase.us/references/FBRefSummary.php?id=58470
 Oncorhynchus clarkii,cutthroat trout,,,363,FL,Canada,"Vancouver Island, British Columbia","Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
 Oncorhynchus gorbuscha,pink salmon,,,411,,,,Minns et al. 1993,http://fishbase.us/references/FBRefSummary.php?id=58584
 Oncorhynchus keta,chum salmon,,,681,FL,Canada,"Fraser River, British Columbia","Scott and Crossman, 1973",http://fishbase.us/references/FBRefSummary.php?id=52559
@@ -113,7 +113,7 @@ Oncorhynchus nerka,sockeye salmon,,160,220,,Canada,"Kootenay Lake, British Colum
 Oncorhynchus tshawytscha,chinook salmon,,,750,,,,Minns et al. 1993,http://fishbase.us/references/FBRefSummary.php?id=58584
 Salmo salar,Atlantic salmon,,,800,,,,Minns et al. 1993,http://fishbase.us/references/FBRefSummary.php?id=58584
 Salmo trutta,brown trout,,,258,,,,Minns et al. 1993,http://fishbase.us/references/FBRefSummary.php?id=58584
-Salvelinus alpinus,Arctic char,,,363,FL,Canada,"Frobisher Bay, Nunavut","Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
+Salvelinus alpinus alpinus,Arctic char,,,363,FL,Canada,"Frobisher Bay, Nunavut","Scott and Crossman, 1973",http://www.fishbase.org/References/FBRefSummary.php?id=114745
 Salvelinus confluentus,bull trout,,,385,,Canada,British Columbia,Ford et al. 1995,http://publications.gc.ca/pub?id=9.562530&sl=0
 Salvelinus fontinalis,brook trout,,,156,SL,Canada,Ontario lake,Portt et al. 1988,http://fishbase.us/references/FBRefSummary.php?id=10280
 Salvelinus malma,Dolly Varden,,,206,FL,United States,Alaska,Coker et al. 2001,http://fishbase.us/references/FBRefSummary.php?id=52559
@@ -158,7 +158,7 @@ Pomoxis nigromaculatus,black crappie,,,192,SL,,,Portt et al. 1988,http://science
 Ammocrypta pellucida,eastern sand darter,,,36,SL,,,"Holm and Mandrak, 1995",http://science-catalogue.canada.ca/record=b3654104~S6
 Etheostoma blennioides,greenside darter,,52,56,TL,Canada,"Grand River, Ontario","Bunt et al. 1998; agrees with SL in Fahy, 1954",https://doi.org/10.1023/A:1007444811400
 Etheostoma caeruleum,rainbow darter,,34,43,TL,United States,Wisconsin,"Becker, 1983",http://fishbase.us/references/FBRefSummary.php?id=54725
-Iowa darter,Iowa darter,,,43,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
+Etheostoma exile,Iowa darter,,,43,SL,,,Portt et al. 1988,http://science-catalogue.canada.ca/record=b3896533~S6
 Etheostoma flabellare,fantail darter,,,55,TL,United States,West and North of Viginia,"Jenkins and Burkhead, 1993",http://fishbase.us/references/FBRefSummary.php?id=54724
 Etheostoma microperca,least darter,Male,,34,TL,United States,"Dinner Creek, Minnesota","Johnson and Hatch, 1991",https://doi.org/10.2307/2426372
 Etheostoma microperca,least darter,Female,,33,TL,United States,"Dinner Creek, Minnesota","Johnson and Hatch, 1991",https://doi.org/10.2307/2426372

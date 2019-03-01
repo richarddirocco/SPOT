@@ -74,8 +74,10 @@ ui <- function(request){
                                      choices = c("97.5%", "87.5%", "50.0%", "12.5%", "2.5%"),
                                      selected = "97.5%"),
                          
-                         sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, value = 2.5, step = 5),
-                         sliderInput("EoP_time", label = "Time to escape screen face (min):", min = 1, max = 30, value = 10, step = 0.5)
+                         sliderInput("EoP_l", label = "Fish length (mm):", min = 25, max = 1000, 
+                                     value = 2.5, step = 5, ticks = FALSE),
+                         sliderInput("EoP_time", label = "Time to escape screen face (min):", min = 1, max = 30, 
+                                     value = 10, step = 0.5, ticks = FALSE)
         ),
         
         helpText(a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "Submit feedback"), align = "center")
