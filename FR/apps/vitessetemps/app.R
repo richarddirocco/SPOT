@@ -8,8 +8,8 @@ options(OutDec= ",")
 
 #change plot fonts from defaults
 library(showtext)
-font.add.google("Lato","lato")
-showtext.auto()
+font_add_google("Lato","lato")
+showtext_auto()
 
 options(scipen=5)
 
@@ -44,7 +44,7 @@ ui <- function(request){
     sidebarPanel(
                           
       helpText("Besoin d’aide? Consultez le  ",
-               a(href="http://www.fishprotectiontools.ca/userguide.html",target="_blank", "Manuel"), align = "center"
+               a(href="http://fishprotectiontools.ca/fr/utilisateur.html",target="_blank", "Manuel"), align = "center"
       ),
                           
       radioButtons("Selecter", label = "Sélectionner le poisson par :", choices = list("groupe" = 0, "nom courant" = 1, "nom scientifique" = 2), selected=0),
@@ -65,7 +65,7 @@ ui <- function(request){
                       choices = sort(FishList$ScientificName),
                       selected = "Salvelinus fontinalis")),
 
-      sliderInput("l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = c(2.5), step = 5),
+      sliderInput("l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = c(2.5), step = 5, ticks = FALSE),
                           
       radioButtons("Calculate", label = "Calculs :", choices = list("aucun" = 0, "vitesse de nage" = 1, "temps de nage" = 2)),
                           
@@ -207,8 +207,8 @@ server <- function(input, output, session){
         theme_classic() +
         theme(axis.line.x = element_line(color="black", size = .5),
               axis.line.y = element_line(color="black", size = .5))+
-        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=14, family="lato"))+
-        theme(axis.text = element_text(size=14, family="lato"), axis.title = element_text(size=16, family="lato"))+
+        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=16, family="lato"))+
+        theme(axis.text = element_text(size=20, family="lato"), axis.title = element_text(size=20, family="lato"))+
         scale_x_log10(name = "Temps de nage (s)", limits=c(3, 1800))+
         scale_y_log10(name = "Vitesse de nage (m/s)", limits=c(.02, 14))+
         annotation_logticks(base = 10, sides = "b")+

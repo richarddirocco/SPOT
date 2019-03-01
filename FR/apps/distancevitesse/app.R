@@ -5,8 +5,8 @@ library(scales)
 
 # Change plot fonts from defaults
 library(showtext)
-font.add.google("Lato","lato")
-showtext.auto()
+font_add_google("Lato","lato")
+showtext_auto()
 
 options(scipen=5)
 
@@ -40,7 +40,7 @@ ui <- function(request){
   sidebarLayout(
     sidebarPanel(
       helpText("Besoin d’aide? Consultez le ",
-               a(href="http://www.fishprotectiontools.ca/userguide.html",target="_blank", "Manuel"), align = "center"
+               a(href="http://fishprotectiontools.ca/fr/utilisateur.html",target="_blank", "Manuel"), align = "center"
       ),
                           
       radioButtons("VvD_Selecter", label = "Sélectionner le poisson par :", choices = list("groupe" = 0, "nom courant" = 1, "nom scientifique" = 2), selected=0),
@@ -67,7 +67,7 @@ ui <- function(request){
           )
       ),
       
-      sliderInput("VvD_l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = c(2.5), step = 5),
+      sliderInput("VvD_l", label = "Longueur du poisson (mm) :", min = 25, max = 1000, value = c(2.5), step = 5, ticks = FALSE),
                           
       radioButtons("Calculate2", label = "Calculs :", choices = list("aucun" = 0, "Distance de nage" = 1, "Vitesse de l’eau" = 2)),
                           
@@ -290,8 +290,8 @@ server <- function(input, output, session){
         theme_classic()+ 
         theme(axis.line.x = element_line(color="black", size = .5),
               axis.line.y = element_line(color="black", size = .5))+
-        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=14, family="lato"))+
-        theme(axis.text = element_text(size=14, family="lato"), axis.title = element_text(size=16, family="lato"))+
+        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=16, family="lato"))+
+        theme(axis.text = element_text(size=20, family="lato"), axis.title = element_text(size=20, family="lato"))+
         scale_x_log10(name = "Vitesse de l’eau (m/s)", limits=c(0.1, 10), breaks = c(0.1,1,10))+
         scale_y_log10(name = "Distance de nage (m)", limits=c(0.1, 1000), breaks = c(0.1,1,10,100,1000))+
         annotation_logticks(base = 10, sides = "b")+
@@ -359,8 +359,8 @@ server <- function(input, output, session){
           geom_segment(aes(x = Plot2Data()$Velocity[which.min(Plot2Data()$X95)], y = 0.1, xend = Plot2Data()$Velocity[which.min(Plot2Data()$X95)], yend = min(Plot2Data()$X95,na.rm=TRUE)),linetype = "dashed", colour="orangered", size = 0.8)}+
         
         # Add legend      
-        scale_colour_manual("",values = c("skyblue2","orangered", "grey65"), 
-                            breaks=c("Mean  ","75% prediction interval  ","95% prediction interval  "))
+        scale_colour_manual("",values = c("skyblue2","orangered", "gray65"), 
+                            breaks=c("Moyenne  ","Intervalle de prédiction de 75 %  ","Intervalle de prédiction de 95 %  "))
     },
     height = function() {
       session$clientData$output_Plot1_width*0.5

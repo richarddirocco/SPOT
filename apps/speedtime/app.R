@@ -5,8 +5,8 @@ library(scales)
 
 #change plot fonts from defaults
 library(showtext)
-font.add.google("Lato","lato")
-showtext.auto()
+font_add_google("Lato","lato")
+showtext_auto()
 
 options(scipen=5)
 
@@ -62,7 +62,7 @@ ui <- function(request){
                       choices = sort(FishList$ScientificName),
                       selected = "Salvelinus fontinalis")),
 
-      sliderInput("l", label = "Fish length (mm):", min = 25, max = 1000, value = c(2.5), step = 5),
+      sliderInput("l", label = "Fish length (mm):", min = 25, max = 1000, value = c(2.5), step = 5, ticks = FALSE),
                           
       radioButtons("Calculate", label = "Calculations:", choices = list("None" = 0, "Swim speed" = 1, "Swim time" = 2)),
                           
@@ -204,8 +204,8 @@ server <- function(input, output, session){
         theme_classic() +
         theme(axis.line.x = element_line(color="black", size = .5),
               axis.line.y = element_line(color="black", size = .5))+
-        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=14, family="lato"))+
-        theme(axis.text = element_text(size=14, family="lato"), axis.title = element_text(size=16, family="lato"))+
+        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=20, family="lato"))+
+        theme(axis.text = element_text(size=20, family="lato"), axis.title = element_text(size=20, family="lato"))+
         scale_x_log10(name = "Swim time (s)", limits=c(3, 1800))+
         scale_y_log10(name = "Swim speed (m/s)", limits=c(.02, 14))+
         annotation_logticks(base = 10, sides = "b")+
