@@ -21,11 +21,14 @@ output:
 
 ##Contexte
 
-<iframe src="https://player.vimeo.com/video/212965322" width="320" height="240" style="float:right;margin-left:10px"frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 Les prises d’eau sans grillage peuvent entraîner des poissons. La vidéo incluse montre un esturgeon vert entraîné dans un tuyau qui extrait de l’eau à un débit de 570 L/s dans un chenal expérimental [@mussen2014unscreened]. Pour empêcher l’entraînement, il faut installer un grillage sur les prises d’eau. Si la superficie du grillage est trop petite, le poisson peut rester coincé sur le grillage. L’[Outil de dimension du grillage à l’entrée d’une prise d’eau](http://www.fishprotectiontools.ca/fr/prisedeau.html) sert à calculer la superficie utile du grillage en fonction de l’espèce et de la taille des poissons ainsi que du volume d’eau extrait. La Superficie utile du grillage est l’espace disponible dans lequel l’eau peut circuler librement et l’espace occupé par le matériau du grillage, mais excluant l’espace occupé par les principales structures de soutien. Cet outil prédit la performance natatoire du poisson à l’aide d’un modèle élaboré au moyen de 27 030 poissons individuels dans 132 sources de données. Pour obtenir des détails sur le modèle, les ensembles de données et la façon dont les calculs sont effectués, voir [Katopodis et Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html).
+
 Dans ce manuel, on répond à un exemple de problème à l’aide de cet outil.
 
+<video controls="controls" width = "320" height = "240"
+  name = "Video Name" src = EntrainedSturgeon.mp4
+  style="float:right;margin-left:10px"frameborder="0">
+  
 ##Exemple de question
 
 Un promoteur veut extraire de l’eau à un débit de 100 L/s d’un étang à proximité. L’étang est l’habitat d’achigans à petite bouche, de perchaudes et de grands brochets. On propose une prise d’eau cylindrique à extrémités solides et un grillage de fils métalliques triangulaires nº 60 autour du cylindre. Quelles doivent être les dimensions du grillage d’entrée?

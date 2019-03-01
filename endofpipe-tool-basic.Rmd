@@ -1,0 +1,31 @@
+---
+title: "End-of-Pipe Screen Size Tool"
+output: 
+  html_document:
+    css: style.css
+    theme: cosmo
+---
+
+<!-- Google Analytics Script  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88888600-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<br>
+
+<iframe id="nestedIFrame" src="http://fishprotectiontools.ca/basicendofpipe/" width="100%" frameBorder="0" scrolling="no"></iframe>
+
+<!-- Load JS to automatically resize iframe depending on height of shiny app  -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="./JS/ie8.polyfils.min.js"></script>
+<script type="text/javascript" src="./JS/iframeResizer.min.js"></script>
+<script type="text/javascript">
+   iFrameResize({heightCalculationMethod: "lowestElement"});
+</script>
