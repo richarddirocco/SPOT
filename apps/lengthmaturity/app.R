@@ -52,7 +52,7 @@ ui <- fluidPage(
                    column(6, selectInput("CommonSpecies", 
                                          label = "Species",
                                          choices =  sort(unique(MaturityData$CommonName)),
-                                         selected = "Northern pike")
+                                         selected = "Northern Pike")
                    )
   ),
   conditionalPanel("input.Selecter == '2'",
