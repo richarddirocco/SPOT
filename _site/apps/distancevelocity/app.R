@@ -283,8 +283,8 @@ server <- function(input, output, session){
         theme_classic()+ 
         theme(axis.line.x = element_line(color="black", size = .5),
               axis.line.y = element_line(color="black", size = .5))+
-        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=20, family="lato"))+
-        theme(axis.text = element_text(size=20, family="lato"), axis.title = element_text(size=20, family="lato"))+
+        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=16, family="lato"))+
+        theme(axis.text = element_text(size=16, family="lato"), axis.title = element_text(size=16, family="lato"))+
         scale_x_log10(name = "Water velocity (m/s)", limits=c(0.1, 10), breaks = c(0.1,1,10))+
         scale_y_log10(name = "Swim distance (m)", limits=c(0.1, 1000), breaks = c(0.1,1,10,100,1000))+
         annotation_logticks(base = 10, sides = "b")+

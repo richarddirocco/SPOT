@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -97,6 +95,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -111,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -131,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -152,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -185,14 +288,12 @@ $(document).ready(function () {
         <li><a href="speedtime.html">Swim Speed & Time</a></li>
         <li><a href="distancevelocity.html">Swim Distance & Velocity</a></li>
         <li><a href="lengthmaturity.html">Length at Maturity</a></li>
-        <li><a href="endofpipe-tool.html">Calculate Screen Size</a></li>
-<!--        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">End-of-Pipe Screen <span class="caret"></span></a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculate Screen Size <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="endofpipe-guideline.html">Draft Guideline</a></li>
-            <li><a href="endofpipe-tool.html">Screen Size Calculator</a></li>
+            <li><a href="endofpipe-tool.html">Advanced Tool</a></li>
+            <li><a href="endofpipe-tool-basic.html">Simplified Tool</a></li>
           </ul>
--->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -233,13 +334,9 @@ $(document).ready(function () {
 <h2>Background</h2>
 <p>The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The <a href="http://www.fishprotectiontools.ca/distancevelocity.html">Swim Distance &amp; Water Velocity tool</a> generates a plot showing swim distance versus water velocity using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis &amp; Gervais (2016)</a>. The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval.</p>
 <p>In this manual, a sample question will be answered using this tool.</p>
-</div>
-<div id="question" class="section level2">
-<h2>Question</h2>
+<p>##Question</p>
 <p>A proponent wishes to install a 30 meter culvert. What is the maximum water velocity that 97.5% of 400 mm northern pike can pass through?</p>
-</div>
-<div id="steps" class="section level2">
-<h2>Steps</h2>
+<p>##Steps</p>
 <ol style="list-style-type: decimal">
 <li>Go to the <a href="http://www.fishprotectiontools.ca/distancevelocity.html">Swim Speed &amp; Swim Time tool</a>.</li>
 <li>Below “Select Fish by:”, click the “Common name” radio button.</li>
@@ -258,17 +355,11 @@ $(document).ready(function () {
 <script type="text/javascript">
    iFrameResize({heightCalculationMethod: "lowestElement"});
 </script>
-</div>
-<div id="solution" class="section level2">
-<h2>Solution</h2>
+<p>##Solution</p>
 <p>This culvert should not exceed a maximum water velocity of 0.35 m/s to allow passage of 97.5% of 400 mm northern pike.</p>
-</div>
-<div id="calculating-swim-distance" class="section level2">
-<h2>Calculating swim distance</h2>
+<p>##Calculating swim distance</p>
 <p>The tool can also be used to determine swim distance based on water velocity. For example, select the “Swim distance” radio button below “Calculations” and enter 0.35 into the “Water velocity” box. The plot will update and show 97.5% of 400 mm Pike in 0.35 m/s current can swim 30 m.</p>
-</div>
-<div id="manual-calculations" class="section level2">
-<h2>Manual calculations</h2>
+<p>##Manual calculations</p>
 <p>The fish swimming performance models presented in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis &amp; Gervais (2016)</a> are potentially useful but required solving complex equations. The web tool reliably and quickly performs these calculations, reducing the likelihood of an erroneous result. In this section, the simplified equations from the report are displayed for reference.</p>
 <p>First, calculate Swim Speed using this formula:</p>
 <p><span class="math display">\[U = kt^b \sqrt{gl}\left(\frac{l}{g}\right)^{-b/2}\]</span></p>
@@ -287,9 +378,7 @@ $(document).ready(function () {
 <p><span class="math display">\[X = M\left(\frac{ U(1+b)}{\sqrt{gl}} \right) ^a \times l\]</span> Where <em>M</em> and <em>a</em> are coefficients derived from dimensionless speed vs. time regression. <em>M</em> and <em>a</em> are reported in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis &amp; Gervais (2016)</a>.</p>
 <p>Alternatively, Swim Speed <em>(U)</em> can be converted to Water Velocity <em>(V)</em> in m/s using:</p>
 <p><span class="math display">\[ V = U(1+b) \]</span></p>
-</div>
-<div id="model-limitations" class="section level2">
-<h2>Model limitations</h2>
+<p>##Model limitations</p>
 <p>Some fish swimming performance groups had limited data available. This lack of data for certain groups may affect the estimated performance. These limitations are outlined below:</p>
 <ul>
 <li><strong>Catfish &amp; Sunfish</strong>: Limited data on burst range</li>

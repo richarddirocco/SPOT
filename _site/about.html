@@ -70,9 +70,7 @@ h6 {
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -97,6 +95,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -111,7 +112,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -131,6 +131,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -152,19 +189,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -185,14 +288,12 @@ $(document).ready(function () {
         <li><a href="speedtime.html">Swim Speed & Time</a></li>
         <li><a href="distancevelocity.html">Swim Distance & Velocity</a></li>
         <li><a href="lengthmaturity.html">Length at Maturity</a></li>
-        <li><a href="endofpipe-tool.html">Calculate Screen Size</a></li>
-<!--        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">End-of-Pipe Screen <span class="caret"></span></a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Calculate Screen Size <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="endofpipe-guideline.html">Draft Guideline</a></li>
-            <li><a href="endofpipe-tool.html">Screen Size Calculator</a></li>
+            <li><a href="endofpipe-tool.html">Advanced Tool</a></li>
+            <li><a href="endofpipe-tool-basic.html">Simplified Tool</a></li>
           </ul>
--->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuals <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -230,7 +331,7 @@ $(document).ready(function () {
 
 </script>
 <p><br></p>
-<p>This website hosts prototype tools built to expand on the <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html'> Fish Swimming Performance Database and Analyses </a> CSAS document. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in <a href='https://www.r-project.org/' target='_blank'>R</a> <span class="citation">(R Core Team 2016)</span> using the following packages:</p>
+<p>This website hosts prototype tools built to expand on the <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html'> Fish Swimming Performance Database and Analyses </a> CSAS document <span class="citation">(Katopodis and Gervais 2016)</span>. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in <a href='https://www.r-project.org/' target='_blank'>R</a> <span class="citation">(R Core Team 2016)</span> using the following packages:</p>
 <ul>
 <li><a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a> <span class="citation">(Chang et al. 2017)</span></li>
 <li><a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a> <span class="citation">(Wickham 2009)</span></li>
@@ -249,11 +350,14 @@ $(document).ready(function () {
 <div id="ref-rfishbase">
 <p>Boettiger, Carl, Duncan Temple Lang, and Peter Wainwright. 2012. <em>rfishbase: Exploring, Manipulating and Visualizing Fishbase Data from R</em>. <em>Journal of Fish Biology</em>.</p>
 </div>
+<div id="ref-shiny">
+<p>Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan McPherson. 2017. <em>Shiny: Web Application Framework for R</em>.</p>
+</div>
 <div id="ref-ggvis">
 <p>Chang, Winston, and Hadley Wickham. 2016. <em>Ggvis: Interactive Grammar of Graphics</em>.</p>
 </div>
-<div id="ref-shiny">
-<p>Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan McPherson. 2017. <em>Shiny: Web Application Framework for R</em>.</p>
+<div id="ref-katopodis2016fish">
+<p>Katopodis, C, and R Gervais. 2016. “Fish Swimming Performance Database and Analyses.” <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.</p>
 </div>
 <div id="ref-R">
 <p>R Core Team. 2016. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing.</p>

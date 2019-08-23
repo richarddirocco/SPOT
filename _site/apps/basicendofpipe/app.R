@@ -22,18 +22,31 @@ ui <- function(request){
     
     sidebarLayout(
       sidebarPanel(
-        selectInput("SelectSpecies", label = "Select species", choices = sort(SpeciesGroups$English.Common.Name), multiple=TRUE),
+        
+#        radioButtons("CommonScientific", "Select species by:", choices = c("Common name", "Scientific name"), selected = "Common name"),
+#        conditionalPanel("input.CommonScientific == 'Common name'",
+                         selectInput("SelectSpecies", 
+                                     label = "Select species:", 
+                                     choices = sort(SpeciesGroups$English.Common.Name), 
+                                     multiple=TRUE, selectize = TRUE),
+#        ),
+#        conditionalPanel("input.CommonScientific == 'Scientific name'",
+#                         selectInput("SelectSpecies:", 
+#                                     label = "Select species:", 
+#                                     choices = sort(SpeciesGroups$Scientific.Name), 
+#                                     multiple=TRUE)
+#        ),
         br(),
         numericInput("EoP_flowrate", label = "Maximum intake flow rate (L/s):", min = 0, value = 125, step = 5),
         
-        helpText(a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "Submit feedback"), align = "center"),
-        align = "center"
+        helpText(a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "Submit feedback"), align = "center")
       ),    # close sidebarPanel
       
       mainPanel(
         ggvisOutput("ggvis"),
         br(),
         htmlOutput("EoP_Text"),
+        htmlOutput("EoP_Text2"),
         align = "center"
       )    # close mainpanel
     )      # close sidebarLayout
@@ -53,6 +66,7 @@ server <- function(input, output, session){
       filter(English.Common.Name %in% input$SelectSpecies)
     # Fill the flow dataframe with the required screen area based on the slowest swimming group
     EoP_dataSet$Screen.Area <- max(Temp$Screen.Area.Coefficient) * EoP_dataSet$Flow
+    EoP_dataSet$Approach.Velocity <- min(Temp$Approach.Velocity)
     EoP_dataSet
   })
   
@@ -78,10 +92,15 @@ server <- function(input, output, session){
   
   output$EoP_Text <- renderUI({
     if(is.numeric(input$EoP_flowrate) & !is.na(max(EoP_PlotData()$Screen.Area))){
-      HTML("The selected fish require an Effective Screen Area of ", max(EoP_PlotData()$Screen.Area), "m<sup>2</sup>.")
+      HTML("The selected fish require an Effective Screen Area of ", max(round(EoP_PlotData()$Screen.Area, 2)), "m<sup>2</sup>.")
     }
-
   })
+  output$EoP_Text2 <- renderUI({
+    if(is.numeric(input$EoP_flowrate) & !is.na(max(EoP_PlotData()$Screen.Area))){
+      HTML("The approach velocity should not exceed ", min(EoP_PlotData()$Approach.Velocity), "m/s.")
+    }
+  })
+  
 }
 
 enableBookmarking(store = "url")
