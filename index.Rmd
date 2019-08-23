@@ -1,5 +1,5 @@
 ---
-title: "Welcome to SPOT <br> Swim Performance Online Tools <hr>"
+title: "Welcome to SPOT"
 output: 
   html_document:
     css: style.css
@@ -16,8 +16,10 @@ output:
   ga('send', 'pageview');
 
 </script>
-
-SPOT is a collection of tools that estimate the swimming performance of fish. The estimates provided by these tools can be helpful in the development and design of fish passage, exclusion, and guidance systems. These interactive web tools perform complex calculations reliably and automatically. For detailed information on these tools and the calculations they perform, visit the <span style="color:red">NEW</span> [User Guide](http://www.fishprotectiontools.ca/userguide.html). A brief overview each tool is provided below.
+<center>
+# Swim Performance Online Tools
+</center>
+SPOT is a collection of tools that estimate the swimming performance of fish. The estimates provided by these tools can be helpful in the development and design of fish passage, exclusion, and guidance systems. These interactive web tools perform complex calculations reliably and automatically. For detailed information on these tools and the calculations they perform, visit the [User Guide](http://www.fishprotectiontools.ca/userguide.html). A brief overview each tool is provided below.
 
 
 ### Swim Speed & Swim Time Tool

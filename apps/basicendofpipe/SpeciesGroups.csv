@@ -1,228 +1,228 @@
-"","English.Common.Name","French.Common.Name","Scientific.Name","Group.s.","Screen.Area.Coefficient"
-"1","All/Unknown","All/Unknown","All/Unknown","Eel",0.025
-"2","Alaska Blackfish","Dallia","Dallia pectoralis","Herring; Sturgeon",0.0125
-"3","Alewife/Gaspereau","Gaspareau","Alosa pseudoharengus","Herring; Sturgeon",0.0125
-"4","American Brook Lamprey","Lamproie de l'est","Lethenteron appendix","Eel",0.025
-"5","American Eel","Anguille d'Am?rique","Anguilla rostrata","Eel",0.025
-"6","American Shad","Alose savoureuse","Alosa sapidissima","Herring; Sturgeon",0.0125
-"7","Arctic Char","Omble chevalier","Salvelinus alpinus","Catfish & Sunfish; Salmon & Walleye",0.01
-"8","Arctic Cisco","Cisco arctique","Coregonus autumnalis","Catfish & Sunfish; Salmon & Walleye",0.01
-"9","Arctic Grayling","Ombre arctique","Thymallus arcticus","Catfish & Sunfish; Salmon & Walleye",0.01
-"10","Arctic Lamprey","Lamproie arctique","Lethenteron camtschaticum","Eel",0.025
-"11","Atlantic Salmon","Saumon Atlantique","Salmo salar","Catfish & Sunfish; Salmon & Walleye",0.01
-"12","Atlantic Sturgeon","Esturgeon noir","Acipenser oxyrinchus","Herring; Sturgeon",0.0125
-"13","Atlantic Tomcod","Poulamon","Microgadus tomcod","Eel",0.025
-"14","Atlantic Whitefish","Cisco","Coregonus huntsmani","Catfish & Sunfish; Salmon & Walleye",0.01
-"15","Banded Killifish","Fondule barr?","Fundulus diaphanus","Eel",0.025
-"16","Bering Cisco","Cisco de B?ring","Coregonus laurettae","Catfish & Sunfish; Salmon & Walleye",0.01
-"17","Bigmouth Buffalo","Poisson-taureau","Ictiobus cyprinellus","Catfish & Sunfish; Salmon & Walleye",0.01
-"18","Bigmouth Shiner","","Notropis dorsalis","Catfish & Sunfish; Salmon & Walleye",0.01
-"19","Black Bullhead","Poisson-chat","Ameiurus melas","Catfish & Sunfish; Salmon & Walleye",0.01
-"20","Black Crappie","Marigane noire","Pomoxis nigromaculatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"21","Black Redhorse","","Moxostoma duquesnei","Catfish & Sunfish; Salmon & Walleye",0.01
-"22","Blackchin Shiner","Menton noir","Notropis heterodon","Catfish & Sunfish; Salmon & Walleye",0.01
-"23","Blackfin Cisco","","Coregonus nigripinnis","Catfish & Sunfish; Salmon & Walleye",0.01
-"24","Blacknose Dace","Naseux noir","Rhinichthys atratulus","Catfish & Sunfish; Salmon & Walleye",0.01
-"25","Blacknose Shiner","Museau noir","Notropis heterolepis","Catfish & Sunfish; Salmon & Walleye",0.01
-"26","Blackside Darter","","Percina maculata","Catfish & Sunfish; Salmon & Walleye",0.01
-"27","Blackspot Shiner","M?n? ? tache noire","Notropis atrocaudalis","Catfish & Sunfish; Salmon & Walleye",0.01
-"28","Blackspotted Stickleback","?pinoche tachet?e","Gasterosteus wheatlandi","Eel",0.025
-"29","Blacktail Shiner","M?n? ? queue noire","Cyprinella venusta","Catfish & Sunfish; Salmon & Walleye",0.01
-"30","Bloater","","Coregonus hoyi","Catfish & Sunfish; Salmon & Walleye",0.01
-"31","Blue Catfish","Poisson-chat bleu","Ictalurus furcatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"32","Blueback Herring","Alose d'?t?","Alosa aestivalis","Herring; Sturgeon",0.0125
-"33","Bluegill","Crapet arlequin","Lepomis macrochirus","Catfish & Sunfish; Salmon & Walleye",0.01
-"34","Bluntnose Minnow","","Pimephales notatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"35","Bonytail","Squalius moreoticus","Gila elegans","Catfish & Sunfish; Salmon & Walleye",0.01
-"36","Bowfin","Poisson-castor","Amia calva","Eel",0.025
-"37","Brassy Minnow","M?m? laiton","Hybognathus hankinsoni","Catfish & Sunfish; Salmon & Walleye",0.01
-"38","Bridgelip Sucker","Meunier de l'ouest","Catostomus columbianus","Catfish & Sunfish; Salmon & Walleye",0.01
-"39","Bridle Shiner","M?n? d'herbe","Notropis bifrenatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"40","Brindled Madtom","","Noturus miurus","Catfish & Sunfish; Salmon & Walleye",0.01
-"41","Broad Whitefish","Cor?gone tschir","Coregonus nasus","Catfish & Sunfish; Salmon & Walleye",0.01
-"42","Brook Silverside","Crayon d'argent","Labidesthes sicculus","Eel",0.025
-"43","Brook Stickleback","?pinoche ? cinq ?pines","Culaea inconstans","Eel",0.025
-"44","Brook Trout","Saumon de fontaine","Salvelinus fontinalis","Catfish & Sunfish; Salmon & Walleye",0.01
-"45","Brown Bullhead","Barbotte brune","Ameiurus nebulosus","Catfish & Sunfish; Salmon & Walleye",0.01
-"46","Brown Trout","Truite commune","Salmo trutta","Catfish & Sunfish; Salmon & Walleye",0.01
-"47","Bull Trout","Omble ? t?te plate","Salvelinus confluentus","Catfish & Sunfish; Salmon & Walleye",0.01
-"48","Bullhead Minnow","Pimephales vigilax","Pimephales vigilax","Catfish & Sunfish; Salmon & Walleye",0.01
-"49","Burbot","Lotte","Lota lota","Eel",0.025
-"50","Carp","Carpe","Cyprinus carpio","Catfish & Sunfish; Salmon & Walleye",0.01
-"51","Central Mudminnow","Umbre de vase","Umbra limi","Herring; Sturgeon",0.0125
-"52","Central Stoneroller","Roule-caillou","Campostoma anomalum","Catfish & Sunfish; Salmon & Walleye",0.01
-"53","Chain Pickerel","Brochet maill?","Esox niger","Pike",0.0167
-"54","Channel Catfish","Barbue de rivi?re","Ictalurus punctatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"55","Channel Darter","Fouille-roche gris","Percina copelandi","Catfish & Sunfish; Salmon & Walleye",0.01
-"56","ChannelxBlue catfish hybrid","Poisson-chat tachet? ? poisson-chat bleu hybride","Ictalurus punctatusxfurcatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"57","Chestnut Lamprey","Lamproie brune","Ichthyomyzon castaneus","Eel",0.025
-"58","Chinook Salmon","Saumon chinook","Oncorhynchus tshawytscha","Catfish & Sunfish; Salmon & Walleye",0.01
-"59","Chiselmouth","","Acrocheilus alutaceus","Catfish & Sunfish; Salmon & Walleye",0.01
-"60","Chum Salmon","Saumon keta","Oncorhynchus keta","Catfish & Sunfish; Salmon & Walleye",0.01
-"61","Cisco","Cisco de lac","Coregonus artedi","Catfish & Sunfish; Salmon & Walleye",0.01
-"62","Coastrange Sculpin","Chabot c?tier","Cottus aleuticus","Eel",0.025
-"63","Coho Salmon","Saumon coho","Oncorhynchus kisutch","Catfish & Sunfish; Salmon & Walleye",0.01
-"64","Colorado Pike Minnow","Poisson squaw du Colorado","Ptychocheilus lucius","Catfish & Sunfish; Salmon & Walleye",0.01
-"65","Common Barbel","Barbeau fluviatile","Barbus barbus","Catfish & Sunfish; Salmon & Walleye",0.01
-"66","Common Bream","Br?me","Abramis brama","Catfish & Sunfish; Salmon & Walleye",0.01
-"67","Common Dace","Vandoise","Leuciscus leuciscus","Catfish & Sunfish; Salmon & Walleye",0.01
-"68","Common Shiner","M?n? ? nageoires rouges","Luxilus cornutus","Catfish & Sunfish; Salmon & Walleye",0.01
-"69","Copper Redhorse","","Moxostoma hubbsi","Catfish & Sunfish; Salmon & Walleye",0.01
-"70","Creek Chub","Mulet ? cornes","Semotilus atromaculatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"71","Crucian Carp","Carassin","Carassius carassius","Catfish & Sunfish; Salmon & Walleye",0.01
-"72","Cutlip Minnow","Bec-de-li?vre","Exoglossum maxillingua","Catfish & Sunfish; Salmon & Walleye",0.01
-"73","Cutthroat Trout","Truite fard?e","Oncorhynchus clarkii","Catfish & Sunfish; Salmon & Walleye",0.01
-"74","Deepwater Cisco","","Coregonus johannae","Catfish & Sunfish; Salmon & Walleye",0.01
-"75","Deepwater Sculpin","Chabot de profondeur","Myoxocephalus thompsonii","Eel",0.025
-"76","Dolly Varden","Dolly varden","Salvelinus malma","Catfish & Sunfish; Salmon & Walleye",0.01
-"77","Eastern Sand Darter","Dard de sable","Ammocrypta pellucida","Catfish & Sunfish; Salmon & Walleye",0.01
-"78","Emerald Shiner","M?n? ?meraude","Notropis atherinoides","Catfish & Sunfish; Salmon & Walleye",0.01
-"79","Eulachon","Eulakane","Thaleichthys pacificus","Herring; Sturgeon",0.0125
-"80","European Chub","Chevaine","Leuciscus cephalus","Catfish & Sunfish; Salmon & Walleye",0.01
-"81","European Eel","Anguille","Anguilla anguilla","Eel",0.025
-"82","European Grayling","Ombre commun","Thymallus thymallus","Catfish & Sunfish; Salmon & Walleye",0.01
-"83","European Perch","Perche fluviatile","Perca fluviatilis","Catfish & Sunfish; Salmon & Walleye",0.01
-"84","Fallfish","Ouitouche","Semotilus corporalis","Catfish & Sunfish; Salmon & Walleye",0.01
-"85","Fantail Darter","Dard barr?","Etheostoma flabellare","Catfish & Sunfish; Salmon & Walleye",0.01
-"86","Fathead Minnow","T?te de boule","Pimephales promelas","Catfish & Sunfish; Salmon & Walleye",0.01
-"87","Finescale Dace","Ventre citron","Chrosomus neogaeus","Catfish & Sunfish; Salmon & Walleye",0.01
-"88","Flannelmouth Sucker","Meunier ? grosses nageoires","Catostomus latipinnis","Catfish & Sunfish; Salmon & Walleye",0.01
-"89","Flathead Chub","M?n? ? t?te plate","Platygobio gracilis","Catfish & Sunfish; Salmon & Walleye",0.01
-"90","Fourspine Stickleback","?pinoche ? quatre ?pines","Apeltes quadracus","Eel",0.025
-"91","Freshwater Drum","Malachigan","Aplodinotus?grunniens","Eel",0.025
-"92","Ghost Shiner","M?n? fant?me","Notropis buchanani","Catfish & Sunfish; Salmon & Walleye",0.01
-"93","Gizzard Dhad","Alose ? g?sier","Dorosoma cepedianum","Herring; Sturgeon",0.0125
-"94","Golden Redhorse","","Moxostoma erythrurum","Catfish & Sunfish; Salmon & Walleye",0.01
-"95","Golden Shiner","M?n? jaune","Notemigonus crysoleucas","Catfish & Sunfish; Salmon & Walleye",0.01
-"96","Goldeye","Laquaiche aux yeux d'or","Hiodon alosoides","Herring; Sturgeon",0.0125
-"97","Grass Pickerel","","Esox americanus vermiculatus","Pike",0.0167
-"98","Gravel Chub","Gravelier","Erimystax?x-punctatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"99","Greater Redhorse","Chevalier jaune","Moxostoma valenciennesi","Catfish & Sunfish; Salmon & Walleye",0.01
-"100","Green Sturgeon","Esturgeon vert","Acipenser medirostris","Herring; Sturgeon",0.0125
-"101","Green Sunfish","","Lepomis cyanellus","Catfish & Sunfish; Salmon & Walleye",0.01
-"102","Greenside Darter","","Etheostoma blennioides","Catfish & Sunfish; Salmon & Walleye",0.01
-"103","Gudgeon","Gofi","Gobio gobio","Catfish & Sunfish; Salmon & Walleye",0.01
-"104","Hornyhead Chub","","Nocomis biguttatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"105","Humpback Chub","M?n? ? bosses","Gila cypha","Catfish & Sunfish; Salmon & Walleye",0.01
-"106","Inconnu","Inconnu","Stenodus leucichthys","Catfish & Sunfish; Salmon & Walleye",0.01
-"107","Iowa Darter","Dard ? ventre jaune","Etheostoma exile","Catfish & Sunfish; Salmon & Walleye",0.01
-"108","Johnny Darter","Raseux-de-terre noir","Etheostoma nigrum","Catfish & Sunfish; Salmon & Walleye",0.01
-"109","June Sucker","Catostome noir nain","Chasmistes liorus","Catfish & Sunfish; Salmon & Walleye",0.01
-"110","Kiyi","","Coregonus kiyi","Catfish & Sunfish; Salmon & Walleye",0.01
-"111","Lake Chub","M?n? de lac","Couesius plumbeus","Catfish & Sunfish; Salmon & Walleye",0.01
-"112","Lake Chubsucker","","Erimyzon sucetta","Catfish & Sunfish; Salmon & Walleye",0.01
-"113","Lake Sturgeon","Esturgeon jaune","Acipenser fulvescens","Herring; Sturgeon",0.0125
-"114","Lake Trout","Touladi","Salvelinus namaycush","Catfish & Sunfish; Salmon & Walleye",0.01
-"115","Lake Whitefish","Grand cor?gone","Coregonus clupeaformis","Catfish & Sunfish; Salmon & Walleye",0.01
-"116","Largemouth Bass","Achigan ? grande bouche","Micropterus salmoides","Catfish & Sunfish; Salmon & Walleye",0.01
-"117","Largescale Sucker","Meunier ? grandes ?cailles","Catostomus macrocheilus","Catfish & Sunfish; Salmon & Walleye",0.01
-"118","Least Chub","M?n? des rapides","Iotichthys phlegethontis","Catfish & Sunfish; Salmon & Walleye",0.01
-"119","Least Cisco","Cisco sardinelle","Coregonus sardinella","Catfish & Sunfish; Salmon & Walleye",0.01
-"120","Least Darter","","Etheostoma microperca","Catfish & Sunfish; Salmon & Walleye",0.01
-"121","Leopard Dace","Naseux l?opard","Rhinichthys falcatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"122","Logperch","Dard-perche","Percina caprodes","Catfish & Sunfish; Salmon & Walleye",0.01
-"123","Longear Sunfish","Crapet ? longues oreilles","Lepomis megalotis","Catfish & Sunfish; Salmon & Walleye",0.01
-"124","Longfin Smelt","?perlan d'hiver","Spirinchus thaleichthys","Herring; Sturgeon",0.0125
-"125","Longjaw Cisco","Cisco ? grande bouche","Coregonus alpenae","Catfish & Sunfish; Salmon & Walleye",0.01
-"126","Longnose Dace","Naseux des rapides","Rhinichthys cataractae","Catfish & Sunfish; Salmon & Walleye",0.01
-"127","Longnose Gar","L?pisost? osseux","Lepisosteus osseus","Pike",0.0167
-"128","Longnose Sucker","Meunier rouge","Catostomus catostomus","Catfish & Sunfish; Salmon & Walleye",0.01
-"129","Mimic Shiner","M?n? p?le","Notropis volucellus","Catfish & Sunfish; Salmon & Walleye",0.01
-"130","Mooneye","Laquaiche argent?e","Hiodon tergisus","Herring; Sturgeon",0.0125
-"131","Mottled Sculpin","Chabot tachet?","Cottus bairdii","Eel",0.025
-"132","Mountain Sucker","Meunier des montagnes","Catostomus platyrhynchus","Catfish & Sunfish; Salmon & Walleye",0.01
-"133","Mountain Whitefish","M?nomini des montagnes","Prosopium williamsoni","Catfish & Sunfish; Salmon & Walleye",0.01
-"134","Mummichog","Choquemort","Fundulus heteroclitus","Eel",0.025
-"135","Muskellunge","Maskinong?","Esox masquinongy","Pike",0.0167
-"136","Ninespine Stickleback","?pinoche ? neuf ?pines","Pungitius pungitius","Eel",0.025
-"137","Northern Brook Lamprey","Lamproie du nord","Ichthyomyzon fossor","Eel",0.025
-"138","Northern Hog Sucker","","Hypentelium nigricans","Catfish & Sunfish; Salmon & Walleye",0.01
-"139","Northern Pike","Brochet","Esox lucius","Pike",0.0167
-"140","Northern Pike Minnow","Sauvagesse du nord","Ptychocheilus oregonensis","Catfish & Sunfish; Salmon & Walleye",0.01
-"141","Northern Redbelly Dace","Ventre rouge du nord","Chrosomus eos","Catfish & Sunfish; Salmon & Walleye",0.01
-"142","Pacific Lamprey","Lamproie du Pacifique","Entosphenus tridentatus","Eel",0.025
-"143","Pallid Sturgeon","Esturgeon p?le","Scaphirhynchus albus","Herring; Sturgeon",0.0125
-"144","Peamouth","M?n? deux-barres","Mylocheilus caurinus","Catfish & Sunfish; Salmon & Walleye",0.01
-"145","Pearl Dace","Mulet perl?","Margariscus?margarita","Catfish & Sunfish; Salmon & Walleye",0.01
-"146","Pink Salmon","Saumon rose","Oncorhynchus gorbuscha","Catfish & Sunfish; Salmon & Walleye",0.01
-"147","Plains Minnow","M?n? des plaines","Hybognathus placitus","Catfish & Sunfish; Salmon & Walleye",0.01
-"148","Pond Smelt","?perlan ? petite bouche","Hypomesus olidus","Herring; Sturgeon",0.0125
-"149","Prickly Sculpin","Chabot piquant","Cottus asper","Eel",0.025
-"150","Proserpine Shiner","M?n? de Proserpine","Cyprinella proserpina","Catfish & Sunfish; Salmon & Walleye",0.01
-"151","Pugnose Minnow","","Opsopoeodus emiliae","Catfish & Sunfish; Salmon & Walleye",0.01
-"152","Pugnose Shiner","","Notropis anogenus","Catfish & Sunfish; Salmon & Walleye",0.01
-"153","Pumpkinseed","Crapet-soleil","Lepomis gibbosus","Catfish & Sunfish; Salmon & Walleye",0.01
-"154","Pygmy Whitefish","M?nomini pygm?e","Prosopium coulterii","Catfish & Sunfish; Salmon & Walleye",0.01
-"155","Quillback","Couette","Carpiodes cyprinus","Catfish & Sunfish; Salmon & Walleye",0.01
-"156","Rainbow Darter","Dard arc-en-ciel","Etheostoma caeruleum","Catfish & Sunfish; Salmon & Walleye",0.01
-"157","Rainbow Smelt","?perlan arc-en-ciel","Osmerus mordax","Herring; Sturgeon",0.0125
-"158","Rainbow Trout","Truite arc-en-ciel","Oncorhynchus mykiss","Catfish & Sunfish; Salmon & Walleye",0.01
-"159","Red River Shiner","Red River shiner","Notropis bairdi","Catfish & Sunfish; Salmon & Walleye",0.01
-"160","Red Shiner","M?n? rouge","Cyprinella lutrensis","Catfish & Sunfish; Salmon & Walleye",0.01
-"161","Redbreast Sunfish","Crapet rouge","Lepomis auritus","Catfish & Sunfish; Salmon & Walleye",0.01
-"162","Redfin Pickerel","Brochet d'Am?rique","Esox americanus americanus","Pike",0.0167
-"163","Redfin Shiner","M?n? d?ombre","Lythrurus umbratilis","Catfish & Sunfish; Salmon & Walleye",0.01
-"164","Redside Dace","M?n? long","Clinostomus elongatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"165","Redside Shiner","M?n? rose","Richardsonius balteatus","Catfish & Sunfish; Salmon & Walleye",0.01
-"166","Ribbon Shiner","M?n? ruban","Lythrurus fumeus","Catfish & Sunfish; Salmon & Walleye",0.01
-"167","Rio Grande Darter","Dard Rio Grande","Etheostoma grahami","Catfish & Sunfish; Salmon & Walleye",0.01
-"168","Rio Grande Silvery Minnow","M?n? d?argent","Hybognathus amarus","Catfish & Sunfish; Salmon & Walleye",0.01
-"169","River Chub","","Nocomis micropogon","Catfish & Sunfish; Salmon & Walleye",0.01
-"170","River Darter","","Percina shumardi","Catfish & Sunfish; Salmon & Walleye",0.01
-"171","River Lamprey","Lamproie de rivi?re","Lampetra ayresii","Eel",0.025
-"172","River Redhorse","Chevalier de rivi?re","Moxostoma carinatum","Catfish & Sunfish; Salmon & Walleye",0.01
-"173","River Shiner","","Notropis blennius","Catfish & Sunfish; Salmon & Walleye",0.01
-"174","Roach","Gardon","Rutilus rutilus","Catfish & Sunfish; Salmon & Walleye",0.01
-"175","Rock Bass","Crapet de roche","Ambloplites rupestris","Catfish & Sunfish; Salmon & Walleye",0.01
-"176","Rosyface Shiner","T?te rose","Notropis rubellus","Catfish & Sunfish; Salmon & Walleye",0.01
-"177","Round Whitefish","M?nomini rond","Prosopium cylindraceum","Catfish & Sunfish; Salmon & Walleye",0.01
-"178","Sabine Shiner","M?n? Sabine","Notropis sabinae","Catfish & Sunfish; Salmon & Walleye",0.01
-"179","Sand Shiner","M?n? paille","Notropis stramineus","Catfish & Sunfish; Salmon & Walleye",0.01
-"180","Sauger","Dor? noir","Sander canadensis","Catfish & Sunfish; Salmon & Walleye",0.01
-"181","Sea Lamprey","Lamproie marine","Petromyzon marinus","Eel",0.025
-"182","Sharpnose Shiner","M?n? ? nez pointu","Notropis oxyrhynchus","Catfish & Sunfish; Salmon & Walleye",0.01
-"183","Shorthead Redhorse","Chevalier rouge","Moxostoma macrolepidotum","Catfish & Sunfish; Salmon & Walleye",0.01
-"184","Shorthead Sculpin","Chabot ? t?te courte","Cottus confusus","Eel",0.025
-"185","Shortjaw Cisco","Cisco ? m?choires ?gales","Coregonus zenithicus","Catfish & Sunfish; Salmon & Walleye",0.01
-"186","Shortnose Cisco","Cisco ? museau court","Coregonus reighardi","Catfish & Sunfish; Salmon & Walleye",0.01
-"187","Shortnose Sturgeon","Esturgeon ? museau court","Acipenser brevirostrum","Herring; Sturgeon",0.0125
-"188","Shovelnose Sturgeon","Esturgeon ? museau plat","Scaphirhynchus platorynchus","Herring; Sturgeon",0.0125
-"189","Silver Chub","","Macrhybopsis?storeriana","Catfish & Sunfish; Salmon & Walleye",0.01
-"190","Silver Lamprey","Lamproie argent?e","Ichthyomyzon unicuspis","Eel",0.025
-"191","Silver Redhorse","Chevalier blanc","Moxostoma anisurum","Catfish & Sunfish; Salmon & Walleye",0.01
-"192","Silverband Shiner","M?n? miroir","Notropis shumardi","Catfish & Sunfish; Salmon & Walleye",0.01
-"193","Slimy Sculpin","Chabot visqueux","Cottus cognatus","Eel",0.025
-"194","Smalleye Shiner","M?n? ? petits yeux","Notropis buccula","Catfish & Sunfish; Salmon & Walleye",0.01
-"195","Smallmouth Bass","Achigan ? petite bouche","Micropterus dolomieu","Catfish & Sunfish; Salmon & Walleye",0.01
-"196","Sockeye Salmon","Saumon rouge","Oncorhynchus nerka","Catfish & Sunfish; Salmon & Walleye",0.01
-"197","Southern Leatherside Chub","","Lepidomeda aliciae","Catfish & Sunfish; Salmon & Walleye",0.01
-"198","Speckled Chub","M?n? mouchet?","Macrhybopsis aestivalis","Catfish & Sunfish; Salmon & Walleye",0.01
-"199","Speckled Dace","seux mouchet?","Rhinichthys osculus","Catfish & Sunfish; Salmon & Walleye",0.01
-"200","Splittail","","Pogonichthys macrolepidotus","Catfish & Sunfish; Salmon & Walleye",0.01
-"201","Spoonhead Sculpin","Chabot ? t?te plate","Cottus ricei","Eel",0.025
-"202","Spotfin Shiner","M?n? bleu","Cyprinella spiloptera","Catfish & Sunfish; Salmon & Walleye",0.01
-"203","Spottail Shiner","Queue ? tache noire","Notropis hudsonius","Catfish & Sunfish; Salmon & Walleye",0.01
-"204","Spotted Gar","L?pisost? tachet?","Lepisosteus oculatus","Pike",0.0167
-"205","Spotted Sucker","","Minytrema melanops","Catfish & Sunfish; Salmon & Walleye",0.01
-"206","Stonecat","Barbotte des rapides","Noturus flavus","Catfish & Sunfish; Salmon & Walleye",0.01
-"207","Striped Bass","Bar d'Am?rique","Morone saxatilis","Catfish & Sunfish; Salmon & Walleye",0.01
-"208","Striped Shiner","M?n? ray?","Luxilus chrysocephalus","Catfish & Sunfish; Salmon & Walleye",0.01
-"209","Tadpole Madtom","Chat-fou brun","Noturus gyrinus","Catfish & Sunfish; Salmon & Walleye",0.01
-"210","Tench","Tanche","Tinca tinca","Catfish & Sunfish; Salmon & Walleye",0.01
-"211","Texas Shiner","","Notropis amabilis","Catfish & Sunfish; Salmon & Walleye",0.01
-"212","Threespine Stickleback","?pinoche ? trois ?pines","Gasterosteus aculeatus","Eel",0.025
-"213","Tiger Muskellunge","","Esox lucius ? masquinongy","Pike",0.0167
-"214","Topeka Shiner","M?n? Topeka","Notropis topeka","Catfish & Sunfish; Salmon & Walleye",0.01
-"215","Torrent Sculpin","Chabot de torrent","Cottus rhotheus","Eel",0.025
-"216","Trout-perch","Omisco","Percopsis omiscomaycus","Catfish & Sunfish; Salmon & Walleye",0.01
-"217","Twaite Shad","Alose feinte","Alosa fallax","Herring; Sturgeon",0.0125
-"218","Walleye","Dor? jaune","Sander vitreus","Catfish & Sunfish; Salmon & Walleye",0.01
-"219","Weed Shiner","M?n? d?herbe","Notropis texanus","Catfish & Sunfish; Salmon & Walleye",0.01
-"220","Western Brook Lamprey","Lamproie de l' ouest","Lampetra richardsoni","Eel",0.025
-"221","White Bass","Bar blanc","Morone chrysops","Catfish & Sunfish; Salmon & Walleye",0.01
-"222","White Crappie","Crapet calicot","Pomoxis annularis","Catfish & Sunfish; Salmon & Walleye",0.01
-"223","White Perch","Bar blanc d'Amerique","Morone americana","Catfish & Sunfish; Salmon & Walleye",0.01
-"224","White Sturgeon","Esturgeon blanc","Acipenser transmontanus","Herring; Sturgeon",0.0125
-"225","White Sucker","Meunier noir","Catostomus commersonii","Catfish & Sunfish; Salmon & Walleye",0.01
-"226","Yellow Bullhead","Barbotte jaune","Ameiurus natalis","Catfish & Sunfish; Salmon & Walleye",0.01
-"227","Yellow Perch","Perchaude","Perca flavescens","Catfish & Sunfish; Salmon & Walleye",0.01
+,English.Common.Name,French.Common.Name,Scientific.Name,Group.s.,Screen.Area.Coefficient,Approach.Velocity
+1,All/Unknown,All/Unknown,All/Unknown,Eel,0.02871,0.035
+2,Alaska Blackfish,Dallia,Dallia pectoralis,Herring; Sturgeon,0.01217,0.082
+3,Alewife/Gaspereau,Gaspareau,Alosa pseudoharengus,Herring; Sturgeon,0.01217,0.082
+4,American Brook Lamprey,Lamproie de l'est,Lethenteron appendix,Eel,0.02871,0.035
+5,American Eel,Anguille d'Amérique,Anguilla rostrata,Eel,0.02871,0.035
+6,American Shad,Alose savoureuse,Alosa sapidissima,Herring; Sturgeon,0.01217,0.082
+7,Arctic Char,Omble chevalier,Salvelinus alpinus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+8,Arctic Cisco,Cisco arctique,Coregonus autumnalis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+9,Arctic Grayling,Ombre arctique,Thymallus arcticus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+10,Arctic Lamprey,Lamproie arctique,Lethenteron camtschaticum,Eel,0.02871,0.035
+11,Atlantic Salmon,Saumon Atlantique,Salmo salar,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+12,Atlantic Sturgeon,Esturgeon noir,Acipenser oxyrinchus,Herring; Sturgeon,0.01217,0.082
+13,Atlantic Tomcod,Poulamon,Microgadus tomcod,Eel,0.02871,0.035
+14,Atlantic Whitefish,Cisco,Coregonus huntsmani,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+15,Banded Killifish,Fondule barré,Fundulus diaphanus,Eel,0.02871,0.035
+16,Bering Cisco,Cisco de Béring,Coregonus laurettae,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+17,Bigmouth Buffalo,Poisson-taureau,Ictiobus cyprinellus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+18,Bigmouth Shiner,,Notropis dorsalis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+19,Black Bullhead,Poisson-chat,Ameiurus melas,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+20,Black Crappie,Marigane noire,Pomoxis nigromaculatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+21,Black Redhorse,,Moxostoma duquesnei,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+22,Blackchin Shiner,Menton noir,Notropis heterodon,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+23,Blackfin Cisco,,Coregonus nigripinnis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+24,Blacknose Dace,Naseux noir,Rhinichthys atratulus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+25,Blacknose Shiner,Museau noir,Notropis heterolepis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+26,Blackside Darter,,Percina maculata,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+27,Blackspot Shiner,Méné à tache noire,Notropis atrocaudalis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+28,Blackspotted Stickleback,Épinoche tachetée,Gasterosteus wheatlandi,Eel,0.02871,0.035
+29,Blacktail Shiner,Méné à queue noire,Cyprinella venusta,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+30,Bloater,,Coregonus hoyi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+31,Blue Catfish,Poisson-chat bleu,Ictalurus furcatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+32,Blueback Herring,Alose d'été,Alosa aestivalis,Herring; Sturgeon,0.01217,0.082
+33,Bluegill,Crapet arlequin,Lepomis macrochirus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+34,Bluntnose Minnow,,Pimephales notatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+35,Bonytail,Squalius moreoticus,Gila elegans,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+36,Bowfin,Poisson-castor,Amia calva,Eel,0.02871,0.035
+37,Brassy Minnow,Mémé laiton,Hybognathus hankinsoni,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+38,Bridgelip Sucker,Meunier de l'ouest,Catostomus columbianus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+39,Bridle Shiner,Méné d'herbe,Notropis bifrenatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+40,Brindled Madtom,,Noturus miurus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+41,Broad Whitefish,Corégone tschir,Coregonus nasus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+42,Brook Silverside,Crayon d'argent,Labidesthes sicculus,Eel,0.02871,0.035
+43,Brook Stickleback,Épinoche à cinq épines,Culaea inconstans,Eel,0.02871,0.035
+44,Brook Trout,Saumon de fontaine,Salvelinus fontinalis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+45,Brown Bullhead,Barbotte brune,Ameiurus nebulosus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+46,Brown Trout,Truite commune,Salmo trutta,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+47,Bull Trout,Omble à tête plate,Salvelinus confluentus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+48,Bullhead Minnow,Pimephales vigilax,Pimephales vigilax,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+49,Burbot,Lotte,Lota lota,Eel,0.02871,0.035
+50,Carp,Carpe,Cyprinus carpio,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+51,Central Mudminnow,Umbre de vase,Umbra limi,Herring; Sturgeon,0.01217,0.082
+52,Central Stoneroller,Roule-caillou,Campostoma anomalum,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+53,Chain Pickerel,Brochet maillé,Esox niger,Pike,0.0186,0.055
+54,Channel Catfish,Barbue de rivière,Ictalurus punctatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+55,Channel Darter,Fouille-roche gris,Percina copelandi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+56,ChannelxBlue catfish hybrid,Poisson-chat tacheté × poisson-chat bleu hybride,Ictalurus punctatusxfurcatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+57,Chestnut Lamprey,Lamproie brune,Ichthyomyzon castaneus,Eel,0.02871,0.035
+58,Chinook Salmon,Saumon chinook,Oncorhynchus tshawytscha,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+59,Chiselmouth,,Acrocheilus alutaceus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+60,Chum Salmon,Saumon keta,Oncorhynchus keta,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+61,Cisco,Cisco de lac,Coregonus artedi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+62,Coastrange Sculpin,Chabot côtier,Cottus aleuticus,Eel,0.02871,0.035
+63,Coho Salmon,Saumon coho,Oncorhynchus kisutch,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+64,Colorado Pike Minnow,Poisson squaw du Colorado,Ptychocheilus lucius,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+65,Common Barbel,Barbeau fluviatile,Barbus barbus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+66,Common Bream,Brème,Abramis brama,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+67,Common Dace,Vandoise,Leuciscus leuciscus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+68,Common Shiner,Méné à nageoires rouges,Luxilus cornutus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+69,Copper Redhorse,,Moxostoma hubbsi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+70,Creek Chub,Mulet à cornes,Semotilus atromaculatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+71,Crucian Carp,Carassin,Carassius carassius,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+72,Cutlip Minnow,Bec-de-lièvre,Exoglossum maxillingua,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+73,Cutthroat Trout,Truite fardée,Oncorhynchus clarkii,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+74,Deepwater Cisco,,Coregonus johannae,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+75,Deepwater Sculpin,Chabot de profondeur,Myoxocephalus thompsonii,Eel,0.02871,0.035
+76,Dolly Varden,Dolly varden,Salvelinus malma,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+77,Eastern Sand Darter,Dard de sable,Ammocrypta pellucida,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+78,Emerald Shiner,Méné émeraude,Notropis atherinoides,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+79,Eulachon,Eulakane,Thaleichthys pacificus,Herring; Sturgeon,0.01217,0.082
+80,European Chub,Chevaine,Squalius cephalus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+81,European Eel,Anguille,Anguilla anguilla,Eel,0.02871,0.035
+82,European Grayling,Ombre commun,Thymallus thymallus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+83,European Perch,Perche fluviatile,Perca fluviatilis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+84,Fallfish,Ouitouche,Semotilus corporalis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+85,Fantail Darter,Dard barré,Etheostoma flabellare,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+86,Fathead Minnow,Tête de boule,Pimephales promelas,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+87,Finescale Dace,Ventre citron,Chrosomus neogaeus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+88,Flannelmouth Sucker,Meunier à grosses nageoires,Catostomus latipinnis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+89,Flathead Chub,Méné à tête plate,Platygobio gracilis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+90,Fourspine Stickleback,Épinoche à quatre épines,Apeltes quadracus,Eel,0.02871,0.035
+91,Freshwater Drum,Malachigan,Aplodinotus?grunniens,Eel,0.02871,0.035
+92,Ghost Shiner,Méné fantôme,Notropis buchanani,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+93,Gizzard Dhad,Alose à gésier,Dorosoma cepedianum,Herring; Sturgeon,0.01217,0.082
+94,Golden Redhorse,,Moxostoma erythrurum,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+95,Golden Shiner,Méné jaune,Notemigonus crysoleucas,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+96,Goldeye,Laquaiche aux yeux d'or,Hiodon alosoides,Herring; Sturgeon,0.01217,0.082
+97,Grass Pickerel,,Esox americanus vermiculatus,Pike,0.0186,0.055
+98,Gravel Chub,Gravelier,Erimystax?x-punctatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+99,Greater Redhorse,Chevalier jaune,Moxostoma valenciennesi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+100,Green Sturgeon,Esturgeon vert,Acipenser medirostris,Herring; Sturgeon,0.01217,0.082
+101,Green Sunfish,,Lepomis cyanellus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+102,Greenside Darter,,Etheostoma blennioides,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+103,Gudgeon,Gofi,Gobio gobio,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+104,Hornyhead Chub,,Nocomis biguttatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+105,Humpback Chub,Méné à bosses,Gila cypha,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+106,Inconnu,Inconnu,Stenodus leucichthys,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+107,Iowa Darter,Dard à ventre jaune,Etheostoma exile,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+108,Johnny Darter,Raseux-de-terre noir,Etheostoma nigrum,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+109,June Sucker,Catostome noir nain,Chasmistes liorus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+110,Kiyi,,Coregonus kiyi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+111,Lake Chub,Méné de lac,Couesius plumbeus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+112,Lake Chubsucker,,Erimyzon sucetta,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+113,Lake Sturgeon,Esturgeon jaune,Acipenser fulvescens,Herring; Sturgeon,0.01217,0.082
+114,Lake Trout,Touladi,Salvelinus namaycush,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+115,Lake Whitefish,Grand corégone,Coregonus clupeaformis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+116,Largemouth Bass,Achigan à grande bouche,Micropterus salmoides,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+117,Largescale Sucker,Meunier à grandes écailles,Catostomus macrocheilus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+118,Least Chub,Méné des rapides,Iotichthys phlegethontis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+119,Least Cisco,Cisco sardinelle,Coregonus sardinella,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+120,Least Darter,,Etheostoma microperca,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+121,Leopard Dace,Naseux léopard,Rhinichthys falcatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+122,Logperch,Dard-perche,Percina caprodes,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+123,Longear Sunfish,Crapet à longues oreilles,Lepomis megalotis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+124,Longfin Smelt,Éperlan d'hiver,Spirinchus thaleichthys,Herring; Sturgeon,0.01217,0.082
+125,Longjaw Cisco,Cisco à grande bouche,Coregonus alpenae,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+126,Longnose Dace,Naseux des rapides,Rhinichthys cataractae,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+127,Longnose Gar,Lépisosté osseux,Lepisosteus osseus,Pike,0.0186,0.055
+128,Longnose Sucker,Meunier rouge,Catostomus catostomus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+129,Mimic Shiner,Méné pâle,Notropis volucellus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+130,Mooneye,Laquaiche argentée,Hiodon tergisus,Herring; Sturgeon,0.01217,0.082
+131,Mottled Sculpin,Chabot tacheté,Cottus bairdii,Eel,0.02871,0.035
+132,Mountain Sucker,Meunier des montagnes,Catostomus platyrhynchus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+133,Mountain Whitefish,Ménomini des montagnes,Prosopium williamsoni,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+134,Mummichog,Choquemort,Fundulus heteroclitus,Eel,0.02871,0.035
+135,Muskellunge,Maskinongé,Esox masquinongy,Pike,0.0186,0.055
+136,Ninespine Stickleback,Épinoche à neuf épines,Pungitius pungitius,Eel,0.02871,0.035
+137,Northern Brook Lamprey,Lamproie du nord,Ichthyomyzon fossor,Eel,0.02871,0.035
+138,Northern Hog Sucker,,Hypentelium nigricans,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+139,Northern Pike,Brochet,Esox lucius,Pike,0.0186,0.055
+140,Northern Pike Minnow,Sauvagesse du nord,Ptychocheilus oregonensis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+141,Northern Redbelly Dace,Ventre rouge du nord,Chrosomus eos,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+142,Pacific Lamprey,Lamproie du Pacifique,Entosphenus tridentatus,Eel,0.02871,0.035
+143,Pallid Sturgeon,Esturgeon pâle,Scaphirhynchus albus,Herring; Sturgeon,0.01217,0.082
+144,Peamouth,Méné deux-barres,Mylocheilus caurinus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+145,Pearl Dace,Mulet perlé,Margariscus?margarita,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+146,Pink Salmon,Saumon rose,Oncorhynchus gorbuscha,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+147,Plains Minnow,Méné des plaines,Hybognathus placitus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+148,Pond Smelt,Éperlan à petite bouche,Hypomesus olidus,Herring; Sturgeon,0.01217,0.082
+149,Prickly Sculpin,Chabot piquant,Cottus asper,Eel,0.02871,0.035
+150,Proserpine Shiner,Méné de Proserpine,Cyprinella proserpina,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+151,Pugnose Minnow,,Opsopoeodus emiliae,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+152,Pugnose Shiner,,Notropis anogenus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+153,Pumpkinseed,Crapet-soleil,Lepomis gibbosus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+154,Pygmy Whitefish,Ménomini pygmée,Prosopium coulterii,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+155,Quillback,Couette,Carpiodes cyprinus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+156,Rainbow Darter,Dard arc-en-ciel,Etheostoma caeruleum,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+157,Rainbow Smelt,Éperlan arc-en-ciel,Osmerus mordax,Herring; Sturgeon,0.01217,0.082
+158,Rainbow Trout,Truite arc-en-ciel,Oncorhynchus mykiss,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+159,Red River Shiner,Red River shiner,Notropis bairdi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+160,Red Shiner,Méné rouge,Cyprinella lutrensis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+161,Redbreast Sunfish,Crapet rouge,Lepomis auritus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+162,Redfin Pickerel,Brochet d'Amérique,Esox americanus americanus,Pike,0.0186,0.055
+163,Redfin Shiner,Méné d’ombre,Lythrurus umbratilis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+164,Redside Dace,Méné long,Clinostomus elongatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+165,Redside Shiner,Méné rose,Richardsonius balteatus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+166,Ribbon Shiner,Méné ruban,Lythrurus fumeus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+167,Rio Grande Darter,Dard Rio Grande,Etheostoma grahami,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+168,Rio Grande Silvery Minnow,Méné d’argent,Hybognathus amarus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+169,River Chub,,Nocomis micropogon,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+170,River Darter,,Percina shumardi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+171,River Lamprey,Lamproie de rivière,Lampetra ayresii,Eel,0.02871,0.035
+172,River Redhorse,Chevalier de rivière,Moxostoma carinatum,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+173,River Shiner,,Notropis blennius,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+174,Roach,Gardon,Rutilus rutilus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+175,Rock Bass,Crapet de roche,Ambloplites rupestris,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+176,Rosyface Shiner,Tête rose,Notropis rubellus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+177,Round Whitefish,Ménomini rond,Prosopium cylindraceum,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+178,Sabine Shiner,Méné Sabine,Notropis sabinae,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+179,Sand Shiner,Méné paille,Notropis stramineus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+180,Sauger,Doré noir,Sander canadensis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+181,Sea Lamprey,Lamproie marine,Petromyzon marinus,Eel,0.02871,0.035
+182,Sharpnose Shiner,Méné à nez pointu,Notropis oxyrhynchus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+183,Shorthead Redhorse,Chevalier rouge,Moxostoma macrolepidotum,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+184,Shorthead Sculpin,Chabot à tête courte,Cottus confusus,Eel,0.02871,0.035
+185,Shortjaw Cisco,Cisco à mâchoires égales,Coregonus zenithicus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+186,Shortnose Cisco,Cisco à museau court,Coregonus reighardi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+187,Shortnose Sturgeon,Esturgeon à museau court,Acipenser brevirostrum,Herring; Sturgeon,0.01217,0.082
+188,Shovelnose Sturgeon,Esturgeon à museau plat,Scaphirhynchus platorynchus,Herring; Sturgeon,0.01217,0.082
+189,Silver Chub,,Macrhybopsis?storeriana,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+190,Silver Lamprey,Lamproie argentée,Ichthyomyzon unicuspis,Eel,0.02871,0.035
+191,Silver Redhorse,Chevalier blanc,Moxostoma anisurum,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+192,Silverband Shiner,Méné miroir,Notropis shumardi,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+193,Slimy Sculpin,Chabot visqueux,Cottus cognatus,Eel,0.02871,0.035
+194,Smalleye Shiner,Méné à petits yeux,Notropis buccula,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+195,Smallmouth Bass,Achigan à petite bouche,Micropterus dolomieu,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+196,Sockeye Salmon,Saumon rouge,Oncorhynchus nerka,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+197,Southern Leatherside Chub,,Lepidomeda aliciae,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+198,Speckled Chub,Méné moucheté,Macrhybopsis aestivalis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+199,Speckled Dace,seux moucheté,Rhinichthys osculus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+200,Splittail,,Pogonichthys macrolepidotus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+201,Spoonhead Sculpin,Chabot à tête plate,Cottus ricei,Eel,0.02871,0.035
+202,Spotfin Shiner,Méné bleu,Cyprinella spiloptera,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+203,Spottail Shiner,Queue à tache noire,Notropis hudsonius,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+204,Spotted Gar,Lépisosté tacheté,Lepisosteus oculatus,Pike,0.0186,0.055
+205,Spotted Sucker,,Minytrema melanops,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+206,Stonecat,Barbotte des rapides,Noturus flavus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+207,Striped Bass,Bar d'Amérique,Morone saxatilis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+208,Striped Shiner,Méné rayé,Luxilus chrysocephalus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+209,Tadpole Madtom,Chat-fou brun,Noturus gyrinus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+210,Tench,Tanche,Tinca tinca,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+211,Texas Shiner,,Notropis amabilis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+212,Threespine Stickleback,Épinoche à trois épines,Gasterosteus aculeatus,Eel,0.02871,0.035
+213,Tiger Muskellunge,,Esox lucius ? masquinongy,Pike,0.0186,0.055
+214,Topeka Shiner,Méné Topeka,Notropis topeka,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+215,Torrent Sculpin,Chabot de torrent,Cottus rhotheus,Eel,0.02871,0.035
+216,Trout-perch,Omisco,Percopsis omiscomaycus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+217,Twaite Shad,Alose feinte,Alosa fallax,Herring; Sturgeon,0.01217,0.082
+218,Walleye,Doré jaune,Sander vitreus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+219,Weed Shiner,Méné d’herbe,Notropis texanus,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+220,Western Brook Lamprey,Lamproie de l' ouest,Lampetra richardsoni,Eel,0.02871,0.035
+221,White Bass,Bar blanc,Morone chrysops,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+222,White Crappie,Crapet calicot,Pomoxis annularis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+223,White Perch,Bar blanc d'Amerique,Morone americana,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+224,White Sturgeon,Esturgeon blanc,Acipenser transmontanus,Herring; Sturgeon,0.01217,0.082
+225,White Sucker,Meunier noir,Catostomus commersonii,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+226,Yellow Bullhead,Barbotte jaune,Ameiurus natalis,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098
+227,Yellow Perch,Perchaude,Perca flavescens,Catfish & Sunfish; Salmon & Walleye,0.01019,0.098

@@ -27,7 +27,7 @@ bibliography: bibliography.bib
 
 </script>
 
-##Background
+## Background
 
 This guide presents a collection of fish swimming performance fatigue (swim speed versus
 endurance time) and distance (swim distance versus water velocity) curves that were produced
@@ -86,7 +86,7 @@ the fit may be more compromised.
 A more detailed description of the analysis and derivation of the swimming performance curves
 presented in this guide can be found in @katopodis2016fish.
 
-##Using the Equations
+## Using the Equations
 
 This document contains a series of equations that can be used to estimate: 
 
@@ -95,7 +95,7 @@ This document contains a series of equations that can be used to estimate:
 
 Both sets of relationships are based on grouped data made up of a collection of different fish species. The swimming performance of a particular fish species is represented by the group. For example, to estimate the swimming performance of rainbow trout, the Salmon & Walleye Group would be used, since rainbow trout is part of this group. [Table 4](#group-summary-by-species) contains a listing of species and the groups those species belong to. The fatigue equations and webtool provide a regression line with 75% and 95% prediction interval lines. Distance equations were generated from the fatigue equations and correspond to the fatigue lines. Prediction intervals are sometimes known as probability intervals and are different from confidence intervals. The prediction interval is a statistical interval calculated to include one or more future observations from the same population with a specified confidence. A prediction interval is used to predict the range within which a single observation is expected to fall. It was included to capture the variation in performance (scatter above and below the regression line) which is important when quantifying performance. For example, the 95% prediction interval for the swim distance would represent the range where there is a 95% chance that the next measurement would fall within. For a 95% prediction interval, there is a 2.5% chance that an observation will be below the lower bound of the interval and a 2.5% chance an observation will be above the upper bound of the interval. Consequently, the lower boundary line of this prediction interval would represent the dividing point above which there is 97.5% chance that a fish would be able swim that distance. The choice of which line to use, should reflect the overall risk to the particular species and watershed. For example, where fish passage is a concern and the goal is to minimize long term impact to a particular population, the lower boundary curve would be used to reflect a higher degree of passage to be achieved. It is important to emphasize that swimming speeds are but one of several factors to be considered in achieving desirable levels of upstream or downstream fish passage and should not be used exclusively to judge designs or effectiveness.
 
-##Fatigue Curves
+## Fatigue Curves
 
 The [fatigue equations](#fatigue-equations) section contains the dimensionless equations for the fatigue curves and summary tables of coefficients (k and b) for the regression line with 75% and 95% prediction intervals for each of the groups. The equations can be used to calculate the following:
 
@@ -103,7 +103,7 @@ The [fatigue equations](#fatigue-equations) section contains the dimensionless e
 * swim speed (U in m/s) given fish species, fish length (l in m) and endurance time (t in s)
 * fish length (l in m) given fish species, swim speed (U in m/s) and endurance time (t in s)
 
-##Fatigue Equations
+## Fatigue Equations
 
 Dimensionless fatigue curves are relationships between dimensionless fish speed (U<sub>\*</sub>) and dimensionless endurance time (t<sub>\*</sub>).
 
@@ -120,7 +120,7 @@ Where:
 *   *l* is fish length in meters
 *   *k* and *b* are coefficients derived from Deming regression analysis
 
-```{r echo = FALSE, results = 'asis'}
+```{r echo = FALSE, results = 'asis', message=FALSE}
 library(DT)
 library(knitr)
 library(kableExtra)
@@ -141,7 +141,7 @@ kable(dt, "html", align="lcccccccc", col.names = c("Group","k", "b","k", "b","k"
   column_spec(1, width = "9em")
 ```
 
-##Distance Curves
+## Distance Curves
 
 The [distance equations](#distance-equations) section contains the dimensionless equations for the distance curves and summary tables of the coefficients (M and a) for the regression line with 75% and 95% prediction intervals for each of the groups. The equations can be used to calculate the following:
 
@@ -149,7 +149,7 @@ The [distance equations](#distance-equations) section contains the dimensionless
 * water velocity (V in m/s) given fish species, fish length (l in m) and swim distance (X in m)
 * fish length (l in m) given fish species, water velocity (V in m/s) and swim distance (X in m)
 
-##Distance Equations
+## Distance Equations
 
 Dimensionless swim distance curves are relationships between dimensionless water velocity (V<sub>\*</sub>) and dimensionless swimming distance (X<sub>\*</sub>).
 
@@ -177,7 +177,7 @@ kable(dt, "html", align="lcccccccccc", col.names = c("Group","M","a","M","a","M"
   column_spec(1, width = "9em")
 ```
 
-##Speed vs. Time Example
+## Speed vs. Time Example
 
 Question: How long can the average 250 mm rainbow trout swim 1 m/s?
 
@@ -217,17 +217,17 @@ $$0.639 = 4.004(6.264t)^{0.25}$$
 Solving for t: 
 $$ t = \left(\frac{0.639}{4.004}\right)^{-1/0.25}\div6.264 = 246 \text{ seconds}$$
 
-###Solution - Speed vs. Time 
+### Solution - Speed vs. Time 
 
 The average 250 mm rainbow trout can swim 1 m/s for 246 seconds. 
 
-##Distance vs. Velocity Example
+## Distance vs. Velocity Example
 
 Question: A proponent wishes to install a 30 meter culvert. What is the maximum water velocity that 87.5% of 400 mm northern pike can pass through?
 
 There are two ways to answer this question. The first and recommended method is using the interactive [webtool](#webtooldistancevelocity). The webtool automatically and reliably performs the calculations contained in this guide. Alternatively, you can [manually perform the calculations](#formuladistancevelocity).
 
-###Webtool - Distance vs. Velocity {#webtooldistancevelocity}
+### Webtool - Distance vs. Velocity {#webtooldistancevelocity}
 
 1.  Go to the [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/distancevelocity.html).
 2.	Below “Select Fish by:”, click the “Common name” radio button.
@@ -244,7 +244,7 @@ knitr::include_app("http://www.fishprotectiontools.ca/distancevelocity/?_inputs_
 ```
 </center>
 
-###Formula - Distance vs. Velocity {#formuladistancevelocity}
+### Formula - Distance vs. Velocity {#formuladistancevelocity}
 
 1. Identify the correct group for northern pike. The [Group Summary by Species](#group-summary-by-species) contains a list of species for each group and from the table, northern pike is part of the 'Pike (derived)' Group.
 2. Swim distance can be calculated using the [distance equations](#distance-equations). To use the equations, find the k and b coefficients. For average endurance time use the regression equation coefficients.
@@ -261,11 +261,11 @@ $$75 = 3.846(0.505V)^{-2.040}$$
 Solving for V:
 $$V = \left(\frac{75}{3.846}\right)^{-1/2.040} \div 0.505 = 0.46 \text{ m/s}$$
 
-###Solution - Distance vs. Velocity
+### Solution - Distance vs. Velocity
 
 This culvert should not exceed a maximum water velocity of 0.46 m/s to allow passage of 87.5% of 400 mm northern pike.
 
-##Concluding Remarks
+## Concluding Remarks
 
 The following are some general observations related to fish swimming performance, the testing that has been used to measure performance and the analysis of the data to produce the estimates of performance.
 
@@ -284,7 +284,7 @@ The following are some general observations related to fish swimming performance
 * In nature, survival often depends on the efficient use of energy stores and fish may limit activities that demand high energy usage.
 * The results of these analyses may represent a “best effort” given the limitations of the data available. Swimming performance depends on factors which cannot be measured conclusively. Actual fish passage structures often generate hydraulic conditions which defer from those tested in swimming performance devices.
 
-##Group Summary by Species
+## Group Summary by Species
 
 ```{r echo = FALSE, results = 'asis'}
 dt <- read.csv("Tables/FishList.csv")
@@ -294,4 +294,4 @@ kable(dt, "html", caption = "Table 4. Summary of the families and species that w
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
-##References
+## References

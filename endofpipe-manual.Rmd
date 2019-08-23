@@ -19,7 +19,7 @@ output:
 
 </script>
 
-##Background
+## Background
 
 Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel [@mussen2014unscreened]. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The [End-of-Pipe Screen Size tool](http://www.fishprotectiontools.ca/endofpipe-tool.html) is used to calculate the required Effective Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Effective Screen Area</b> is the space available for the free flow of water and the space occupied by the screen material but excludes space occupied by major support structures. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html). 
 
@@ -32,11 +32,11 @@ In this manual, a sample problem will be answered using this tool.
   name = "Video Name" src = EntrainedSturgeon.mp4
   style="float:right;margin-left:10px"frameborder="0">
   
-##Sample question
+## Sample question
 
 A proponent wishes to withdraw water at a rate of 100 L/s from a nearby pond. The pond supports populations of smallmouth bass, yellow perch, and northern pike. The intake is proposed to be cylindrical with the ends solid and #60 wedge wire screen around the cylinder. What size should the intake screen be?
 
-###Steps
+### Steps
 
 A.  Determine the required effective screen area
 B.  Determine the dimensions of the screen
@@ -61,7 +61,7 @@ Once these steps are completed, the tool will indicate an Effective Screen Area 
    iFrameResize({heightCalculationMethod: "lowestElement"});
 </script>
 
-####B. Determine dimensions of intake screen
+#### B. Determine dimensions of intake screen
 
 For a cylindrical screen where the ends are solid and screening is around the cylinder, the following formula applies:
 
@@ -77,15 +77,15 @@ $$
 \end{aligned}
 $$
 
-###Solution
+### Solution
 
 A regularly cleaned 0.60 m diameter, 0.96 m long cylindrical screen would meet the design requirements. It should be noted that the dimensions given are representative of the screening area only; they do not include any screen that may be blocked by framing, etc.
 
-##Advanced options
+## Advanced options
 
 Clicking the "Show advanced options"" check box allows for much more control than previously possible through the [1995 guideline](http://www.dfo-mpo.gc.ca/Library/223669.pdf), including the ability to change the amount of time required for a fish to escape the face of a screen, the ability to decrease the proportion of fish protected below 97.5%, and the ability to increase the length of fish near the water intake. In most scenarios, these values should not be changed from their default values.
 
-##Additional information
+## Additional information
 
 Below the chart, a line of text displays the design approach velocity in m/s. This information may be useful when using the end-of-pipe screen size calculator in conjunction with provincial regulations or to verify the screen is working properly once installed. 
 

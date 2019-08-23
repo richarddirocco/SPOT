@@ -57,7 +57,7 @@ MaturityData$"Minimum length at first maturity" <- MaturityData$"Minimum length 
 MaturityData$"Mean length at first maturity (Lm)" <- MaturityData$"Mean length at first maturity (Lm)" * 10
 
 
-# Import data derived from Coker et al., 2001
+# Import data derived from Coker et al., 2001 and other manually added data
 OtherLengthAtMaturity <- read_csv("~/RMarkdownWebsite/apps/lengthmaturity/OtherLengthAtMaturityData.csv")
 
 # Replace NAs in sex with "Unsexed"

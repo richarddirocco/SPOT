@@ -1,8 +1,8 @@
-English Common Name,French Common Name,Scientific Name,Group
+           English Common Name,French Common Name,Scientific Name,Group
 Alaska Blackfish,Dallia,Dallia pectoralis,Herring & Sturgeon
-Alewife/gaspareau,Gaspareau,Alosa pseudoharengus,Herring & Sturgeon
+Alewife/Gaspereau,Gaspareau,Alosa pseudoharengus,Herring & Sturgeon
 American Brook Lamprey,Lamproie de l'est,Lethenteron appendix,Eel
-American Eel,Anguille d'Am?rique,Anguilla rostrata,Eel
+American Eel,Anguille d'Amérique,Anguilla rostrata,Eel
 American Shad,Alose savoureuse,Alosa sapidissima,Herring & Sturgeon
 Arctic Char,Omble chevalier,Salvelinus alpinus,"Catfish, Salmon, Sunfish & Walleye"
 Arctic Cisco,Cisco arctique,Coregonus autumnalis,"Catfish, Salmon, Sunfish & Walleye"
@@ -12,8 +12,8 @@ Atlantic Salmon,Saumon Atlantique,Salmo salar,"Catfish, Salmon, Sunfish & Walley
 Atlantic Sturgeon,Esturgeon noir,Acipenser oxyrinchus,Herring & Sturgeon
 Atlantic Tomcod,Poulamon,Microgadus tomcod,Eel
 Atlantic Whitefish,Cisco,Coregonus huntsmani,"Catfish, Salmon, Sunfish & Walleye"
-Banded Killifish,Fondule barr?,Fundulus diaphanus,
-Bering Cisco,Cisco de B?ring,Coregonus laurettae,"Catfish, Salmon, Sunfish & Walleye"
+Banded Killifish,Fondule barré,Fundulus diaphanus,
+Bering Cisco,Cisco de Béring,Coregonus laurettae,"Catfish, Salmon, Sunfish & Walleye"
 Bigmouth Buffalo,Poisson-taureau,Ictiobus cyprinellus,"Catfish, Salmon, Sunfish & Walleye"
 Bigmouth Shiner,,Notropis dorsalis,"Catfish, Salmon, Sunfish & Walleye"
 Black Bullhead,Poisson-chat,Ameiurus melas,"Catfish, Salmon, Sunfish & Walleye"
@@ -24,199 +24,200 @@ Blackfin Cisco,,Coregonus nigripinnis,"Catfish, Salmon, Sunfish & Walleye"
 Blacknose Dace,Naseux noir,Rhinichthys atratulus,"Catfish, Salmon, Sunfish & Walleye"
 Blacknose Shiner,Museau noir,Notropis heterolepis,"Catfish, Salmon, Sunfish & Walleye"
 Blackside Darter,,Percina maculata,"Catfish, Salmon, Sunfish & Walleye"
-Blackspot Shiner,M?n? ? tache noire,Notropis atrocaudalis,"Catfish, Salmon, Sunfish & Walleye"
-Blackspotted Stickleback,?pinoche tachet?e,Gasterosteus wheatlandi,
-Blacktail Shiner,M?n? ? queue noire,Cyprinella venusta,"Catfish, Salmon, Sunfish & Walleye"
+Blackspot Shiner,Méné à tache noire,Notropis atrocaudalis,"Catfish, Salmon, Sunfish & Walleye"
+Blackspotted Stickleback,Épinoche tachetée,Gasterosteus wheatlandi,
+Blacktail Shiner,Méné à queue noire,Cyprinella venusta,"Catfish, Salmon, Sunfish & Walleye"
 Bloater,,Coregonus hoyi,"Catfish, Salmon, Sunfish & Walleye"
 Blue Catfish,Poisson-chat bleu,Ictalurus furcatus,"Catfish, Salmon, Sunfish & Walleye"
-Blueback Herring,Alose d'?t?,Alosa aestivalis,Herring & Sturgeon
+Blueback Herring,Alose d'été,Alosa aestivalis,Herring & Sturgeon
 Bluegill,Crapet arlequin,Lepomis macrochirus,"Catfish, Salmon, Sunfish & Walleye"
 Bluntnose Minnow,,Pimephales notatus,"Catfish, Salmon, Sunfish & Walleye"
 Bonytail,Squalius moreoticus,Gila elegans,"Catfish, Salmon, Sunfish & Walleye"
 Bowfin,Poisson-castor,Amia calva,Eel
-Brassy Minnow,M?m? laiton,Hybognathus hankinsoni,"Catfish, Salmon, Sunfish & Walleye"
+Brassy Minnow,Mémé laiton,Hybognathus hankinsoni,"Catfish, Salmon, Sunfish & Walleye"
 Bridgelip Sucker,Meunier de l'ouest,Catostomus columbianus,"Catfish, Salmon, Sunfish & Walleye"
-Bridle Shiner,M?n? d'herbe,Notropis bifrenatus,"Catfish, Salmon, Sunfish & Walleye"
+Bridle Shiner,Méné d'herbe,Notropis bifrenatus,"Catfish, Salmon, Sunfish & Walleye"
 Brindled Madtom,,Noturus miurus,"Catfish, Salmon, Sunfish & Walleye"
-Broad Whitefish,Cor?gone tschir,Coregonus nasus,"Catfish, Salmon, Sunfish & Walleye"
+Broad Whitefish,Corégone tschir,Coregonus nasus,"Catfish, Salmon, Sunfish & Walleye"
 Brook Silverside,Crayon d'argent,Labidesthes sicculus,
-Brook Stickleback,?pinoche ? cinq ?pines,Culaea inconstans,
+Brook Stickleback,Épinoche à cinq épines,Culaea inconstans,
 Brook Trout,Saumon de fontaine,Salvelinus fontinalis,"Catfish, Salmon, Sunfish & Walleye"
 Brown Bullhead,Barbotte brune,Ameiurus nebulosus,"Catfish, Salmon, Sunfish & Walleye"
 Brown Trout,Truite commune,Salmo trutta,"Catfish, Salmon, Sunfish & Walleye"
-Bull Trout,Omble ? t?te plate,Salvelinus confluentus,"Catfish, Salmon, Sunfish & Walleye"
+Bull Trout,Omble à tête plate,Salvelinus confluentus,"Catfish, Salmon, Sunfish & Walleye"
 Bullhead Minnow,Pimephales vigilax,Pimephales vigilax,"Catfish, Salmon, Sunfish & Walleye"
 Burbot,Lotte,Lota lota,Eel
 Carp,Carpe,Cyprinus carpio,"Catfish, Salmon, Sunfish & Walleye"
 Central Mudminnow,Umbre de vase,Umbra limi,Herring & Sturgeon
 Central Stoneroller,Roule-caillou,Campostoma anomalum,"Catfish, Salmon, Sunfish & Walleye"
-Chain Pickerel,Brochet maill?,Esox niger,Pike
-Channel Catfish,Barbue de rivi?re,Ictalurus punctatus,"Catfish, Salmon, Sunfish & Walleye"
+Chain Pickerel,Brochet maillé,Esox niger,Pike
+Channel Catfish,Barbue de rivière,Ictalurus punctatus,"Catfish, Salmon, Sunfish & Walleye"
 Channel Darter,Fouille-roche gris,Percina copelandi,"Catfish, Salmon, Sunfish & Walleye"
-Channel?נBlue catfish hybrid,Poisson-chat tachet? ? poisson-chat bleu hybride,Ictalurus punctatus?נfurcatus,"Catfish, Salmon, Sunfish & Walleye"
+Channel × Blue catfish hybrid,Poisson-chat tacheté × poisson-chat bleu hybride,Ictalurus punctatus × furcatus,"Catfish, Salmon, Sunfish & Walleye"
 Chestnut Lamprey,Lamproie brune,Ichthyomyzon castaneus,Eel
 Chinook Salmon,Saumon chinook,Oncorhynchus tshawytscha,"Catfish, Salmon, Sunfish & Walleye"
 Chiselmouth,,Acrocheilus alutaceus,"Catfish, Salmon, Sunfish & Walleye"
 Chum Salmon,Saumon keta,Oncorhynchus keta,"Catfish, Salmon, Sunfish & Walleye"
 Cisco,Cisco de lac,Coregonus artedi,"Catfish, Salmon, Sunfish & Walleye"
-Coastrange Sculpin,Chabot c?tier,Cottus aleuticus,
+Coastrange Sculpin,Chabot côtier,Cottus aleuticus,
 Coho Salmon,Saumon coho,Oncorhynchus kisutch,"Catfish, Salmon, Sunfish & Walleye"
 Colorado Pikeminnow,Poisson squaw du Colorado,Ptychocheilus lucius,"Catfish, Salmon, Sunfish & Walleye"
 Common Barbel,Barbeau fluviatile,Barbus barbus,"Catfish, Salmon, Sunfish & Walleye"
-Common Bream,Br?me,Abramis brama,"Catfish, Salmon, Sunfish & Walleye"
+Common Bream,Brème,Abramis brama,"Catfish, Salmon, Sunfish & Walleye"
 Common Dace,Vandoise,Leuciscus leuciscus,"Catfish, Salmon, Sunfish & Walleye"
-Common Shiner,M?n? ? nageoires rouges,Luxilus cornutus,"Catfish, Salmon, Sunfish & Walleye"
+Common Shiner,Méné à nageoires rouges,Luxilus cornutus,"Catfish, Salmon, Sunfish & Walleye"
 Copper Redhorse,,Moxostoma hubbsi,"Catfish, Salmon, Sunfish & Walleye"
-Creek Chub,Mulet ? cornes,Semotilus atromaculatus,"Catfish, Salmon, Sunfish & Walleye"
+Creek Chub,Mulet à cornes,Semotilus atromaculatus,"Catfish, Salmon, Sunfish & Walleye"
 Crucian Carp,Carassin,Carassius carassius,"Catfish, Salmon, Sunfish & Walleye"
-Cutlips Minnow,Bec-de-li?vre,Exoglossum maxillingua,"Catfish, Salmon, Sunfish & Walleye"
-Cutthroat Trout,Truite fard?e,Oncorhynchus clarkii,"Catfish, Salmon, Sunfish & Walleye"
+Cutlip Minnow,Bec-de-lièvre,Exoglossum maxillingua,"Catfish, Salmon, Sunfish & Walleye"
+Cutthroat Trout,Truite fardée,Oncorhynchus clarkii,"Catfish, Salmon, Sunfish & Walleye"
 Deepwater Cisco,,Coregonus johannae,"Catfish, Salmon, Sunfish & Walleye"
 Deepwater Sculpin,Chabot de profondeur,Myoxocephalus thompsonii,
 Dolly Varden,Dolly varden,Salvelinus malma,"Catfish, Salmon, Sunfish & Walleye"
 Eastern Sand Darter,Dard de sable,Ammocrypta pellucida,"Catfish, Salmon, Sunfish & Walleye"
-Emerald Shiner,M?n? ?meraude,Notropis atherinoides,"Catfish, Salmon, Sunfish & Walleye"
+Emerald Shiner,Méné émeraude,Notropis atherinoides,"Catfish, Salmon, Sunfish & Walleye"
 Eulachon,Eulakane,Thaleichthys pacificus,Herring & Sturgeon
+Eurasian ruffe,Grémille,Gymnocephalus cernua,"Catfish, Salmon, Sunfish & Walleye"
 European Chub,Chevaine,Leuciscus cephalus,"Catfish, Salmon, Sunfish & Walleye"
 European Eel,Anguille,Anguilla anguilla,Eel
 European Grayling,Ombre commun,Thymallus thymallus,"Catfish, Salmon, Sunfish & Walleye"
 European Perch,Perche fluviatile,Perca fluviatilis,"Catfish, Salmon, Sunfish & Walleye"
 Fallfish,Ouitouche,Semotilus corporalis,"Catfish, Salmon, Sunfish & Walleye"
-Fantail Darter,Dard barr?,Etheostoma flabellare,"Catfish, Salmon, Sunfish & Walleye"
-Fathead Minnow,T?te de boule,Pimephales promelas,"Catfish, Salmon, Sunfish & Walleye"
+Fantail Darter,Dard barré,Etheostoma flabellare,"Catfish, Salmon, Sunfish & Walleye"
+Fathead Minnow,Tête de boule,Pimephales promelas,"Catfish, Salmon, Sunfish & Walleye"
 Finescale Dace,Ventre citron,Chrosomus neogaeus,"Catfish, Salmon, Sunfish & Walleye"
-Flannelmouth Sucker,Meunier ? grosses nageoires,Catostomus latipinnis,"Catfish, Salmon, Sunfish & Walleye"
-Flathead Chub,M?n? ? t?te plate,Platygobio gracilis,"Catfish, Salmon, Sunfish & Walleye"
-Fourspine Stickleback,?pinoche ? quatre ?pines,Apeltes quadracus,
-Freshwater Drum,Malachigan,Aplodinotus?grunniens,
-Ghost Shiner,M?n? fant?me,Notropis buchanani,"Catfish, Salmon, Sunfish & Walleye"
-Gizzard Shad,Alose ? g?sier,Dorosoma cepedianum,Herring & Sturgeon
+Flannelmouth Sucker,Meunier à grosses nageoires,Catostomus latipinnis,"Catfish, Salmon, Sunfish & Walleye"
+Flathead Chub,Méné à tête plate,Platygobio gracilis,"Catfish, Salmon, Sunfish & Walleye"
+Fourspine Stickleback,Épinoche à quatre épines,Apeltes quadracus,
+Freshwater Drum,Malachigan,Aplodinotus grunniens,
+Ghost Shiner,Méné fantôme,Notropis buchanani,"Catfish, Salmon, Sunfish & Walleye"
+Gizzard Dhad,Alose à gésier,Dorosoma cepedianum,Herring & Sturgeon
 Golden Redhorse,,Moxostoma erythrurum,"Catfish, Salmon, Sunfish & Walleye"
-Golden Shiner,M?n? jaune,Notemigonus crysoleucas,"Catfish, Salmon, Sunfish & Walleye"
+Golden Shiner,Méné jaune,Notemigonus crysoleucas,"Catfish, Salmon, Sunfish & Walleye"
 Goldeye,Laquaiche aux yeux d'or,Hiodon alosoides,Herring & Sturgeon
 Grass Pickerel,,Esox americanus vermiculatus,Pike
-Gravel Chub,Gravelier,Erimystax?x-punctatus,"Catfish, Salmon, Sunfish & Walleye"
+Gravel Chub,Gravelier,Erimystax x-punctatus,"Catfish, Salmon, Sunfish & Walleye"
 Greater Redhorse,Chevalier jaune,Moxostoma valenciennesi,"Catfish, Salmon, Sunfish & Walleye"
 Green Sturgeon,Esturgeon vert,Acipenser medirostris,Herring & Sturgeon
 Green Sunfish,,Lepomis cyanellus,"Catfish, Salmon, Sunfish & Walleye"
 Greenside Darter,,Etheostoma blennioides,"Catfish, Salmon, Sunfish & Walleye"
 Gudgeon,Gofi,Gobio gobio,"Catfish, Salmon, Sunfish & Walleye"
 Hornyhead Chub,,Nocomis biguttatus,"Catfish, Salmon, Sunfish & Walleye"
-Humpback Chub,M?n? ? bosses,Gila cypha,"Catfish, Salmon, Sunfish & Walleye"
+Humpback Chub,Méné à bosses,Gila cypha,"Catfish, Salmon, Sunfish & Walleye"
 Inconnu,Inconnu,Stenodus leucichthys,"Catfish, Salmon, Sunfish & Walleye"
-Iowa Darter,Dard ? ventre jaune,Etheostoma exile,"Catfish, Salmon, Sunfish & Walleye"
+Iowa Darter,Dard à ventre jaune,Etheostoma exile,"Catfish, Salmon, Sunfish & Walleye"
 Johnny Darter,Raseux-de-terre noir,Etheostoma nigrum,"Catfish, Salmon, Sunfish & Walleye"
 June Sucker,Catostome noir nain,Chasmistes liorus,"Catfish, Salmon, Sunfish & Walleye"
 Kiyi,,Coregonus kiyi,"Catfish, Salmon, Sunfish & Walleye"
-Lake Chub,M?n? de lac,Couesius plumbeus,"Catfish, Salmon, Sunfish & Walleye"
+Lake Chub,Méné de lac,Couesius plumbeus,"Catfish, Salmon, Sunfish & Walleye"
 Lake Chubsucker,,Erimyzon sucetta,"Catfish, Salmon, Sunfish & Walleye"
 Lake Sturgeon,Esturgeon jaune,Acipenser fulvescens,Herring & Sturgeon
 Lake Trout,Touladi,Salvelinus namaycush,"Catfish, Salmon, Sunfish & Walleye"
-Lake Whitefish,Grand cor?gone,Coregonus clupeaformis,"Catfish, Salmon, Sunfish & Walleye"
-Largemouth Bass,Achigan ? grande bouche,Micropterus salmoides,"Catfish, Salmon, Sunfish & Walleye"
-Largescale Sucker,Meunier ? grandes ?cailles,Catostomus macrocheilus,"Catfish, Salmon, Sunfish & Walleye"
-Least Chub,M?n? des rapides,Iotichthys phlegethontis,"Catfish, Salmon, Sunfish & Walleye"
+Lake Whitefish,Grand corégone,Coregonus clupeaformis,"Catfish, Salmon, Sunfish & Walleye"
+Largemouth Bass,Achigan à grande bouche,Micropterus salmoides,"Catfish, Salmon, Sunfish & Walleye"
+Largescale Sucker,Meunier à grandes écailles,Catostomus macrocheilus,"Catfish, Salmon, Sunfish & Walleye"
+Least Chub,Méné des rapides,Iotichthys phlegethontis,"Catfish, Salmon, Sunfish & Walleye"
 Least Cisco,Cisco sardinelle,Coregonus sardinella,"Catfish, Salmon, Sunfish & Walleye"
 Least Darter,,Etheostoma microperca,"Catfish, Salmon, Sunfish & Walleye"
-Leopard Dace,Naseux l?opard,Rhinichthys falcatus,"Catfish, Salmon, Sunfish & Walleye"
+Leopard Dace,Naseux léopard,Rhinichthys falcatus,"Catfish, Salmon, Sunfish & Walleye"
 Logperch,Dard-perche,Percina caprodes,"Catfish, Salmon, Sunfish & Walleye"
-Longear Sunfish,Crapet ? longues oreilles,Lepomis megalotis,"Catfish, Salmon, Sunfish & Walleye"
-Longfin Smelt,?perlan d'hiver,Spirinchus thaleichthys,Herring & Sturgeon
-Longjaw Cisco,Cisco ? grande bouche,Coregonus alpenae,"Catfish, Salmon, Sunfish & Walleye"
+Longear Sunfish,Crapet à longues oreilles,Lepomis megalotis,"Catfish, Salmon, Sunfish & Walleye"
+Longfin Smelt,Éperlan d'hiver,Spirinchus thaleichthys,Herring & Sturgeon
+Longjaw Cisco,Cisco à grande bouche,Coregonus alpenae,"Catfish, Salmon, Sunfish & Walleye"
 Longnose Dace,Naseux des rapides,Rhinichthys cataractae,"Catfish, Salmon, Sunfish & Walleye"
-Longnose Gar,L?pisost? osseux,Lepisosteus osseus,Pike
+Longnose Gar,Lépisosté osseux,Lepisosteus osseus,Pike
 Longnose Sucker,Meunier rouge,Catostomus catostomus,"Catfish, Salmon, Sunfish & Walleye"
-Mimic Shiner,M?n? p?le,Notropis volucellus,"Catfish, Salmon, Sunfish & Walleye"
-Mooneye,Laquaiche argent?e,Hiodon tergisus,Herring & Sturgeon
-Mottled Sculpin,Chabot tachet?,Cottus bairdii,
+Mimic Shiner,Méné pâle,Notropis volucellus,"Catfish, Salmon, Sunfish & Walleye"
+Mooneye,Laquaiche argentée,Hiodon tergisus,Herring & Sturgeon
+Mottled Sculpin,Chabot tacheté,Cottus bairdii,
 Mountain Sucker,Meunier des montagnes,Catostomus platyrhynchus,"Catfish, Salmon, Sunfish & Walleye"
-Mountain Whitefish,M?nomini des montagnes,Prosopium williamsoni,"Catfish, Salmon, Sunfish & Walleye"
+Mountain Whitefish,Ménomini des montagnes,Prosopium williamsoni,"Catfish, Salmon, Sunfish & Walleye"
 Mummichog,Choquemort,Fundulus heteroclitus,
-Muskellunge,Maskinong?,Esox masquinongy,Pike
-Ninespine Stickleback,?pinoche ? neuf ?pines,Pungitius pungitius,
+Muskellunge,Maskinongé,Esox masquinongy,Pike
+Ninespine Stickleback,Épinoche à neuf épines,Pungitius pungitius,
 Northern Brook Lamprey,Lamproie du nord,Ichthyomyzon fossor,Eel
 Northern Hog Sucker,,Hypentelium nigricans,"Catfish, Salmon, Sunfish & Walleye"
 Northern Pike,Brochet,Esox lucius,Pike
 Northern Pikeminnow,Sauvagesse du nord,Ptychocheilus oregonensis,"Catfish, Salmon, Sunfish & Walleye"
 Northern Redbelly Dace,Ventre rouge du nord,Chrosomus eos,"Catfish, Salmon, Sunfish & Walleye"
 Pacific Lamprey,Lamproie du Pacifique,Entosphenus tridentatus,Eel
-Pallid Sturgeon,Esturgeon p?le,Scaphirhynchus albus,Herring & Sturgeon
-Peamouth,M?n? deux-barres,Mylocheilus caurinus,"Catfish, Salmon, Sunfish & Walleye"
-Pearl Dace,Mulet perl?,Margariscus?margarita,"Catfish, Salmon, Sunfish & Walleye"
+Pallid Sturgeon,Esturgeon pâle,Scaphirhynchus albus,Herring & Sturgeon
+Peamouth,Méné deux-barres,Mylocheilus caurinus,"Catfish, Salmon, Sunfish & Walleye"
+Pearl Dace,Mulet perlé,Margariscus margarita,"Catfish, Salmon, Sunfish & Walleye"
 Pink Salmon,Saumon rose,Oncorhynchus gorbuscha,"Catfish, Salmon, Sunfish & Walleye"
-Plains Minnow,M?n? des plaines,Hybognathus placitus,"Catfish, Salmon, Sunfish & Walleye"
-Pond Smelt,?perlan ? petite bouche,Hypomesus olidus,Herring & Sturgeon
+Plains Minnow,Méné des plaines,Hybognathus placitus,"Catfish, Salmon, Sunfish & Walleye"
+Pond Smelt,Éperlan à petite bouche,Hypomesus olidus,Herring & Sturgeon
 Prickly Sculpin,Chabot piquant,Cottus asper,
-Proserpine Shiner,M?n? de Proserpine,Cyprinella proserpina,"Catfish, Salmon, Sunfish & Walleye"
+Proserpine Shiner,Méné de Proserpine,Cyprinella proserpina,"Catfish, Salmon, Sunfish & Walleye"
 Pugnose Minnow,,Opsopoeodus emiliae,"Catfish, Salmon, Sunfish & Walleye"
 Pugnose Shiner,,Notropis anogenus,"Catfish, Salmon, Sunfish & Walleye"
 Pumpkinseed,Crapet-soleil,Lepomis gibbosus,"Catfish, Salmon, Sunfish & Walleye"
-Pygmy Whitefish,M?nomini pygm?e,Prosopium coulterii,"Catfish, Salmon, Sunfish & Walleye"
+Pygmy Whitefish,Ménomini pygmée,Prosopium coulterii,"Catfish, Salmon, Sunfish & Walleye"
 Quillback,Couette,Carpiodes cyprinus,"Catfish, Salmon, Sunfish & Walleye"
 Rainbow Darter,Dard arc-en-ciel,Etheostoma caeruleum,"Catfish, Salmon, Sunfish & Walleye"
-Rainbow Smelt,?perlan arc-en-ciel,Osmerus mordax,Herring & Sturgeon
+Rainbow Smelt,Éperlan arc-en-ciel,Osmerus mordax,Herring & Sturgeon
 Rainbow Trout,Truite arc-en-ciel,Oncorhynchus mykiss,"Catfish, Salmon, Sunfish & Walleye"
 Red River Shiner,Red River shiner,Notropis bairdi,"Catfish, Salmon, Sunfish & Walleye"
-Red Shiner,M?n? rouge,Cyprinella lutrensis,"Catfish, Salmon, Sunfish & Walleye"
+Red Shiner,Méné rouge,Cyprinella lutrensis,"Catfish, Salmon, Sunfish & Walleye"
 Redbreast Sunfish,Crapet rouge,Lepomis auritus,"Catfish, Salmon, Sunfish & Walleye"
-Redfin Pickerel,Brochet d'Am?rique,Esox americanus americanus,Pike
-Redfin Shiner,M?n? d?ombre,Lythrurus umbratilis,"Catfish, Salmon, Sunfish & Walleye"
-Redside Dace,M?n? long,Clinostomus elongatus,"Catfish, Salmon, Sunfish & Walleye"
-Redside Shiner,M?n? rose,Richardsonius balteatus,"Catfish, Salmon, Sunfish & Walleye"
-Ribbon Shiner,M?n? ruban,Lythrurus fumeus,"Catfish, Salmon, Sunfish & Walleye"
+Redfin Pickerel,Brochet d'Amérique,Esox americanus americanus,Pike
+Redfin Shiner,Méné d’ombre,Lythrurus umbratilis,"Catfish, Salmon, Sunfish & Walleye"
+Redside Dace,Méné long,Clinostomus elongatus,"Catfish, Salmon, Sunfish & Walleye"
+Redside Shiner,Méné rose,Richardsonius balteatus,"Catfish, Salmon, Sunfish & Walleye"
+Ribbon Shiner,Méné ruban,Lythrurus fumeus,"Catfish, Salmon, Sunfish & Walleye"
 Rio Grande Darter,Dard Rio Grande,Etheostoma grahami,"Catfish, Salmon, Sunfish & Walleye"
-Rio Grande Silvery Minnow,M?n? d?argent,Hybognathus amarus,"Catfish, Salmon, Sunfish & Walleye"
+Rio Grande Silvery Minnow,Méné d’argent,Hybognathus amarus,"Catfish, Salmon, Sunfish & Walleye"
 River Chub,,Nocomis micropogon,"Catfish, Salmon, Sunfish & Walleye"
 River Darter,,Percina shumardi,"Catfish, Salmon, Sunfish & Walleye"
-River Lamprey,Lamproie de rivi?re,Lampetra ayresii,Eel
-River Redhorse,Chevalier de rivi?re,Moxostoma carinatum,"Catfish, Salmon, Sunfish & Walleye"
+River Lamprey,Lamproie de rivière,Lampetra ayresii,Eel
+River Redhorse,Chevalier de rivière,Moxostoma carinatum,"Catfish, Salmon, Sunfish & Walleye"
 River Shiner,,Notropis blennius,"Catfish, Salmon, Sunfish & Walleye"
 Roach,Gardon,Rutilus rutilus,"Catfish, Salmon, Sunfish & Walleye"
 Rock Bass,Crapet de roche,Ambloplites rupestris,"Catfish, Salmon, Sunfish & Walleye"
-Rosyface Shiner,T?te rose,Notropis rubellus,"Catfish, Salmon, Sunfish & Walleye"
-Round Whitefish,M?nomini rond,Prosopium cylindraceum,"Catfish, Salmon, Sunfish & Walleye"
-Sabine Shiner,M?n? Sabine,Notropis sabinae,"Catfish, Salmon, Sunfish & Walleye"
-Sand Shiner,M?n? paille,Notropis stramineus,"Catfish, Salmon, Sunfish & Walleye"
-Sauger,Dor? noir,Sander canadensis,"Catfish, Salmon, Sunfish & Walleye"
+Rosyface Shiner,Tête rose,Notropis rubellus,"Catfish, Salmon, Sunfish & Walleye"
+Round Whitefish,Ménomini rond,Prosopium cylindraceum,"Catfish, Salmon, Sunfish & Walleye"
+Sabine Shiner,Méné Sabine,Notropis sabinae,"Catfish, Salmon, Sunfish & Walleye"
+Sand Shiner,Méné paille,Notropis stramineus,"Catfish, Salmon, Sunfish & Walleye"
+Sauger,Doré noir,Sander canadensis,"Catfish, Salmon, Sunfish & Walleye"
 Sea Lamprey,Lamproie marine,Petromyzon marinus,Eel
-Sharpnose Shiner,M?n? ? nez pointu,Notropis oxyrhynchus,"Catfish, Salmon, Sunfish & Walleye"
+Sharpnose Shiner,Méné à nez pointu,Notropis oxyrhynchus,"Catfish, Salmon, Sunfish & Walleye"
 Shorthead Redhorse,Chevalier rouge,Moxostoma macrolepidotum,"Catfish, Salmon, Sunfish & Walleye"
-Shorthead Sculpin,Chabot ? t?te courte,Cottus confusus,
-Shortjaw Cisco,Cisco ? m?choires ?gales,Coregonus zenithicus,"Catfish, Salmon, Sunfish & Walleye"
-Shortnose Cisco,Cisco ? museau court,Coregonus reighardi,"Catfish, Salmon, Sunfish & Walleye"
-Shortnose Sturgeon,Esturgeon ? museau court,Acipenser brevirostrum,Herring & Sturgeon
-Shovelnose Sturgeon,Esturgeon ? museau plat,Scaphirhynchus platorynchus,Herring & Sturgeon
-Silver Chub,,Macrhybopsis?storeriana,"Catfish, Salmon, Sunfish & Walleye"
-Silver Lamprey,Lamproie argent?e,Ichthyomyzon unicuspis,Eel
+Shorthead Sculpin,Chabot à tête courte,Cottus confusus,
+Shortjaw Cisco,Cisco à mâchoires égales,Coregonus zenithicus,"Catfish, Salmon, Sunfish & Walleye"
+Shortnose Cisco,Cisco à museau court,Coregonus reighardi,"Catfish, Salmon, Sunfish & Walleye"
+Shortnose Sturgeon,Esturgeon à museau court,Acipenser brevirostrum,Herring & Sturgeon
+Shovelnose Sturgeon,Esturgeon à museau plat,Scaphirhynchus platorynchus,Herring & Sturgeon
+Silver Chub,,Macrhybopsis storeriana,"Catfish, Salmon, Sunfish & Walleye"
+Silver Lamprey,Lamproie argentée,Ichthyomyzon unicuspis,Eel
 Silver Redhorse,Chevalier blanc,Moxostoma anisurum,"Catfish, Salmon, Sunfish & Walleye"
-Silverband Shiner,M?n? miroir,Notropis shumardi,"Catfish, Salmon, Sunfish & Walleye"
+Silverband Shiner,Méné miroir,Notropis shumardi,"Catfish, Salmon, Sunfish & Walleye"
 Slimy Sculpin,Chabot visqueux,Cottus cognatus,
-Smalleye Shiner,M?n? ? petits yeux,Notropis buccula,"Catfish, Salmon, Sunfish & Walleye"
-Smallmouth Bass,Achigan ? petite bouche,Micropterus dolomieu,"Catfish, Salmon, Sunfish & Walleye"
+Smalleye Shiner,Méné à petits yeux,Notropis buccula,"Catfish, Salmon, Sunfish & Walleye"
+Smallmouth Bass,Achigan à petite bouche,Micropterus dolomieu,"Catfish, Salmon, Sunfish & Walleye"
 Sockeye Salmon,Saumon rouge,Oncorhynchus nerka,"Catfish, Salmon, Sunfish & Walleye"
 Southern Leatherside Chub,,Lepidomeda aliciae,"Catfish, Salmon, Sunfish & Walleye"
-Speckled Chub,M?n? mouchet?,Macrhybopsis aestivalis,"Catfish, Salmon, Sunfish & Walleye"
-Speckled Dace,seux mouchet?,Rhinichthys osculus,"Catfish, Salmon, Sunfish & Walleye"
+Speckled Chub,Méné moucheté,Macrhybopsis aestivalis,"Catfish, Salmon, Sunfish & Walleye"
+Speckled Dace,seux moucheté,Rhinichthys osculus,"Catfish, Salmon, Sunfish & Walleye"
 Splittail,,Pogonichthys macrolepidotus,"Catfish, Salmon, Sunfish & Walleye"
-Spoonhead Sculpin,Chabot ? t?te plate,Cottus ricei,
-Spotfin Shiner,M?n? bleu,Cyprinella spiloptera,"Catfish, Salmon, Sunfish & Walleye"
-Spottail Shiner,Queue ? tache noire,Notropis hudsonius,"Catfish, Salmon, Sunfish & Walleye"
-Spotted Gar,L?pisost? tachet?,Lepisosteus oculatus,Pike
+Spoonhead Sculpin,Chabot à tête plate,Cottus ricei,
+Spotfin Shiner,Méné bleu,Cyprinella spiloptera,"Catfish, Salmon, Sunfish & Walleye"
+Spottail Shiner,Queue à tache noire,Notropis hudsonius,"Catfish, Salmon, Sunfish & Walleye"
+Spotted Gar,Lépisosté tacheté,Lepisosteus oculatus,Pike
 Spotted Sucker,,Minytrema melanops,"Catfish, Salmon, Sunfish & Walleye"
 Stonecat,Barbotte des rapides,Noturus flavus,"Catfish, Salmon, Sunfish & Walleye"
-Striped Bass,Bar d'Am?rique,Morone saxatilis,"Catfish, Salmon, Sunfish & Walleye"
-Striped Shiner,M?n? ray?,Luxilus chrysocephalus,"Catfish, Salmon, Sunfish & Walleye"
+Striped Bass,Bar d'Amérique,Morone saxatilis,"Catfish, Salmon, Sunfish & Walleye"
+Striped Shiner,Méné rayé,Luxilus chrysocephalus,"Catfish, Salmon, Sunfish & Walleye"
 Tadpole Madtom,Chat-fou brun,Noturus gyrinus,"Catfish, Salmon, Sunfish & Walleye"
 Tench,Tanche,Tinca tinca,"Catfish, Salmon, Sunfish & Walleye"
 Texas Shiner,,Notropis amabilis,"Catfish, Salmon, Sunfish & Walleye"
-Threespine stickleback,?pinoche ? trois ?pines,Gasterosteus aculeatus,
-Tiger Muskellunge,,Esox lucius ? masquinongy,Pike
-Topeka Shiner,M?n? Topeka,Notropis topeka,"Catfish, Salmon, Sunfish & Walleye"
+Threespine Stickleback,Épinoche à trois épines,Gasterosteus aculeatus,
+Tiger Muskellunge,,Esox lucius × masquinongy,Pike
+Topeka Shiner,Méné Topeka,Notropis topeka,"Catfish, Salmon, Sunfish & Walleye"
 Torrent Sculpin,Chabot de torrent,Cottus rhotheus,
 Trout-perch,Omisco,Percopsis omiscomaycus,"Catfish, Salmon, Sunfish & Walleye"
 Twaite Shad,Alose feinte,Alosa fallax,Herring & Sturgeon
-Walleye,Dor? jaune,Sander vitreus,"Catfish, Salmon, Sunfish & Walleye"
-Weed Shiner,M?n? d?herbe,Notropis texanus,"Catfish, Salmon, Sunfish & Walleye"
+Walleye,Doré jaune,Sander vitreus,"Catfish, Salmon, Sunfish & Walleye"
+Weed Shiner,Méné d’herbe,Notropis texanus,"Catfish, Salmon, Sunfish & Walleye"
 Western Brook Lamprey,Lamproie de l' ouest,Lampetra richardsoni,Eel
 White Bass,Bar blanc,Morone chrysops,"Catfish, Salmon, Sunfish & Walleye"
 White Crappie,Crapet calicot,Pomoxis annularis,"Catfish, Salmon, Sunfish & Walleye"
