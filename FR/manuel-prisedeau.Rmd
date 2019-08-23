@@ -19,7 +19,7 @@ output:
 
 </script>
 
-##Contexte
+## Contexte
 
 Les prises d’eau sans grillage peuvent entraîner des poissons. La vidéo incluse montre un esturgeon vert entraîné dans un tuyau qui extrait de l’eau à un débit de 570 L/s dans un chenal expérimental [@mussen2014unscreened]. Pour empêcher l’entraînement, il faut installer un grillage sur les prises d’eau. Si la superficie du grillage est trop petite, le poisson peut rester coincé sur le grillage. L’[Outil de dimension du grillage à l’entrée d’une prise d’eau](http://www.fishprotectiontools.ca/fr/prisedeau.html) sert à calculer la superficie utile du grillage en fonction de l’espèce et de la taille des poissons ainsi que du volume d’eau extrait. La Superficie utile du grillage est l’espace disponible dans lequel l’eau peut circuler librement et l’espace occupé par le matériau du grillage, mais excluant l’espace occupé par les principales structures de soutien. Cet outil prédit la performance natatoire du poisson à l’aide d’un modèle élaboré au moyen de 27 030 poissons individuels dans 132 sources de données. Pour obtenir des détails sur le modèle, les ensembles de données et la façon dont les calculs sont effectués, voir [Katopodis et Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html).
 
@@ -29,11 +29,11 @@ Dans ce manuel, on répond à un exemple de problème à l’aide de cet outil.
   name = "Video Name" src = EntrainedSturgeon.mp4
   style="float:right;margin-left:10px"frameborder="0">
   
-##Exemple de question
+## Exemple de question
 
 Un promoteur veut extraire de l’eau à un débit de 100 L/s d’un étang à proximité. L’étang est l’habitat d’achigans à petite bouche, de perchaudes et de grands brochets. On propose une prise d’eau cylindrique à extrémités solides et un grillage de fils métalliques triangulaires nº 60 autour du cylindre. Quelles doivent être les dimensions du grillage d’entrée?
 
-###Étapes
+### Étapes
 
 A.  Déterminer la superficie utile du grillage nécessaire.
 B.  Déterminer les dimensions du grillage.
@@ -58,7 +58,7 @@ Une fois ces étapes effectuées, l’outil indique qu’une superficie utile de
    iFrameResize({heightCalculationMethod: "lowestElement"});
 </script>
 
-####B. Déterminer les dimensions du grillage
+#### B. Déterminer les dimensions du grillage
 
 Dans le cas d’un grillage cylindrique à extrémités solides, où le grillage est autour du cylindre, on utilise la formule suivante :
 
@@ -74,18 +74,18 @@ $$
 \end{aligned}
 $$
 
-###Solution
+### Solution
 
 Un grillage cylindrique régulièrement nettoyé de 0,60 m de diamètre et de 0,96 m de long respecterait les critères de conception. Il importe de noter que les dimensions représentent seulement la superficie du grillage; elles n’incluent pas toute portion du grillage qui pourrait être bloquée par un cadre, etc.
 
-##Options avancées
+## Options avancées
 
 Le fait de cliquer la case à cocher « Afficher les options avancées » offre un contrôle grandement supérieur par rapport aux [Lignes directrices de 1995](http://publications.gc.ca/collections/Collection/Fs23-270-2004F.pdf), notamment la capacité de modifier la durée nécessaire pour qu’un poisson s’éloigne de la surface d’un grillage, la capacité de diminuer la proportion de poissons protégées à moins de 97,5 % et la capacité d’augmenter la longueur du poisson près de la prise d’eau. Dans la plupart des cas, il ne faut pas modifier ces valeurs par rapport aux valeurs par défaut.
 
-##Renseignements supplémentaires
+## Renseignements supplémentaires
 
 Sous le tableau, une ligne de texte affiche la vitesse d’approche nominale en m/s. Cette information peut s’avérer utile quand on utilise la calculatrice de dimension du grillage à l’entrée d’une prise d’eau en conjonction avec les règlements provinciaux ou pour vérifier si le grillage fonctionne correctement une fois installé.
 L’outil de dimension du grillage à l’entrée d’une prise d’eau peut servir à calculer la superficie utile du grillage nécessaire pour prévenir la majorité de l’entraînement et de l’impaction à l’aide du débit d’entrée seulement. Pour ce faire, s’assurer que tous les groupes sont sélectionnés et que le mode est réglé à « base ». Entrer le débit d’entrée et la superficie utile du grillage empêchera l’entraînement et l’impaction de tous les poissons plus grands que 25 mm au niveau de la prise d’eau. Il est important de se rappeler que ces grillages ne protègent que très peu le plancton, par exemple les poissons en premier stade biologique, contre l’entraînement ou l’impaction.
 
 
-###Références
+### Références

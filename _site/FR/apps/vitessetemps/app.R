@@ -207,8 +207,8 @@ server <- function(input, output, session){
         theme_classic() +
         theme(axis.line.x = element_line(color="black", size = .5),
               axis.line.y = element_line(color="black", size = .5))+
-        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=16, family="lato"))+
-        theme(axis.text = element_text(size=20, family="lato"), axis.title = element_text(size=20, family="lato"))+
+        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=12, family="lato"))+
+        theme(axis.text = element_text(size=16, family="lato"), axis.title = element_text(size=16, family="lato"))+
         scale_x_log10(name = "Temps de nage (s)", limits=c(3, 1800))+
         scale_y_log10(name = "Vitesse de nage (m/s)", limits=c(.02, 14))+
         annotation_logticks(base = 10, sides = "b")+

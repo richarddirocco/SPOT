@@ -27,7 +27,7 @@ bibliography: bibliography.bib
 
 </script>
 
-##Contexte
+## Contexte
 
 Ce guide présente une collection de courbes de fatigue de nage (vitesse de nage par rapport au temps d’endurance) et de distance (distance de nage par rapport à la vitesse de l’eau) produites à l’aide de données recueillies dans divers documents. L’analyse est axée sur les espèces d’eau douce (p. ex., potamodrome) et les espèces dont l’étape du cycle de vie nécessite l’utilisation d’eau douce (p. ex., espèce diadrome, y compris les salmonidés anadromes et les anguilles catadromes).
 
@@ -43,7 +43,7 @@ Le « groupe des brochets » était un cas spécial en ce sens qu’un manque de
 
 Une description plus détaillée de l’analyse et de la déduction des courbes de performance natatoire présentées dans ce guide se trouve dans @katopodis2016fish.
 
-##Utilisation des équations
+## Utilisation des équations
 
 Le présent document contient une série d’équations qui peuvent servir à estimer ce qui suit :
 
@@ -53,7 +53,7 @@ Le présent document contient une série d’équations qui peuvent servir à es
 Les deux ensembles de relations sont fondés sur des données regroupées composées d’un ensemble d’espèces de poissons différents. La performance natatoire d’une espèce de poissons en particulier est représentée par le groupe. Par exemple, pour estimer la performance natatoire de la truite arc-en-ciel, le groupe des saumons et des dorés jaunes est utilisé, car la truite arc-en-ciel fait partie de ce groupe. Le [tableau 4](#tableu4) contient une liste d’espèces et les groupes auxquels appartiennent ces espèces. Les équations relatives à la fatigue et l’outil Web présentent une ligne de régression avec des lignes d’intervalle de prédiction de 75 % et 95 %. Les équations relatives à la distance ont été générées à partir des équations relatives à la fatigue et correspondent aux lignes de fatigue. Les intervalles de prédiction, parfois connus sous le nom d’intervalles de probabilité, sont différents des intervalles de confiance. L’intervalle de prédiction est un intervalle statistique calculé pour comprendre au moins une observation future de la même population avec un degré de confiance précis. L’intervalle de prédiction sert à prédire la plage dans laquelle on s’attend à ce qu’une observation unique se situe. Il a été inclus pour refléter la variation de performance (dispersion au-dessus et en dessous de la ligne de régression), ce qui est important pour quantifier la performance. Par exemple, l’intervalle de prédiction de 95 % pour la distance de nage représente la plage dans laquelle la prochaine mesure aurait 95 % de chance de se situer. Pour un intervalle de prédiction de 95 %, il existe une chance de 2,5 % qu’une observation se situe sous la limite inférieure de l’intervalle et une chance de 2,5 % qu’elle se situe au-dessus de la limite supérieure. En conséquence, la ligne de la limite inférieure de cet intervalle de prédiction représenterait le point de séparation au-dessus duquel il existe une chance de 97,5 % qu’un poisson puisse nager sur cette distance en particulier. Le choix de la ligne à utiliser doit tenir compte du risque global pour cette espèce en particulier ainsi que du bassin hydrographique. Par exemple, quand le passage du poisson est problématique et que le but est de minimiser les répercussions à long terme sur une population en particulier, la courbe de limite inférieure devrait être utilisée pour tenir compte d’un degré plus élevé de passage à atteindre. Il est important de souligner que les vitesses de nage ne sont qu’un facteur parmi tant d’autres dont il faut tenir compte pour obtenir les niveaux souhaitables de passage du poisson en amont et en aval, et elles ne doivent pas être utilisées exclusivement pour juger des conceptions ou de l’efficacité.
 
 
-##Courbes de fatigue
+## Courbes de fatigue
 
 La section [Équations relatives à la fatigue](#equationsfatique) comprend les équations adimensionnelles pour les courbes de fatigue et les tableaux récapitulatifs des coefficients (k et b) pour la ligne de régression avec des intervalles de prédiction de 75 % et 95 % pour chacun des groupes. Les équations peuvent être utilisées pour calculer ce qui suit :
 
@@ -62,7 +62,7 @@ La section [Équations relatives à la fatigue](#equationsfatique) comprend les 
 * la vitesse de nage (U en m/s) en fonction de l’espèce, de la longueur du poisson (l en m) et du temps d’endurance (t en s)
 * la longueur du poisson (l en m) en fonction de l’espèce, de la vitesse de nage (U en m/s) et du temps d’endurance (t en s)
 
-##Équations relatives à la fatigue {#equationsfatique}
+## Équations relatives à la fatigue {#equationsfatique}
 
 Les courbes de fatigue adimensionnelles sont des relations entre la vitesse adimensionnelle du poisson (U<sub>\*</sub>) et le temps d’endurance adimensionnel (t<sub>\*</sub>).
 
@@ -75,12 +75,12 @@ Et : $$t_* = \frac{t}{\sqrt{l/g}}$$
 Où :
 
 *   *U*<sub>\*</sub> est la vitesse de nage du poisson en m/s
-*	  *t*<sub>\*</sub> est le temps d’endurance en secondes qui est limité entre 3 et 1 800 secondes
+*   *t*<sub>\*</sub> est le temps d’endurance en secondes qui est limité entre 3 et 1 800 secondes
 * 	*g* est l’accélération gravitationnelle (9,81 m/s^2^)
 *   *l* est la longueur du poisson en mètres
 *   *k* et *b* sont les coefficients dérivés de l’analyse de la régression de Deming
 
-```{r echo = FALSE, results = 'asis'}
+```{r echo = FALSE, results = 'asis', message=FALSE}
 library(DT)
 library(knitr)
 library(kableExtra)
@@ -101,7 +101,7 @@ kable(dt, "html", align="lcccccccc", col.names = c("Groupe","k", "b","k", "b","k
   column_spec(1, width = "9em")
 ```
 
-##Courbes de distance
+## Courbes de distance
 
 La section [Équations relatives à la distance](#equationsdistance) comprend les équations adimensionnelles pour les courbes de distance et les tableaux récapitulatifs des coefficients (M et a) pour la ligne de régression avec des intervalles de prédiction de 75 % et 95 % pour chacun des groupes. Les équations peuvent être utilisées pour calculer ce qui suit :
 
@@ -110,7 +110,7 @@ La section [Équations relatives à la distance](#equationsdistance) comprend le
 *   la longueur du poisson (l en m) en fonction de l’espèce, de la vitesse de l’eau (V en m/s) et de la distance de nage (X en m)
 
 
-##Équations relatives à la distance {#equationsdistance}
+## Équations relatives à la distance {#equationsdistance}
 
 Les courbes de distance de nage adimensionnelles sont des relations entre la vitesse adimensionnelle de l’eau (V<sub>\*</sub>) et la distance de nage adimensionnelle (X<sub>\*</sub>).
 
@@ -139,7 +139,7 @@ kable(dt, "html", align="lcccccccccc", col.names = c("Group","M","a","M","a","M"
   column_spec(1, width = "9em")
 ```
 
-##Exemple de vitesse par rapport au temps
+## Exemple de vitesse par rapport au temps
 
 Question : pendant combien de temps une truite arc-en-ciel moyenne de 250 mm peut-elle nager à 1 m/s?
 
@@ -184,14 +184,14 @@ Solution – Vitesse par rapport au temps
 
 La truite arc-en-ciel moyenne de 250 mm peut nager à 1 m/s pendant 246 secondes.
 
-##Exemple de distance par rapport à la vitesse
+## Exemple de distance par rapport à la vitesse
 
 Question : un soumissionnaire souhaite installer un ponceau de 30 mètres. Quelle est la vitesse maximale de l’eau que 87,5 % des grands brochets peuvent surmonter?
 
 Il y a deux façons de répondre à cette question. La première méthode, celle qui est recommandée, est d’utiliser [l’outil Web interactif](#outilweb2). L’outil Web effectue de façon automatique et fiable les calculs présentés dans ce guide. Autrement, on peut [faire les calculs manuellement](#formuledistancevitesse).
 
 
-###Outil Web – distance par rapport à la vitesse {#outilweb2}
+### Outil Web – distance par rapport à la vitesse {#outilweb2}
 
 1.	Consultez [l’outil de vitesse et de temps de nage](http://www.fishprotectiontools.ca/fr/distancevitesse.html).
 2.	Sous « Sélectionner le poisson par : », cliquer sur le bouton d’option « Nom courant ».
@@ -208,7 +208,7 @@ knitr::include_app("http://www.fishprotectiontools.ca/fr/distancevitesse/?_input
 ```
 </center>
 
-###Formule – Distance par rapport à la vitesse {#formuledistancevitesse}
+### Formule – Distance par rapport à la vitesse {#formuledistancevitesse}
 
 1.	Déterminer le bon groupe du grand brochet. Le [Résumé de groupe par espèce](#tableu4) contient une liste d’espèces pour chaque groupe. Dans le tableau, le grand brochet fait partie du groupe « Brochet (dérivé) ».
 2.	On peut calculer la distance de nage à l’aide des [équations relatives à la distance](#equationsdistance). Pour utiliser les équations, trouver les coefficients k et b. Pour le temps d’endurance moyen, utiliser les coefficients d’équation de régression.
@@ -223,11 +223,11 @@ Et :  $$V_* = \frac{V}{\sqrt{9.81\times0.4}} = 0.505V$$
 
 Calculer V : $$V = \left(\frac{75}{3.846}\right)^{-1/2.040} \div 0.505 = 0.46 \text{ m/s}$$
 
-###Solution – Distance par rapport à la vitesse
+### Solution – Distance par rapport à la vitesse
 
 Ce ponceau ne doit pas dépasser une vitesse de l’eau de 0,46 m/s pour permettre le passage de 87,5 % des grands brochets de 400 mm.
 
-##Mot de la fin
+## Mot de la fin
 
 Voici des observations de nature générale relatives à la performance natatoire des poissons, les essais utilisés pour mesurer la performance et l’analyse des données pour obtenir les estimations de la performance.
 
@@ -247,7 +247,7 @@ Voici des observations de nature générale relatives à la performance natatoir
 *	Les résultats de ces analyses peuvent représenter un « meilleur effort » en raison des limites des données disponibles. La performance natatoire dépend de facteurs qui ne peuvent pas être mesurés de façon concluante. Les structures de passage des poissons réelles génèrent souvent des conditions hydrauliques qui diffèrent de celles mises à l’essai dans des dispositifs de performance natatoire.
 
 
-##Résumé de groupe par espèce {#tableu4}
+## Résumé de groupe par espèce {#tableu4}
 
 ```{r echo = FALSE, results = 'asis'}
 dt <- read.csv("Tables/FishList.csv", fileEncoding = "ISO-8859-13")
@@ -256,4 +256,4 @@ kable(dt, "html", caption = "Tableau 4. Le résumé des familles et des espèces
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
 ```
 
-##Références
+## Références

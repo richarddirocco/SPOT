@@ -17,8 +17,8 @@ MaturityData$Sex <- as.factor(MaturityData$Sex)
 MaturityData$Country <- as.factor(MaturityData$Country)
 
 # Translate column names to French
-names(MaturityData) <- c("ScientificName", "EnglishName", "Sexe", "Longueur minimale à première maturité (mm)", 
-                         "Longueur moyenne à première maturité (mm)", "Type de mesure", "Pays", "Région", "Référence", "FrenchName")
+names(MaturityData) <- c("ScientificName", "EnglishName", "FrenchName", "Sexe", "Longueur minimale à première maturité (mm)", 
+                         "Longueur moyenne à première maturité (mm)", "Type de mesure", "Pays", "Région", "Référence")
 
 # Translate length types
 # MaturityData$"Type de mesure"[MaturityData$"Type de mesure"=="FL"] <- "LF"

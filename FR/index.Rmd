@@ -1,5 +1,5 @@
 ---
-title: "Bienvenue dans les OPNL <br> Outils de performance natatoire en ligne <hr>"
+title: "Bienvenue dans les OPNL"
 output: 
   html_document:
     css: style.css
@@ -17,6 +17,9 @@ output:
 
 </script>
 
+<center>
+# Outils de performance natatoire en ligne
+</center>
 
 Les OPNL sont une collection d’outils servant à estimer la performance natatoire des poissons. Les estimations présentées par ces outils peuvent s’avérer utiles pour élaborer et concevoir des systèmes de passage, d’exclusion et d’orientation du poisson. Ces outils interactifs en ligne effectuent des calculs complexes de façon fiable et automatique. Pour obtenir plus de renseignements sur ces outils et les calculs qu’ils effectuent, consultez le [Guide de l’utilisateur](http://www.fishprotectiontools.ca/fr/utilisateur.html). Un aperçu de chaque outil est présenté ci-dessous.
 

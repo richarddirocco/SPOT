@@ -17,8 +17,8 @@ MaturityData$Sex <- as.factor(MaturityData$Sex)
 MaturityData$Country <- as.factor(MaturityData$Country)
 
 # Translate column names to French
-names(MaturityData) <- c("ScientificName", "EnglishName", "Sexe", "Longueur minimale à première maturité (mm)", 
-                         "Longueur moyenne à première maturité (mm)", "Type de mesure", "Pays", "Région", "Référence", "FrenchName")
+names(MaturityData) <- c("ScientificName", "EnglishName", "FrenchName", "Sexe", "Longueur minimale à première maturité (mm)", 
+                         "Longueur moyenne à première maturité (mm)", "Type de mesure", "Pays", "Région", "Référence")
 
 # Translate length types
 # MaturityData$"Type de mesure"[MaturityData$"Type de mesure"=="FL"] <- "LF"
@@ -98,14 +98,17 @@ server <- function(input, output) {
                                             server = TRUE, 
                                             escape = FALSE, 
                                             rownames = FALSE,
+                                            colnames=c("Longueur minimale à première maturité (mm)" = 5,
+                                                       "Longueur moyenne à première maturité (mm)" = 6,
+                                                       "Type de mesure" = 7),
                                             options = list(
                                               columnDefs = list(list(className = 'dt-center', targets = c(3, 4, 5)),
-                                                                (list(targets = c(0, 1, 9), visible = FALSE))),
+                                                                (list(targets = c(0,1,2), visible = FALSE))),
                                               pageLength = 500,
                                               dom = 't',
                                               autoWidth = TRUE
-                                              )
                                             )
+  )
 }
 
 shinyApp( ui = ui, server = server)

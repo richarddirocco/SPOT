@@ -14,12 +14,12 @@ showtext_auto()
 options(scipen=5)
 
 #import K and b values for each group of fish (used in equations)
-GroupVariables <- read.csv("GroupVariables.csv", fileEncoding = "ISO-8859-13") 
+GroupVariables <- read.csv("GroupVariables.csv") 
 rownames(GroupVariables)<-GroupVariables$Group
 GroupVariables$Group <- NULL
 
 #import list of common and scientific names and their respective lengths
-FishList <- read.csv("FishList.csv", fileEncoding = "ISO-8859-13")
+FishList <- read.csv("FishList.csv")
 FishList$FrenchGroupName <- as.character(FishList$FrenchGroupName)
 
 Velocity = data.frame(seq(from=0.1, to=10, by=0.01))
@@ -207,8 +207,8 @@ server <- function(input, output, session){
         theme_classic() +
         theme(axis.line.x = element_line(color="black", size = .5),
               axis.line.y = element_line(color="black", size = .5))+
-        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=16, family="lato"))+
-        theme(axis.text = element_text(size=20, family="lato"), axis.title = element_text(size=20, family="lato"))+
+        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=12, family="lato"))+
+        theme(axis.text = element_text(size=16, family="lato"), axis.title = element_text(size=16, family="lato"))+
         scale_x_log10(name = "Temps de nage (s)", limits=c(3, 1800))+
         scale_y_log10(name = "Vitesse de nage (m/s)", limits=c(.02, 14))+
         annotation_logticks(base = 10, sides = "b")+

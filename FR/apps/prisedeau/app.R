@@ -5,13 +5,13 @@ library(tidyr)
 
 
 # import K and b values for each group of fish (used in equations)
-data <- read.csv("GroupVariables.csv", fileEncoding = "ISO-8859-13")
+data <- read.csv("GroupVariables.csv", fileEncoding = "UTF-8")
 rownames(data)<-data$Group
 data$Group <- NULL
 
 # import list of common and scientific names and their respective lengths
-FishList <- read.csv("FishList.csv", stringsAsFactors=FALSE, fileEncoding = "ISO-8859-13")
-FishList$FrenchGroupName <- as.character(FishList$FrenchGroupName)
+FishList <- read.csv("FishList.csv", stringsAsFactors=FALSE, fileEncoding = "UTF-8")
+#FishList$FrenchGroupName <- as.character(FishList$FrenchGroupName)
 
 Velocity = data.frame(seq(from=0.1, to=10, by=0.01))
 colnames(Velocity)[1] <- "Velocity"
