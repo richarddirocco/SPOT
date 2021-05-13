@@ -3,7 +3,6 @@ library(shinythemes)
 library(ggvis)
 library(tidyr)
 
-
 # import K and b values for each group of fish (used in equations)
 data <- read.csv("GroupVariables.csv")
 rownames(data)<-data$Group
@@ -24,6 +23,8 @@ colnames(Velocity)[1] <- "Velocity"
 
 ui <- function(request){
   (fluidPage(
+    
+    tags$head(includeScript("google-analytics.js")),
     
     # Add script to resize iframe automatically
     # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
