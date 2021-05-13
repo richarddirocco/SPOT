@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +85,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -245,18 +245,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -362,11 +350,11 @@ Figure 1. Exemple de tracé généré par l’outil de vitesse et de temps de na
 <li>Pour obtenir de plus amples renseignements sur cet outil et un échantillon de problème, consultez le <a href="http://www.fishprotectiontools.ca/fr/utilisateur.html#exemple_de_distance_par_rapport_%C3%A0_la_vitesse">Manuel sur l’outil de distance de nage et de vitesse de l’eau</a>.</li>
 </ul>
 </div>
-<div id="outil-de-longueur-a-maturite" class="section level3">
+<div id="outil-de-longueur-à-maturité" class="section level3">
 <h3>Outil de longueur à maturité</h3>
 <p>L’<a href="http://www.fishprotectiontools.ca/fr/longueurmaturite.html">outil de longueur à maturité</a> peut servir à consulter les données sur la maturité d’une espèce. L’outil présente un tableau de références dans lequel sont indiquées les longueurs minimales et moyennes à maturité. Dans les cas où le poisson mature doit franchir un obstacle pour compléter son cycle vital, la longueur à maturité peut s’avérer utile pour estimer la performance natatoire au moyen d’un autre outil du présent site Web. Par exemple, si le saumon de l’Atlantique en migration doit franchir un ponceau de 30 mètres pour atteindre un habitat de frai, quelle longueur de poisson conviendrait-il d’utiliser dans l’outil de distance de nage et de vitesse de l’eau?</p>
 </div>
-<div id="outil-de-dimension-du-grillage-a-lentree-dune-prise-deau" class="section level3">
+<div id="outil-de-dimension-du-grillage-à-lentrée-dune-prise-deau" class="section level3">
 <h3>Outil de dimension du grillage à l’entrée d’une prise d’eau</h3>
 <p>L’<a href="http://www.fishprotectiontools.ca/fr/prisedeau.html">outil de dimension du grillage à l’entrée d’une prise d’eau</a> calcule la superficie de grillage nécessaire au niveau de la prise d’eau pour éviter l’impaction de 97,5 % des poissons selon l’espèce, la longueur et la durée nécessaire pour qu’un poisson s’éloigne de la face du grillage. Des renseignements supplémentaires et un échantillon de problème se trouvent dans le <a href="http://www.fishprotectiontools.ca/fr/manuel-prisedeau.html">Manuel sur l’outil de dimension du grillage à l’entrée d’une prise d’eau</a>.</p>
 </div>
@@ -389,6 +377,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
