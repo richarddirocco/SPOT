@@ -21,7 +21,20 @@ output:
 
 <br>
 
-This website hosts prototype tools built to expand on the <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html'> Fish Swimming Performance Database and Analyses </a> CSAS document [@katopodis2016fish]. This website was coded by <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> in  <a href='https://www.r-project.org/' target='_blank'>R</a> [@R] using the following packages:
+This website hosts prototype tools built to expand on the <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html'> Fish Swimming Performance Database and Analyses </a> CSAS document [@katopodis2016fish]. This website was coded by Richard Di Rocco with input from Richard Gervais. Feedback regarding these tools is welcome and can be submitted <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.
+
+
+## Citing this tool
+
+Please cite the CSAS document and this website separately as:
+
+Katopodis, C, and R Gervais. 2016. *Fish Swimming Performance Database and Analyses*. DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002., 550. Available from http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html.
+
+Di Rocco, R, and R. Gervais. `r paste(format(Sys.Date(),"%Y"), ". ", sep="")`*SPOT: Swim Performance Online Tools*. Available from http://www.fishprotectiontools.ca/. 
+
+## Packages
+
+These tools are coded in <a href='https://www.r-project.org/' target='_blank'>R</a> [@R] using the following packages:
 
 * <a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a> [@shiny]
 * <a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a> [@ggplot2]
@@ -30,6 +43,13 @@ This website hosts prototype tools built to expand on the <a href='http://www.df
 * <a href='http://rmarkdown.rstudio.com/' target='_blank'>R Markdown</a> [@rmarkdown]
 * <a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a> [@rfishbase]
 
-This website is still in development. Feedback is welcome and can be submitted <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.
+## References
+<div id="refs"></div>
 
-### References
+<br>
+<br>
+
+<center>
+`r paste("Date Modified", Sys.Date())`
+</center>
+
