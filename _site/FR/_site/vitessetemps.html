@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +85,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -245,18 +245,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -291,7 +279,8 @@ $(document).ready(function () {
             <li><a href="vitessetemps.html">Vitesse et temps de nage</a></li>
             <li><a href="distancevitesse.html">Distance de nage et vitesse de l’eau</a></li>
             <li><a href="longueurmaturite.html">Longueur à maturité</a></li>
-            <li><a href="prisedeau.html">Calculer dimension du grillage</a></li>
+            <li><a href="basicprisedeau.html">Outil simple - Calculer dimension du grillage </a></li>
+            <li><a href="prisedeau.html">Outil complexe - Calculer dimension du grillage </a></li>
           </ul>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuels <span class="caret"></span></a>
@@ -357,6 +346,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

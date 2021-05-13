@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
 <title>Fish Swimming Performance User Guide</title>
 
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -26,13 +36,18 @@
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -45,30 +60,27 @@ if (window.hljs) {
 
 
 
+
 <style type="text/css">
-h1 {
-  font-size: 34px;
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
 }
-h1.title {
-  font-size: 38px;
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-h2 {
-  font-size: 30px;
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-h3 {
-  font-size: 24px;
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
 }
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -82,13 +94,8 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -102,40 +109,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -163,7 +143,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -175,7 +155,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -186,10 +166,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -201,7 +194,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -237,6 +229,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -249,48 +242,9 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -304,6 +258,12 @@ $(document).ready(function ()  {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -339,8 +299,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -367,7 +325,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -416,7 +374,8 @@ div.tocify {
 </div><!--/.navbar -->
 </html>
 
-<div class="fluid-row" id="header">
+
+<div id="header">
 
 
 
@@ -438,11 +397,11 @@ div.tocify {
 </script>
 <div id="background" class="section level2">
 <h2>Background</h2>
-<p>This guide presents a collection of fish swimming performance fatigue (swim speed versus endurance time) and distance (swim distance versus water velocity) curves that were produced from data collected from the literature. The focus of the analysis was on freshwater species ( e.g. potamodromous) and species with a life cycle stage that requires the use of freshwater ( e.g. diadromous species, including anadromous salmonids and catadromous eels).</p>
+<p>This guide presents a collection of fish swimming performance fatigue (swim speed versus endurance time) and distance (swim distance versus water velocity) curves that were produced from data collected from the literature. The focus of the analysis was on freshwater species (e.g. potamodromous) and species with a life cycle stage that requires the use of freshwater (e.g. diadromous species, including anadromous salmonids and catadromous eels).</p>
 <p>Data from fish performance studies were collected in the laboratory or the field through a variety of methods and constitute the database for analyses conducted. Data from swim chamber tests, such as time to fatigue (fixed velocity) and increasing velocity (critical swim speed), as well as fish speed and endurance from volitional open channels were used. Regressions were performed to generate fatigue curves for endurance in the range of 3 s (seconds) to 30 min (minutes). This range was considered the most practical and relevant for fish passage and other protection measures related to the swimming ability of fish.</p>
 <p>Data grouping was used to produce more inclusive and diverse datasets that capture measurements from a wide range of data sources. Furthermore, data grouping helps bridge data gaps related to limited or missing data, makes the results more universal and reduces the potential bias when data is limited. Each independent swim test should be regarded as a point in time measurement that reflects the performance of the specific fish that were tested and the conditions under which they were tested. Environmental conditions that can affect swimming capacity of fish are variable in the natural world, and include factors such as water velocity, water temperature, the fish’s energy stores related to food supply, fish health, and others. Testing may not capture the potential variation in performance from all these factors and therefore it is important to be aware of this when using swimming performance data.</p>
 <p>Fish length appears to be a major factor affecting swimming performance. Longer fish have higher fish speeds (U) expressed in m/s, than shorter ones. Fish speed is also expressed in body lengths per second (BL/s) or if l is fish length, U/l. In this case, shorter fish usually have higher relative speeds than longer ones. Estimates in BL/s are often used for various species, indicating swimming performance similarity between different species. A dimensionless speed (U<sub>*</sub>) is another way of expressing fish speed and is defined as U(gl)<sup>-0.5</sup>, where g has a constant value of 9.81 m/s<sup>2</sup>. The dimensionless speed identifies fish species with similar swimming performance more clearly and provides better regressions compared to BL/s or m/s.</p>
-<p>Regression analysis of available data was used to formulate a collection of dimensionless fatigue curves (dimensionless swim speed versus dimensionless endurance time) derived by grouping fish species with similar swimming performance. Dimensionless fatigue curves, for the 3 s to 30 min time range and corresponding distance curves, were generated for the following groups: 1) Eel; 2) Salmon and Walleye; 3) Catfish and Sunfish; 4) Sturgeon; 5) Herring; and 6) Pike (derived). The “Eel Group” and the “Salmon and Walleye Group”, which correspond to the previously named “anguilliform” and “subcarangiform” groups, have the more complete data sets and more robust regressions. The “Catfish and Sunfish” and “Sturgeon” groups lack burst or high fish speed data, while the “Herring Group” has limited prolonged or low speed fish data. These limitations should be kept in mind when using the results.</p>
+<p>Regression analysis of available data was used to formulate a collection of dimensionless fatigue curves (dimensionless swim speed versus dimensionless endurance time) derived by grouping fish species with similar swimming performance. Dimensionless fatigue curves, for the 3 s to 30 min time range and corresponding distance curves, were generated for the following groups: 1) Eel; 2) Salmon and Walleye; 3) Catfish and Sunfish; 4) Sturgeon; 5) Herring; and 6) Pike (derived). The “Eel Group” and the “Salmon and Walleye Group,” which correspond to the previously named “anguilliform” and “subcarangiform” groups, have the more complete data sets and more robust regressions. The “Catfish and Sunfish” and “Sturgeon” groups lack burst or high fish speed data, while the “Herring Group” has limited prolonged or low speed fish data. These limitations should be kept in mind when using the results.</p>
 <p>The “Pike Group” was a special case where a lack of data at the higher swimming speeds prevented the creation of a complete fatigue curve. Given the importance of pike for certain regions, a special curve was developed to provide some guidance on swimming capacity. The derived curve was based on existing pike swimming data at the lower end of the curve. Pike are known for strong burst speeds so the high end of the curve was estimated from the similar highest speeds from the “Eel” and the “Salmon and Walleye” groups. The derived curve was considered a more effective option that trying to include pike with one of the other groups where the fit may be more compromised.</p>
 <p>A more detailed description of the analysis and derivation of the swimming performance curves presented in this guide can be found in <span class="citation">Katopodis and Gervais (2016)</span>.</p>
 </div>
@@ -653,38 +612,38 @@ Table 2. Dimensionless fatigue equations for 75% and 95% prediction interval coe
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 95% Prediction Interval
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 75% Prediction Interval
 </div>
 </th>
 </tr>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Upper Boundary
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Lower Boundary
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Upper Boundary
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Lower Boundary
 </div>
@@ -927,43 +886,43 @@ Table 3. Dimensionless swim distance equations and prediction interval coefficie
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden" colspan="3">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="3">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 95% Prediction Interval
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 75% Prediction Interval
 </div>
 </th>
 </tr>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 X<sub>•</sub> vs. V<sub>•</sub>
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Upper Boundary
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Lower Boundary
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Upper Boundary
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Lower Boundary
 </div>
@@ -1219,7 +1178,7 @@ Pike (derived)
 </tbody>
 </table>
 </div>
-<div id="speed-vs.time-example" class="section level2">
+<div id="speed-vs.-time-example" class="section level2">
 <h2>Speed vs. Time Example</h2>
 <p>Question: How long can the average 250 mm rainbow trout swim 1 m/s?</p>
 <p>There are two ways to answer this question. The first and recommended method is using the interactive <a href="#webtoolspeedtime">webtool</a>. The webtool automatically and reliably performs the calculations contained in this guide. Alternatively, you can <a href="#formulaspeedtime">manually perform the calculations</a>.</p>
@@ -1227,14 +1186,16 @@ Pike (derived)
 <h3>WebTool - Speed vs. Time</h3>
 <ol style="list-style-type: decimal">
 <li>Go to the <a href="http://www.fishprotectiontools.ca/speedtime.html">Swim Speed &amp; Swim Time tool</a>.</li>
-<li>Below “Select Fish by:”, click the “Common name” radio button.</li>
-<li>In the “Select species” drop down menu, choose “Rainbow or Steelhead trout”.</li>
+<li>Below “Select Fish by:” click the “Common name” radio button.</li>
+<li>In the “Select species” drop down menu, choose “Rainbow or Steelhead trout.”</li>
 <li>Drag the “Fish length” slider to 250 mm.</li>
 <li>Below “Calculations:” press the “Swim time” radio button.</li>
 <li>Enter “1” in the “Swim speed” box.</li>
 </ol>
 <p>Once these steps are completed, the tool should look like this:</p>
 <center>
+<iframe src="http://www.fishprotectiontools.ca/speedtime/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Rainbow%20or%20Steelhead%20trout%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="672" height="1260px">
+</iframe>
 </center>
 </div>
 <div id="formulaspeedtime" class="section level3">
@@ -1246,12 +1207,12 @@ Pike (derived)
 <p><span class="math display">\[U_* = 4.004(t_*)^-0.25\]</span> Where: <span class="math display">\[U_* = \frac{1.0}{\sqrt{9.81\times0.250}} = 0.639\]</span></p>
 <p>And: <span class="math display">\[ t_* = \frac{t}{\sqrt{0.250/9.81}} = 6.264t\]</span> Substitute the values of U<sub>*</sub> and t<sub>*</sub> into the first equation: <span class="math display">\[0.639 = 4.004(6.264t)^{0.25}\]</span> Solving for t: <span class="math display">\[ t = \left(\frac{0.639}{4.004}\right)^{-1/0.25}\div6.264 = 246 \text{ seconds}\]</span></p>
 </div>
-<div id="solution---speed-vs.time" class="section level3">
+<div id="solution---speed-vs.-time" class="section level3">
 <h3>Solution - Speed vs. Time</h3>
 <p>The average 250 mm rainbow trout can swim 1 m/s for 246 seconds.</p>
 </div>
 </div>
-<div id="distance-vs.velocity-example" class="section level2">
+<div id="distance-vs.-velocity-example" class="section level2">
 <h2>Distance vs. Velocity Example</h2>
 <p>Question: A proponent wishes to install a 30 meter culvert. What is the maximum water velocity that 87.5% of 400 mm northern pike can pass through?</p>
 <p>There are two ways to answer this question. The first and recommended method is using the interactive <a href="#webtooldistancevelocity">webtool</a>. The webtool automatically and reliably performs the calculations contained in this guide. Alternatively, you can <a href="#formuladistancevelocity">manually perform the calculations</a>.</p>
@@ -1259,14 +1220,16 @@ Pike (derived)
 <h3>Webtool - Distance vs. Velocity</h3>
 <ol style="list-style-type: decimal">
 <li>Go to the <a href="http://www.fishprotectiontools.ca/distancevelocity.html">Swim Speed &amp; Swim Time tool</a>.</li>
-<li>Below “Select Fish by:”, click the “Common name” radio button.</li>
-<li>In the “Select species” drop down menu, choose “Northern Pike”.</li>
+<li>Below “Select Fish by:” click the “Common name” radio button.</li>
+<li>In the “Select species” drop down menu, choose “Northern Pike.”</li>
 <li>Drag the “Fish length” slider to 400 mm.</li>
-<li>Below “Calculations:”, press the “Water velocity” radio button</li>
+<li>Below “Calculations:” press the “Water velocity” radio button</li>
 <li>Enter “30” in the “Swim distance in meter:” box.</li>
 </ol>
 Once these steps are completed, the tool should look like this:
 <center>
+<iframe src="http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Northern%20pike%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true" width="672" height="1260px">
+</iframe>
 </center>
 </div>
 <div id="formuladistancevelocity" class="section level3">
@@ -1280,7 +1243,7 @@ Once these steps are completed, the tool should look like this:
 <p>And: <span class="math display">\[V_* = \frac{V}{\sqrt{9.81\times0.4}} = 0.505V\]</span> <span class="math display">\[75 = 3.846(0.505V)^{-2.040}\]</span></p>
 <p>Solving for V: <span class="math display">\[V = \left(\frac{75}{3.846}\right)^{-1/2.040} \div 0.505 = 0.46 \text{ m/s}\]</span></p>
 </div>
-<div id="solution---distance-vs.velocity" class="section level3">
+<div id="solution---distance-vs.-velocity" class="section level3">
 <h3>Solution - Distance vs. Velocity</h3>
 <p>This culvert should not exceed a maximum water velocity of 0.46 m/s to allow passage of 87.5% of 400 mm northern pike.</p>
 </div>
@@ -1297,7 +1260,7 @@ Once these steps are completed, the tool should look like this:
 <li>Large variability in individual swimming performance is indicated. This is not surprising since fish species and populations have survived for millions of years at least in part because of different group or individual abilities or strategies.</li>
 <li>There are insufficient data available for many species to derive individual fatigue curves. An ecohydraulic approach using dimensionless variables allowed more global data analyses for groups of fish species and the ability to use limited data sets.</li>
 <li>Although variability in swimming performance exists between species and individuals within a species, data analyses indicate broad similarities in relative performance for groups of species.</li>
-<li>Grouping of species by family and swimming mode was used to create 6 fish groups. Two of these groups, the “Eel” and the “Salmon and Walleye”, have the best data sets and most robust regressions. These two groups correspond to update versions of the previously labelled “Anguilliform” and “Subcarangiform” species. The other 4 groups have data limitations which should be considered when using the results.</li>
+<li>Grouping of species by family and swimming mode was used to create 6 fish groups. Two of these groups, the “Eel” and the “Salmon and Walleye,” have the best data sets and most robust regressions. These two groups correspond to update versions of the previously labelled “Anguilliform” and “Subcarangiform” species. The other 4 groups have data limitations which should be considered when using the results.</li>
 <li>Speed-time regressions provided estimates of swim distance – water velocity relationships for different confidence levels.</li>
 <li>Swim distance estimates from fatigue curves, were comparable with available direct measurements.</li>
 <li>Estimates of fatigue time or distance may be useful when considering physiological aspects in practical applications, such as fish screens and fishways.</li>
@@ -2495,10 +2458,10 @@ Shovelnose sturgeon
 </table>
 </div>
 <div id="references" class="section level2 unnumbered">
-<h2>References</h2>
-<div id="refs" class="references">
-<div id="ref-katopodis2016fish">
-<p>Katopodis, C, and R Gervais. 2016. “Fish Swimming Performance Database and Analyses.” <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.</p>
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-katopodis2016fish" class="csl-entry">
+Katopodis, C, and R Gervais. 2016. <span>“Fish Swimming Performance Database and Analyses.”</span> <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.
 </div>
 </div>
 </div>
@@ -2514,13 +2477,56 @@ Shovelnose sturgeon
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

@@ -14,12 +14,12 @@ showtext_auto()
 options(scipen=5)
 
 #import K and b values for each group of fish (used in equations)
-GroupVariables <- read.csv("GroupVariables.csv", fileEncoding = "ISO-8859-13") 
+GroupVariables <- read.csv("GroupVariables.csv") 
 rownames(GroupVariables)<-GroupVariables$Group
 GroupVariables$Group <- NULL
 
 #import list of common and scientific names and their respective lengths
-FishList <- read.csv("FishList.csv", fileEncoding = "ISO-8859-13")
+FishList <- read.csv("FishList.csv")
 FishList$FrenchGroupName <- as.character(FishList$FrenchGroupName)
 
 Velocity = data.frame(seq(from=0.1, to=10, by=0.01))

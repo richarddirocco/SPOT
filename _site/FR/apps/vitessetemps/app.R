@@ -14,12 +14,12 @@ showtext_auto()
 options(scipen=5)
 
 #import K and b values for each group of fish (used in equations)
-GroupVariables <- read.csv("GroupVariables.csv", fileEncoding = "ISO-8859-13") 
+GroupVariables <- read.csv("GroupVariables.csv") 
 rownames(GroupVariables)<-GroupVariables$Group
 GroupVariables$Group <- NULL
 
 #import list of common and scientific names and their respective lengths
-FishList <- read.csv("FishList.csv", fileEncoding = "ISO-8859-13")
+FishList <- read.csv("FishList.csv")
 FishList$FrenchGroupName <- as.character(FishList$FrenchGroupName)
 
 Velocity = data.frame(seq(from=0.1, to=10, by=0.01))
@@ -304,7 +304,7 @@ server <- function(input, output, session){
     if(T25Num()<3){
       TT25 <- paste("12,5 % des ", tolower(Group()), "de", input$l, "mm ne peuvent pas nager à", SSnum(), " m/s.")}
     if(T25Num()>=3 & T25Num()<=1800){
-      TT25 <- paste("12,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T5Num(), digits = 3), "s")}
+      TT25 <- paste("12,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T25Num(), digits = 3), "s")}
     if(T25Num()>1800){
       TT25 <- paste("12,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s plus longtemps que 1800 s")}
     TT25
@@ -314,7 +314,7 @@ server <- function(input, output, session){
     if(T50Num()<3){
       TT50 <- paste("50 % des ", tolower(Group()), "de", input$l, "mm ne peuvent pas nager à", SSnum(), " m/s.")}
     if(T50Num()>=3 & T50Num()<=1800){
-      TT50 <- paste("50 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T5Num(), digits = 3), "s")}
+      TT50 <- paste("50 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T50Num(), digits = 3), "s")}
     if(T50Num()>1800){
       TT50 <- paste("50 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s plus longtemps que 1800 s")}
     TT50
@@ -324,7 +324,7 @@ server <- function(input, output, session){
     if(T75Num()<3){
       TT75 <- paste("87,5 % des ", tolower(Group()), "de", input$l, "mm ne peuvent pas nager à", SSnum(), " m/s.")}
     if(T75Num()>=3 & T75Num()<=1800){
-      TT75 <- paste("87,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T5Num(), digits = 3), "s")}
+      TT75 <- paste("87,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T75Num(), digits = 3), "s")}
     if(T75Num()>1800){
       TT75 <- paste("87,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s plus longtemps que 1800 s")}
     TT75
@@ -334,7 +334,7 @@ server <- function(input, output, session){
     if(T95Num()<3){
       TT95 <- paste("97,5% des ", tolower(Group()), "de", input$l, "mm ne peuvent pas nager à", SSnum(), " m/s.")}
     if(T95Num()>=3 & T95Num()<=1800){
-      TT95 <- paste("97,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T5Num(), digits = 3), "s")}
+      TT95 <- paste("97,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T95Num(), digits = 3), "s")}
     if(T95Num()>1800){
       TT95 <- paste("97.5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s plus longtemps que 1800 s")}
     TT95

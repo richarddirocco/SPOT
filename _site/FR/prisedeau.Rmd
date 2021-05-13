@@ -1,5 +1,5 @@
 ---
-title: "Outil de dimension du grillage à l’entrée d’une prise d’eau"
+title: "Outil complexe - Dimension du grillage à l’entrée d’une prise d’eau"
 output: 
   html_document:
     css: style.css

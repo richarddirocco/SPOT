@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -88,7 +89,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -249,48 +249,9 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -304,6 +265,12 @@ $(document).ready(function ()  {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -339,8 +306,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -397,7 +362,8 @@ div.tocify {
             <li><a href="vitessetemps.html">Vitesse et temps de nage</a></li>
             <li><a href="distancevitesse.html">Distance de nage et vitesse de l’eau</a></li>
             <li><a href="longueurmaturite.html">Longueur à maturité</a></li>
-            <li><a href="prisedeau.html">Calculer dimension du grillage</a></li>
+            <li><a href="basicprisedeau.html">Outil simple - Calculer dimension du grillage </a></li>
+            <li><a href="prisedeau.html">Outil complexe - Calculer dimension du grillage </a></li>
           </ul>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuels <span class="caret"></span></a>
@@ -445,7 +411,7 @@ div.tocify {
 <p>Le « groupe des brochets » était un cas spécial en ce sens qu’un manque de données sur les vitesses de nage supérieures empêchait la création d’une courbe de fatigue complète. En raison de l’importance du brochet dans certaines régions, une courbe spéciale a été créée pour offrir une certaine orientation sur les capacités de nage. La courbe dérivée était fondée sur les données de nage existantes du brochet à l’extrémité inférieure de la courbe. Le brochet est connu pour ses puissants élans de vitesse. Ainsi, l’extrémité supérieure de la courbe a été estimée à partir des vitesses élevées semblables des groupes des « anguilles » et des « saumons et des dorés jaunes ». La courbé dérivée fut jugée une option plus efficace que de tenter d’inclure le brochet dans l’un des autres groupes dans lesquels l’adéquation pourrait s’avérer moins idéale.</p>
 <p>Une description plus détaillée de l’analyse et de la déduction des courbes de performance natatoire présentées dans ce guide se trouve dans <span class="citation">Katopodis and Gervais (2016)</span>.</p>
 </div>
-<div id="utilisation-des-equations" class="section level2">
+<div id="utilisation-des-équations" class="section level2">
 <h2>Utilisation des équations</h2>
 <p>Le présent document contient une série d’équations qui peuvent servir à estimer ce qui suit :</p>
 <ol style="list-style-type: decimal">
@@ -1234,6 +1200,8 @@ Brochet (dérivé)
 </ol>
 <p>Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :</p>
 <center>
+<iframe src="http://www.fishprotectiontools.ca/fr/vitessetemps/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Truite%20arc-en-ciel%20et%20saumon%20arc-en-ciel%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="672" height="1260px">
+</iframe>
 </center>
 </div>
 <div id="formulevitessetemps" class="section level3">
@@ -1250,7 +1218,7 @@ Brochet (dérivé)
 <p>La truite arc-en-ciel moyenne de 250 mm peut nager à 1 m/s pendant 246 secondes.</p>
 </div>
 </div>
-<div id="exemple-de-distance-par-rapport-a-la-vitesse" class="section level2">
+<div id="exemple-de-distance-par-rapport-à-la-vitesse" class="section level2">
 <h2>Exemple de distance par rapport à la vitesse</h2>
 <p>Question : un soumissionnaire souhaite installer un ponceau de 30 mètres. Quelle est la vitesse maximale de l’eau que 87,5 % des grands brochets peuvent surmonter?</p>
 <p>Il y a deux façons de répondre à cette question. La première méthode, celle qui est recommandée, est d’utiliser <a href="#outilweb2">l’outil Web interactif</a>. L’outil Web effectue de façon automatique et fiable les calculs présentés dans ce guide. Autrement, on peut <a href="#formuledistancevitesse">faire les calculs manuellement</a>.</p>
@@ -1266,6 +1234,8 @@ Brochet (dérivé)
 </ol>
 Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
 <center>
+<iframe src="http://www.fishprotectiontools.ca/fr/distancevitesse/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Grand%20brochet%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true" width="672" height="1260px">
+</iframe>
 </center>
 </div>
 <div id="formuledistancevitesse" class="section level3">
@@ -1279,7 +1249,7 @@ Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
 <p>Et : <span class="math display">\[V_* = \frac{V}{\sqrt{9.81\times0.4}} = 0.505V\]</span> <span class="math display">\[75 = 3.846(0.505V)^{-2.040}\]</span></p>
 <p>Calculer V : <span class="math display">\[V = \left(\frac{75}{3.846}\right)^{-1/2.040} \div 0.505 = 0.46 \text{ m/s}\]</span></p>
 </div>
-<div id="solution-distance-par-rapport-a-la-vitesse" class="section level3">
+<div id="solution-distance-par-rapport-à-la-vitesse" class="section level3">
 <h3>Solution – Distance par rapport à la vitesse</h3>
 <p>Ce ponceau ne doit pas dépasser une vitesse de l’eau de 0,46 m/s pour permettre le passage de 87,5 % des grands brochets de 400 mm.</p>
 </div>
@@ -2493,7 +2463,7 @@ Esturgeon ą museau plat
 </tbody>
 </table>
 </div>
-<div id="references" class="section level2 unnumbered">
+<div id="références" class="section level2 unnumbered">
 <h2>Références</h2>
 <div id="refs" class="references">
 <div id="ref-katopodis2016fish">
@@ -2520,6 +2490,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

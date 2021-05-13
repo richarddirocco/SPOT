@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -14,12 +13,22 @@
 
 <title>Guide de l’utilisateur sur la performance natatoire des poissons</title>
 
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -27,13 +36,18 @@
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -46,30 +60,27 @@ if (window.hljs) {
 
 
 
+
 <style type="text/css">
-h1 {
-  font-size: 34px;
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
 }
-h1.title {
-  font-size: 38px;
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-h2 {
-  font-size: 30px;
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-h3 {
-  font-size: 24px;
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
 }
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -82,10 +93,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -102,40 +109,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -163,7 +143,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -175,7 +155,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -186,10 +166,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -201,7 +194,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -237,6 +229,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -332,7 +325,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -381,7 +374,7 @@ div.tocify {
 </div><!--/.navbar -->
 </html>
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -618,38 +611,38 @@ Tableau 2. Équations relatives à la fatigue adimensionnelle pour les coefficie
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Intervalle de prédiction de 95 %
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Intervalle de prédiction de 75 %
 </div>
 </th>
 </tr>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Limite supérieure
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Limite inférieure
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Limite supérieure
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Limite inférieure
 </div>
@@ -892,43 +885,43 @@ Tableau 3. Équations relatives à la distance de nage adimensionnelle et coeffi
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden" colspan="3">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="3">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Intervalle de prédiction de 95 %
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="4">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Intervalle de prédiction de 75 %
 </div>
 </th>
 </tr>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 X• par rapport à V•
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Limite supérieure
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Limite inférieure
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Limite supérieure
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Limite inférieure
 </div>
@@ -1207,9 +1200,9 @@ Brochet (dérivé)
 <div id="formulevitessetemps" class="section level3">
 <h3>Formule – Vitesse par rapport au temps</h3>
 <ol style="list-style-type: decimal">
-<li>Déterminer le bon groupe de la truite arc-en-ciel. Le <a href="#tableu4">Résumé de groupe par espèce</a> contient une liste d’espèces pour chaque groupe. Dans le tableau, la truite arc-en-ciel fait partie du groupe « Saumon et doré jaune ».</li>
+<li><p>Déterminer le bon groupe de la truite arc-en-ciel. Le <a href="#tableu4">Résumé de groupe par espèce</a> contient une liste d’espèces pour chaque groupe. Dans le tableau, la truite arc-en-ciel fait partie du groupe « Saumon et doré jaune ».</p></li>
 <li><p>On peut calculer le temps d’endurance à l’aide des <a href="#equationsfatique">équations relatives à la fatigue</a>. Pour utiliser les équations, trouver les coefficients k et b. Pour le temps d’endurance moyen, utiliser les coefficients d’équation de régression.</p></li>
-<li>Identify the correct group for rainbow trout. The <a href="#group-summary-by-species">Group Summary by Species</a> contains a list of species for each group and from the table, rainbow trout is part of the ‘Salmon and Walleye’ Group.</li>
+<li><p>Identify the correct group for rainbow trout. The <a href="#group-summary-by-species">Group Summary by Species</a> contains a list of species for each group and from the table, rainbow trout is part of the ‘Salmon and Walleye’ Group.</p></li>
 <li><p>Endurance time can be calculated using the <a href="#fatigue-equations">fatigue equations</a>. To use the equations, find the k and b coefficients. For average endurance time use the regression equation coefficients.</p></li>
 </ol>
 <p><span class="math display">\[U_* = 4.004(t_*)^-0.25\]</span> Où : <span class="math display">\[U_* = \frac{1.0}{\sqrt{9.81\times0.250}} = 0.639\]</span></p>
@@ -1262,7 +1255,7 @@ Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
 <li>Les normes pour mesurer la capacité de nage des poissons sont limitées. Les données ont été recueillies au moyen de divers tests de performance natatoire des poissons, qui ont tendance à couvrir différentes parties des courbes de fatigue.</li>
 <li>Les bases de données contiennent un mélange de données de nage moyennes et individuelles. Par souci d’uniformité, on a regroupé les données.</li>
 <li>Les données sur les vitesses d’élan recueillies dans les chenaux volontaires complètent les données sur les vitesses prolongées recueillies dans les tunnels de nage. Elles contribuent à déterminer les courbes de fatigue sur une vaste plage de temps.</li>
-<li>Des courbes d’extrapolation obtenues à partir des données relatives au chenal volontaire uniquement sous-estimeraient la performance prolongée étant donné que les courbes de fatigue fondées uniquement sur des données relatives à la vitesse d’élan sont caractérisées par des pentes raides. L’inverse est également vrai, c.-à-d. que les courbes de fatigue fondées sur des données provenant des tunnels de nage seulement ont tendance à être plus planes et sous-estimeraient la performance en vitesse d’élan, en cas d’extrapolation.</li>
+<li>Des courbes d’extrapolation obtenues à partir des données relatives au chenal volontaire uniquement sous-estimeraient la performance prolongée étant donné que les courbes de fatigue fondées uniquement sur des données relatives à la vitesse d’élan sont caractérisées par des pentes raides. L’inverse est également vrai, c.-à-d. que les courbes de fatigue fondées sur des données provenant des tunnels de nage seulement ont tendance à être plus planes et sous-estimeraient la performance en vitesse d’élan, en cas d’extrapolation.</li>
 <li>Des variations importantes ont été constatées dans la performance natatoire individuelle. Ce n’est pas surprenant étant donné que les espèces et les populations de poissons ont survécu pendant des millions d’années en partie en raison des capacités et des stratégies des groupes différents et des individus.</li>
 <li>Pour de nombreuses espèces, les données disponibles sont insuffisantes pour créer des courbes de fatigue individuelles. Une approche écohydraulique utilisant des variables adimensionnelles a permis de réaliser des analyses de données plus globales pour des groupes d’espèces de poissons et d’utiliser des ensembles de données limités.</li>
 <li>Même s’il existe une variabilité de la performance natatoire entre les espèces et les individus d’une même espèce, les analyses de données indiquent d’importantes similitudes de la performance relative pour certains groupes d’espèces.</li>
@@ -2464,10 +2457,10 @@ Esturgeon ą museau plat
 </table>
 </div>
 <div id="références" class="section level2 unnumbered">
-<h2>Références</h2>
-<div id="refs" class="references">
-<div id="ref-katopodis2016fish">
-<p>Katopodis, C, and R Gervais. 2016. “Fish Swimming Performance Database and Analyses.” <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.</p>
+<h2 class="unnumbered">Références</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-katopodis2016fish" class="csl-entry">
+Katopodis, C, and R Gervais. 2016. <span>“Fish Swimming Performance Database and Analyses.”</span> <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.
 </div>
 </div>
 </div>
@@ -2483,7 +2476,7 @@ Esturgeon ą museau plat
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -2501,7 +2494,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -2522,7 +2515,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

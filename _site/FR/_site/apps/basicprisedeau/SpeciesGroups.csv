@@ -1,0 +1,228 @@
+	English.Common.Name	French.Common.Name	Scientific.Name	Group.s.	Screen.Area.Coefficient	Approach.Velocity
+1	All/Unknown	Tout	All/Unknown	Eel	0.02871	0.035
+2	Largemouth Bass	Achigan à grande bouche	Micropterus salmoides	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+3	Smallmouth Bass	Achigan à petite bouche	Micropterus dolomieu	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+4	Gizzard Dhad	Alose à gésier	Dorosoma cepedianum	Herring; Sturgeon	0.01217	0.082
+5	Blueback Herring	Alose d'été	Alosa aestivalis	Herring; Sturgeon	0.01217	0.082
+6	Twaite Shad	Alose feinte	Alosa fallax	Herring; Sturgeon	0.01217	0.082
+7	American Shad	Alose savoureuse	Alosa sapidissima	Herring; Sturgeon	0.01217	0.082
+8	European Eel	Anguille	Anguilla anguilla	Eel	0.02871	0.035
+9	American Eel	Anguille d'Amérique	Anguilla rostrata	Eel	0.02871	0.035
+10	White Bass	Bar blanc	Morone chrysops	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+11	White Perch	Bar blanc d'Amerique	Morone americana	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+12	Striped Bass	Bar d'Amérique	Morone saxatilis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+13	Common Barbel	Barbeau fluviatile	Barbus barbus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+14	Brown Bullhead	Barbotte brune	Ameiurus nebulosus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+15	Stonecat	Barbotte des rapides	Noturus flavus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+16	Yellow Bullhead	Barbotte jaune	Ameiurus natalis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+17	Channel Catfish	Barbue de rivière	Ictalurus punctatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+18	Cutlip Minnow	Bec-de-lièvre	Exoglossum maxillingua	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+19	Common Bream	Brème	Abramis brama	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+20	Northern Pike	Brochet	Esox lucius	Pike	0.0186	0.055
+21	Redfin Pickerel	Brochet d'Amérique	Esox americanus americanus	Pike	0.0186	0.055
+22	Chain Pickerel	Brochet maillé	Esox niger	Pike	0.0186	0.055
+23	Crucian Carp	Carassin	Carassius carassius	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+24	Carp	Carpe	Cyprinus carpio	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+25	June Sucker	Catostome noir nain	Chasmistes liorus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+26	Shorthead Sculpin	Chabot à tête courte	Cottus confusus	Eel	0.02871	0.035
+27	Spoonhead Sculpin	Chabot à tête plate	Cottus ricei	Eel	0.02871	0.035
+28	Coastrange Sculpin	Chabot côtier	Cottus aleuticus	Eel	0.02871	0.035
+29	Deepwater Sculpin	Chabot de profondeur	Myoxocephalus thompsonii	Eel	0.02871	0.035
+30	Torrent Sculpin	Chabot de torrent	Cottus rhotheus	Eel	0.02871	0.035
+31	Prickly Sculpin	Chabot piquant	Cottus asper	Eel	0.02871	0.035
+32	Mottled Sculpin	Chabot tacheté	Cottus bairdii	Eel	0.02871	0.035
+33	Slimy Sculpin	Chabot visqueux	Cottus cognatus	Eel	0.02871	0.035
+34	Tadpole Madtom	Chat-fou brun	Noturus gyrinus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+35	European Chub	Chevaine	Squalius cephalus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+36	Silver Redhorse	Chevalier blanc	Moxostoma anisurum	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+37	River Redhorse	Chevalier de rivière	Moxostoma carinatum	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+38	Greater Redhorse	Chevalier jaune	Moxostoma valenciennesi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+39	Shorthead Redhorse	Chevalier rouge	Moxostoma macrolepidotum	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+40	Mummichog	Choquemort	Fundulus heteroclitus	Eel	0.02871	0.035
+41	Atlantic Whitefish	Cisco	Coregonus huntsmani	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+42	Longjaw Cisco	Cisco à grande bouche	Coregonus alpenae	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+43	Shortjaw Cisco	Cisco à mâchoires égales	Coregonus zenithicus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+44	Shortnose Cisco	Cisco à museau court	Coregonus reighardi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+45	Arctic Cisco	Cisco arctique	Coregonus autumnalis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+46	Bering Cisco	Cisco de Béring	Coregonus laurettae	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+47	Cisco	Cisco de lac	Coregonus artedi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+48	Least Cisco	Cisco sardinelle	Coregonus sardinella	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+49	Broad Whitefish	Corégone tschir	Coregonus nasus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+50	Quillback	Couette	Carpiodes cyprinus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+51	Longear Sunfish	Crapet à longues oreilles	Lepomis megalotis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+52	Bluegill	Crapet arlequin	Lepomis macrochirus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+53	White Crappie	Crapet calicot	Pomoxis annularis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+54	Rock Bass	Crapet de roche	Ambloplites rupestris	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+55	Redbreast Sunfish	Crapet rouge	Lepomis auritus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+56	Pumpkinseed	Crapet-soleil	Lepomis gibbosus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+57	Brook Silverside	Crayon d'argent	Labidesthes sicculus	Eel	0.02871	0.035
+58	Alaska Blackfish	Dallia	Dallia pectoralis	Herring; Sturgeon	0.01217	0.082
+59	Iowa Darter	Dard à ventre jaune	Etheostoma exile	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+60	Rainbow Darter	Dard arc-en-ciel	Etheostoma caeruleum	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+61	Fantail Darter	Dard barré	Etheostoma flabellare	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+62	Eastern Sand Darter	Dard de sable	Ammocrypta pellucida	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+63	Rio Grande Darter	Dard Rio Grande	Etheostoma grahami	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+64	Logperch	Dard-perche	Percina caprodes	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+65	Dolly Varden	Dolly varden	Salvelinus malma	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+66	Walleye	Doré jaune	Sander vitreus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+67	Sauger	Doré noir	Sander canadensis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+68	Pond Smelt	Éperlan à petite bouche	Hypomesus olidus	Herring; Sturgeon	0.01217	0.082
+69	Rainbow Smelt	Éperlan arc-en-ciel	Osmerus mordax	Herring; Sturgeon	0.01217	0.082
+70	Longfin Smelt	Éperlan d'hiver	Spirinchus thaleichthys	Herring; Sturgeon	0.01217	0.082
+71	Brook Stickleback	Épinoche à cinq épines	Culaea inconstans	Eel	0.02871	0.035
+72	Ninespine Stickleback	Épinoche à neuf épines	Pungitius pungitius	Eel	0.02871	0.035
+73	Fourspine Stickleback	Épinoche à quatre épines	Apeltes quadracus	Eel	0.02871	0.035
+74	Threespine Stickleback	Épinoche à trois épines	Gasterosteus aculeatus	Eel	0.02871	0.035
+75	Blackspotted Stickleback	Épinoche tachetée	Gasterosteus wheatlandi	Eel	0.02871	0.035
+76	Shortnose Sturgeon	Esturgeon à museau court	Acipenser brevirostrum	Herring; Sturgeon	0.01217	0.082
+77	Shovelnose Sturgeon	Esturgeon à museau plat	Scaphirhynchus platorynchus	Herring; Sturgeon	0.01217	0.082
+78	White Sturgeon	Esturgeon blanc	Acipenser transmontanus	Herring; Sturgeon	0.01217	0.082
+79	Lake Sturgeon	Esturgeon jaune	Acipenser fulvescens	Herring; Sturgeon	0.01217	0.082
+80	Atlantic Sturgeon	Esturgeon noir	Acipenser oxyrinchus	Herring; Sturgeon	0.01217	0.082
+81	Pallid Sturgeon	Esturgeon pâle	Scaphirhynchus albus	Herring; Sturgeon	0.01217	0.082
+82	Green Sturgeon	Esturgeon vert	Acipenser medirostris	Herring; Sturgeon	0.01217	0.082
+83	Eulachon	Eulakane	Thaleichthys pacificus	Herring; Sturgeon	0.01217	0.082
+84	Banded Killifish	Fondule barré	Fundulus diaphanus	Eel	0.02871	0.035
+85	Channel Darter	Fouille-roche gris	Percina copelandi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+86	Roach	Gardon	Rutilus rutilus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+87	Alewife/Gaspereau	Gaspareau	Alosa pseudoharengus	Herring; Sturgeon	0.01217	0.082
+88	Gudgeon	Gofi	Gobio gobio	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+89	Lake Whitefish	Grand corégone	Coregonus clupeaformis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+90	Gravel Chub	Gravelier	Erimystax?x-punctatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+91	Inconnu	Inconnu	Stenodus leucichthys	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+92	Arctic Lamprey	Lamproie arctique	Lethenteron camtschaticum	Eel	0.02871	0.035
+93	Silver Lamprey	Lamproie argentée	Ichthyomyzon unicuspis	Eel	0.02871	0.035
+94	Chestnut Lamprey	Lamproie brune	Ichthyomyzon castaneus	Eel	0.02871	0.035
+95	Western Brook Lamprey	Lamproie de l' ouest	Lampetra richardsoni	Eel	0.02871	0.035
+96	American Brook Lamprey	Lamproie de l'est	Lethenteron appendix	Eel	0.02871	0.035
+97	River Lamprey	Lamproie de rivière	Lampetra ayresii	Eel	0.02871	0.035
+98	Northern Brook Lamprey	Lamproie du nord	Ichthyomyzon fossor	Eel	0.02871	0.035
+99	Pacific Lamprey	Lamproie du Pacifique	Entosphenus tridentatus	Eel	0.02871	0.035
+100	Sea Lamprey	Lamproie marine	Petromyzon marinus	Eel	0.02871	0.035
+101	Mooneye	Laquaiche argentée	Hiodon tergisus	Herring; Sturgeon	0.01217	0.082
+102	Goldeye	Laquaiche aux yeux d'or	Hiodon alosoides	Herring; Sturgeon	0.01217	0.082
+103	Longnose Gar	Lépisosté osseux	Lepisosteus osseus	Pike	0.0186	0.055
+104	Spotted Gar	Lépisosté tacheté	Lepisosteus oculatus	Pike	0.0186	0.055
+105	Burbot	Lotte	Lota lota	Eel	0.02871	0.035
+106	Freshwater Drum	Malachigan	Aplodinotus?grunniens	Eel	0.02871	0.035
+107	Black Crappie	Marigane noire	Pomoxis nigromaculatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+108	Muskellunge	Maskinongé	Esox masquinongy	Pike	0.0186	0.055
+109	Brassy Minnow	Mémé laiton	Hybognathus hankinsoni	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+110	Humpback Chub	Méné à bosses	Gila cypha	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+111	Common Shiner	Méné à nageoires rouges	Luxilus cornutus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+112	Sharpnose Shiner	Méné à nez pointu	Notropis oxyrhynchus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+113	Smalleye Shiner	Méné à petits yeux	Notropis buccula	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+114	Blacktail Shiner	Méné à queue noire	Cyprinella venusta	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+115	Blackspot Shiner	Méné à tache noire	Notropis atrocaudalis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+116	Flathead Chub	Méné à tête plate	Platygobio gracilis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+117	Spotfin Shiner	Méné bleu	Cyprinella spiloptera	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+118	Rio Grande Silvery Minnow	Méné d’argent	Hybognathus amarus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+119	Weed Shiner	Méné d’herbe	Notropis texanus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+120	Redfin Shiner	Méné d’ombre	Lythrurus umbratilis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+121	Lake Chub	Méné de lac	Couesius plumbeus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+122	Proserpine Shiner	Méné de Proserpine	Cyprinella proserpina	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+123	Plains Minnow	Méné des plaines	Hybognathus placitus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+124	Least Chub	Méné des rapides	Iotichthys phlegethontis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+125	Peamouth	Méné deux-barres	Mylocheilus caurinus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+126	Bridle Shiner	Méné d'herbe	Notropis bifrenatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+127	Emerald Shiner	Méné émeraude	Notropis atherinoides	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+128	Ghost Shiner	Méné fantôme	Notropis buchanani	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+129	Golden Shiner	Méné jaune	Notemigonus crysoleucas	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+130	Redside Dace	Méné long	Clinostomus elongatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+131	Silverband Shiner	Méné miroir	Notropis shumardi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+132	Speckled Chub	Méné moucheté	Macrhybopsis aestivalis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+133	Sand Shiner	Méné paille	Notropis stramineus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+134	Mimic Shiner	Méné pâle	Notropis volucellus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+135	Striped Shiner	Méné rayé	Luxilus chrysocephalus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+136	Redside Shiner	Méné rose	Richardsonius balteatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+137	Red Shiner	Méné rouge	Cyprinella lutrensis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+138	Ribbon Shiner	Méné ruban	Lythrurus fumeus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+139	Sabine Shiner	Méné Sabine	Notropis sabinae	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+140	Topeka Shiner	Méné Topeka	Notropis topeka	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+141	Mountain Whitefish	Ménomini des montagnes	Prosopium williamsoni	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+142	Pygmy Whitefish	Ménomini pygmée	Prosopium coulterii	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+143	Round Whitefish	Ménomini rond	Prosopium cylindraceum	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+144	Blackchin Shiner	Menton noir	Notropis heterodon	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+145	Largescale Sucker	Meunier à grandes écailles	Catostomus macrocheilus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+146	Flannelmouth Sucker	Meunier à grosses nageoires	Catostomus latipinnis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+147	Bridgelip Sucker	Meunier de l'ouest	Catostomus columbianus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+148	Mountain Sucker	Meunier des montagnes	Catostomus platyrhynchus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+149	White Sucker	Meunier noir	Catostomus commersonii	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+150	Longnose Sucker	Meunier rouge	Catostomus catostomus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+151	Creek Chub	Mulet à cornes	Semotilus atromaculatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+152	Pearl Dace	Mulet perlé	Margariscus?margarita	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+153	Blacknose Shiner	Museau noir	Notropis heterolepis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+154	Longnose Dace	Naseux des rapides	Rhinichthys cataractae	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+155	Leopard Dace	Naseux léopard	Rhinichthys falcatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+156	Blacknose Dace	Naseux noir	Rhinichthys atratulus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+157	Bull Trout	Omble à tête plate	Salvelinus confluentus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+158	Arctic Char	Omble chevalier	Salvelinus alpinus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+159	Arctic Grayling	Ombre arctique	Thymallus arcticus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+160	European Grayling	Ombre commun	Thymallus thymallus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+161	Trout-perch	Omisco	Percopsis omiscomaycus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+162	Fallfish	Ouitouche	Semotilus corporalis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+163	Yellow Perch	Perchaude	Perca flavescens	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+164	European Perch	Perche fluviatile	Perca fluviatilis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+165	Bullhead Minnow	Pimephales vigilax	Pimephales vigilax	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+166	Colorado Pike Minnow	Poisson squaw du Colorado	Ptychocheilus lucius	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+167	Bowfin	Poisson-castor	Amia calva	Eel	0.02871	0.035
+168	Black Bullhead	Poisson-chat	Ameiurus melas	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+169	Blue Catfish	Poisson-chat bleu	Ictalurus furcatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+170	ChannelxBlue catfish hybrid	Poisson-chat tacheté × poisson-chat bleu hybride	Ictalurus punctatusxfurcatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+171	Bigmouth Buffalo	Poisson-taureau	Ictiobus cyprinellus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+172	Atlantic Tomcod	Poulamon	Microgadus tomcod	Eel	0.02871	0.035
+173	Spottail Shiner	Queue à tache noire	Notropis hudsonius	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+174	Johnny Darter	Raseux-de-terre noir	Etheostoma nigrum	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+175	Red River Shiner	Red River shiner	Notropis bairdi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+176	Central Stoneroller	Roule-caillou	Campostoma anomalum	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+177	Atlantic Salmon	Saumon Atlantique	Salmo salar	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+178	Chinook Salmon	Saumon chinook	Oncorhynchus tshawytscha	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+179	Coho Salmon	Saumon coho	Oncorhynchus kisutch	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+180	Brook Trout	Saumon de fontaine	Salvelinus fontinalis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+181	Chum Salmon	Saumon keta	Oncorhynchus keta	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+182	Pink Salmon	Saumon rose	Oncorhynchus gorbuscha	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+183	Sockeye Salmon	Saumon rouge	Oncorhynchus nerka	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+184	Northern Pike Minnow	Sauvagesse du nord	Ptychocheilus oregonensis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+185	Speckled Dace	seux moucheté	Rhinichthys osculus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+186	Bonytail	Squalius moreoticus	Gila elegans	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+187	Tench	Tanche	Tinca tinca	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+188	Fathead Minnow	Tête de boule	Pimephales promelas	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+189	Rosyface Shiner	Tête rose	Notropis rubellus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+190	Lake Trout	Touladi	Salvelinus namaycush	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+191	Rainbow Trout	Truite arc-en-ciel	Oncorhynchus mykiss	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+192	Brown Trout	Truite commune	Salmo trutta	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+193	Cutthroat Trout	Truite fardée	Oncorhynchus clarkii	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+194	Central Mudminnow	Umbre de vase	Umbra limi	Herring; Sturgeon	0.01217	0.082
+195	Common Dace	Vandoise	Leuciscus leuciscus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+196	Finescale Dace	Ventre citron	Chrosomus neogaeus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+197	Northern Redbelly Dace	Ventre rouge du nord	Chrosomus eos	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+198	Bigmouth Shiner		Notropis dorsalis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+199	Black Redhorse		Moxostoma duquesnei	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+200	Blackfin Cisco		Coregonus nigripinnis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+201	Blackside Darter		Percina maculata	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+202	Bloater		Coregonus hoyi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+203	Bluntnose Minnow		Pimephales notatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+204	Brindled Madtom		Noturus miurus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+205	Chiselmouth		Acrocheilus alutaceus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+206	Copper Redhorse		Moxostoma hubbsi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+207	Deepwater Cisco		Coregonus johannae	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+208	Golden Redhorse		Moxostoma erythrurum	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+209	Grass Pickerel		Esox americanus vermiculatus	Pike	0.0186	0.055
+210	Green Sunfish		Lepomis cyanellus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+211	Greenside Darter		Etheostoma blennioides	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+212	Hornyhead Chub		Nocomis biguttatus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+213	Kiyi		Coregonus kiyi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+214	Lake Chubsucker		Erimyzon sucetta	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+215	Least Darter		Etheostoma microperca	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+216	Northern Hog Sucker		Hypentelium nigricans	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+217	Pugnose Minnow		Opsopoeodus emiliae	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+218	Pugnose Shiner		Notropis anogenus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+219	River Chub		Nocomis micropogon	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+220	River Darter		Percina shumardi	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+221	River Shiner		Notropis blennius	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+222	Silver Chub		Macrhybopsis?storeriana	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+223	Southern Leatherside Chub		Lepidomeda aliciae	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+224	Splittail		Pogonichthys macrolepidotus	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+225	Spotted Sucker		Minytrema melanops	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+226	Texas Shiner		Notropis amabilis	Catfish & Sunfish; Salmon & Walleye	0.01019	0.098
+227	Tiger Muskellunge		Esox lucius ? masquinongy	Pike	0.0186	0.055

@@ -201,6 +201,8 @@ knitr::include_app("http://www.fishprotectiontools.ca/speedtime/?_inputs_&Calcul
 ```
 </center>
 
+
+
 ### Formula - Speed vs. Time {#formulaspeedtime}
 
 1. Identify the correct group for rainbow trout. The [Group Summary by Species](#group-summary-by-species) contains a list of species for each group and from the table, rainbow trout is part of the 'Salmon and Walleye' Group.

@@ -9,6 +9,8 @@ SpeciesGroups <- read.csv("SpeciesGroups.csv")
 ui <- function(request){
   (fluidPage(
     
+    tags$head(includeScript("google-analytics.js")),
+    
     # Add script to resize iframe automatically
     # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
     tags$head(includeScript("iframeResizer.contentWindow.min.js")),
@@ -22,25 +24,17 @@ ui <- function(request){
     
     sidebarLayout(
       sidebarPanel(
-        
-#        radioButtons("CommonScientific", "Select species by:", choices = c("Common name", "Scientific name"), selected = "Common name"),
-#        conditionalPanel("input.CommonScientific == 'Common name'",
-                         selectInput("SelectSpecies", 
-                                     label = "Select species:", 
-                                     choices = sort(SpeciesGroups$English.Common.Name), 
-                                     multiple=TRUE, selectize = TRUE),
-#        ),
-#        conditionalPanel("input.CommonScientific == 'Scientific name'",
-#                         selectInput("SelectSpecies:", 
-#                                     label = "Select species:", 
-#                                     choices = sort(SpeciesGroups$Scientific.Name), 
-#                                     multiple=TRUE)
-#        ),
-        br(),
-        numericInput("EoP_flowrate", label = "Maximum intake flow rate (L/s):", min = 0, value = 125, step = 5),
+        selectInput("SelectSpecies", 
+                    label = "Select species:", 
+                    choices = SpeciesGroups$English.Common.Name, 
+                    multiple=TRUE, selectize = TRUE),
+      helpText("Tip: Select All/Unknown if you are unsure of the species near the intake"),
+
+      br(),
+        numericInput("EoP_flowrate", label = "Maximum intake flow rate (L/s):", min = 0, value = 150, step = 5),
         
         helpText(a(href="mailto:richard.dirocco@dfo-mpo.gc.ca", "Submit feedback"), align = "center")
-      ),    # close sidebarPanel
+      ),    
       
       mainPanel(
         ggvisOutput("ggvis"),

@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -84,7 +85,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -245,18 +245,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -291,7 +279,8 @@ $(document).ready(function () {
             <li><a href="vitessetemps.html">Vitesse et temps de nage</a></li>
             <li><a href="distancevitesse.html">Distance de nage et vitesse de l’eau</a></li>
             <li><a href="longueurmaturite.html">Longueur à maturité</a></li>
-            <li><a href="prisedeau.html">Calculer dimension du grillage</a></li>
+            <li><a href="basicprisedeau.html">Outil simple - Calculer dimension du grillage </a></li>
+            <li><a href="prisedeau.html">Outil complexe - Calculer dimension du grillage </a></li>
           </ul>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manuels <span class="caret"></span></a>
@@ -340,13 +329,13 @@ $(document).ready(function () {
 <div id="exemple-de-question" class="section level2">
 <h2>Exemple de question</h2>
 <p>Un promoteur veut extraire de l’eau à un débit de 100 L/s d’un étang à proximité. L’étang est l’habitat d’achigans à petite bouche, de perchaudes et de grands brochets. On propose une prise d’eau cylindrique à extrémités solides et un grillage de fils métalliques triangulaires nº 60 autour du cylindre. Quelles doivent être les dimensions du grillage d’entrée?</p>
-<div id="etapes" class="section level3">
+<div id="étapes" class="section level3">
 <h3>Étapes</h3>
 <ol style="list-style-type: upper-alpha">
 <li>Déterminer la superficie utile du grillage nécessaire.</li>
 <li>Déterminer les dimensions du grillage.</li>
 </ol>
-<div id="a.-determiner-la-superficie-utile-du-grillage" class="section level4">
+<div id="a.-déterminer-la-superficie-utile-du-grillage" class="section level4">
 <h4>A. Déterminer la superficie utile du grillage</h4>
 <p>Faire les étapes suivantes à l’aide de l’<a href="http://www.fishprotectiontools.ca/fr/prisedeau.html">Outil de dimension du grillage à l’entrée d’une prise d’eau</a></p>
 <ol style="list-style-type: decimal">
@@ -365,7 +354,7 @@ $(document).ready(function () {
    iFrameResize({heightCalculationMethod: "lowestElement"});
 </script>
 </div>
-<div id="b.-determiner-les-dimensions-du-grillage" class="section level4">
+<div id="b.-déterminer-les-dimensions-du-grillage" class="section level4">
 <h4>B. Déterminer les dimensions du grillage</h4>
 <p>Dans le cas d’un grillage cylindrique à extrémités solides, où le grillage est autour du cylindre, on utilise la formule suivante :</p>
 <p><span class="math display">\[Superficie = \pi DL\]</span> Les dimensions inconnues sont le diamètre (D) et la longueur (L). On détermine ces dimensions en choisissant une valeur pour l’une d’entre elles et en résolvant l’équation pour l’autre. Si le diamètre fait 0,60 m, la longueur sera :</p>
@@ -384,14 +373,14 @@ $(document).ready(function () {
 <p>Un grillage cylindrique régulièrement nettoyé de 0,60 m de diamètre et de 0,96 m de long respecterait les critères de conception. Il importe de noter que les dimensions représentent seulement la superficie du grillage; elles n’incluent pas toute portion du grillage qui pourrait être bloquée par un cadre, etc.</p>
 </div>
 </div>
-<div id="options-avancees" class="section level2">
+<div id="options-avancées" class="section level2">
 <h2>Options avancées</h2>
 <p>Le fait de cliquer la case à cocher « Afficher les options avancées » offre un contrôle grandement supérieur par rapport aux <a href="http://publications.gc.ca/collections/Collection/Fs23-270-2004F.pdf">Lignes directrices de 1995</a>, notamment la capacité de modifier la durée nécessaire pour qu’un poisson s’éloigne de la surface d’un grillage, la capacité de diminuer la proportion de poissons protégées à moins de 97,5 % et la capacité d’augmenter la longueur du poisson près de la prise d’eau. Dans la plupart des cas, il ne faut pas modifier ces valeurs par rapport aux valeurs par défaut.</p>
 </div>
-<div id="renseignements-supplementaires" class="section level2">
+<div id="renseignements-supplémentaires" class="section level2">
 <h2>Renseignements supplémentaires</h2>
 <p>Sous le tableau, une ligne de texte affiche la vitesse d’approche nominale en m/s. Cette information peut s’avérer utile quand on utilise la calculatrice de dimension du grillage à l’entrée d’une prise d’eau en conjonction avec les règlements provinciaux ou pour vérifier si le grillage fonctionne correctement une fois installé. L’outil de dimension du grillage à l’entrée d’une prise d’eau peut servir à calculer la superficie utile du grillage nécessaire pour prévenir la majorité de l’entraînement et de l’impaction à l’aide du débit d’entrée seulement. Pour ce faire, s’assurer que tous les groupes sont sélectionnés et que le mode est réglé à « base ». Entrer le débit d’entrée et la superficie utile du grillage empêchera l’entraînement et l’impaction de tous les poissons plus grands que 25 mm au niveau de la prise d’eau. Il est important de se rappeler que ces grillages ne protègent que très peu le plancton, par exemple les poissons en premier stade biologique, contre l’entraînement ou l’impaction.</p>
-<div id="references" class="section level3 unnumbered">
+<div id="références" class="section level3 unnumbered">
 <h3>Références</h3>
 <div id="refs" class="references">
 <div id="ref-mussen2014unscreened">
@@ -418,6 +407,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

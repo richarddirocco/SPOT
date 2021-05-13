@@ -204,7 +204,7 @@ server <- function(input, output, session){
         theme_classic() +
         theme(axis.line.x = element_line(color="black", size = .5),
               axis.line.y = element_line(color="black", size = .5))+
-        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=16, family="lato"))+
+        theme(legend.key = element_blank(), legend.position="top", legend.text=element_text(size=12, family="lato"))+
         theme(axis.text = element_text(size=16, family="lato"), axis.title = element_text(size=16, family="lato"))+
         scale_x_log10(name = "Swim time (s)", limits=c(3, 1800))+
         scale_y_log10(name = "Swim speed (m/s)", limits=c(.02, 14))+
@@ -249,7 +249,9 @@ server <- function(input, output, session){
           geom_segment(aes(x = T95Num(), y = 0.02, xend = T95Num(), yend = SSnum()), linetype = "dashed", colour="orangered", size = 0.8)}+
         
         #add legend to plot
-        scale_colour_manual("",values = c("skyblue2","orangered", "gray65"), 
+        #scale_colour_manual("",values = c("skyblue2","orangered", "gray65"), 
+        #                    breaks=c("Mean  ","75% prediction interval  ","95% prediction interval  "))
+        scale_colour_manual("",values = c("gray65", "skyblue2","orangered"), 
                             breaks=c("Mean  ","75% prediction interval  ","95% prediction interval  "))
     },
     height = function() {
