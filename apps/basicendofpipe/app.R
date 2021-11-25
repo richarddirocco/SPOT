@@ -10,6 +10,8 @@ ui <- function(request){
   (fluidPage(
     
     tags$head(includeScript("google-analytics.js")),
+    # Set maximum width of app
+    tags$head(tags$style(type="text/css", ".container-fluid {  max-width: 1200px}")),
     
     # Add script to resize iframe automatically
     # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
@@ -21,7 +23,8 @@ ui <- function(request){
     ),
     
     theme = shinytheme("cosmo"),
-    
+    br(),
+    br(),
     sidebarLayout(
       sidebarPanel(
         selectInput("SelectSpecies", 
