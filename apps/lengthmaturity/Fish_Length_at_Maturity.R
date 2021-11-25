@@ -8,6 +8,8 @@
 library(rfishbase)
 library(readr)
 library(tools)
+library(dplyr)
+
 
 # Import list of common and scientific names of Canadian Species
 # Downloadeded from here: http://fishbase.org/Country/CountryChecklist.php?showAll=yes&c_code=124&vhabitat=fresh
@@ -18,7 +20,7 @@ SpeciesList <- read_csv("~/RMarkdownWebsite/apps/lengthmaturity/FishList.csv")
 SpecCodes <- synonyms(species_list = SpeciesList$'Scientific Name', limit = 500, fields = c("SpecCode","SynGenus","SynSpecies"))
 
 # Download maturity data
-MaturityData <- maturity(species_list = SpecCodes$ScientificName, limit = 5000)
+MaturityData <- maturity(species_list = SpecCodes$Species, limit = 5000)
 
 # Delete rows that don't have Lm or Minimum Mature Length
 MaturityData <- MaturityData[!with(MaturityData,is.na(Lm) & is.na(LengthMatMin)),]
@@ -78,6 +80,12 @@ MaturityData$Sex <- toTitleCase(MaturityData$Sex)
 MaturityData$Locality <- toTitleCase(MaturityData$Locality)
 MaturityData$CommonName <- toTitleCase(MaturityData$CommonName)
 
+# Round numbers
+MaturityData$"Minimum length at first maturity" <- as.numeric(MaturityData$"Minimum length at first maturity")
+MaturityData$"Minimum length at first maturity" <- round(MaturityData$"Minimum length at first maturity", digits = 0)
+MaturityData$"Mean length at first maturity (Lm)" <- as.numeric(MaturityData$"Mean length at first maturity (Lm)")
+MaturityData$"Mean length at first maturity (Lm)" <- round(MaturityData$"Mean length at first maturity (Lm)", digits = 0)
+
 
 # Get current date for archive and name file
 CurrentDate <- Sys.Date()
@@ -86,9 +94,15 @@ csvFileName <- paste("~/RMarkdownWebsite/apps/lengthmaturity/ArchivedData/Maturi
 # Use if statement to make sure the dataframe isn't empty
 if(nrow(MaturityData) > 300){
   # Write CSV and make it available for length at maturity app
-  write_csv(MaturityData, path = "~/RMarkdownWebsite/apps/lengthmaturity/MaturityData.csv")
-  # Write to french app folder
-  write_csv(MaturityData, path = "~/RMarkdownWebsite/FR/apps/longueurmaturité/MaturityData.csv")
+  write.csv(MaturityData, "~/RMarkdownWebsite/apps/lengthmaturity/MaturityData.csv")
   # Write CSV and place it in the archive
-  write_csv(MaturityData, path = csvFileName)
+  write.csv(MaturityData, csvFileName)
+  # Translate Female and Male under sex
+  FrenchMaturityData <- MaturityData
+  FrenchMaturityData["Sex"][FrenchMaturityData["Sex"] == "Female"] <- "Femelle"
+  FrenchMaturityData["Sex"][FrenchMaturityData["Sex"] == "Male"] <- "Mâle"
+  FrenchMaturityData["Sex"][FrenchMaturityData["Sex"] == "Mixed"] <- "Mixte"
+  FrenchMaturityData["Sex"][FrenchMaturityData["Sex"] == "Unsexed"] <- "Non enregistré"
+  # Write to french app folder
+  write.csv(FrenchMaturityData, "~/RMarkdownWebsite/FR/apps/longueurmaturité/MaturityData.csv")
 }

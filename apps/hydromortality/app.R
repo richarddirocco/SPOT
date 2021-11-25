@@ -14,14 +14,18 @@ Fish_Width_Depth_Data <- read.csv("Fish_Width_Depth_Data.csv")
 rownames(Fish_Width_Depth_Data)<-Fish_Width_Depth_Data$Name
 Fish_Width_Depth_Data$Name <- NULL
 
+# Import species group
+SpeciesGroups <- read.csv("SpeciesGroups.csv")
+
 # Create an object with different lengths between 0-1000 mm
-Length <- seq(from=0, to=1000, by=1)
+Length <- seq(from=25, to=1000, by=1)
 
 ui <- dashboardPage(
   dashboardHeader(title = "Hydro Mortality Calculator"),
   ## Sidebar content
   dashboardSidebar(
     sidebarMenu(
+      menuItem("Species and abundance", tabName = "SpeciesAbundance", icon = icon("align-left")),
       menuItem("Blade Strike", tabName = "BladeStrike", icon = icon("asterisk")),
       menuItem("Approach Velocity", tabName = "ApproachVelocity", icon = icon("dashboard"))
     )
@@ -30,6 +34,17 @@ ui <- dashboardPage(
   dashboardBody(
     # Boxes need to be put in a row (or column)
     tabItems(
+      tabItem(tabName = "SpeciesAbundance",
+        fluidRow(
+          box(    
+            selectInput("SelectSpecies", 
+                        label = "Select species:", 
+                        choices = SpeciesGroups$English.Common.Name, 
+                        multiple=TRUE, selectize = TRUE),
+            dataTableOutput('SpeciesListTable')
+          )
+        )
+      ),
       tabItem(tabName = "BladeStrike",
         fluidRow(
           box(
@@ -83,6 +98,18 @@ server <- function(input, output) {
   AV_PlotData <- reactive({
     
   })
+  
+
+  SpeciesTable <- reactive({
+      ST <- data.frame(input$SelectSpecies)
+      
+    })
+  
+  output$SpeciesListTable = renderDataTable({
+    SpeciesTable()
+  })
+
+  
   
   output$testtable = renderDataTable({
     AV_CompareData()
