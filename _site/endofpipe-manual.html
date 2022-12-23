@@ -13,8 +13,8 @@
 
 <title>Manual: End-of-Pipe Screen Size Tool</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -56,28 +56,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-/* for pandoc --citeproc since 2.11 */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -103,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -160,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -193,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -202,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -332,8 +311,8 @@ $(document).ready(function () {
 <h4>A. Determining effective screen area</h4>
 <p>Complete these steps using the <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size tool</a></p>
 <ol style="list-style-type: decimal">
-<li>In the “Select fish by:” dropdown, choose “Group.”</li>
-<li>Below “Select groups:” check the “Catfish &amp; Sunfish,” “Pike” and “Salmon &amp; Walleye” boxes.</li>
+<li>In the “Select fish by:” dropdown, choose “Group”.</li>
+<li>Below “Select groups:”, check the “Catfish &amp; Sunfish”, “Pike” and “Salmon &amp; Walleye” boxes.</li>
 <li>Enter “100” in the “Intake flow rate (L/s):” box.</li>
 </ol>
 <p>Once these steps are completed, the tool will indicate an Effective Screen Area of 1.82 m<sup>2</sup> is required. The tool should look like this:</p>
@@ -373,12 +352,12 @@ $(document).ready(function () {
 <div id="additional-information" class="section level2">
 <h2>Additional information</h2>
 <p>Below the chart, a line of text displays the design approach velocity in m/s. This information may be useful when using the end-of-pipe screen size calculator in conjunction with provincial regulations or to verify the screen is working properly once installed.</p>
-<p>The end-of-pipe screen size tool can be used to calculate the effective screen area needed to prevent most entrainment and impingement with no information other than the intake flow rate. To do this, ensure all groups are selected and the mode is set to “basic.” Enter the intake flow and the effective screen area will prevent nearly all fish larger than 25 mm from being entrained or impinged at that water intake. It is important to remember that these screens do little to protect plankton, such as early life-stage fish, from becoming entrained or impinged.</p>
+<p>The end-of-pipe screen size tool can be used to calculate the effective screen area needed to prevent most entrainment and impingement with no information other than the intake flow rate. To do this, ensure all groups are selected and the mode is set to “basic”. Enter the intake flow and the effective screen area will prevent nearly all fish larger than 25 mm from being entrained or impinged at that water intake. It is important to remember that these screens do little to protect plankton, such as early life-stage fish, from becoming entrained or impinged.</p>
 <div id="references" class="section level3 unnumbered">
 <h3 class="unnumbered">References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-mussen2014unscreened" class="csl-entry">
-Mussen, Timothy D, Dennis Cocherell, Jamilynn B Poletto, Jon S Reardon, Zachary Hockett, Ali Ercan, Hossein Bandeh, M Levent Kavvas, Joseph J Cech Jr, and Nann A Fangue. 2014. <span>“Unscreened Water-Diversion Pipes Pose an Entrainment Risk to the Threatened Green Sturgeon, Acipenser Medirostris.”</span> <em>PloS One</em> 9 (1): e86321.
+<div id="refs" class="references hanging-indent">
+<div id="ref-mussen2014unscreened">
+<p>Mussen, Timothy D, Dennis Cocherell, Jamilynn B Poletto, Jon S Reardon, Zachary Hockett, Ali Ercan, Hossein Bandeh, M Levent Kavvas, Joseph J Cech Jr, and Nann A Fangue. 2014. “Unscreened Water-Diversion Pipes Pose an Entrainment Risk to the Threatened Green Sturgeon, Acipenser Medirostris.” <em>PloS One</em> 9 (1): e86321.</p>
 </div>
 </div>
 </div>

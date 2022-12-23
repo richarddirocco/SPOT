@@ -13,8 +13,8 @@
 
 <title>Fish Swimming Performance User Guide</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -61,28 +61,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-/* for pandoc --citeproc since 2.11 */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -108,6 +87,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -165,11 +147,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -198,8 +184,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -207,16 +193,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -401,7 +380,7 @@ div.tocify {
 <p>Data from fish performance studies were collected in the laboratory or the field through a variety of methods and constitute the database for analyses conducted. Data from swim chamber tests, such as time to fatigue (fixed velocity) and increasing velocity (critical swim speed), as well as fish speed and endurance from volitional open channels were used. Regressions were performed to generate fatigue curves for endurance in the range of 3 s (seconds) to 30 min (minutes). This range was considered the most practical and relevant for fish passage and other protection measures related to the swimming ability of fish.</p>
 <p>Data grouping was used to produce more inclusive and diverse datasets that capture measurements from a wide range of data sources. Furthermore, data grouping helps bridge data gaps related to limited or missing data, makes the results more universal and reduces the potential bias when data is limited. Each independent swim test should be regarded as a point in time measurement that reflects the performance of the specific fish that were tested and the conditions under which they were tested. Environmental conditions that can affect swimming capacity of fish are variable in the natural world, and include factors such as water velocity, water temperature, the fish’s energy stores related to food supply, fish health, and others. Testing may not capture the potential variation in performance from all these factors and therefore it is important to be aware of this when using swimming performance data.</p>
 <p>Fish length appears to be a major factor affecting swimming performance. Longer fish have higher fish speeds (U) expressed in m/s, than shorter ones. Fish speed is also expressed in body lengths per second (BL/s) or if l is fish length, U/l. In this case, shorter fish usually have higher relative speeds than longer ones. Estimates in BL/s are often used for various species, indicating swimming performance similarity between different species. A dimensionless speed (U<sub>*</sub>) is another way of expressing fish speed and is defined as U(gl)<sup>-0.5</sup>, where g has a constant value of 9.81 m/s<sup>2</sup>. The dimensionless speed identifies fish species with similar swimming performance more clearly and provides better regressions compared to BL/s or m/s.</p>
-<p>Regression analysis of available data was used to formulate a collection of dimensionless fatigue curves (dimensionless swim speed versus dimensionless endurance time) derived by grouping fish species with similar swimming performance. Dimensionless fatigue curves, for the 3 s to 30 min time range and corresponding distance curves, were generated for the following groups: 1) Eel; 2) Salmon and Walleye; 3) Catfish and Sunfish; 4) Sturgeon; 5) Herring; and 6) Pike (derived). The “Eel Group” and the “Salmon and Walleye Group,” which correspond to the previously named “anguilliform” and “subcarangiform” groups, have the more complete data sets and more robust regressions. The “Catfish and Sunfish” and “Sturgeon” groups lack burst or high fish speed data, while the “Herring Group” has limited prolonged or low speed fish data. These limitations should be kept in mind when using the results.</p>
+<p>Regression analysis of available data was used to formulate a collection of dimensionless fatigue curves (dimensionless swim speed versus dimensionless endurance time) derived by grouping fish species with similar swimming performance. Dimensionless fatigue curves, for the 3 s to 30 min time range and corresponding distance curves, were generated for the following groups: 1) Eel; 2) Salmon and Walleye; 3) Catfish and Sunfish; 4) Sturgeon; 5) Herring; and 6) Pike (derived). The “Eel Group” and the “Salmon and Walleye Group”, which correspond to the previously named “anguilliform” and “subcarangiform” groups, have the more complete data sets and more robust regressions. The “Catfish and Sunfish” and “Sturgeon” groups lack burst or high fish speed data, while the “Herring Group” has limited prolonged or low speed fish data. These limitations should be kept in mind when using the results.</p>
 <p>The “Pike Group” was a special case where a lack of data at the higher swimming speeds prevented the creation of a complete fatigue curve. Given the importance of pike for certain regions, a special curve was developed to provide some guidance on swimming capacity. The derived curve was based on existing pike swimming data at the lower end of the curve. Pike are known for strong burst speeds so the high end of the curve was estimated from the similar highest speeds from the “Eel” and the “Salmon and Walleye” groups. The derived curve was considered a more effective option that trying to include pike with one of the other groups where the fit may be more compromised.</p>
 <p>A more detailed description of the analysis and derivation of the swimming performance curves presented in this guide can be found in <span class="citation">Katopodis and Gervais (2016)</span>.</p>
 </div>
@@ -1186,15 +1165,15 @@ Pike (derived)
 <h3>WebTool - Speed vs. Time</h3>
 <ol style="list-style-type: decimal">
 <li>Go to the <a href="http://www.fishprotectiontools.ca/speedtime.html">Swim Speed &amp; Swim Time tool</a>.</li>
-<li>Below “Select Fish by:” click the “Common name” radio button.</li>
-<li>In the “Select species” drop down menu, choose “Rainbow or Steelhead trout.”</li>
+<li>Below “Select Fish by:”, click the “Common name” radio button.</li>
+<li>In the “Select species” drop down menu, choose “Rainbow or Steelhead trout”.</li>
 <li>Drag the “Fish length” slider to 250 mm.</li>
 <li>Below “Calculations:” press the “Swim time” radio button.</li>
 <li>Enter “1” in the “Swim speed” box.</li>
 </ol>
 <p>Once these steps are completed, the tool should look like this:</p>
 <center>
-<iframe src="http://www.fishprotectiontools.ca/speedtime/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Rainbow%20or%20Steelhead%20trout%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="672" height="1260px">
+<iframe src="http://www.fishprotectiontools.ca/speedtime/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Rainbow%20or%20Steelhead%20trout%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="672" height="1260px" data-external="1">
 </iframe>
 </center>
 </div>
@@ -1220,15 +1199,15 @@ Pike (derived)
 <h3>Webtool - Distance vs. Velocity</h3>
 <ol style="list-style-type: decimal">
 <li>Go to the <a href="http://www.fishprotectiontools.ca/distancevelocity.html">Swim Speed &amp; Swim Time tool</a>.</li>
-<li>Below “Select Fish by:” click the “Common name” radio button.</li>
-<li>In the “Select species” drop down menu, choose “Northern Pike.”</li>
+<li>Below “Select Fish by:”, click the “Common name” radio button.</li>
+<li>In the “Select species” drop down menu, choose “Northern Pike”.</li>
 <li>Drag the “Fish length” slider to 400 mm.</li>
-<li>Below “Calculations:” press the “Water velocity” radio button</li>
+<li>Below “Calculations:”, press the “Water velocity” radio button</li>
 <li>Enter “30” in the “Swim distance in meter:” box.</li>
 </ol>
 Once these steps are completed, the tool should look like this:
 <center>
-<iframe src="http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Northern%20pike%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true" width="672" height="1260px">
+<iframe src="http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Northern%20pike%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true" width="672" height="1260px" data-external="1">
 </iframe>
 </center>
 </div>
@@ -1260,7 +1239,7 @@ Once these steps are completed, the tool should look like this:
 <li>Large variability in individual swimming performance is indicated. This is not surprising since fish species and populations have survived for millions of years at least in part because of different group or individual abilities or strategies.</li>
 <li>There are insufficient data available for many species to derive individual fatigue curves. An ecohydraulic approach using dimensionless variables allowed more global data analyses for groups of fish species and the ability to use limited data sets.</li>
 <li>Although variability in swimming performance exists between species and individuals within a species, data analyses indicate broad similarities in relative performance for groups of species.</li>
-<li>Grouping of species by family and swimming mode was used to create 6 fish groups. Two of these groups, the “Eel” and the “Salmon and Walleye,” have the best data sets and most robust regressions. These two groups correspond to update versions of the previously labelled “Anguilliform” and “Subcarangiform” species. The other 4 groups have data limitations which should be considered when using the results.</li>
+<li>Grouping of species by family and swimming mode was used to create 6 fish groups. Two of these groups, the “Eel” and the “Salmon and Walleye”, have the best data sets and most robust regressions. These two groups correspond to update versions of the previously labelled “Anguilliform” and “Subcarangiform” species. The other 4 groups have data limitations which should be considered when using the results.</li>
 <li>Speed-time regressions provided estimates of swim distance – water velocity relationships for different confidence levels.</li>
 <li>Swim distance estimates from fatigue curves, were comparable with available direct measurements.</li>
 <li>Estimates of fatigue time or distance may be useful when considering physiological aspects in practical applications, such as fish screens and fishways.</li>
@@ -2459,9 +2438,9 @@ Shovelnose sturgeon
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2 class="unnumbered">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-katopodis2016fish" class="csl-entry">
-Katopodis, C, and R Gervais. 2016. <span>“Fish Swimming Performance Database and Analyses.”</span> <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.
+<div id="refs" class="references hanging-indent">
+<div id="ref-katopodis2016fish">
+<p>Katopodis, C, and R Gervais. 2016. “Fish Swimming Performance Database and Analyses.” <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.</p>
 </div>
 </div>
 </div>
@@ -2504,6 +2483,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

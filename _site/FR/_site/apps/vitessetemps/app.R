@@ -252,7 +252,7 @@ server <- function(input, output, session){
           geom_segment(aes(x = T95Num(), y = 0.02, xend = T95Num(), yend = SSnum()), linetype = "dashed", colour="orangered", size = 0.8)}+
         
         #add legend to plot
-        scale_colour_manual("",values = c("skyblue2","orangered", "gray65"), 
+        scale_colour_manual("",values = c("gray65", "skyblue2","orangered"), 
                             breaks=c("Moyenne  ","Intervalle de prédiction de 75 %  ","Intervalle de prédiction de 95 %  "))
     },
     height = function() {
@@ -304,7 +304,7 @@ server <- function(input, output, session){
     if(T25Num()<3){
       TT25 <- paste("12,5 % des ", tolower(Group()), "de", input$l, "mm ne peuvent pas nager à", SSnum(), " m/s.")}
     if(T25Num()>=3 & T25Num()<=1800){
-      TT25 <- paste("12,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T5Num(), digits = 3), "s")}
+      TT25 <- paste("12,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T25Num(), digits = 3), "s")}
     if(T25Num()>1800){
       TT25 <- paste("12,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s plus longtemps que 1800 s")}
     TT25
@@ -314,7 +314,7 @@ server <- function(input, output, session){
     if(T50Num()<3){
       TT50 <- paste("50 % des ", tolower(Group()), "de", input$l, "mm ne peuvent pas nager à", SSnum(), " m/s.")}
     if(T50Num()>=3 & T50Num()<=1800){
-      TT50 <- paste("50 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T5Num(), digits = 3), "s")}
+      TT50 <- paste("50 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T50Num(), digits = 3), "s")}
     if(T50Num()>1800){
       TT50 <- paste("50 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s plus longtemps que 1800 s")}
     TT50
@@ -324,7 +324,7 @@ server <- function(input, output, session){
     if(T75Num()<3){
       TT75 <- paste("87,5 % des ", tolower(Group()), "de", input$l, "mm ne peuvent pas nager à", SSnum(), " m/s.")}
     if(T75Num()>=3 & T75Num()<=1800){
-      TT75 <- paste("87,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T5Num(), digits = 3), "s")}
+      TT75 <- paste("87,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T75Num(), digits = 3), "s")}
     if(T75Num()>1800){
       TT75 <- paste("87,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s plus longtemps que 1800 s")}
     TT75
@@ -334,7 +334,7 @@ server <- function(input, output, session){
     if(T95Num()<3){
       TT95 <- paste("97,5% des ", tolower(Group()), "de", input$l, "mm ne peuvent pas nager à", SSnum(), " m/s.")}
     if(T95Num()>=3 & T95Num()<=1800){
-      TT95 <- paste("97,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T5Num(), digits = 3), "s")}
+      TT95 <- paste("97,5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s pendant au moins ", signif(T95Num(), digits = 3), "s")}
     if(T95Num()>1800){
       TT95 <- paste("97.5 % des ", tolower(Group()), "de", input$l, "mm peuvent nager à", SSnum(), " m/s plus longtemps que 1800 s")}
     TT95

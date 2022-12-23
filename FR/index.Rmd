@@ -61,3 +61,8 @@ L’[outil de longueur à maturité](http://www.fishprotectiontools.ca/fr/longue
 ### Outil de dimension du grillage à l’entrée d’une prise d’eau
 
 L’[outil de dimension du grillage à l’entrée d’une prise d’eau](http://www.fishprotectiontools.ca/fr/prisedeau.html) calcule la superficie de grillage nécessaire au niveau de la prise d’eau pour éviter l’impaction de 97,5 % des poissons selon l’espèce, la longueur et la durée nécessaire pour qu’un poisson s’éloigne de la face du grillage. Des renseignements supplémentaires et un échantillon de problème se trouvent dans le [Manuel sur l’outil de dimension du grillage à l’entrée d’une prise d’eau](http://www.fishprotectiontools.ca/fr/manuel-prisedeau.html).
+
+
+<center>
+`r paste("Date modifiée", Sys.Date())`
+</center>

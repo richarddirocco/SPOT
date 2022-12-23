@@ -13,8 +13,8 @@
 
 <title>Guide de l’utilisateur sur la performance natatoire des poissons</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -1193,7 +1193,7 @@ Brochet (dérivé)
 </ol>
 <p>Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :</p>
 <center>
-<iframe src="http://www.fishprotectiontools.ca/fr/vitessetemps/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Truite%20arc-en-ciel%20et%20saumon%20arc-en-ciel%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="672" height="1260px">
+<iframe src="http://www.fishprotectiontools.ca/fr/vitessetemps/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Truite%20arc-en-ciel%20et%20saumon%20arc-en-ciel%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="672" height="1260px" data-external="1">
 </iframe>
 </center>
 </div>
@@ -1227,7 +1227,7 @@ Brochet (dérivé)
 </ol>
 Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
 <center>
-<iframe src="http://www.fishprotectiontools.ca/fr/distancevitesse/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Grand%20brochet%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true" width="672" height="1260px">
+<iframe src="http://www.fishprotectiontools.ca/fr/distancevitesse/?_inputs_&amp;Calculate2=%222%22&amp;SD=%2230%22&amp;SDEst=true&amp;VvD_CName=%22Grand%20brochet%22&amp;VvD_Group=%22Salmon%20%26%20Walleye%22&amp;VvD_l=400&amp;VvD_Selecter=%221%22&amp;VvD_SName=%22Salvelinus%20fontinalis%22&amp;WV=%220.15%22&amp;WVEst=true" width="672" height="1260px" data-external="1">
 </iframe>
 </center>
 </div>
@@ -2503,6 +2503,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

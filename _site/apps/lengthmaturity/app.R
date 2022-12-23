@@ -17,7 +17,6 @@ MaturityData <- read.csv("MaturityData.csv", fileEncoding = "ISO-8859-1")
 MaturityData$Sex <- as.factor(MaturityData$Sex)
 MaturityData$Country <- as.factor(MaturityData$Country)
 
-
 # Rename Measurement.type
 MaturityData$Measurement.type <- as.factor(MaturityData$Measurement.type)
 
@@ -38,7 +37,7 @@ ui <- fluidPage(
   br(),
   
   # Help text explaining how to use the tool
-  helpText("Select a species using the scientific or common name. The available length at maturity data for the selected species will be displayed in the table below. The data is from", a("FishBase", href='http://www.fishbase.ca/'), " and other sources (see reference column). The Measurement type column shows the type of fish length measurement used: FL (Fork Length), SL (Standard Length), TL (Total Length), or NG (Not Given)."),
+  helpText("Select a species using the scientific or common name. The available length at maturity data for the selected species will be displayed in the table below. The data is from", a("FishBase", href='http://www.fishbase.ca/', target="_blank"), " and other sources (see reference column). The Measurement type column shows the type of fish length measurement used: FL (Fork Length), SL (Standard Length), TL (Total Length), or NG (Not Given)."),
   
   # Add break before selecter
   br(),

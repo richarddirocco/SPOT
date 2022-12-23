@@ -33,3 +33,11 @@ Ce site Web héberge des prototypes d’outils élaborés pour développer le do
 Ce site Web est en cours de développement. Les commentaires sont les bienvenus. On peut les transmettre  <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>ici</a>.
 
 ### Références
+<div id="refs"></div>
+
+<br>
+<br>
+
+<center>
+`r paste("Date modifiée", Sys.Date())`
+</center>

@@ -252,7 +252,7 @@ server <- function(input, output, session){
           geom_segment(aes(x = T95Num(), y = 0.02, xend = T95Num(), yend = SSnum()), linetype = "dashed", colour="orangered", size = 0.8)}+
         
         #add legend to plot
-        scale_colour_manual("",values = c("skyblue2","orangered", "gray65"), 
+        scale_colour_manual("",values = c("gray65", "skyblue2","orangered"), 
                             breaks=c("Moyenne  ","Intervalle de prédiction de 75 %  ","Intervalle de prédiction de 95 %  "))
     },
     height = function() {

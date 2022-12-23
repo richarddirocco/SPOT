@@ -62,7 +62,7 @@ ui <- function(request){
                       choices = sort(FishList$ScientificName),
                       selected = "Salvelinus fontinalis")),
 
-      sliderInput("l", label = "Fish length (mm):", min = 25, max = 1000, value = c(2.5), step = 5, ticks = FALSE),
+      sliderInput("l", label = "Fish length (mm):", min = 25, max = 1000, value = c(25), step = 5, ticks = FALSE),
                           
       radioButtons("Calculate", label = "Calculations:", choices = list("None" = 0, "Swim speed" = 1, "Swim time" = 2)),
                           
@@ -212,11 +212,11 @@ server <- function(input, output, session){
         annotation_logticks(base = 10, sides = "l")+
         
         #add function to plot
-        stat_function(fun = U, aes(colour = "Mean  "), size = 0.8, alpha=Alpha()) +
-        stat_function(fun= U75U, aes(colour="75% prediction interval  "), size = 0.8, alpha=Alpha()) +
-        stat_function(fun= U75L, aes(colour="75% prediction interval  "), size = 0.8, alpha=Alpha()) +
-        stat_function(fun= U95U, aes(colour="95% prediction interval  "), size = 0.8, alpha=Alpha()) +
-        stat_function(fun= U95L, aes(colour="95% prediction interval  "), size = 0.8, alpha=Alpha()) +
+        stat_function(fun = U, n = 2, aes(colour = "Mean  "), size = 0.8, alpha=Alpha()) +
+        stat_function(fun= U75U, n = 2, aes(colour="75% prediction interval  "), size = 0.8, alpha=Alpha()) +
+        stat_function(fun= U75L, n = 2, aes(colour="75% prediction interval  "), size = 0.8, alpha=Alpha()) +
+        stat_function(fun= U95U, n = 2, aes(colour="95% prediction interval  "), size = 0.8, alpha=Alpha()) +
+        stat_function(fun= U95L, n = 2, aes(colour="95% prediction interval  "), size = 0.8, alpha=Alpha()) +
         
         #add vertical line to plot for swim speed calculations
         {if(input$Calculate == '1') geom_vline(xintercept=STnum(), linetype = "dashed", size = 0.8)}+

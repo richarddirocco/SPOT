@@ -359,7 +359,7 @@ server <- function(input, output, session){
           geom_segment(aes(x = Plot2Data()$Velocity[which.min(Plot2Data()$X95)], y = 0.1, xend = Plot2Data()$Velocity[which.min(Plot2Data()$X95)], yend = min(Plot2Data()$X95,na.rm=TRUE)),linetype = "dashed", colour="orangered", size = 0.8)}+
         
         # Add legend      
-        scale_colour_manual("",values = c("skyblue2","orangered", "gray65"), 
+        scale_colour_manual("",values = c("gray65", "skyblue2","orangered"), 
                             breaks=c("Moyenne  ","Intervalle de prédiction de 75 %  ","Intervalle de prédiction de 95 %  "))
     },
     height = function() {
