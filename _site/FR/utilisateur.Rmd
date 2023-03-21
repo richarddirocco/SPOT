@@ -147,7 +147,7 @@ Il y a deux façons de répondre à cette question. La première méthode, celle
 
 ### Outil Web – vitesse par rapport au temps {#outilweb1}
 
-1. Consultez [l’outil de vitesse et de temps de nage](http://www.fishprotectiontools.ca/fr/vitessetemps.html).
+1. Consultez [l’outil de vitesse et de temps de nage](https://fishprotectiontools.ca/fr/vitessetemps.html).
 2. Sous « Sélectionner le poisson par : », cliquer sur le bouton d’option « Nom courant ».
 3. Dans le menu déroulant « Sélectionner l’espèce », choisir « Truite arc-en-ciel ».
 4. Faire glisser le curseur nommé « Longueur du poisson » jusqu’à 250 mm.
@@ -158,7 +158,7 @@ Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
 
 <center>
 ```{r echo = FALSE}
-knitr::include_app("http://www.fishprotectiontools.ca/fr/vitessetemps/?_inputs_&Calculate=%222%22&CName=%22Truite%20arc-en-ciel%20et%20saumon%20arc-en-ciel%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true",
+knitr::include_app("https://fishprotectiontools.ca/fr/vitessetemps/?_inputs_&Calculate=%222%22&CName=%22Truite%20arc-en-ciel%20et%20saumon%20arc-en-ciel%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true",
                     height = "1260px")
 ```
 </center>
@@ -193,7 +193,7 @@ Il y a deux façons de répondre à cette question. La première méthode, celle
 
 ### Outil Web – distance par rapport à la vitesse {#outilweb2}
 
-1.	Consultez [l’outil de vitesse et de temps de nage](http://www.fishprotectiontools.ca/fr/distancevitesse.html).
+1.	Consultez [l’outil de vitesse et de temps de nage](https://fishprotectiontools.ca/fr/distancevitesse.html).
 2.	Sous « Sélectionner le poisson par : », cliquer sur le bouton d’option « Nom courant ».
 3.	Dans le menu déroulant « Sélectionner l’espèce », choisir « Grand brochet ».
 4.	Faire glisser le curseur nommé « Longueur du poisson » jusqu’à 400 mm.
@@ -203,7 +203,7 @@ Il y a deux façons de répondre à cette question. La première méthode, celle
 Une fois ces étapes effectuées, l’outil devrait apparaître comme suit :
 <center>
 ```{r echo = FALSE}
-knitr::include_app("http://www.fishprotectiontools.ca/fr/distancevitesse/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Grand%20brochet%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true",
+knitr::include_app("https://fishprotectiontools.ca/fr/distancevitesse/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Grand%20brochet%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true",
                     height = "1260px")
 ```
 </center>

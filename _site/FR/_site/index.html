@@ -13,7 +13,7 @@
 
 <title>Bienvenue dans les OPNL</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -57,6 +57,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 
 
@@ -81,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -138,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -171,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -180,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -261,7 +262,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="apropos.html">À propos</a></li>
-        <li><a href="http://fishprotectiontools.ca">English</a></li>
+        <li><a href="https://fishprotectiontools.ca">English</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -289,46 +290,100 @@ $(document).ready(function () {
 
 </script>
 <center>
-<div id="outils-de-performance-natatoire-en-ligne" class="section level1">
+<div id="outils-de-performance-natatoire-en-ligne"
+class="section level1">
 <h1>Outils de performance natatoire en ligne</h1>
 </center>
-<p>Les OPNL sont une collection d’outils servant à estimer la performance natatoire des poissons. Les estimations présentées par ces outils peuvent s’avérer utiles pour élaborer et concevoir des systèmes de passage, d’exclusion et d’orientation du poisson. Ces outils interactifs en ligne effectuent des calculs complexes de façon fiable et automatique. Pour obtenir plus de renseignements sur ces outils et les calculs qu’ils effectuent, consultez le <a href="http://www.fishprotectiontools.ca/fr/utilisateur.html">Guide de l’utilisateur</a>. Un aperçu de chaque outil est présenté ci-dessous.</p>
+<p>Les OPNL sont une collection d’outils servant à estimer la
+performance natatoire des poissons. Les estimations présentées par ces
+outils peuvent s’avérer utiles pour élaborer et concevoir des systèmes
+de passage, d’exclusion et d’orientation du poisson. Ces outils
+interactifs en ligne effectuent des calculs complexes de façon fiable et
+automatique. Pour obtenir plus de renseignements sur ces outils et les
+calculs qu’ils effectuent, consultez le <a
+href="https://fishprotectiontools.ca/fr/utilisateur.html">Guide de
+l’utilisateur</a>. Un aperçu de chaque outil est présenté
+ci-dessous.</p>
 <div id="outil-de-vitesse-et-de-temps-de-nage" class="section level3">
 <h3>Outil de vitesse et de temps de nage</h3>
-<p>L’<a href="http://www.fishprotectiontools.ca/fr/vitessetemps.html">outil de vitesse et de temps de nage</a> génère un tracé qui indique la vitesse de nage par rapport au temps de nage et permet d’estimer un de ces éléments en fonction de l’autre (voir la figure 1). Cet outil nécessite l’espèce ou le groupe de poissons ainsi que la longueur des poissons pour effectuer les calculs. Cet outil peut servir à répondre à des questions comme :</p>
+<p>L’<a href="https://fishprotectiontools.ca/fr/vitessetemps.html">outil
+de vitesse et de temps de nage</a> génère un tracé qui indique la
+vitesse de nage par rapport au temps de nage et permet d’estimer un de
+ces éléments en fonction de l’autre (voir la figure 1). Cet outil
+nécessite l’espèce ou le groupe de poissons ainsi que la longueur des
+poissons pour effectuer les calculs. Cet outil peut servir à répondre à
+des questions comme :</p>
 <ul>
-<li>Pendant combien de temps un meunier noir de 100 mm peut-il garder une vitesse de nage de 0,5 m/s?</li>
-<li>À quelle vitesse une truite arc-en-ciel de 200 mm peut-elle nager pendant 5 minutes?</li>
+<li>Pendant combien de temps un meunier noir de 100 mm peut-il garder
+une vitesse de nage de 0,5 m/s?</li>
+<li>À quelle vitesse une truite arc-en-ciel de 200 mm peut-elle nager
+pendant 5 minutes?</li>
 </ul>
-<p>Pour obtenir de plus amples renseignements sur cet outil et un échantillon de problème, consultez le <a href="http://www.fishprotectiontools.ca/fr/utilisateur.html#exemple_de_vitesse_par_rapport_au_temps">Manuel sur l’outil de vitesse et de temps de nage</a>.</p>
+<p>Pour obtenir de plus amples renseignements sur cet outil et un
+échantillon de problème, consultez le <a
+href="https://fishprotectiontools.ca/fr/utilisateur.html#exemple_de_vitesse_par_rapport_au_temps">Manuel
+sur l’outil de vitesse et de temps de nage</a>.</p>
 <center>
 <figure>
 <img src="Figures/SpeedTimePlot.png" width=500>
 <figcaption>
-Figure 1. Exemple de tracé généré par l’outil de vitesse et de temps de nage.
+Figure 1. Exemple de tracé généré par l’outil de vitesse et de temps de
+nage.
 </figcaption>
 </figure>
 </center>
 <p><br></p>
 </div>
-<div id="outil-de-distance-de-nage-et-de-vitesse-de-leau" class="section level3">
+<div id="outil-de-distance-de-nage-et-de-vitesse-de-leau"
+class="section level3">
 <h3>Outil de distance de nage et de vitesse de l’eau</h3>
-<p>L’<a href="http://www.fishprotectiontools.ca/fr/distancevitesse.html">outil de distance de nage et de vitesse de l’eau</a> ressemble beaucoup à l’outil de vitesse et de temps de nage, mais il trace la distance de nage par rapport à la vitesse de l’eau. Cet outil peut servir à répondre à des questions comme :</p>
+<p>L’<a
+href="https://fishprotectiontools.ca/fr/distancevitesse.html">outil de
+distance de nage et de vitesse de l’eau</a> ressemble beaucoup à l’outil
+de vitesse et de temps de nage, mais il trace la distance de nage par
+rapport à la vitesse de l’eau. Cet outil peut servir à répondre à des
+questions comme :</p>
 <ul>
-<li>Quelle est la vitesse maximale qu’un esturgeon jaune de 1 000 mm peut surmonter quand il nage sur une distance de 60 m?</li>
-<li>À quelle distance une truite mouchetée de 150 mm peut-elle nager dans un courant de 0,5 m/s?</li>
-<li>Pour obtenir de plus amples renseignements sur cet outil et un échantillon de problème, consultez le <a href="http://www.fishprotectiontools.ca/fr/utilisateur.html#exemple_de_distance_par_rapport_%C3%A0_la_vitesse">Manuel sur l’outil de distance de nage et de vitesse de l’eau</a>.</li>
+<li>Quelle est la vitesse maximale qu’un esturgeon jaune de 1 000 mm
+peut surmonter quand il nage sur une distance de 60 m?</li>
+<li>À quelle distance une truite mouchetée de 150 mm peut-elle nager
+dans un courant de 0,5 m/s?</li>
+<li>Pour obtenir de plus amples renseignements sur cet outil et un
+échantillon de problème, consultez le <a
+href="https://fishprotectiontools.ca/fr/utilisateur.html#exemple_de_distance_par_rapport_%C3%A0_la_vitesse">Manuel
+sur l’outil de distance de nage et de vitesse de l’eau</a>.</li>
 </ul>
 </div>
 <div id="outil-de-longueur-à-maturité" class="section level3">
 <h3>Outil de longueur à maturité</h3>
-<p>L’<a href="http://www.fishprotectiontools.ca/fr/longueurmaturite.html">outil de longueur à maturité</a> peut servir à consulter les données sur la maturité d’une espèce. L’outil présente un tableau de références dans lequel sont indiquées les longueurs minimales et moyennes à maturité. Dans les cas où le poisson mature doit franchir un obstacle pour compléter son cycle vital, la longueur à maturité peut s’avérer utile pour estimer la performance natatoire au moyen d’un autre outil du présent site Web. Par exemple, si le saumon de l’Atlantique en migration doit franchir un ponceau de 30 mètres pour atteindre un habitat de frai, quelle longueur de poisson conviendrait-il d’utiliser dans l’outil de distance de nage et de vitesse de l’eau?</p>
+<p>L’<a
+href="https://fishprotectiontools.ca/fr/longueurmaturite.html">outil de
+longueur à maturité</a> peut servir à consulter les données sur la
+maturité d’une espèce. L’outil présente un tableau de références dans
+lequel sont indiquées les longueurs minimales et moyennes à maturité.
+Dans les cas où le poisson mature doit franchir un obstacle pour
+compléter son cycle vital, la longueur à maturité peut s’avérer utile
+pour estimer la performance natatoire au moyen d’un autre outil du
+présent site Web. Par exemple, si le saumon de l’Atlantique en migration
+doit franchir un ponceau de 30 mètres pour atteindre un habitat de frai,
+quelle longueur de poisson conviendrait-il d’utiliser dans l’outil de
+distance de nage et de vitesse de l’eau?</p>
 </div>
-<div id="outil-de-dimension-du-grillage-à-lentrée-dune-prise-deau" class="section level3">
+<div id="outil-de-dimension-du-grillage-à-lentrée-dune-prise-deau"
+class="section level3">
 <h3>Outil de dimension du grillage à l’entrée d’une prise d’eau</h3>
-<p>L’<a href="http://www.fishprotectiontools.ca/fr/prisedeau.html">outil de dimension du grillage à l’entrée d’une prise d’eau</a> calcule la superficie de grillage nécessaire au niveau de la prise d’eau pour éviter l’impaction de 97,5 % des poissons selon l’espèce, la longueur et la durée nécessaire pour qu’un poisson s’éloigne de la face du grillage. Des renseignements supplémentaires et un échantillon de problème se trouvent dans le <a href="http://www.fishprotectiontools.ca/fr/manuel-prisedeau.html">Manuel sur l’outil de dimension du grillage à l’entrée d’une prise d’eau</a>.</p>
+<p>L’<a href="https://fishprotectiontools.ca/fr/prisedeau.html">outil de
+dimension du grillage à l’entrée d’une prise d’eau</a> calcule la
+superficie de grillage nécessaire au niveau de la prise d’eau pour
+éviter l’impaction de 97,5 % des poissons selon l’espèce, la longueur et
+la durée nécessaire pour qu’un poisson s’éloigne de la face du grillage.
+Des renseignements supplémentaires et un échantillon de problème se
+trouvent dans le <a
+href="https://fishprotectiontools.ca/fr/manuel-prisedeau.html">Manuel
+sur l’outil de dimension du grillage à l’entrée d’une prise
+d’eau</a>.</p>
 <center>
-Date modifiée 2021-10-04
+Date modifiée 2023-03-21
 </center>
 </div>
 </div>

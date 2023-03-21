@@ -20,7 +20,7 @@ output:
 
 ##Background
 
-The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/speedtime.html) generates a plot showing swim speed versus swim time using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html). The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval. 
+The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The [Swim Speed &amp; Swim Time tool](https://fishprotectiontools.ca/speedtime.html) generates a plot showing swim speed versus swim time using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html). The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval. 
 
 In this manual, a sample problem will be answered using this tool.
 
@@ -31,7 +31,7 @@ How long can the average 250 mm rainbow trout swim 1 m/s?
 ##Steps
 
 
-1. Go to the [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/speedtime.html).
+1. Go to the [Swim Speed &amp; Swim Time tool](https://fishprotectiontools.ca/speedtime.html).
 2. Below "Select Fish by:", click the "Common name" radio button.
 3. In the "Select species" drop down menu, choose "Rainbow or Steelhead trout".
 4. Drag the "Fish length" slider to 250 mm.
@@ -40,7 +40,7 @@ How long can the average 250 mm rainbow trout swim 1 m/s?
 
 Once these steps are completed, the tool should look like this:
 
-<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/speedtime/?_inputs_&Calculate=%222%22&CName=%22Rainbow%20or%20Steelhead%20trout%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true" width="100%" frameBorder="0" scrolling="no"></iframe>
+<iframe id="nestedIFrame" src="https://fishprotectiontools.ca/speedtime/?_inputs_&Calculate=%222%22&CName=%22Rainbow%20or%20Steelhead%20trout%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true" width="100%" frameBorder="0" scrolling="no"></iframe>
 
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

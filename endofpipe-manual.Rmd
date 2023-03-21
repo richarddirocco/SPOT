@@ -21,7 +21,7 @@ output:
 
 ## Background
 
-Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel [@mussen2014unscreened]. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The [End-of-Pipe Screen Size tool](http://www.fishprotectiontools.ca/endofpipe-tool.html) is used to calculate the required Effective Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Effective Screen Area</b> is the space available for the free flow of water and the space occupied by the screen material but excludes space occupied by major support structures. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html). 
+Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel [@mussen2014unscreened]. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The [End-of-Pipe Screen Size tool](https://fishprotectiontools.ca/endofpipe-tool.html) is used to calculate the required Effective Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Effective Screen Area</b> is the space available for the free flow of water and the space occupied by the screen material but excludes space occupied by major support structures. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see [Katopodis &amp; Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html). 
 
 
 
@@ -43,7 +43,7 @@ B.  Determine the dimensions of the screen
 
 #### A. Determining effective screen area
 
-Complete these steps using the [End-of-Pipe Screen Size tool](http://www.fishprotectiontools.ca/endofpipe-tool.html)
+Complete these steps using the [End-of-Pipe Screen Size tool](https://fishprotectiontools.ca/endofpipe-tool.html)
 
 1.	In the “Select fish by:” dropdown, choose “Group”.
 2.	Below “Select groups:”, check the “Catfish & Sunfish”, "Pike" and “Salmon & Walleye” boxes.
@@ -51,7 +51,7 @@ Complete these steps using the [End-of-Pipe Screen Size tool](http://www.fishpro
 
 Once these steps are completed, the tool will indicate an Effective Screen Area of 1.82 m^2^ is required. The tool should look like this:
 
-<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/endofpipe/?_inputs_&CatfishSunfish=true&Eel=false&EoP_CName=%22Brook%20trout%22&EoP_flowrate=100&EoP_l=25&EoP_Selecter=%220%22&EoP_SName=%22Salvelinus%20fontinalis%22&EoP_time=10&Herring=false&Pike=true&SalmonWalleye=true&Sturgeon=false" width="100%" frameBorder="0" scrolling="no"></iframe>
+<iframe id="nestedIFrame" src="https://fishprotectiontools.ca/endofpipe/?_inputs_&CatfishSunfish=true&Eel=false&EoP_CName=%22Brook%20trout%22&EoP_flowrate=100&EoP_l=25&EoP_Selecter=%220%22&EoP_SName=%22Salvelinus%20fontinalis%22&EoP_time=10&Herring=false&Pike=true&SalmonWalleye=true&Sturgeon=false" width="100%" frameBorder="0" scrolling="no"></iframe>
 
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

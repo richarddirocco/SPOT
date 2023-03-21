@@ -13,7 +13,7 @@
 
 <title>Manuel : Outil de dimension du grillage à l’entrée d’une prise d’eau</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -52,6 +52,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -103,6 +104,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -160,11 +164,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -193,8 +201,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -202,16 +210,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -283,7 +284,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="apropos.html">À propos</a></li>
-        <li><a href="http://fishprotectiontools.ca">English</a></li>
+        <li><a href="https://fishprotectiontools.ca">English</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -294,7 +295,8 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Manuel : Outil de dimension du grillage à l’entrée d’une prise d’eau</h1>
+<h1 class="title toc-ignore">Manuel : Outil de dimension du grillage à
+l’entrée d’une prise d’eau</h1>
 
 </div>
 
@@ -312,31 +314,63 @@ $(document).ready(function () {
 </script>
 <div id="contexte" class="section level2">
 <h2>Contexte</h2>
-<p>Les prises d’eau sans grillage peuvent entraîner des poissons. La vidéo incluse montre un esturgeon vert entraîné dans un tuyau qui extrait de l’eau à un débit de 570 L/s dans un chenal expérimental <span class="citation">(Mussen et al. 2014)</span>. Pour empêcher l’entraînement, il faut installer un grillage sur les prises d’eau. Si la superficie du grillage est trop petite, le poisson peut rester coincé sur le grillage. L’<a href="http://www.fishprotectiontools.ca/fr/prisedeau.html">Outil de dimension du grillage à l’entrée d’une prise d’eau</a> sert à calculer la superficie utile du grillage en fonction de l’espèce et de la taille des poissons ainsi que du volume d’eau extrait. La Superficie utile du grillage est l’espace disponible dans lequel l’eau peut circuler librement et l’espace occupé par le matériau du grillage, mais excluant l’espace occupé par les principales structures de soutien. Cet outil prédit la performance natatoire du poisson à l’aide d’un modèle élaboré au moyen de 27 030 poissons individuels dans 132 sources de données. Pour obtenir des détails sur le modèle, les ensembles de données et la façon dont les calculs sont effectués, voir <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html">Katopodis et Gervais (2016)</a>.</p>
-<p>Dans ce manuel, on répond à un exemple de problème à l’aide de cet outil.</p>
+<p>Les prises d’eau sans grillage peuvent entraîner des poissons. La
+vidéo incluse montre un esturgeon vert entraîné dans un tuyau qui
+extrait de l’eau à un débit de 570 L/s dans un chenal expérimental <span
+class="citation">(Mussen et al. 2014)</span>. Pour empêcher
+l’entraînement, il faut installer un grillage sur les prises d’eau. Si
+la superficie du grillage est trop petite, le poisson peut rester coincé
+sur le grillage. L’<a
+href="https://fishprotectiontools.ca/fr/prisedeau.html">Outil de
+dimension du grillage à l’entrée d’une prise d’eau</a> sert à calculer
+la superficie utile du grillage en fonction de l’espèce et de la taille
+des poissons ainsi que du volume d’eau extrait. La Superficie utile du
+grillage est l’espace disponible dans lequel l’eau peut circuler
+librement et l’espace occupé par le matériau du grillage, mais excluant
+l’espace occupé par les principales structures de soutien. Cet outil
+prédit la performance natatoire du poisson à l’aide d’un modèle élaboré
+au moyen de 27 030 poissons individuels dans 132 sources de données.
+Pour obtenir des détails sur le modèle, les ensembles de données et la
+façon dont les calculs sont effectués, voir <a
+href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html">Katopodis
+et Gervais (2016)</a>.</p>
+<p>Dans ce manuel, on répond à un exemple de problème à l’aide de cet
+outil.</p>
 <video controls="controls" width = "320" height = "240"
   name = "Video Name" src = EntrainedSturgeon.mp4
   style="float:right;margin-left:10px"frameborder="0">
 </div>
 <div id="exemple-de-question" class="section level2">
 <h2>Exemple de question</h2>
-<p>Un promoteur veut extraire de l’eau à un débit de 100 L/s d’un étang à proximité. L’étang est l’habitat d’achigans à petite bouche, de perchaudes et de grands brochets. On propose une prise d’eau cylindrique à extrémités solides et un grillage de fils métalliques triangulaires nº 60 autour du cylindre. Quelles doivent être les dimensions du grillage d’entrée?</p>
+<p>Un promoteur veut extraire de l’eau à un débit de 100 L/s d’un étang
+à proximité. L’étang est l’habitat d’achigans à petite bouche, de
+perchaudes et de grands brochets. On propose une prise d’eau cylindrique
+à extrémités solides et un grillage de fils métalliques triangulaires nº
+60 autour du cylindre. Quelles doivent être les dimensions du grillage
+d’entrée?</p>
 <div id="étapes" class="section level3">
 <h3>Étapes</h3>
 <ol style="list-style-type: upper-alpha">
 <li>Déterminer la superficie utile du grillage nécessaire.</li>
 <li>Déterminer les dimensions du grillage.</li>
 </ol>
-<div id="a.-déterminer-la-superficie-utile-du-grillage" class="section level4">
+<div id="a.-déterminer-la-superficie-utile-du-grillage"
+class="section level4">
 <h4>A. Déterminer la superficie utile du grillage</h4>
-<p>Faire les étapes suivantes à l’aide de l’<a href="http://www.fishprotectiontools.ca/fr/prisedeau.html">Outil de dimension du grillage à l’entrée d’une prise d’eau</a></p>
+<p>Faire les étapes suivantes à l’aide de l’<a
+href="https://fishprotectiontools.ca/fr/prisedeau.html">Outil de
+dimension du grillage à l’entrée d’une prise d’eau</a></p>
 <ol style="list-style-type: decimal">
-<li>Dans le menu déroulant « Sélectionner le poisson par : », choisir « Groupe ».</li>
-<li>Sous « Sélectionner les groupes : », cocher les cases « Poisson-chat et malachigan », « Brochet » et « Saumon et doré jaune ».</li>
+<li>Dans le menu déroulant « Sélectionner le poisson par : », choisir «
+Groupe ».</li>
+<li>Sous « Sélectionner les groupes : », cocher les cases « Poisson-chat
+et malachigan », « Brochet » et « Saumon et doré jaune ».</li>
 <li>Entrer « 100 » dans la boîte « Débit d’entrée (L/s) : ».</li>
 </ol>
-<p>Une fois ces étapes effectuées, l’outil indique qu’une superficie utile de grillage de 1,82 m<sup>2</sup> est nécessaire. L’outil devrait apparaître comme suit :</p>
-<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/fr/prisedeau/?_inputs_&amp;CatfishSunfish=true&amp;Anguilles=false&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=100&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Harengs=false&amp;Brochets=true&amp;SalmonWalleye=true&amp;Esturgeons=false" width="100%" frameBorder="0" scrolling="no">
+<p>Une fois ces étapes effectuées, l’outil indique qu’une superficie
+utile de grillage de 1,82 m<sup>2</sup> est nécessaire. L’outil devrait
+apparaître comme suit :</p>
+<iframe id="nestedIFrame" src="https://fishprotectiontools.ca/fr/prisedeau/?_inputs_&amp;CatfishSunfish=true&amp;Anguilles=false&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=100&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Harengs=false&amp;Brochets=true&amp;SalmonWalleye=true&amp;Esturgeons=false" width="100%" frameBorder="0" scrolling="no">
 </iframe>
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -346,10 +380,16 @@ $(document).ready(function () {
    iFrameResize({heightCalculationMethod: "lowestElement"});
 </script>
 </div>
-<div id="b.-déterminer-les-dimensions-du-grillage" class="section level4">
+<div id="b.-déterminer-les-dimensions-du-grillage"
+class="section level4">
 <h4>B. Déterminer les dimensions du grillage</h4>
-<p>Dans le cas d’un grillage cylindrique à extrémités solides, où le grillage est autour du cylindre, on utilise la formule suivante :</p>
-<p><span class="math display">\[Superficie = \pi DL\]</span> Les dimensions inconnues sont le diamètre (D) et la longueur (L). On détermine ces dimensions en choisissant une valeur pour l’une d’entre elles et en résolvant l’équation pour l’autre. Si le diamètre fait 0,60 m, la longueur sera :</p>
+<p>Dans le cas d’un grillage cylindrique à extrémités solides, où le
+grillage est autour du cylindre, on utilise la formule suivante :</p>
+<p><span class="math display">\[Superficie = \pi DL\]</span> Les
+dimensions inconnues sont le diamètre (D) et la longueur (L). On
+détermine ces dimensions en choisissant une valeur pour l’une d’entre
+elles et en résolvant l’équation pour l’autre. Si le diamètre fait 0,60
+m, la longueur sera :</p>
 <p><span class="math display">\[
 \begin{aligned}
   1.82\text{ m}^2 &amp;= \pi (0.60 \text{ m})L \\
@@ -362,21 +402,51 @@ $(document).ready(function () {
 </div>
 <div id="solution" class="section level3">
 <h3>Solution</h3>
-<p>Un grillage cylindrique régulièrement nettoyé de 0,60 m de diamètre et de 0,96 m de long respecterait les critères de conception. Il importe de noter que les dimensions représentent seulement la superficie du grillage; elles n’incluent pas toute portion du grillage qui pourrait être bloquée par un cadre, etc.</p>
+<p>Un grillage cylindrique régulièrement nettoyé de 0,60 m de diamètre
+et de 0,96 m de long respecterait les critères de conception. Il importe
+de noter que les dimensions représentent seulement la superficie du
+grillage; elles n’incluent pas toute portion du grillage qui pourrait
+être bloquée par un cadre, etc.</p>
 </div>
 </div>
 <div id="options-avancées" class="section level2">
 <h2>Options avancées</h2>
-<p>Le fait de cliquer la case à cocher « Afficher les options avancées » offre un contrôle grandement supérieur par rapport aux <a href="http://publications.gc.ca/collections/Collection/Fs23-270-2004F.pdf">Lignes directrices de 1995</a>, notamment la capacité de modifier la durée nécessaire pour qu’un poisson s’éloigne de la surface d’un grillage, la capacité de diminuer la proportion de poissons protégées à moins de 97,5 % et la capacité d’augmenter la longueur du poisson près de la prise d’eau. Dans la plupart des cas, il ne faut pas modifier ces valeurs par rapport aux valeurs par défaut.</p>
+<p>Le fait de cliquer la case à cocher « Afficher les options avancées »
+offre un contrôle grandement supérieur par rapport aux <a
+href="http://publications.gc.ca/collections/Collection/Fs23-270-2004F.pdf">Lignes
+directrices de 1995</a>, notamment la capacité de modifier la durée
+nécessaire pour qu’un poisson s’éloigne de la surface d’un grillage, la
+capacité de diminuer la proportion de poissons protégées à moins de 97,5
+% et la capacité d’augmenter la longueur du poisson près de la prise
+d’eau. Dans la plupart des cas, il ne faut pas modifier ces valeurs par
+rapport aux valeurs par défaut.</p>
 </div>
 <div id="renseignements-supplémentaires" class="section level2">
 <h2>Renseignements supplémentaires</h2>
-<p>Sous le tableau, une ligne de texte affiche la vitesse d’approche nominale en m/s. Cette information peut s’avérer utile quand on utilise la calculatrice de dimension du grillage à l’entrée d’une prise d’eau en conjonction avec les règlements provinciaux ou pour vérifier si le grillage fonctionne correctement une fois installé. L’outil de dimension du grillage à l’entrée d’une prise d’eau peut servir à calculer la superficie utile du grillage nécessaire pour prévenir la majorité de l’entraînement et de l’impaction à l’aide du débit d’entrée seulement. Pour ce faire, s’assurer que tous les groupes sont sélectionnés et que le mode est réglé à « base ». Entrer le débit d’entrée et la superficie utile du grillage empêchera l’entraînement et l’impaction de tous les poissons plus grands que 25 mm au niveau de la prise d’eau. Il est important de se rappeler que ces grillages ne protègent que très peu le plancton, par exemple les poissons en premier stade biologique, contre l’entraînement ou l’impaction.</p>
+<p>Sous le tableau, une ligne de texte affiche la vitesse d’approche
+nominale en m/s. Cette information peut s’avérer utile quand on utilise
+la calculatrice de dimension du grillage à l’entrée d’une prise d’eau en
+conjonction avec les règlements provinciaux ou pour vérifier si le
+grillage fonctionne correctement une fois installé. L’outil de dimension
+du grillage à l’entrée d’une prise d’eau peut servir à calculer la
+superficie utile du grillage nécessaire pour prévenir la majorité de
+l’entraînement et de l’impaction à l’aide du débit d’entrée seulement.
+Pour ce faire, s’assurer que tous les groupes sont sélectionnés et que
+le mode est réglé à « base ». Entrer le débit d’entrée et la superficie
+utile du grillage empêchera l’entraînement et l’impaction de tous les
+poissons plus grands que 25 mm au niveau de la prise d’eau. Il est
+important de se rappeler que ces grillages ne protègent que très peu le
+plancton, par exemple les poissons en premier stade biologique, contre
+l’entraînement ou l’impaction.</p>
 <div id="références" class="section level3 unnumbered">
 <h3 class="unnumbered">Références</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-mussen2014unscreened" class="csl-entry">
-Mussen, Timothy D, Dennis Cocherell, Jamilynn B Poletto, Jon S Reardon, Zachary Hockett, Ali Ercan, Hossein Bandeh, M Levent Kavvas, Joseph J Cech Jr, and Nann A Fangue. 2014. <span>“Unscreened Water-Diversion Pipes Pose an Entrainment Risk to the Threatened Green Sturgeon, Acipenser Medirostris.”</span> <em>PloS One</em> 9 (1): e86321.
+Mussen, Timothy D, Dennis Cocherell, Jamilynn B Poletto, Jon S Reardon,
+Zachary Hockett, Ali Ercan, Hossein Bandeh, M Levent Kavvas, Joseph J
+Cech Jr, and Nann A Fangue. 2014. <span>“Unscreened Water-Diversion
+Pipes Pose an Entrainment Risk to the Threatened Green Sturgeon,
+Acipenser Medirostris.”</span> <em>PloS One</em> 9 (1): e86321.
 </div>
 </div>
 </div>

@@ -13,7 +13,7 @@
 
 <title>Manual: Swim Speed &amp; Swim Time Tool</title>
 
-<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -262,7 +262,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="about.html">About</a></li>
-        <li><a href="http://fishprotectiontools.ca/fr/">Français</a></li>
+        <li><a href="https://fishprotectiontools.ca/fr/">Français</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -274,7 +274,8 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Manual: Swim Speed &amp; Swim Time Tool</h1>
+<h1 class="title toc-ignore">Manual: Swim Speed &amp; Swim Time
+Tool</h1>
 
 </div>
 
@@ -291,21 +292,37 @@ $(document).ready(function () {
 
 </script>
 <p>##Background</p>
-<p>The ability to predict fish swim speed and stamina is helpful in the development and design of fish passage, exclusion, and guidance systems. The <a href="http://www.fishprotectiontools.ca/speedtime.html">Swim Speed &amp; Swim Time tool</a> generates a plot showing swim speed versus swim time using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis &amp; Gervais (2016)</a>. The model calculates the mean swimming performance surrounded by 75% and 95% prediction intervals. These intervals show the expected range of swim performance values. For example, 95% of unsampled fish should fall within the bounds of the 95% prediction interval.</p>
-<p>In this manual, a sample problem will be answered using this tool.</p>
+<p>The ability to predict fish swim speed and stamina is helpful in the
+development and design of fish passage, exclusion, and guidance systems.
+The <a href="https://fishprotectiontools.ca/speedtime.html">Swim Speed
+&amp; Swim Time tool</a> generates a plot showing swim speed versus swim
+time using a model built on 27,030 individual fish found in 132 data
+sources. For details on the model, dataset and how these calculations
+are performed, see <a
+href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis
+&amp; Gervais (2016)</a>. The model calculates the mean swimming
+performance surrounded by 75% and 95% prediction intervals. These
+intervals show the expected range of swim performance values. For
+example, 95% of unsampled fish should fall within the bounds of the 95%
+prediction interval.</p>
+<p>In this manual, a sample problem will be answered using this
+tool.</p>
 <p>##Question</p>
 <p>How long can the average 250 mm rainbow trout swim 1 m/s?</p>
 <p>##Steps</p>
 <ol style="list-style-type: decimal">
-<li>Go to the <a href="http://www.fishprotectiontools.ca/speedtime.html">Swim Speed &amp; Swim Time tool</a>.</li>
+<li>Go to the <a
+href="https://fishprotectiontools.ca/speedtime.html">Swim Speed &amp;
+Swim Time tool</a>.</li>
 <li>Below “Select Fish by:”, click the “Common name” radio button.</li>
-<li>In the “Select species” drop down menu, choose “Rainbow or Steelhead trout”.</li>
+<li>In the “Select species” drop down menu, choose “Rainbow or Steelhead
+trout”.</li>
 <li>Drag the “Fish length” slider to 250 mm.</li>
 <li>Below “Calculations:” press the “Swim time” radio button.</li>
 <li>Enter “1” in the “Swim speed” box.</li>
 </ol>
 <p>Once these steps are completed, the tool should look like this:</p>
-<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/speedtime/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Rainbow%20or%20Steelhead%20trout%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="100%" frameBorder="0" scrolling="no">
+<iframe id="nestedIFrame" src="https://fishprotectiontools.ca/speedtime/?_inputs_&amp;Calculate=%222%22&amp;CName=%22Rainbow%20or%20Steelhead%20trout%22&amp;Group=%22Salmon%20%26%20Walleye%22&amp;l=250&amp;Selecter=%221%22&amp;SName=%22Salvelinus%20fontinalis%22&amp;SS=%221%22&amp;SSEst=true&amp;ST=%22600%22&amp;STEst=true" width="100%" frameBorder="0" scrolling="no">
 </iframe>
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -317,32 +334,52 @@ $(document).ready(function () {
 <p>##Solution</p>
 <p>The average 250 mm rainbow trout can swim 1 m/s for 250 seconds.</p>
 <p>##Calculating swim speed</p>
-<p>The tool can also be used to determine swim speed based on swim time. For example, select the “Swim speed” radio button below “Calculations” and enter 250 s into the “Swim time” box. The plot will update and show the average rainbow trout can swim 1 m/s for 250 s.</p>
+<p>The tool can also be used to determine swim speed based on swim time.
+For example, select the “Swim speed” radio button below “Calculations”
+and enter 250 s into the “Swim time” box. The plot will update and show
+the average rainbow trout can swim 1 m/s for 250 s.</p>
 <p>##Manual calculations</p>
-<p>The fish swimming performance models presented in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis &amp; Gervais (2016)</a> are potentially useful but required solving complex equations. The web tool reliably and quickly performs these calculations, reducing the likelihood of an erroneous result. In this section, the simplified equations from the report are displayed for reference.</p>
+<p>The fish swimming performance models presented in <a
+href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis
+&amp; Gervais (2016)</a> are potentially useful but required solving
+complex equations. The web tool reliably and quickly performs these
+calculations, reducing the likelihood of an erroneous result. In this
+section, the simplified equations from the report are displayed for
+reference.</p>
 <p>Fish swimming speed is calculated using the following formula:</p>
-<p><span class="math display">\[U = kt^b \sqrt{gl}\left(\frac{l}{g}\right)^{-b/2}\]</span> Where:</p>
+<p><span class="math display">\[U = kt^b
+\sqrt{gl}\left(\frac{l}{g}\right)^{-b/2}\]</span> Where:</p>
 <ul>
 <li><em>U</em> is the fish swimming speed in m/s</li>
-<li><em>t</em> is endurance time in seconds and is limited from 3 to 1800 seconds</li>
+<li><em>t</em> is endurance time in seconds and is limited from 3 to
+1800 seconds</li>
 <li><em>g</em> is gravitational acceleration (9.81 m/s<sup>2</sup>)</li>
 <li><em>l</em> is fish length in meters</li>
-<li><em>k</em> and <em>b</em> are coefficients derived from Deming regression analysis
+<li><em>k</em> and <em>b</em> are coefficients derived from Deming
+regression analysis
 <ul>
-<li>These values can be found in <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis &amp; Gervais (2016)</a></li>
+<li>These values can be found in <a
+href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis
+&amp; Gervais (2016)</a></li>
 </ul></li>
 </ul>
-<p>The formula can be rearranged to estimate time based on fish swimming speed:</p>
-<p><span class="math display">\[t = \left(\frac{U(l/g)^{b/2}}{k \sqrt{gl}}\right) ^{1/b} \]</span></p>
+<p>The formula can be rearranged to estimate time based on fish swimming
+speed:</p>
+<p><span class="math display">\[t = \left(\frac{U(l/g)^{b/2}}{k
+\sqrt{gl}}\right) ^{1/b} \]</span></p>
 <p>##Model limitations</p>
-<p>Some fish swimming performance groups had limited data available. This lack of data for certain groups may affect the estimated performance. These limitations are outlined below:</p>
+<p>Some fish swimming performance groups had limited data available.
+This lack of data for certain groups may affect the estimated
+performance. These limitations are outlined below:</p>
 <ul>
-<li><strong>Catfish &amp; Sunfish</strong>: Limited data on burst range</li>
+<li><strong>Catfish &amp; Sunfish</strong>: Limited data on burst
+range</li>
 <li><strong>Eel</strong>: Comprehensive data set</li>
 <li><strong>Herring</strong>: Lack of prolonged data</li>
 <li><strong>Salmon &amp; Walleye</strong>: Comprehensive data set</li>
 <li><strong>Sturgeon</strong>: Lack of burst data</li>
-<li><strong>Pike</strong>: Lack of burst data, curve derived by assuming burst performance is similar to Salmon &amp; Walleye and Eel groups</li>
+<li><strong>Pike</strong>: Lack of burst data, curve derived by assuming
+burst performance is similar to Salmon &amp; Walleye and Eel groups</li>
 </ul>
 
 

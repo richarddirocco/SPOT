@@ -13,7 +13,7 @@
 
 <title>Manual: End-of-Pipe Screen Size Tool</title>
 
-<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -57,6 +57,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -262,7 +284,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="about.html">About</a></li>
-        <li><a href="http://fishprotectiontools.ca/fr/">Français</a></li>
+        <li><a href="https://fishprotectiontools.ca/fr/">Français</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -292,15 +314,36 @@ $(document).ready(function () {
 </script>
 <div id="background" class="section level2">
 <h2>Background</h2>
-<p>Water intakes without screens can entrain fish. The included video shows green sturgeon being entrained into a pipe which is withdrawing water at a rate of 570 L/s from an experimental channel <span class="citation">(Mussen et al. 2014)</span>. To prevent entrainment, a screen should be fitted to water intakes. If the screen area is too small, fish can become impinged on the screen. The <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size tool</a> is used to calculate the required Effective Screen Area for a water intake pipe based on the fish species, their size, and the volume of water being withdrawn. <b>Effective Screen Area</b> is the space available for the free flow of water and the space occupied by the screen material but excludes space occupied by major support structures. This tool predicts fish swim performance using a model built on 27,030 individual fish found in 132 data sources. For details on the model, dataset and how these calculations are performed, see <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis &amp; Gervais (2016)</a>.</p>
-<p>In this manual, a sample problem will be answered using this tool.</p>
+<p>Water intakes without screens can entrain fish. The included video
+shows green sturgeon being entrained into a pipe which is withdrawing
+water at a rate of 570 L/s from an experimental channel <span
+class="citation">(Mussen et al. 2014)</span>. To prevent entrainment, a
+screen should be fitted to water intakes. If the screen area is too
+small, fish can become impinged on the screen. The <a
+href="https://fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe
+Screen Size tool</a> is used to calculate the required Effective Screen
+Area for a water intake pipe based on the fish species, their size, and
+the volume of water being withdrawn. <b>Effective Screen Area</b> is the
+space available for the free flow of water and the space occupied by the
+screen material but excludes space occupied by major support structures.
+This tool predicts fish swim performance using a model built on 27,030
+individual fish found in 132 data sources. For details on the model,
+dataset and how these calculations are performed, see <a
+href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html">Katopodis
+&amp; Gervais (2016)</a>.</p>
+<p>In this manual, a sample problem will be answered using this
+tool.</p>
 <video controls="controls" width = "320" height = "240"
   name = "Video Name" src = EntrainedSturgeon.mp4
   style="float:right;margin-left:10px"frameborder="0">
 </div>
 <div id="sample-question" class="section level2">
 <h2>Sample question</h2>
-<p>A proponent wishes to withdraw water at a rate of 100 L/s from a nearby pond. The pond supports populations of smallmouth bass, yellow perch, and northern pike. The intake is proposed to be cylindrical with the ends solid and #60 wedge wire screen around the cylinder. What size should the intake screen be?</p>
+<p>A proponent wishes to withdraw water at a rate of 100 L/s from a
+nearby pond. The pond supports populations of smallmouth bass, yellow
+perch, and northern pike. The intake is proposed to be cylindrical with
+the ends solid and #60 wedge wire screen around the cylinder. What size
+should the intake screen be?</p>
 <div id="steps" class="section level3">
 <h3>Steps</h3>
 <ol style="list-style-type: upper-alpha">
@@ -309,14 +352,19 @@ $(document).ready(function () {
 </ol>
 <div id="a.-determining-effective-screen-area" class="section level4">
 <h4>A. Determining effective screen area</h4>
-<p>Complete these steps using the <a href="http://www.fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe Screen Size tool</a></p>
+<p>Complete these steps using the <a
+href="https://fishprotectiontools.ca/endofpipe-tool.html">End-of-Pipe
+Screen Size tool</a></p>
 <ol style="list-style-type: decimal">
 <li>In the “Select fish by:” dropdown, choose “Group”.</li>
-<li>Below “Select groups:”, check the “Catfish &amp; Sunfish”, “Pike” and “Salmon &amp; Walleye” boxes.</li>
+<li>Below “Select groups:”, check the “Catfish &amp; Sunfish”, “Pike”
+and “Salmon &amp; Walleye” boxes.</li>
 <li>Enter “100” in the “Intake flow rate (L/s):” box.</li>
 </ol>
-<p>Once these steps are completed, the tool will indicate an Effective Screen Area of 1.82 m<sup>2</sup> is required. The tool should look like this:</p>
-<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/endofpipe/?_inputs_&amp;CatfishSunfish=true&amp;Eel=false&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=100&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Herring=false&amp;Pike=true&amp;SalmonWalleye=true&amp;Sturgeon=false" width="100%" frameBorder="0" scrolling="no">
+<p>Once these steps are completed, the tool will indicate an Effective
+Screen Area of 1.82 m<sup>2</sup> is required. The tool should look like
+this:</p>
+<iframe id="nestedIFrame" src="https://fishprotectiontools.ca/endofpipe/?_inputs_&amp;CatfishSunfish=true&amp;Eel=false&amp;EoP_CName=%22Brook%20trout%22&amp;EoP_flowrate=100&amp;EoP_l=25&amp;EoP_Selecter=%220%22&amp;EoP_SName=%22Salvelinus%20fontinalis%22&amp;EoP_time=10&amp;Herring=false&amp;Pike=true&amp;SalmonWalleye=true&amp;Sturgeon=false" width="100%" frameBorder="0" scrolling="no">
 </iframe>
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -326,10 +374,15 @@ $(document).ready(function () {
    iFrameResize({heightCalculationMethod: "lowestElement"});
 </script>
 </div>
-<div id="b.-determine-dimensions-of-intake-screen" class="section level4">
+<div id="b.-determine-dimensions-of-intake-screen"
+class="section level4">
 <h4>B. Determine dimensions of intake screen</h4>
-<p>For a cylindrical screen where the ends are solid and screening is around the cylinder, the following formula applies:</p>
-<p><span class="math display">\[Area = \pi DL\]</span> The unknown dimensions are diameter (D) and length (L). These dimensions are determined by choosing a value for one and solving the equation for the other. If the diameter is 0.60 m, then the length follows as:</p>
+<p>For a cylindrical screen where the ends are solid and screening is
+around the cylinder, the following formula applies:</p>
+<p><span class="math display">\[Area = \pi DL\]</span> The unknown
+dimensions are diameter (D) and length (L). These dimensions are
+determined by choosing a value for one and solving the equation for the
+other. If the diameter is 0.60 m, then the length follows as:</p>
 <p><span class="math display">\[
 \begin{aligned}
   1.82\text{ m}^2 &amp;= \pi (0.60 \text{ m})L \\
@@ -342,22 +395,46 @@ $(document).ready(function () {
 </div>
 <div id="solution" class="section level3">
 <h3>Solution</h3>
-<p>A regularly cleaned 0.60 m diameter, 0.96 m long cylindrical screen would meet the design requirements. It should be noted that the dimensions given are representative of the screening area only; they do not include any screen that may be blocked by framing, etc.</p>
+<p>A regularly cleaned 0.60 m diameter, 0.96 m long cylindrical screen
+would meet the design requirements. It should be noted that the
+dimensions given are representative of the screening area only; they do
+not include any screen that may be blocked by framing, etc.</p>
 </div>
 </div>
 <div id="advanced-options" class="section level2">
 <h2>Advanced options</h2>
-<p>Clicking the “Show advanced options”" check box allows for much more control than previously possible through the <a href="http://www.dfo-mpo.gc.ca/Library/223669.pdf">1995 guideline</a>, including the ability to change the amount of time required for a fish to escape the face of a screen, the ability to decrease the proportion of fish protected below 97.5%, and the ability to increase the length of fish near the water intake. In most scenarios, these values should not be changed from their default values.</p>
+<p>Clicking the “Show advanced options”” check box allows for much more
+control than previously possible through the <a
+href="http://www.dfo-mpo.gc.ca/Library/223669.pdf">1995 guideline</a>,
+including the ability to change the amount of time required for a fish
+to escape the face of a screen, the ability to decrease the proportion
+of fish protected below 97.5%, and the ability to increase the length of
+fish near the water intake. In most scenarios, these values should not
+be changed from their default values.</p>
 </div>
 <div id="additional-information" class="section level2">
 <h2>Additional information</h2>
-<p>Below the chart, a line of text displays the design approach velocity in m/s. This information may be useful when using the end-of-pipe screen size calculator in conjunction with provincial regulations or to verify the screen is working properly once installed.</p>
-<p>The end-of-pipe screen size tool can be used to calculate the effective screen area needed to prevent most entrainment and impingement with no information other than the intake flow rate. To do this, ensure all groups are selected and the mode is set to “basic”. Enter the intake flow and the effective screen area will prevent nearly all fish larger than 25 mm from being entrained or impinged at that water intake. It is important to remember that these screens do little to protect plankton, such as early life-stage fish, from becoming entrained or impinged.</p>
+<p>Below the chart, a line of text displays the design approach velocity
+in m/s. This information may be useful when using the end-of-pipe screen
+size calculator in conjunction with provincial regulations or to verify
+the screen is working properly once installed.</p>
+<p>The end-of-pipe screen size tool can be used to calculate the
+effective screen area needed to prevent most entrainment and impingement
+with no information other than the intake flow rate. To do this, ensure
+all groups are selected and the mode is set to “basic”. Enter the intake
+flow and the effective screen area will prevent nearly all fish larger
+than 25 mm from being entrained or impinged at that water intake. It is
+important to remember that these screens do little to protect plankton,
+such as early life-stage fish, from becoming entrained or impinged.</p>
 <div id="references" class="section level3 unnumbered">
 <h3 class="unnumbered">References</h3>
-<div id="refs" class="references hanging-indent">
-<div id="ref-mussen2014unscreened">
-<p>Mussen, Timothy D, Dennis Cocherell, Jamilynn B Poletto, Jon S Reardon, Zachary Hockett, Ali Ercan, Hossein Bandeh, M Levent Kavvas, Joseph J Cech Jr, and Nann A Fangue. 2014. “Unscreened Water-Diversion Pipes Pose an Entrainment Risk to the Threatened Green Sturgeon, Acipenser Medirostris.” <em>PloS One</em> 9 (1): e86321.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-mussen2014unscreened" class="csl-entry">
+Mussen, Timothy D, Dennis Cocherell, Jamilynn B Poletto, Jon S Reardon,
+Zachary Hockett, Ali Ercan, Hossein Bandeh, M Levent Kavvas, Joseph J
+Cech Jr, and Nann A Fangue. 2014. <span>“Unscreened Water-Diversion
+Pipes Pose an Entrainment Risk to the Threatened Green Sturgeon,
+Acipenser Medirostris.”</span> <em>PloS One</em> 9 (1): e86321.
 </div>
 </div>
 </div>

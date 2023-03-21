@@ -185,7 +185,7 @@ There are two ways to answer this question. The first and recommended method is 
 
 ### WebTool - Speed vs. Time {#webtoolspeedtime}
 
-1. Go to the [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/speedtime.html).
+1. Go to the [Swim Speed &amp; Swim Time tool](https://fishprotectiontools.ca/speedtime.html).
 2. Below "Select Fish by:", click the "Common name" radio button.
 3. In the "Select species" drop down menu, choose "Rainbow or Steelhead trout".
 4. Drag the "Fish length" slider to 250 mm.
@@ -196,7 +196,7 @@ Once these steps are completed, the tool should look like this:
 
 <center>
 ```{r echo = FALSE}
-knitr::include_app("http://www.fishprotectiontools.ca/speedtime/?_inputs_&Calculate=%222%22&CName=%22Rainbow%20or%20Steelhead%20trout%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true",
+knitr::include_app("https://fishprotectiontools.ca/speedtime/?_inputs_&Calculate=%222%22&CName=%22Rainbow%20or%20Steelhead%20trout%22&Group=%22Salmon%20%26%20Walleye%22&l=250&Selecter=%221%22&SName=%22Salvelinus%20fontinalis%22&SS=%221%22&SSEst=true&ST=%22600%22&STEst=true",
                     height = "1260px")
 ```
 </center>
@@ -231,7 +231,7 @@ There are two ways to answer this question. The first and recommended method is 
 
 ### Webtool - Distance vs. Velocity {#webtooldistancevelocity}
 
-1.  Go to the [Swim Speed &amp; Swim Time tool](http://www.fishprotectiontools.ca/distancevelocity.html).
+1.  Go to the [Swim Speed &amp; Swim Time tool](https://fishprotectiontools.ca/distancevelocity.html).
 2.	Below “Select Fish by:”, click the “Common name” radio button.
 3.	In the “Select species” drop down menu, choose “Northern Pike”.
 4.	Drag the “Fish length” slider to 400 mm.
@@ -241,7 +241,7 @@ There are two ways to answer this question. The first and recommended method is 
 Once these steps are completed, the tool should look like this:
 <center>
 ```{r echo = FALSE}
-knitr::include_app("http://www.fishprotectiontools.ca/distancevelocity/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Northern%20pike%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true",
+knitr::include_app("https://fishprotectiontools.ca/distancevelocity/?_inputs_&Calculate2=%222%22&SD=%2230%22&SDEst=true&VvD_CName=%22Northern%20pike%22&VvD_Group=%22Salmon%20%26%20Walleye%22&VvD_l=400&VvD_Selecter=%221%22&VvD_SName=%22Salvelinus%20fontinalis%22&WV=%220.15%22&WVEst=true",
                     height = "1260px")
 ```
 </center>

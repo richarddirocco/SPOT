@@ -13,7 +13,7 @@
 
 <title>About This Website</title>
 
-<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -57,6 +57,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -262,7 +284,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="about.html">About</a></li>
-        <li><a href="http://fishprotectiontools.ca/fr/">Français</a></li>
+        <li><a href="https://fishprotectiontools.ca/fr/">Français</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -291,56 +313,89 @@ $(document).ready(function () {
 
 </script>
 <p><br></p>
-<p>This website hosts prototype tools built to expand on the <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html'> Fish Swimming Performance Database and Analyses </a> CSAS document <span class="citation">(Katopodis and Gervais 2016)</span>. This website was coded by Richard Di Rocco with input from Richard Gervais. Feedback regarding these tools is welcome and can be submitted <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.</p>
+<p>This website hosts prototype tools built to expand on the
+<a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html'>
+Fish Swimming Performance Database and Analyses </a> CSAS document <span
+class="citation">(Katopodis and Gervais 2016)</span>. This website was
+coded by Richard Di Rocco with input from Richard Gervais. Feedback
+regarding these tools is welcome and can be submitted
+<a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>here</a>.</p>
 <div id="citing-this-tool" class="section level2">
 <h2>Citing this tool</h2>
 <p>Please cite the CSAS document and this website separately as:</p>
-<p>Katopodis, C, and R Gervais. 2016. <em>Fish Swimming Performance Database and Analyses</em>. DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002., 550. Available from <a href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html" class="uri">http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html</a>.</p>
-<p>Di Rocco, R, and R. Gervais. 2022. <em>SPOT: Swim Performance Online Tools</em>. Available from <a href="http://www.fishprotectiontools.ca/" class="uri">http://www.fishprotectiontools.ca/</a>.</p>
+<p>Katopodis, C, and R Gervais. 2016. <em>Fish Swimming Performance
+Database and Analyses</em>. DFO Can. Sci. Advis. Sec. Res. Doc.
+2016/002., 550. Available from <a
+href="http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html"
+class="uri">http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-eng.html</a>.</p>
+<p>Di Rocco, R, and R. Gervais. 2023. <em>SPOT: Swim Performance Online
+Tools</em>. Available from <a href="https://fishprotectiontools.ca/"
+class="uri">https://fishprotectiontools.ca/</a>.</p>
 </div>
 <div id="packages" class="section level2">
 <h2>Packages</h2>
-<p>These tools are coded in <a href='https://www.r-project.org/' target='_blank'>R</a> <span class="citation">(R Core Team 2019)</span> using the following packages:</p>
+<p>These tools are coded in
+<a href='https://www.r-project.org/' target='_blank'>R</a> <span
+class="citation">(R Core Team 2019)</span> using the following
+packages:</p>
 <ul>
-<li><a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a> <span class="citation">(Chang et al. 2017)</span></li>
-<li><a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a> <span class="citation">(Wickham 2009)</span></li>
-<li><a href='http://ggvis.rstudio.com/' target='_blank'> ggvis</a> <span class="citation">(Chang and Wickham 2016)</span></li>
-<li><a href='http://tidyr.tidyverse.org/' target='_blank'> tidyr</a> <span class="citation">(Wickham and Henry 2017)</span></li>
-<li><a href='http://rmarkdown.rstudio.com/' target='_blank'>R Markdown</a> <span class="citation">(Allaire et al. 2016)</span></li>
-<li><a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a> <span class="citation">(Boettiger, Temple Lang, and Wainwright 2012)</span></li>
+<li><a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a>
+<span class="citation">(Chang et al. 2017)</span></li>
+<li><a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a>
+<span class="citation">(Wickham 2009)</span></li>
+<li><a href='http://ggvis.rstudio.com/' target='_blank'> ggvis</a> <span
+class="citation">(Chang and Wickham 2016)</span></li>
+<li><a href='http://tidyr.tidyverse.org/' target='_blank'> tidyr</a>
+<span class="citation">(Wickham and Henry 2017)</span></li>
+<li><a href='http://rmarkdown.rstudio.com/' target='_blank'>R
+Markdown</a> <span class="citation">(Allaire et al. 2016)</span></li>
+<li><a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a>
+<span class="citation">(Boettiger, Temple Lang, and Wainwright
+2012)</span></li>
 </ul>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
-<div id="refs" class="references hanging-indent">
-<div id="ref-rmarkdown">
-<p>Allaire, JJ, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang, Jeff Allen, Hadley Wickham, Aron Atkins, and Rob Hyndman. 2016. <em>Rmarkdown: Dynamic Documents for R</em>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-rmarkdown" class="csl-entry">
+Allaire, JJ, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang,
+Jeff Allen, Hadley Wickham, Aron Atkins, and Rob Hyndman. 2016.
+<em>Rmarkdown: Dynamic Documents for r</em>.
 </div>
-<div id="ref-rfishbase">
-<p>Boettiger, Carl, Duncan Temple Lang, and Peter Wainwright. 2012. <em>rfishbase: Exploring, Manipulating and Visualizing Fishbase Data from R</em>. <em>Journal of Fish Biology</em>.</p>
+<div id="ref-rfishbase" class="csl-entry">
+Boettiger, Carl, Duncan Temple Lang, and Peter Wainwright. 2012.
+<em><span class="nocase">rfishbase</span>: Exploring, Manipulating and
+Visualizing FishBase Data from r</em>. <em>Journal of Fish Biology</em>.
 </div>
-<div id="ref-shiny">
-<p>Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan McPherson. 2017. <em>Shiny: Web Application Framework for R</em>.</p>
+<div id="ref-shiny" class="csl-entry">
+Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan
+McPherson. 2017. <em>Shiny: Web Application Framework for r</em>.
 </div>
-<div id="ref-ggvis">
-<p>Chang, Winston, and Hadley Wickham. 2016. <em>Ggvis: Interactive Grammar of Graphics</em>.</p>
+<div id="ref-ggvis" class="csl-entry">
+Chang, Winston, and Hadley Wickham. 2016. <em>Ggvis: Interactive Grammar
+of Graphics</em>.
 </div>
-<div id="ref-katopodis2016fish">
-<p>Katopodis, C, and R Gervais. 2016. “Fish Swimming Performance Database and Analyses.” <em>DFO Can. Sci. Advis. Sec. Res. Doc. 2016/002.</em>, 550.</p>
+<div id="ref-katopodis2016fish" class="csl-entry">
+Katopodis, C, and R Gervais. 2016. <span>“Fish Swimming Performance
+Database and Analyses.”</span> <em>DFO Can. Sci. Advis. Sec. Res. Doc.
+2016/002.</em>, 550.
 </div>
-<div id="ref-R">
-<p>R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing.</p>
+<div id="ref-R" class="csl-entry">
+R Core Team. 2019. <em>R: A Language and Environment for Statistical
+Computing</em>. Vienna, Austria: R Foundation for Statistical Computing.
 </div>
-<div id="ref-ggplot2">
-<p>Wickham, Hadley. 2009. <em>ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York.</p>
+<div id="ref-ggplot2" class="csl-entry">
+Wickham, Hadley. 2009. <em><span class="nocase">g</span>gplot2: Elegant
+Graphics for Data Analysis</em>. Springer-Verlag New York.
 </div>
-<div id="ref-tidyr">
-<p>Wickham, Hadley, and Lionel Henry. 2017. <em>Tidyr: Easily Tidy Data with ’Spread()’ and ’Gather()’ Functions</em>.</p>
+<div id="ref-tidyr" class="csl-entry">
+Wickham, Hadley, and Lionel Henry. 2017. <em>Tidyr: Easily Tidy Data
+with ’Spread()’ and ’Gather()’ Functions</em>.
 </div>
 </div>
 <p><br> <br></p>
 <center>
-Date Modified 2022-12-13
+Date Modified 2023-03-21
 </center>
 </div>
 

@@ -20,7 +20,7 @@ output:
 
 <br>
 
-<iframe id="nestedIFrame" src="http://fishprotectiontools.ca/fr/basicprisedeau" width="100%" frameBorder="0" scrolling="no"></iframe>
+<iframe id="nestedIFrame" src="https://fishprotectiontools.ca/fr/basicprisedeau" width="100%" frameBorder="0" scrolling="no"></iframe>
 
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -21,7 +21,7 @@ output:
 
 ## Contexte
 
-Les prises d’eau sans grillage peuvent entraîner des poissons. La vidéo incluse montre un esturgeon vert entraîné dans un tuyau qui extrait de l’eau à un débit de 570 L/s dans un chenal expérimental [@mussen2014unscreened]. Pour empêcher l’entraînement, il faut installer un grillage sur les prises d’eau. Si la superficie du grillage est trop petite, le poisson peut rester coincé sur le grillage. L’[Outil de dimension du grillage à l’entrée d’une prise d’eau](http://www.fishprotectiontools.ca/fr/prisedeau.html) sert à calculer la superficie utile du grillage en fonction de l’espèce et de la taille des poissons ainsi que du volume d’eau extrait. La Superficie utile du grillage est l’espace disponible dans lequel l’eau peut circuler librement et l’espace occupé par le matériau du grillage, mais excluant l’espace occupé par les principales structures de soutien. Cet outil prédit la performance natatoire du poisson à l’aide d’un modèle élaboré au moyen de 27 030 poissons individuels dans 132 sources de données. Pour obtenir des détails sur le modèle, les ensembles de données et la façon dont les calculs sont effectués, voir [Katopodis et Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html).
+Les prises d’eau sans grillage peuvent entraîner des poissons. La vidéo incluse montre un esturgeon vert entraîné dans un tuyau qui extrait de l’eau à un débit de 570 L/s dans un chenal expérimental [@mussen2014unscreened]. Pour empêcher l’entraînement, il faut installer un grillage sur les prises d’eau. Si la superficie du grillage est trop petite, le poisson peut rester coincé sur le grillage. L’[Outil de dimension du grillage à l’entrée d’une prise d’eau](https://fishprotectiontools.ca/fr/prisedeau.html) sert à calculer la superficie utile du grillage en fonction de l’espèce et de la taille des poissons ainsi que du volume d’eau extrait. La Superficie utile du grillage est l’espace disponible dans lequel l’eau peut circuler librement et l’espace occupé par le matériau du grillage, mais excluant l’espace occupé par les principales structures de soutien. Cet outil prédit la performance natatoire du poisson à l’aide d’un modèle élaboré au moyen de 27 030 poissons individuels dans 132 sources de données. Pour obtenir des détails sur le modèle, les ensembles de données et la façon dont les calculs sont effectués, voir [Katopodis et Gervais (2016)](http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html).
 
 Dans ce manuel, on répond à un exemple de problème à l’aide de cet outil.
 
@@ -40,7 +40,7 @@ B.  Déterminer les dimensions du grillage.
 
 #### A. Déterminer la superficie utile du grillage
 
-Faire les étapes suivantes à l’aide de l’[Outil de dimension du grillage à l’entrée d’une prise d’eau](http://www.fishprotectiontools.ca/fr/prisedeau.html)
+Faire les étapes suivantes à l’aide de l’[Outil de dimension du grillage à l’entrée d’une prise d’eau](https://fishprotectiontools.ca/fr/prisedeau.html)
 
 1.	Dans le menu déroulant « Sélectionner le poisson par : », choisir « Groupe ».
 2.	Sous « Sélectionner les groupes : », cocher les cases « Poisson-chat et malachigan », « Brochet » et « Saumon et doré jaune ».
@@ -48,7 +48,7 @@ Faire les étapes suivantes à l’aide de l’[Outil de dimension du grillage �
 
 Une fois ces étapes effectuées, l’outil indique qu’une superficie utile de grillage de 1,82 m^2^ est nécessaire. L’outil devrait apparaître comme suit :
 
-<iframe id="nestedIFrame" src="http://www.fishprotectiontools.ca/fr/prisedeau/?_inputs_&CatfishSunfish=true&Anguilles=false&EoP_CName=%22Brook%20trout%22&EoP_flowrate=100&EoP_l=25&EoP_Selecter=%220%22&EoP_SName=%22Salvelinus%20fontinalis%22&EoP_time=10&Harengs=false&Brochets=true&SalmonWalleye=true&Esturgeons=false" width="100%" frameBorder="0" scrolling="no"></iframe>
+<iframe id="nestedIFrame" src="https://fishprotectiontools.ca/fr/prisedeau/?_inputs_&CatfishSunfish=true&Anguilles=false&EoP_CName=%22Brook%20trout%22&EoP_flowrate=100&EoP_l=25&EoP_Selecter=%220%22&EoP_SName=%22Salvelinus%20fontinalis%22&EoP_time=10&Harengs=false&Brochets=true&SalmonWalleye=true&Esturgeons=false" width="100%" frameBorder="0" scrolling="no"></iframe>
 
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

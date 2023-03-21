@@ -18,7 +18,7 @@ output:
 
 </script>
 
-<iframe src="http://www.fishprotectiontools.ca/fr/longueurmaturite/" width="100%" height="3000px" style="border:none"></iframe>
+<iframe src="https://fishprotectiontools.ca/fr/longueurmaturite/" width="100%" height="3000px" style="border:none"></iframe>
 
 
 <!-- Load JS to automatically resize iframe depending on height of shiny app  -->

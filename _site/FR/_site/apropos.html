@@ -13,7 +13,7 @@
 
 <title>À propos de ce site Web</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -52,6 +52,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -103,6 +104,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -160,11 +164,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -193,8 +201,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -202,16 +210,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -283,7 +284,7 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="apropos.html">À propos</a></li>
-        <li><a href="http://fishprotectiontools.ca">English</a></li>
+        <li><a href="https://fishprotectiontools.ca">English</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -311,41 +312,64 @@ $(document).ready(function () {
 
 </script>
 <p><br></p>
-<p>Ce site Web héberge des prototypes d’outils élaborés pour développer le document du <a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html' > SCCS Analyses et base de données des performances natatoires du poisson</a>. Ce site Web a été codé par <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> en R (R Core Team 2016) à l’aide des trousses suivantes :</p>
+<p>Ce site Web héberge des prototypes d’outils élaborés pour développer
+le document du
+<a href='http://www.dfo-mpo.gc.ca/csas-sccs/Publications/ResDocs-DocRech/2016/2016_002-fra.html' >
+SCCS Analyses et base de données des performances natatoires du
+poisson</a>. Ce site Web a été codé par
+<a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>Richard Di Rocco</a> en R
+(R Core Team 2016) à l’aide des trousses suivantes :</p>
 <ul>
-<li><a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a> <span class="citation">(Chang et al. 2017)</span></li>
-<li><a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a> <span class="citation">(Wickham 2009)</span></li>
-<li><a href='http://ggvis.rstudio.com/' target='_blank'> ggvis</a> <span class="citation">(Chang and Wickham 2016)</span></li>
-<li><a href='http://tidyr.tidyverse.org/' target='_blank'> tidyr</a> <span class="citation">(Wickham and Henry 2017)</span></li>
-<li><a href='http://rmarkdown.rstudio.com/' target='_blank'>R Markdown</a> <span class="citation">(Allaire et al. 2016)</span></li>
-<li><a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a> <span class="citation">(Boettiger, Temple Lang, and Wainwright 2012)</span></li>
+<li><a href='https://shiny.rstudio.com/' target='_blank'> Shiny</a>
+<span class="citation">(Chang et al. 2017)</span></li>
+<li><a href='http://ggplot2.tidyverse.org/' target='_blank'> ggplot2</a>
+<span class="citation">(Wickham 2009)</span></li>
+<li><a href='http://ggvis.rstudio.com/' target='_blank'> ggvis</a> <span
+class="citation">(Chang and Wickham 2016)</span></li>
+<li><a href='http://tidyr.tidyverse.org/' target='_blank'> tidyr</a>
+<span class="citation">(Wickham and Henry 2017)</span></li>
+<li><a href='http://rmarkdown.rstudio.com/' target='_blank'>R
+Markdown</a> <span class="citation">(Allaire et al. 2016)</span></li>
+<li><a href='https://github.com/ropensci/rfishbase' target='_blank'>rfishbase</a>
+<span class="citation">(Boettiger, Temple Lang, and Wainwright
+2012)</span></li>
 </ul>
-<p>Ce site Web est en cours de développement. Les commentaires sont les bienvenus. On peut les transmettre <a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>ici</a>.</p>
+<p>Ce site Web est en cours de développement. Les commentaires sont les
+bienvenus. On peut les transmettre
+<a href='mailto:richard.dirocco@dfo-mpo.gc.ca'>ici</a>.</p>
 <div id="références" class="section level3">
 <h3>Références</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-rmarkdown" class="csl-entry">
-Allaire, JJ, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang, Jeff Allen, Hadley Wickham, Aron Atkins, and Rob Hyndman. 2016. <em>Rmarkdown: Dynamic Documents for r</em>.
+Allaire, JJ, Joe Cheng, Yihui Xie, Jonathan McPherson, Winston Chang,
+Jeff Allen, Hadley Wickham, Aron Atkins, and Rob Hyndman. 2016.
+<em>Rmarkdown: Dynamic Documents for r</em>.
 </div>
 <div id="ref-rfishbase" class="csl-entry">
-Boettiger, Carl, Duncan Temple Lang, and Peter Wainwright. 2012. <em><span class="nocase">rfishbase</span>: Exploring, Manipulating and Visualizing FishBase Data from r</em>. <em>Journal of Fish Biology</em>.
+Boettiger, Carl, Duncan Temple Lang, and Peter Wainwright. 2012.
+<em><span class="nocase">rfishbase</span>: Exploring, Manipulating and
+Visualizing FishBase Data from r</em>. <em>Journal of Fish Biology</em>.
 </div>
 <div id="ref-shiny" class="csl-entry">
-Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan McPherson. 2017. <em>Shiny: Web Application Framework for r</em>.
+Chang, Winston, Joe Cheng, JJ Allaire, Yihui Xie, and Jonathan
+McPherson. 2017. <em>Shiny: Web Application Framework for r</em>.
 </div>
 <div id="ref-ggvis" class="csl-entry">
-Chang, Winston, and Hadley Wickham. 2016. <em>Ggvis: Interactive Grammar of Graphics</em>.
+Chang, Winston, and Hadley Wickham. 2016. <em>Ggvis: Interactive Grammar
+of Graphics</em>.
 </div>
 <div id="ref-ggplot2" class="csl-entry">
-Wickham, Hadley. 2009. <em><span class="nocase">g</span>gplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York.
+Wickham, Hadley. 2009. <em><span class="nocase">g</span>gplot2: Elegant
+Graphics for Data Analysis</em>. Springer-Verlag New York.
 </div>
 <div id="ref-tidyr" class="csl-entry">
-Wickham, Hadley, and Lionel Henry. 2017. <em>Tidyr: Easily Tidy Data with ’Spread()’ and ’Gather()’ Functions</em>.
+Wickham, Hadley, and Lionel Henry. 2017. <em>Tidyr: Easily Tidy Data
+with ’Spread()’ and ’Gather()’ Functions</em>.
 </div>
 </div>
 <p><br> <br></p>
 <center>
-Date modifiée 2021-10-04
+Date modifiée 2023-03-21
 </center>
 </div>
 

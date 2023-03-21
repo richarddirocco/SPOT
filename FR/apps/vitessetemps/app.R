@@ -44,7 +44,7 @@ ui <- function(request){
     sidebarPanel(
                           
       helpText("Besoin d’aide? Consultez le  ",
-               a(href="http://fishprotectiontools.ca/fr/utilisateur.html",target="_blank", "Manuel"), align = "center"
+               a(href="https://fishprotectiontools.ca/fr/utilisateur.html",target="_blank", "Manuel"), align = "center"
       ),
                           
       radioButtons("Selecter", label = "Sélectionner le poisson par :", choices = list("groupe" = 0, "nom courant" = 1, "nom scientifique" = 2), selected=0),
