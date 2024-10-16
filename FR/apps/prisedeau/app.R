@@ -24,7 +24,11 @@ colnames(Velocity)[1] <- "Velocity"
 
 ui <- function(request){
   (fluidPage(
-    
+    # Fix from https://github.com/rstudio/shiny/issues/4116
+    tags$style(HTML(".ggvis-output.recalculating {
+      --shiny-fade-opacity: 1;
+    }"
+    )),
     # Add script to resize iframe automatically
     # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
     tags$head(includeScript("iframeResizer.contentWindow.min.js")),

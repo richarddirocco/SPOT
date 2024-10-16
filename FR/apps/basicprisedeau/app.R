@@ -11,7 +11,11 @@ SpeciesGroups <- read_delim("SpeciesGroups.csv",
 
 ui <- function(request){
   (fluidPage(
-    
+    # Fix from https://github.com/rstudio/shiny/issues/4116
+    tags$style(HTML(".ggvis-output.recalculating {
+      --shiny-fade-opacity: 1;
+    }"
+    )),
     tags$head(includeScript("google-analytics.js")),
     
     # Add script to resize iframe automatically

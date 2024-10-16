@@ -40,7 +40,7 @@ ui <- function(request){
     sidebarLayout(
       sidebarPanel(
         helpText("Need help? Visit the ",
-                 a(href="http://www.fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
+                 a(href="https://fishprotectiontools.ca/endofpipe-manual.html",target="_blank", "Manual"), align = "center"
         ),
 
         selectInput("EoP_Selecter", label = "Select fish by:", 

@@ -39,7 +39,7 @@ ui <- function(request){
     sidebarLayout(
       sidebarPanel(
         helpText("Besoin d’aide? Consultez le ",
-                 a(href="http://fishprotectiontools.ca/fr/manuel-prisedeau.html",target="_blank", "Manuel"), align = "center"
+                 a(href="https://fishprotectiontools.ca/fr/manuel-prisedeau.html",target="_blank", "Manuel"), align = "center"
         ),
         
         selectInput("EoP_Selecter", label = "Sélection par : ", 

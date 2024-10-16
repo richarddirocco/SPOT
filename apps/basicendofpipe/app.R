@@ -3,15 +3,20 @@ library(shinythemes)
 library(ggvis)
 library(dplyr)
 
+
 # Import species group
 SpeciesGroups <- read.csv("SpeciesGroups.csv")
 
 ui <- function(request){
   (fluidPage(
-    
     tags$head(includeScript("google-analytics.js")),
     # Set maximum width of app
     tags$head(tags$style(type="text/css", ".container-fluid {  max-width: 1200px}")),
+    # Fix from https://github.com/rstudio/shiny/issues/4116
+    tags$style(HTML(".ggvis-output.recalculating {
+      --shiny-fade-opacity: 1;
+    }"
+    )),
     
     # Add script to resize iframe automatically
     # Script from here: https://groups.google.com/forum/#!topic/shiny-discuss/cFpn3UcZTvQ
