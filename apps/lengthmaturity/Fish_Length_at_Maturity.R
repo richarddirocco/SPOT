@@ -94,9 +94,9 @@ csvFileName <- paste("/home/rdirocco/RMarkdownWebsite/apps/lengthmaturity/Archiv
 # Use if statement to make sure the dataframe isn't empty
 if(nrow(MaturityData) > 300){
   # Write CSV and make it available for length at maturity app
-  write.csv(MaturityData, "/home/rdirocco/RMarkdownWebsite/apps/lengthmaturity/MaturityData.csv")
+  write_excel_csv(MaturityData, "/home/rdirocco/RMarkdownWebsite/apps/lengthmaturity/MaturityData.csv")
   # Write CSV and place it in the archive
-  write.csv(MaturityData, csvFileName)
+  write_excel_csv(MaturityData, csvFileName)
   # Translate Female and Male under sex
   FrenchMaturityData <- MaturityData
   FrenchMaturityData["Sex"][FrenchMaturityData["Sex"] == "Female"] <- "Femelle"
@@ -104,6 +104,6 @@ if(nrow(MaturityData) > 300){
   FrenchMaturityData["Sex"][FrenchMaturityData["Sex"] == "Mixed"] <- "Mixte"
   FrenchMaturityData["Sex"][FrenchMaturityData["Sex"] == "Unsexed"] <- "Non enregistré"
   # Write to french app folder
-  write.csv(FrenchMaturityData, "/home/rdirocco/RMarkdownWebsite/FR/apps/longueurmaturité/MaturityData.csv")
+  write_excel_csv(FrenchMaturityData, "/home/rdirocco/RMarkdownWebsite/FR/apps/longueurmaturité/MaturityData.csv")
 }
 

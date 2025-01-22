@@ -5,13 +5,13 @@ library(readr)
 
 # Change plot fonts from defaults
 library(showtext)
-font.add.google("Lato","lato")
-showtext.auto()
+font_add_google("Lato","lato")
+showtext_auto()
 
 options(scipen=5)
 
 # Import Maturity Data
-MaturityData <- read.csv("MaturityData.csv", fileEncoding = "ISO-8859-1")
+MaturityData <- read.csv("MaturityData.csv")
 
 # Convert some variable to factors. This makes it easier to sort the table
 MaturityData$Sex <- as.factor(MaturityData$Sex)
@@ -39,22 +39,22 @@ ui <- fluidPage(
   # Help text explaining how to use the tool
   helpText("Select a species using the scientific or common name. The available length at maturity data for the selected species will be displayed in the table below. The data is from", a("FishBase", href='http://www.fishbase.ca/', target="_blank"), " and other sources (see reference column). The Measurement type column shows the type of fish length measurement used: FL (Fork Length), SL (Standard Length), TL (Total Length), or NG (Not Given)."),
   
-  # Add break before selecter
+  # Add break before Selector
   br(),
   
   # Create radio button to select species by common or scientific name
-  column(6, radioButtons("Selecter", label = "Select species using:",
+  column(6, radioButtons("Selector", label = "Select species using:",
                choices = list("Common name" = 1, "Scientific name" = 2), selected=1)),
   
   # Create drop down menus based on common or scientific selection
-  conditionalPanel("input.Selecter == '1'",
+  conditionalPanel("input.Selector == '1'",
                    column(6, selectInput("CommonSpecies", 
                                          label = "Species",
                                          choices =  sort(unique(MaturityData$CommonName)),
                                          selected = "Northern Pike")
                    )
   ),
-  conditionalPanel("input.Selecter == '2'",
+  conditionalPanel("input.Selector == '2'",
     column(6, selectInput("ScientificSpecies", 
                           label = "Species",
                           choices =  sort(unique(MaturityData$ScientificName)),
@@ -76,10 +76,10 @@ server <- function(input, output) {
   # Subset the MaturityData table based on the species selected
   DisplayData <- reactive({
     displaydata <- MaturityData
-    if (input$Selecter==1){
+    if (input$Selector==1){
       displaydata <- subset(displaydata, CommonName == input$CommonSpecies)
     }
-    if (input$Selecter==2){
+    if (input$Selector==2){
       displaydata <- subset(displaydata, ScientificName == input$ScientificSpecies)
     }
     displaydata
